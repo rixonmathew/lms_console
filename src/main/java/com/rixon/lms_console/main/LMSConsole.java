@@ -17,14 +17,6 @@ public class LMSConsole {
     public static final String EXIT_COMMAND = "exit";
     public static final String EXIT_MESSAGE = "Have a good day %n";
 
-    private static Command<String> createCommand(String commandString){
-      CommandBuilder builder = new CommandBuilder();
-      return builder.buildCommand(commandString);
-    }
-
-    private static void executeCommand(Command<String> command){
-
-    }
     public static void main(String[] args) {
         //TODO Create a console that displays the system and gets the command from the users
         //TODO Display the results of the command validation

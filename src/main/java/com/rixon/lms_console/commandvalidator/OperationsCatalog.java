@@ -12,6 +12,7 @@ public class OperationsCatalog {
     private static List<String> validCommandStrings;
 
     static {
+        //TODO Move the commands to a resource file
         validCommandStrings = new ArrayList<String>();
         validCommandStrings.add("search");
         validCommandStrings.add("issue");
