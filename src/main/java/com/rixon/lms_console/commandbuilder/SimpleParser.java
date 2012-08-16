@@ -53,7 +53,7 @@ public class SimpleParser implements Parser {
 
     private void validateCommand() {
         commandValidator = new SimpleValidator();
-        this.validationResult = commandValidator.validateCommand(this.operation);
+        this.validationResult = commandValidator.validateCommand(this.operation,this.parameter);
     }
 
     private void createCommand(){

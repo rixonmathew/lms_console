@@ -1,6 +1,7 @@
 package com.rixon.lms_console.commandvalidator;
 
 import com.rixon.lms_console.command.Command;
+import com.rixon.lms_console.command.Parameter;
 
 /**
  * This class is responsible for validating the command object
@@ -13,8 +14,9 @@ public interface Validator<TYPE> {
      * If the operation is valid then the isValid flag will be yes and the message and hint can be ignored.
      * If the operation is invalid then the message will contain the reason why the validation failed and hint
      * will provide users the hint to correct the operation
-     * @param operation
+     * @param operation operation for the command
+     * @param parameter the parameters for the operation
      * @return validationResult
      */
-    public ValidationResult validateCommand(String operation);
+    public ValidationResult validateCommand(String operation,Parameter<TYPE> parameter);
 }
