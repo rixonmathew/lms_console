@@ -10,7 +10,7 @@ import com.rixon.lms_console.commandvalidator.ValidationResult;
  * Time: 7:58 PM
  *
  */
-public interface Command<PARAMETER_TYPE> {
+public interface Command {
 
     /**
      * This method will return the operation that the command will perform
@@ -22,7 +22,7 @@ public interface Command<PARAMETER_TYPE> {
      * This method will return the parameter associated with the Command object
      * @return parameter object
      */
-    public Parameter<PARAMETER_TYPE> getParameter();
+    public Parameter<String> getParameter();
 
 
     /**

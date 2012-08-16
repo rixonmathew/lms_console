@@ -26,10 +26,19 @@ public class CommandValidatorTest {
     }
 
     @Test
-    public void validateBasicSearchCommand() {
+    public void validateBasicInvalidSearchCommand() {
         final String operationString = "search";
         final String parameterString = "";
-        Command<String> searchCommand = CommandTestUtil.createCommand(operationString,parameterString,builder);
+        Command searchCommand = CommandTestUtil.createCommand(operationString,parameterString,builder);
         CommandTestUtil.assertValidationResult(searchCommand.getValidationResult(),false);
     }
+
+    @Test
+    public void validateBasicValidSearchCommand() {
+        final String operationString = "search";
+        final String parameterString = "12123123,112322,122312,1232";
+        Command searchCommand = CommandTestUtil.createCommand(operationString,parameterString,builder);
+        CommandTestUtil.assertValidationResult(searchCommand.getValidationResult(),true);
+    }
+
 }

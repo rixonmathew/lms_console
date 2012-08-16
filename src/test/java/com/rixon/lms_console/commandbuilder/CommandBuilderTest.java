@@ -71,7 +71,7 @@ public class CommandBuilderTest {
         final String invalidIssueCommand = "iisue";
         final String parameters = "123123,123123223,1112323";
         final String expectedValidationMessage = "default message";
-        Command<String> bookIssueCommand = CommandTestUtil.createCommand(invalidIssueCommand,parameters,builder);
+        Command bookIssueCommand = CommandTestUtil.createCommand(invalidIssueCommand,parameters,builder);
         assertNotNull(bookIssueCommand);
         CommandTestUtil.assertValidationResult(bookIssueCommand.getValidationResult(), false);
         String actualValidationMessage = bookIssueCommand.getValidationResult().validationMessage();

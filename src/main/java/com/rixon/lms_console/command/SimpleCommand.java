@@ -11,17 +11,15 @@ import java.util.Collection;
  * Time: 8:04 PM
  * To change this template use File | Settings | File Templates.
  */
-public class SimpleCommand implements Command<String> {
+public class SimpleCommand implements Command {
 
     private String operation;
     private Parameter<String> parameter;
-    private boolean  isValid;
     private ValidationResult validationResult;
 
-    public SimpleCommand(String operation, Parameter<String> parameter, boolean valid, ValidationResult validationResult) {
+    public SimpleCommand(String operation, Parameter<String> parameter, ValidationResult validationResult) {
         this.operation = operation;
         this.parameter = parameter;
-        isValid = valid;
         this.validationResult = validationResult;
     }
 
@@ -37,7 +35,7 @@ public class SimpleCommand implements Command<String> {
 
     @Override
     public boolean isValid() {
-        return isValid;
+        return this.validationResult.isValid();
     }
 
     @Override

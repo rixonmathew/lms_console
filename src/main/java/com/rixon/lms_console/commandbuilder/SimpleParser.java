@@ -21,13 +21,12 @@ public class SimpleParser implements Parser {
     private String operation;
     private Parameter<String> parameter;
     private String commandString;
-    private boolean isCommandValid;
     private ValidationResult validationResult;
-    private Command<String> command;
+    private Command command;
     private Validator commandValidator;
 
     @Override
-    public Command<String> parse(String commandString) {
+    public Command parse(String commandString) {
         this.commandString = commandString;
         this.tokenizeCommandString();
         this.validateCommand();
@@ -57,6 +56,6 @@ public class SimpleParser implements Parser {
     }
 
     private void createCommand(){
-      this.command = new SimpleCommand(operation,parameter,isCommandValid,validationResult);
+      this.command = new SimpleCommand(operation,parameter,validationResult);
     }
 }
