@@ -15,6 +15,7 @@ import com.rixon.lms_console.service.mock.SearchServiceMock;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.rixon.lms_console.command.operation.OperationTypes.HELP;
 import static com.rixon.lms_console.command.operation.OperationTypes.SEARCH;
 
 /**
@@ -31,6 +32,7 @@ public class ServiceFacadeMock implements ServiceFacade {
     private void loadServiceMap(){
         serviceMap  = new HashMap<String,Service>();
         serviceMap.put(SEARCH,new SearchServiceMock());
+        serviceMap.put(HELP,new HelpServiceMock());
     }
     public Service serviceForOperation(String operationName) {
         Service service = serviceMap.get(operationName);

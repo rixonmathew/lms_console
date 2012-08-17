@@ -12,6 +12,7 @@ import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.command.result.SearchBookResult;
 import com.rixon.lms_console.domain.Book;
 import com.rixon.lms_console.service.Service;
+import com.rixon.lms_console.util.DateUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,14 +23,23 @@ import java.util.List;
 public class SearchServiceMock implements Service {
     @Override
     public Result executeService(Parameter<String> parameter) {
-        Book book1 = new Book();
-        book1.setIsbn("1123");
-        Book book2 = new Book();
-        book2.setIsbn("1124");
+        Book book1 = createBook("11231","Test Book","Author1","Some publisher","01/01/2000");
+        Book book2 = createBook("22231","Test Book2","Author2","Some publisher","01/01/2001");
         List<Book> books = new ArrayList<Book>();
         books.add(book1);
         books.add(book2);
         SearchBookResult searchBookResult = new SearchBookResult(books);
         return searchBookResult;
     }
+
+    private Book createBook(String isbn,String title,String author,String publisher,String releaseDate) {
+        Book book = new Book();
+        book.setIsbn(isbn);
+        book.setTitle(title);
+        book.setAuthor(author);
+        book.setPublisher(publisher);
+        book.setReleaseDate(DateUtil.getFormattedDate(releaseDate));
+        return book;
+    }
+
 }

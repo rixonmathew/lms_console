@@ -39,12 +39,11 @@ public class SearchBookResult extends AbstractResult {
 
         private void initHeader() {
             headerNames = new HashMap<Integer, String>();
-            headerNames.put(0,"ID");
-            headerNames.put(1,"Type");
-            headerNames.put(2,"Title");
-            headerNames.put(3,"Author");
-            headerNames.put(4,"Description");
-            headerNames.put(5,"Published Date");
+            headerNames.put(0,"isbn");
+            headerNames.put(1,"Title");
+            headerNames.put(2,"Author");
+            headerNames.put(3,"Publisher");
+            headerNames.put(4,"Published Date");
         }
 
         @Override
@@ -64,10 +63,25 @@ public class SearchBookResult extends AbstractResult {
                 columnIndex<0||columnIndex>headerNames.values().size())
                 return book;
             book = books.get(rowIndex);
+            Object cellValue = null;
             switch (columnIndex){
-                //TODO add implementation
+                case 0:
+                    cellValue = book.getIsbn();
+                    break;
+                case 1:
+                    cellValue = book.getTitle();
+                    break;
+                case 2:
+                    cellValue = book.getAuthor();
+                    break;
+                case 3:
+                    cellValue = book.getPublisher();
+                    break;
+                case 4:
+                    cellValue = book.getReleaseDate();
+                    break;
             }
-            return book.getIsbn();
+            return cellValue;
         }
     }
 }

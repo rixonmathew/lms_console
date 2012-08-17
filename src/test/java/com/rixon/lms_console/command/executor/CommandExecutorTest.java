@@ -38,5 +38,28 @@ public class CommandExecutorTest extends AbstractCommandTest {
        assertNotNull(result);
        TableModel tableModel = result.getResultsTable();
        assertEquals("count of results not same",2,tableModel.getRowCount());
+       assertEquals("count of columns not same",5,tableModel.getColumnCount());
+       assertCellValues(tableModel);
     }
+
+    @Test
+    public void testHelpCommandExecution() {
+        Command helpCommand = CommandTestUtil.createCommand("help","",builder);
+        Result result = executor.executeCommand(helpCommand);
+        assertNotNull(result);
+        TableModel tableModel = result.getResultsTable();
+        assertEquals("Displayed count of commands is not same",4,tableModel.getRowCount());
+        assertEquals("Displayed count of result columns is not same",1,tableModel.getColumnCount());
+        assertCellValues(tableModel);
+    }
+
+    private void assertCellValues(TableModel tableModel) {
+        for (int row=0;row<tableModel.getRowCount();row++) {
+            for (int column=0;column<tableModel.getColumnCount();column++){
+                Object cellValue = tableModel.getValueAt(row,column);
+                assertNotNull("Cell value null at row:"+row+" column:"+column,cellValue);
+            }
+        }
+    }
+
 }
