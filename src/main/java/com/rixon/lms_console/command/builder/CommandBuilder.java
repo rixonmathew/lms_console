@@ -1,7 +1,6 @@
-package com.rixon.lms_console.commandbuilder;
+package com.rixon.lms_console.command.builder;
 
 import com.rixon.lms_console.command.Command;
-import com.rixon.lms_console.command.SimpleCommand;
 
 /**
  * Created with IntelliJ IDEA.

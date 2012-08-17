@@ -1,8 +1,7 @@
 package com.rixon.lms_console.command;
 
-import com.rixon.lms_console.commandvalidator.ValidationResult;
-
-import java.util.Collection;
+import com.rixon.lms_console.command.operation.Operation;
+import com.rixon.lms_console.command.validator.ValidationResult;
 
 /**
  * Created with IntelliJ IDEA.

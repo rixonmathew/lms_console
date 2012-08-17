@@ -1,4 +1,4 @@
-package com.rixon.lms_console.commandvalidator.parameterValidation;
+package com.rixon.lms_console.command.validator.parameterValidation;
 
 import com.rixon.lms_console.command.Parameter;
 

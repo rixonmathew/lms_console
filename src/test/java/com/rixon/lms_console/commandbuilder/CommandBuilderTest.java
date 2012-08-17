@@ -1,15 +1,16 @@
 package com.rixon.lms_console.commandbuilder;
 
 import com.rixon.lms_console.command.Command;
-import com.rixon.lms_console.command.Operation;
-import com.rixon.lms_console.commandvalidator.ValidationResult;
-import org.junit.*;
+import com.rixon.lms_console.command.builder.CommandBuilder;
+import com.rixon.lms_console.command.operation.Operation;
+import com.rixon.lms_console.command.operation.OperationFlyWeightFactory;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -39,7 +40,8 @@ public class CommandBuilderTest {
         Command bookSearchCommand = CommandTestUtil.createCommand(searchOperation,searchParameter,builder);
         assertNotNull(bookSearchCommand);
         Operation operation = bookSearchCommand.getOperation();
-        assertEquals("Operation is not same", Operation.operationFor("search"), operation);
+        assertEquals("OperationTypes is not same", OperationFlyWeightFactory.operationForType(searchOperation),
+                operation);
         List<String> parameters = (List<String>) bookSearchCommand.getParameter().getParameters();
         assertEquals("Parameter size is not same", 1, parameters.size());
         CommandTestUtil.assertValidationResult(bookSearchCommand.getValidationResult(), true);

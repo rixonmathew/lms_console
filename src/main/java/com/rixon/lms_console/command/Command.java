@@ -1,6 +1,7 @@
 package com.rixon.lms_console.command;
 
-import com.rixon.lms_console.commandvalidator.ValidationResult;
+import com.rixon.lms_console.command.operation.Operation;
+import com.rixon.lms_console.command.validator.ValidationResult;
 
 /**
  * This interface represents a command to be executed. The command consists of two parts

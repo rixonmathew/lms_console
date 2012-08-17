@@ -1,4 +1,4 @@
-package com.rixon.lms_console.commandvalidator;
+package com.rixon.lms_console.command.validator;
 
 import java.util.HashMap;
 import java.util.Map;

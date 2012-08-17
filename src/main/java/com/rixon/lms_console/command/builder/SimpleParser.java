@@ -1,9 +1,14 @@
-package com.rixon.lms_console.commandbuilder;
+package com.rixon.lms_console.command.builder;
 
-import com.rixon.lms_console.command.*;
-import com.rixon.lms_console.commandvalidator.SimpleValidator;
-import com.rixon.lms_console.commandvalidator.ValidationResult;
-import com.rixon.lms_console.commandvalidator.Validator;
+import com.rixon.lms_console.command.Command;
+import com.rixon.lms_console.command.Parameter;
+import com.rixon.lms_console.command.SimpleCommand;
+import com.rixon.lms_console.command.SimpleParameter;
+import com.rixon.lms_console.command.operation.Operation;
+import com.rixon.lms_console.command.operation.OperationFlyWeightFactory;
+import com.rixon.lms_console.command.validator.SimpleValidator;
+import com.rixon.lms_console.command.validator.ValidationResult;
+import com.rixon.lms_console.command.validator.Validator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +43,7 @@ public class SimpleParser implements Parser {
         while (tokenizer.hasMoreTokens()) {
             String token = tokenizer.nextToken();
             if (i == 0) {
-                operation = Operation.operationFor(token);
+                operation = OperationFlyWeightFactory.operationForType(token);
             } else {
                 parameterList.add(token);
             }

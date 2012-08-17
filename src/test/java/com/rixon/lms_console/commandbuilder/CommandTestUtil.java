@@ -1,7 +1,8 @@
 package com.rixon.lms_console.commandbuilder;
 
 import com.rixon.lms_console.command.Command;
-import com.rixon.lms_console.commandvalidator.ValidationResult;
+import com.rixon.lms_console.command.builder.CommandBuilder;
+import com.rixon.lms_console.command.validator.ValidationResult;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

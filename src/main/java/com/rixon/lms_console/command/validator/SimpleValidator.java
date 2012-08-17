@@ -1,8 +1,8 @@
-package com.rixon.lms_console.commandvalidator;
+package com.rixon.lms_console.command.validator;
 
-import com.rixon.lms_console.command.Operation;
 import com.rixon.lms_console.command.Parameter;
-import com.rixon.lms_console.commandvalidator.parameterValidation.ParameterValidator;
+import com.rixon.lms_console.command.operation.Operation;
+import com.rixon.lms_console.command.validator.parameterValidation.ParameterValidator;
 
 /**
  * ${CLASS_NAME}
@@ -15,7 +15,7 @@ public class SimpleValidator implements Validator<String> {
 
     @Override
     public ValidationResult validateCommand(Operation operation,Parameter<String> parameter) {
-        boolean isOperationValid = OperationsCatalog.isOperationValid(operation);
+        boolean isOperationValid = OperationsCatalog.isOperationValid(operation.getOperationType());
         boolean areParametersValid = ParameterValidator.validateParameter(parameter, operation);
         boolean isCommandValid = isOperationValid && areParametersValid;
         String validationMessage, validationHint;

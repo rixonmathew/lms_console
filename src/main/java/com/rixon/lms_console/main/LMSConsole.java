@@ -1,8 +1,5 @@
 package com.rixon.lms_console.main;
 
-import com.rixon.lms_console.command.Command;
-import com.rixon.lms_console.commandbuilder.CommandBuilder;
-
 import java.io.Console;
 
 /**

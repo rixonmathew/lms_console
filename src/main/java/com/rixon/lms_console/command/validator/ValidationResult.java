@@ -1,4 +1,4 @@
-package com.rixon.lms_console.commandvalidator;
+package com.rixon.lms_console.command.validator;
 
 /**
  * This interface will hold the result of the validation process

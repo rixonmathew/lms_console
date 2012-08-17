@@ -1,10 +1,9 @@
-package com.rixon.lms_console.commandvalidator.parameterValidation;
+package com.rixon.lms_console.command.validator.parameterValidation;
 
-import com.rixon.lms_console.command.Operation;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.rixon.lms_console.command.Operation.*;
+import static com.rixon.lms_console.command.operation.OperationTypes.*;
 
 
 /**
@@ -15,22 +14,24 @@ import static com.rixon.lms_console.command.Operation.*;
  * Time: 12:16 PM
  */
 public class StrategyContext {
-    private static Map<Operation,ParameterValidationStrategy> validationStrategyMap;
+    private static Map<String,ParameterValidationStrategy> validationStrategyMap;
 
     static {
         loadValidationStrategyMap();
     }
 
     private static void loadValidationStrategyMap() {
-        validationStrategyMap = new HashMap<Operation, ParameterValidationStrategy>();
+        validationStrategyMap = new HashMap<String, ParameterValidationStrategy>();
         validationStrategyMap.put(SEARCH,new SearchParametersValidationStrategy());
         validationStrategyMap.put(ISSUE,new IssueParameterValidationStrategy());
         validationStrategyMap.put(TRANSFER,new TransferParameterValidationStrategy());
+        validationStrategyMap.put(RETURN,new ReturnParameterValidationStrategy());
+        validationStrategyMap.put(HELP,new HelpParameterValidationStrategy());
         validationStrategyMap.put(COMMON,new CommonValidationStrategy());
     }
 
-    public static ParameterValidationStrategy strategyForOperation(Operation operation){
-        ParameterValidationStrategy validationStrategy = validationStrategyMap.get(operation);
+    public static ParameterValidationStrategy strategyForOperation(String operationType){
+        ParameterValidationStrategy validationStrategy = validationStrategyMap.get(operationType);
         if(validationStrategy==null){
             validationStrategy = validationStrategyMap.get(COMMON);
         }

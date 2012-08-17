@@ -1,4 +1,4 @@
-package com.rixon.lms_console.commandvalidator;
+package com.rixon.lms_console.command.validator;
 
 /**
  * This class holds the result of the validation of a Command object
