@@ -81,5 +81,12 @@ public class CommandValidatorTest {
         CommandTestUtil.assertValidationResult(searchCommand.getValidationResult(),true);
     }
 
+    @Test
+    public void validateInValidTransferCommandWithMoreParameters() {
+        final String operationString = "transfer";
+        final String parameterString = "1123123123 123123 111230 123123 123213";
+        Command searchCommand = CommandTestUtil.createCommand(operationString,parameterString,builder);
+        CommandTestUtil.assertValidationResult(searchCommand.getValidationResult(),false);
+    }
 
 }

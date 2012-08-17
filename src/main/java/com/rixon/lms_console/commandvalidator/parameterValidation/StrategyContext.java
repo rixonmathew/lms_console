@@ -25,8 +25,8 @@ public class StrategyContext {
         validationStrategyMap = new HashMap<Operation, ParameterValidationStrategy>();
         validationStrategyMap.put(SEARCH,new SearchParametersValidationStrategy());
         validationStrategyMap.put(ISSUE,new IssueParameterValidationStrategy());
+        validationStrategyMap.put(TRANSFER,new TransferParameterValidationStrategy());
         validationStrategyMap.put(COMMON,new CommonValidationStrategy());
-
     }
 
     public static ParameterValidationStrategy strategyForOperation(Operation operation){
