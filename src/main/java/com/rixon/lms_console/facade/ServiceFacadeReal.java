@@ -10,10 +10,9 @@ package com.rixon.lms_console.facade;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.rixon.lms_console.service.SearchService;
-import com.rixon.lms_console.service.Service;
+import com.rixon.lms_console.service.*;
 
-import static com.rixon.lms_console.command.operation.OperationTypes.SEARCH;
+import static com.rixon.lms_console.command.operation.OperationTypes.*;
 
 /**
  * This class represents the facade to access all the services associated with LMS
@@ -32,6 +31,9 @@ public class ServiceFacadeReal implements ServiceFacade {
     private void loadServiceMap(){
         serviceMap  = new HashMap<String,Service>();
         serviceMap.put(SEARCH,new SearchService());
+        serviceMap.put(HELP,new HelpService());
+        serviceMap.put(ISSUE,new IssueService());
+        serviceMap.put(TRANSFER,new TransferService());
     }
     public Service serviceForOperation(String operationName) {
       Service service = serviceMap.get(operationName);

@@ -14,36 +14,37 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * User: 229921|Date: 8/17/12|Time: 11:24 PM
+ * User: 229921|Date: 8/17/12|Time: 11:40 PM
  */
-public class IssueResult extends AbstractResult {
+public class TransferResult extends AbstractResult {
 
-    public IssueResult(List results) {
+    public TransferResult(List results) {
         super(results);
     }
 
     @Override
     protected TableModel convertListToModel(List searchItems) {
-        return new IssueResultTableModel(searchItems);
+        return new TransferResultTableModel(searchItems);
     }
 
-    class IssueResultTableModel extends AbstractTableModel {
-        List<String> issueResult;
+    class TransferResultTableModel extends AbstractTableModel {
+
+        List<String> transferResult;
         private Map<Integer, String> headerNames;
+
+        TransferResultTableModel(List<String> transferResult) {
+            this.transferResult = transferResult;
+            initHeader();
+        }
 
         private void initHeader() {
             headerNames = new HashMap<Integer, String>();
             headerNames.put(0, "result");
         }
 
-        IssueResultTableModel(List<String> issueResult) {
-            this.issueResult = issueResult;
-            initHeader();
-        }
-
         @Override
         public int getRowCount() {
-            return issueResult.size();
+            return transferResult.size();
         }
 
         @Override
@@ -53,12 +54,12 @@ public class IssueResult extends AbstractResult {
 
         @Override
         public Object getValueAt(int rowIndex, int columnIndex) {
-            String operation = null;
-            if (rowIndex < 0 || rowIndex > issueResult.size() ||
+            String result = null;
+            if (rowIndex < 0 || rowIndex > transferResult.size() ||
                     columnIndex < 0 || columnIndex > headerNames.values().size())
-                return operation;
-            operation = issueResult.get(rowIndex);
-            return operation;
+                return result;
+            result = transferResult.get(rowIndex);
+            return result;
         }
     }
 }

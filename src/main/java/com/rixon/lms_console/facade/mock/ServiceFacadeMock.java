@@ -12,13 +12,12 @@ import com.rixon.lms_console.service.Service;
 import com.rixon.lms_console.service.mock.HelpServiceMock;
 import com.rixon.lms_console.service.mock.IssueServiceMock;
 import com.rixon.lms_console.service.mock.SearchServiceMock;
+import com.rixon.lms_console.service.mock.TransferServiceMock;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.rixon.lms_console.command.operation.OperationTypes.HELP;
-import static com.rixon.lms_console.command.operation.OperationTypes.ISSUE;
-import static com.rixon.lms_console.command.operation.OperationTypes.SEARCH;
+import static com.rixon.lms_console.command.operation.OperationTypes.*;
 
 /**
  * User: 229921|Date: 8/17/12|Time: 8:57 PM
@@ -36,6 +35,7 @@ public class ServiceFacadeMock implements ServiceFacade {
         serviceMap.put(SEARCH,new SearchServiceMock());
         serviceMap.put(HELP,new HelpServiceMock());
         serviceMap.put(ISSUE,new IssueServiceMock());
+        serviceMap.put(TRANSFER,new TransferServiceMock());
     }
     public Service serviceForOperation(String operationName) {
         Service service = serviceMap.get(operationName);

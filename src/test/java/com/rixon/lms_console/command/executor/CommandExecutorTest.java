@@ -62,6 +62,16 @@ public class CommandExecutorTest extends AbstractCommandTest {
         assertEquals("Displayed rows for issue command is not same",1,tableModel.getRowCount());
     }
 
+    @Test
+    public void testTransferCommandExecution() {
+        Command transferCommand = CommandTestUtil.createCommand("transfer","1123122 u100120 u112232",builder);
+        Result result = executor.executeCommand(transferCommand);
+        assertNotNull(result);
+        TableModel tableModel = result.getResultsTable();
+        assertEquals("Displayed rows for issue command is not same",1,tableModel.getRowCount());
+    }
+
+
     private void assertCellValues(TableModel tableModel) {
         for (int row=0;row<tableModel.getRowCount();row++) {
             for (int column=0;column<tableModel.getColumnCount();column++){

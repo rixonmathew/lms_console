@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/result/IssueResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/HelpService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/IssueService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/mock/HelpServiceMock.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/mock/IssueServiceMock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/domain/Book.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/domain/Book.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/result/TransferResult.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/TransferService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/mock/TransferServiceMock.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/result/IssueResult.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/result/IssueResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/facade/ServiceFacadeReal.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/facade/ServiceFacadeReal.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/facade/mock/ServiceFacadeMock.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/facade/mock/ServiceFacadeMock.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/executor/CommandExecutorTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/executor/CommandExecutorTest.java" />
-      <change type="MOVED" beforePath="D:\workspace\workspace_learn\lms_console\src\main\java\com\rixon\lms_console\facade\mock\HelpServiceMock.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/mock/HelpServiceMock.java" />
     </list>
     <ignored path="lms_console.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -288,7 +285,61 @@
       <file leaf-file-name="CommandExecutorTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/executor/CommandExecutorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="9" selection-start="2043" selection-end="2043" vertical-scroll-proportion="0.0">
+            <state line="60" column="28" selection-start="2253" selection-end="2253" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServiceFacadeReal.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/facade/ServiceFacadeReal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="44" selection-start="1062" selection-end="1062" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OperationTypes.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/OperationTypes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="19" selection-start="265" selection-end="265" vertical-scroll-proportion="0.3802817">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransferService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/TransferService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="50" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransferServiceMock.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/mock/TransferServiceMock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="26" selection-start="999" selection-end="999" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#928#936#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransferResult.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/result/TransferResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="64" column="57" selection-start="1859" selection-end="1859" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -310,64 +361,7 @@
       <file leaf-file-name="ServiceFacadeMock.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/facade/mock/ServiceFacadeMock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="38" selection-start="1325" selection-end="1325" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IssueServiceMock.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/mock/IssueServiceMock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="30" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#860#868#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelpService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/HelpService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#803#811#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IssueService.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/IssueService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="67" selection-start="655" selection-end="655" vertical-scroll-proportion="0.52560645">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/SearchService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="13" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelpResult.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/result/HelpResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="0" selection-start="1544" selection-end="1837" vertical-scroll-proportion="0.0">
+            <state line="37" column="57" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -378,7 +372,7 @@
       <file leaf-file-name="IssueResult.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/result/IssueResult.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="97" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.0">
+            <state line="61" column="0" selection-start="1518" selection-end="1817" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -386,13 +380,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HelpServiceMock.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/mock/HelpServiceMock.java">
+      <file leaf-file-name="IssueServiceMock.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/mock/IssueServiceMock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="812" selection-end="1091" vertical-scroll-proportion="0.0">
+            <state line="27" column="0" selection-start="752" selection-end="950" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#857#865#0" expanded="true" />
+                <element signature="e#860#868#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -421,22 +415,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/SearchService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/facade/ServiceFacadeFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/facade/mock/HelpServiceMock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/result/SearchBookResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/util/DateUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/mock/SearchServiceMock.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/result/HelpResult.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/domain/Book.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/executor/CommandExecutorTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/facade/mock/ServiceFacadeMock.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/facade/mock/IssueServiceMock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/result/IssueResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/mock/IssueServiceMock.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/HelpService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/IssueService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/executor/CommandExecutorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/TransferService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/result/IssueResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/facade/ServiceFacadeReal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/mock/TransferServiceMock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/result/TransferResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/facade/mock/ServiceFacadeMock.java" />
       </list>
     </option>
   </component>
@@ -771,7 +765,105 @@
               <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="facade" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms_console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms_console" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms_console" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="facade" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mock" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms_console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms_console" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms_console" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="command" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms_console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms_console" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms_console" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="command" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="result" />
               <option name="myItemType" value="com.cenqua.clover.idea.projectview.PsiDirectoryNodeWrapper" />
             </PATH_ELEMENT>
           </PATH>
@@ -849,35 +941,7 @@
       <recent name="com.rixon.lms_console.command.builder" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All_Tests">
-    <configuration default="false" name="CommandValidatorTest.validateHelpCommandWithParameter" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="lms_console" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.rixon.lms_console.command.validator" />
-      <option name="MAIN_CLASS_NAME" value="com.rixon.lms_console.command.validator.CommandValidatorTest" />
-      <option name="METHOD_NAME" value="validateHelpCommandWithParameter" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="wholeProject" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.CommandExecutorTest.testTransferCommandExecution">
     <configuration default="false" name="CommandExecutorTest.testBasicCommandExecution" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="lms_console" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -957,6 +1021,28 @@
       <option name="PACKAGE_NAME" value="com.rixon.lms_console.command.executor" />
       <option name="MAIN_CLASS_NAME" value="com.rixon.lms_console.command.executor.CommandExecutorTest" />
       <option name="METHOD_NAME" value="testIssueCommandExecution" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CommandExecutorTest.testTransferCommandExecution" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="lms_console" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.rixon.lms_console.command.executor" />
+      <option name="MAIN_CLASS_NAME" value="com.rixon.lms_console.command.executor.CommandExecutorTest" />
+      <option name="METHOD_NAME" value="testTransferCommandExecution" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -1109,11 +1195,11 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All_Tests" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.CommandValidatorTest.validateHelpCommandWithParameter" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.CommandExecutorTest.testBasicCommandExecution" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.CommandExecutorTest.testHelpCommandExecution" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.CommandExecutorTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.CommandExecutorTest.testIssueCommandExecution" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.CommandExecutorTest.testBasicCommandExecution" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CommandExecutorTest.testHelpCommandExecution" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CommandExecutorTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CommandExecutorTest.testIssueCommandExecution" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.CommandExecutorTest.testTransferCommandExecution" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -1193,9 +1279,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24905087" sideWeight="0.600639" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953683" sideWeight="0.67087275" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3996328" sideWeight="0.67087275" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24905087" sideWeight="0.66773164" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24905087" sideWeight="0.6688852" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24981017" sideWeight="0.60399336" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33226836" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3311148" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Test Runs" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953683" sideWeight="0.6661342" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Aspects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1334,113 +1420,18 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/util/DateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="29" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/mock/SearchServiceMock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="38" selection-start="1612" selection-end="1612" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1072#1078#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/result/SearchBookResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="0" selection-start="1486" selection-end="2378" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/main/LMSConsole.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="78" selection-start="371" selection-end="371" vertical-scroll-proportion="0.35">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/domain/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/executor/CommandExecutorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="9" selection-start="2043" selection-end="2043" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/executor/SimpleCommandExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="868" selection-end="868" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/facade/mock/ServiceFacadeMock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="38" selection-start="1325" selection-end="1325" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/result/HelpResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="1544" selection-end="1837" vertical-scroll-proportion="0.0">
+        <state line="63" column="0" selection-start="1544" selection-end="1837" vertical-scroll-proportion="0.84833336">
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/result/IssueResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="97" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/mock/IssueServiceMock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="30" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#860#868#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/SearchService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0">
+        <state line="20" column="13" selection-start="631" selection-end="631" vertical-scroll-proportion="0.375">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1449,7 +1440,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/mock/HelpServiceMock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="812" selection-end="1091" vertical-scroll-proportion="0.0">
+        <state line="30" column="0" selection-start="812" selection-end="1091" vertical-scroll-proportion="0.625">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#857#865#0" expanded="true" />
@@ -1469,10 +1460,107 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/IssueService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="67" selection-start="655" selection-end="655" vertical-scroll-proportion="0.52560645">
+        <state line="18" column="67" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/executor/CommandExecutorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="28" selection-start="2253" selection-end="2253" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/TransferService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="50" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/mock/IssueServiceMock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="752" selection-end="950" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#860#868#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/mock/TransferServiceMock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="26" selection-start="999" selection-end="999" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#928#936#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/result/IssueResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="0" selection-start="1518" selection-end="1817" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/result/TransferResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="57" selection-start="1859" selection-end="1859" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/executor/SimpleCommandExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="868" selection-end="868" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/facade/mock/ServiceFacadeMock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="57" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/facade/ServiceFacadeReal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="44" selection-start="1062" selection-end="1062" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/OperationTypes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="19" selection-start="265" selection-end="265" vertical-scroll-proportion="0.3802817">
+          <folding />
         </state>
       </provider>
     </entry>
