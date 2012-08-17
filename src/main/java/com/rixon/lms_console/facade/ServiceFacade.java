@@ -7,33 +7,19 @@
 
 package com.rixon.lms_console.facade;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import com.rixon.lms_console.service.SearchService;
 import com.rixon.lms_console.service.Service;
 
-import static com.rixon.lms_console.command.operation.OperationTypes.SEARCH;
-
 /**
- * This class represents the facade to access all the services associated with LMS
- * User: 229921
- * Date: 8/17/12
- * Time: 7:05 PM
+ * This interface represents the facade for accessing the service. It is an implementation of
+ * Abstract Factory Design Pattern by GoF
+ * User: 229921|Date: 8/17/12|Time: 8:51 PM
  */
-public class ServiceFacade {
+public interface ServiceFacade {
 
-    private static Map<String,Service> serviceMap = new HashMap<String,Service>();
-
-    static {
-        loadServiceMap();
-    }
-
-    private static void loadServiceMap(){
-        serviceMap.put(SEARCH,new SearchService());
-    }
-    public static Service serviceForOperation(String operationName) {
-      Service service = serviceMap.get(operationName);
-      return service;
-    }
+    /**
+     * This method will provide the Service instance for the given operation
+     * @param operationName
+     * @return Service instance
+     */
+    public Service serviceForOperation(String operationName);
 }
