@@ -55,29 +55,4 @@ public class Book {
         this.releaseDate = releaseDate;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Book book = (Book) o;
-
-        if (!author.equals(book.author)) return false;
-        if (!isbn.equals(book.isbn)) return false;
-        if (!publisher.equals(book.publisher)) return false;
-        if (!releaseDate.equals(book.releaseDate)) return false;
-        if (!title.equals(book.title)) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = isbn.hashCode();
-        result = 31 * result + title.hashCode();
-        result = 31 * result + author.hashCode();
-        result = 31 * result + publisher.hashCode();
-        result = 31 * result + releaseDate.hashCode();
-        return result;
-    }
 }

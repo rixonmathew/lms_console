@@ -53,6 +53,15 @@ public class CommandExecutorTest extends AbstractCommandTest {
         assertCellValues(tableModel);
     }
 
+    @Test
+    public void testIssueCommandExecution() {
+        Command issueCommand = CommandTestUtil.createCommand("issue","1123122 u100120",builder);
+        Result result = executor.executeCommand(issueCommand);
+        assertNotNull(result);
+        TableModel tableModel = result.getResultsTable();
+        assertEquals("Displayed rows for issue command is not same",1,tableModel.getRowCount());
+    }
+
     private void assertCellValues(TableModel tableModel) {
         for (int row=0;row<tableModel.getRowCount();row++) {
             for (int column=0;column<tableModel.getColumnCount();column++){
