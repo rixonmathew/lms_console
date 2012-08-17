@@ -5,7 +5,7 @@ import com.rixon.lms_console.commandvalidator.ValidationResult;
 /**
  * This interface represents a command to be executed. The command consists of two parts
  * operation and parameters required to perform the operation.
- *  User: 229921
+ * User: 229921
  * Date: 8/1/12
  * Time: 7:58 PM
  *
@@ -16,7 +16,7 @@ public interface Command {
      * This method will return the operation that the command will perform
      * @return
      */
-    public String getOperation();
+    public Operation getOperation();
 
     /**
      * This method will return the parameter associated with the Command object

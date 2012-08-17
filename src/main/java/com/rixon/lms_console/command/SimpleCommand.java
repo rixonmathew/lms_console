@@ -13,18 +13,18 @@ import java.util.Collection;
  */
 public class SimpleCommand implements Command {
 
-    private String operation;
+    private Operation operation;
     private Parameter<String> parameter;
     private ValidationResult validationResult;
 
-    public SimpleCommand(String operation, Parameter<String> parameter, ValidationResult validationResult) {
+    public SimpleCommand(Operation operation, Parameter<String> parameter, ValidationResult validationResult) {
         this.operation = operation;
         this.parameter = parameter;
         this.validationResult = validationResult;
     }
 
     @Override
-    public String getOperation() {
+    public Operation getOperation() {
         return operation;
     }
 

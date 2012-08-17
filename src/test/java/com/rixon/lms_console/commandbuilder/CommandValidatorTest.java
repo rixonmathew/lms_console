@@ -41,4 +41,45 @@ public class CommandValidatorTest {
         CommandTestUtil.assertValidationResult(searchCommand.getValidationResult(),true);
     }
 
+    @Test
+    public void validateBasicInvalidIssueCommand() {
+        final String operationString = "issue";
+        final String parameterString = "";
+        Command searchCommand = CommandTestUtil.createCommand(operationString,parameterString,builder);
+        CommandTestUtil.assertValidationResult(searchCommand.getValidationResult(),false);
+    }
+
+    @Test
+    public void validateBasicInvalidIssueCommandWithMoreParameters() {
+        final String operationString = "issue";
+        final String parameterString = "112321321 1123232 112321312";
+        Command searchCommand = CommandTestUtil.createCommand(operationString,parameterString,builder);
+        CommandTestUtil.assertValidationResult(searchCommand.getValidationResult(),false);
+    }
+
+    @Test
+    public void validateBasicValidIssueCommandWithMoreParameters() {
+        final String operationString = "issue";
+        final String parameterString = "112321321 1123232";
+        Command searchCommand = CommandTestUtil.createCommand(operationString,parameterString,builder);
+        CommandTestUtil.assertValidationResult(searchCommand.getValidationResult(),true);
+    }
+
+    @Test
+    public void validateBasicInvalidTransferCommand() {
+        final String operationString = "transfer";
+        final String parameterString = "";
+        Command searchCommand = CommandTestUtil.createCommand(operationString,parameterString,builder);
+        CommandTestUtil.assertValidationResult(searchCommand.getValidationResult(),false);
+    }
+
+    @Test
+    public void validateBasicValidTransferCommand() {
+        final String operationString = "transfer";
+        final String parameterString = "1123123123 123123 111230";
+        Command searchCommand = CommandTestUtil.createCommand(operationString,parameterString,builder);
+        CommandTestUtil.assertValidationResult(searchCommand.getValidationResult(),true);
+    }
+
+
 }

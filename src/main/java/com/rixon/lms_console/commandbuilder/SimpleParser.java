@@ -1,9 +1,6 @@
 package com.rixon.lms_console.commandbuilder;
 
-import com.rixon.lms_console.command.Command;
-import com.rixon.lms_console.command.Parameter;
-import com.rixon.lms_console.command.SimpleCommand;
-import com.rixon.lms_console.command.SimpleParameter;
+import com.rixon.lms_console.command.*;
 import com.rixon.lms_console.commandvalidator.SimpleValidator;
 import com.rixon.lms_console.commandvalidator.ValidationResult;
 import com.rixon.lms_console.commandvalidator.Validator;
@@ -18,7 +15,7 @@ import java.util.StringTokenizer;
  */
 public class SimpleParser implements Parser {
 
-    private String operation;
+    private Operation operation;
     private Parameter<String> parameter;
     private String commandString;
     private ValidationResult validationResult;
@@ -41,7 +38,7 @@ public class SimpleParser implements Parser {
         while (tokenizer.hasMoreTokens()) {
             String token = tokenizer.nextToken();
             if (i == 0) {
-                operation = token;
+                operation = Operation.operationFor(token);
             } else {
                 parameterList.add(token);
             }

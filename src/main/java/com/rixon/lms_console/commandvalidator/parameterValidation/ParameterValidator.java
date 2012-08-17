@@ -1,8 +1,7 @@
 package com.rixon.lms_console.commandvalidator.parameterValidation;
 
 import com.rixon.lms_console.command.Parameter;
-
-import java.util.List;
+import com.rixon.lms_console.command.Operation;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,7 +12,7 @@ import java.util.List;
  */
 public class ParameterValidator {
 
-    public static boolean validateParameter(Parameter<String> parameter, String operation) {
+    public static boolean validateParameter(Parameter<String> parameter, Operation operation) {
        ParameterValidationStrategy validationStrategy = StrategyContext.strategyForOperation(operation);
        return validationStrategy.validateParameter(parameter);
     }

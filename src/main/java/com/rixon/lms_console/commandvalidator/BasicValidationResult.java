@@ -1,7 +1,7 @@
 package com.rixon.lms_console.commandvalidator;
 
 /**
- * ${CLASS_NAME}
+ * This class holds the result of the validation of a Command object
  * User: 229921|Date: 8/3/12|Time: 8:29 PM
  */
 public class BasicValidationResult implements ValidationResult {

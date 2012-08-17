@@ -16,6 +16,11 @@ Things to be incorporated
 10) Result formatter that provides formatted output for the console
 11)
 
+Refactorings
+============
+1) Rename all Simple* classes to a more meaningful name
+2) How
+
 Done
 ==========
 1) Creating command objects from command string

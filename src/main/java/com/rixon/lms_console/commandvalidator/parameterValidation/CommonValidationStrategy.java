@@ -14,7 +14,7 @@ import java.util.Collection;
 public class CommonValidationStrategy implements ParameterValidationStrategy{
 
     @Override
-    public boolean validateParameter(Parameter parameter) {
+    public boolean validateParameter(Parameter<String> parameter) {
         boolean isValid = true;
         Collection parameterValues = parameter.getParameters();
         if (parameterValues==null || parameterValues.isEmpty()){

@@ -1,6 +1,7 @@
 package com.rixon.lms_console.commandbuilder;
 
 import com.rixon.lms_console.command.Command;
+import com.rixon.lms_console.command.Operation;
 import com.rixon.lms_console.commandvalidator.ValidationResult;
 import org.junit.*;
 
@@ -37,8 +38,8 @@ public class CommandBuilderTest {
         final String searchParameter = "1123331232";
         Command bookSearchCommand = CommandTestUtil.createCommand(searchOperation,searchParameter,builder);
         assertNotNull(bookSearchCommand);
-        String command = bookSearchCommand.getOperation();
-        assertEquals("Operation is not same", "search", command);
+        Operation operation = bookSearchCommand.getOperation();
+        assertEquals("Operation is not same", Operation.operationFor("search"), operation);
         List<String> parameters = (List<String>) bookSearchCommand.getParameter().getParameters();
         assertEquals("Parameter size is not same", 1, parameters.size());
         CommandTestUtil.assertValidationResult(bookSearchCommand.getValidationResult(), true);
@@ -48,12 +49,12 @@ public class CommandBuilderTest {
     @Test
     public void testCommandCreationWithMultipleParameters() {
         final String issueOperation = "issue";
-        final String books = "bb123123123 b12312322 bqwe213123123";
+        final String books = "b12312322";
         final String userId = "u1123u22";
         Command booksIssueCommand = CommandTestUtil.createCommand(issueOperation,userId+" "+books,builder);
         assertNotNull(booksIssueCommand);
         List<String> parameters = (List<String>) booksIssueCommand.getParameter().getParameters();
-        assertEquals("Parameter size is not same", 4, parameters.size());
+        assertEquals("Parameter size is not same", 2, parameters.size());
         CommandTestUtil.assertValidationResult(booksIssueCommand.getValidationResult(), true);
     }
 

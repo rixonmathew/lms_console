@@ -1,6 +1,7 @@
 package com.rixon.lms_console.commandvalidator;
 
 import com.rixon.lms_console.command.Command;
+import com.rixon.lms_console.command.Operation;
 import com.rixon.lms_console.command.Parameter;
 
 /**
@@ -18,5 +19,5 @@ public interface Validator<TYPE> {
      * @param parameter the parameters for the operation
      * @return validationResult
      */
-    public ValidationResult validateCommand(String operation,Parameter<TYPE> parameter);
+    public ValidationResult validateCommand(Operation operation,Parameter<TYPE> parameter);
 }

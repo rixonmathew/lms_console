@@ -2,7 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/Operation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/IssueParameterValidationStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_console.iml" afterPath="$PROJECT_DIR$/lms_console.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_console.ipr" afterPath="$PROJECT_DIR$/lms_console.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_console.iws" afterPath="$PROJECT_DIR$/lms_console.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/Command.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/Command.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/SimpleCommand.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/SimpleCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandbuilder/SimpleParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandbuilder/SimpleParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/BasicValidationResult.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/BasicValidationResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/OperationsCatalog.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/OperationsCatalog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/SimpleValidator.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/SimpleValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/Validator.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/Validator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/CommonValidationStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/CommonValidationStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/ParameterValidationStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/ParameterValidationStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/ParameterValidator.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/ParameterValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/SearchParametersValidationStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/SearchParametersValidationStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/StrategyContext.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/StrategyContext.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/commandbuilder/CommandBuilderTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/commandbuilder/CommandBuilderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/commandbuilder/CommandValidatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/commandbuilder/CommandValidatorTest.java" />
     </list>
     <ignored path="lms_console.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +49,7 @@
     <manualInitString null="true" />
     <autoRefreshInterval>2000</autoRefreshInterval>
     <flushInterval>5000</flushInterval>
-    <showInline>false</showInline>
+    <showInline>true</showInline>
     <showSummaryInToolwindow>true</showSummaryInToolwindow>
     <autoRefresh>true</autoRefresh>
     <coveredHighlight>-3605816</coveredHighlight>
@@ -41,7 +61,7 @@
     <instrumentTests>true</instrumentTests>
     <outOfDateHighlight>-32</outOfDateHighlight>
     <notCoveredHighlight>-341816</notCoveredHighlight>
-    <hideFullyCovered>false</hideFullyCovered>
+    <hideFullyCovered>true</hideFullyCovered>
     <cloudReportIncludeSubpkgs>false</cloudReportIncludeSubpkgs>
     <includes null="true" />
     <includePassedTestCoverageOnly>true</includePassedTestCoverageOnly>
@@ -56,8 +76,8 @@
     <showGutter>true</showGutter>
     <failedCoveredStripe>-14336</failedCoveredStripe>
     <regexpContexts class="java.util.ArrayList" />
-    <flattenPackages>false</flattenPackages>
-    <autoScrollFromSource>false</autoScrollFromSource>
+    <flattenPackages>true</flattenPackages>
+    <autoScrollFromSource>true</autoScrollFromSource>
     <showErrorMarks>true</showErrorMarks>
     <showTooltips>true</showTooltips>
     <showSummaryInToolbar>true</showSummaryInToolbar>
@@ -248,19 +268,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="SimpleValidator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/SimpleValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="865" selection-end="865" vertical-scroll-proportion="0.92493296">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommandValidatorTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/commandbuilder/CommandValidatorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="44" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
+            <state line="14" column="84" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -268,37 +279,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Parameter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/Parameter.java">
+      <file leaf-file-name="Validator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/Validator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="26" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Command.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/Command.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="92" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleCommand.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/SimpleCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="693" selection-end="693" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandbuilder/SimpleParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="112" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.0">
+            <state line="10" column="21" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -307,7 +291,16 @@
       <file leaf-file-name="CommandTestUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/commandbuilder/CommandTestUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="65" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0">
+            <state line="21" column="33" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommandBuilder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandbuilder/CommandBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="42" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -316,7 +309,52 @@
       <file leaf-file-name="CommandBuilderTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/commandbuilder/CommandBuilderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="78" selection-start="2261" selection-end="2261" vertical-scroll-proportion="0.0">
+            <state line="32" column="0" selection-start="782" selection-end="782" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ValidationHintProvider.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/ValidationHintProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="4" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ValidationMessageProvider.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/ValidationMessageProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="47" selection-start="890" selection-end="890" vertical-scroll-proportion="0.7178683">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Operation.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/Operation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="4" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Command.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/Command.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="17" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommandValidatorTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/commandbuilder/CommandValidatorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="40" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -350,22 +388,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/BasicValidationResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/CommonValidationStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/IssueParameterValidationStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/SearchParametersValidationStrategy.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/commandbuilder/CommandValidatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/OperationsCatalog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/Operation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/StrategyContext.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/ParameterValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/Command.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/SimpleCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandbuilder/SimpleParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/Validator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/SimpleValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/ParameterValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/ParameterValidationStrategy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/CommonValidationStrategy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/SearchParametersValidationStrategy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/ParameterValidationStrategy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/ParameterValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/StrategyContext.java" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/Command.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandbuilder/SimpleParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/SimpleCommand.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/commandbuilder/CommandTestUtil.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/commandbuilder/CommandBuilderTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/commandbuilder/CommandValidatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/Operation.java" />
       </list>
     </option>
   </component>
@@ -416,10 +454,6 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="Plugins" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="clover2" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -496,6 +530,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -724,16 +768,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="ProjectViewSettings">
@@ -751,17 +785,18 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="fileTemplates" />
+    <property name="options.lastSelected" value="Clover License" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -769,15 +804,15 @@
       <recent name="com.rixon.lms_console.commandvalidator" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.com.rixon.lms_console.commandbuilder">
-    <configuration default="false" name="CommandBuilderTest" type="JUnit" factoryName="JUnit" temporary="true">
+  <component name="RunManager" selected="JUnit.All_Tests">
+    <configuration default="false" name="CommandValidatorTest.validateBasicInvalidIssueCommandWithMoreParameters" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="lms_console" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.rixon.lms_console.commandbuilder" />
-      <option name="MAIN_CLASS_NAME" value="com.rixon.lms_console.commandbuilder.CommandBuilderTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.rixon.lms_console.commandbuilder.CommandValidatorTest" />
+      <option name="METHOD_NAME" value="validateBasicInvalidIssueCommandWithMoreParameters" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -792,17 +827,17 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="CommandValidatorTest.validateBasicSearchCommand" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="CommandValidatorTest.validateBasicValidIssueCommandWithMoreParameters" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="lms_console" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.rixon.lms_console.commandbuilder" />
       <option name="MAIN_CLASS_NAME" value="com.rixon.lms_console.commandbuilder.CommandValidatorTest" />
-      <option name="METHOD_NAME" value="validateBasicSearchCommand" />
+      <option name="METHOD_NAME" value="validateBasicValidIssueCommandWithMoreParameters" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -820,14 +855,58 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="com.rixon.lms_console.commandbuilder" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="" />
+    <configuration default="false" name="CommandValidatorTest.validateBasicInvalidTransferCommand" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="lms_console" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.rixon.lms_console.commandbuilder" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="com.rixon.lms_console.commandbuilder.CommandValidatorTest" />
+      <option name="METHOD_NAME" value="validateBasicInvalidTransferCommand" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CommandValidatorTest.validateBasicValidTransferCommand" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="lms_console" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.rixon.lms_console.commandbuilder" />
+      <option name="MAIN_CLASS_NAME" value="com.rixon.lms_console.commandbuilder.CommandValidatorTest" />
+      <option name="METHOD_NAME" value="validateBasicValidTransferCommand" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CommandBuilderTest.testBasicCommandCreation" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="lms_console" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.rixon.lms_console.commandbuilder" />
+      <option name="MAIN_CLASS_NAME" value="com.rixon.lms_console.commandbuilder.CommandBuilderTest" />
+      <option name="METHOD_NAME" value="testBasicCommandCreation" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -843,31 +922,7 @@
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="CommandValidatorTest.validateBasicValidSearchCommand" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="lms_console" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.rixon.lms_console.commandbuilder" />
-      <option name="MAIN_CLASS_NAME" value="com.rixon.lms_console.commandbuilder.CommandValidatorTest" />
-      <option name="METHOD_NAME" value="validateBasicValidSearchCommand" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="wholeProject" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
@@ -970,11 +1025,48 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.CommandBuilderTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.CommandValidatorTest.validateBasicSearchCommand" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.com.rixon.lms_console.commandbuilder" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.CommandValidatorTest.validateBasicValidSearchCommand" />
+    <configuration default="false" name="All_Tests" type="JUnit" factoryName="JUnit">
+      <module name="lms_console" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="directory" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <envs />
+      <dir value="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/commandbuilder" />
+      <patterns />
+      <RunnerSettings RunnerId="Clover Optimizing Runner">
+        <option name="discardSnapshots" value="false" />
+        <option name="compilesBeforeStaleSnapshot" value="10" />
+        <option name="minimize" value="true" />
+        <option name="reorder" value="FAILFAST" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.CommandValidatorTest.validateBasicInvalidIssueCommandWithMoreParameters" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.CommandValidatorTest.validateBasicValidIssueCommandWithMoreParameters" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.All_Tests" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CommandValidatorTest.validateBasicInvalidTransferCommand" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CommandValidatorTest.validateBasicValidTransferCommand" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.CommandBuilderTest.testBasicCommandCreation" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -1037,25 +1129,25 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.67087275" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249694" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.399361" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41533548" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cloverage" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32965687" sideWeight="0.67087275" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258786" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cloverage" active="false" anchor="left" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32953683" sideWeight="0.5846645" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249694" sideWeight="0.67087275" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32965687" sideWeight="0.67087275" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24905087" sideWeight="0.600639" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953683" sideWeight="0.67087275" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3996328" sideWeight="0.67087275" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24905087" sideWeight="0.6709265" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327787" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Test Runs" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.67087275" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24905087" sideWeight="0.600639" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33865815" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Test Runs" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953683" sideWeight="0.66134185" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Aspects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1195,105 +1287,118 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/SimpleValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="63" selection-start="679" selection-end="679" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/ParameterValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="34" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/ParameterValidationStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="41" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/SearchParametersValidationStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="68" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
+        <state line="13" column="53" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/CommonValidationStrategy.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/OperationsCatalog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="90" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+        <state line="18" column="51" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/StrategyContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="43" selection-start="1032" selection-end="1032" vertical-scroll-proportion="0.0">
+        <state line="39" column="0" selection-start="1336" selection-end="1336" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/BasicValidationResult.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/parameterValidation/ParameterValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="130" selection-end="130" vertical-scroll-proportion="0.15">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/Parameter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="26" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="92" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
+        <state line="14" column="66" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/SimpleCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="693" selection-end="693" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandbuilder/SimpleParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="112" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/commandbuilder/CommandTestUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="65" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/commandbuilder/CommandBuilderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="78" selection-start="2261" selection-end="2261" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/commandbuilder/CommandValidatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="44" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
+        <state line="45" column="20" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandbuilder/SimpleParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="865" selection-end="865" vertical-scroll-proportion="0.92493296">
+        <state line="40" column="43" selection-start="1298" selection-end="1298" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandbuilder/CommandBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="42" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/commandbuilder/CommandTestUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="33" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/Validator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="21" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/SimpleValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="84" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/commandbuilder/CommandValidatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="40" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="17" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/Operation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="4" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/commandbuilder/CommandBuilderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="782" selection-end="782" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/ValidationHintProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="4" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/commandvalidator/ValidationMessageProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="47" selection-start="890" selection-end="890" vertical-scroll-proportion="0.7178683">
           <folding />
         </state>
       </provider>

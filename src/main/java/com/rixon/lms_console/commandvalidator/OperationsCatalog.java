@@ -1,7 +1,11 @@
 package com.rixon.lms_console.commandvalidator;
 
+import com.rixon.lms_console.command.Operation;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.rixon.lms_console.command.Operation.*;
 
 /**
  * ${CLASS_NAME}
@@ -9,20 +13,19 @@ import java.util.List;
  */
 public class OperationsCatalog {
 
-    private static List<String> validCommandStrings;
+    private static List<Operation> validOperations;
 
     static {
         //TODO Move the commands to a resource file
-        validCommandStrings = new ArrayList<String>();
-        validCommandStrings.add("search");
-        validCommandStrings.add("issue");
-        validCommandStrings.add("transfer");
-        validCommandStrings.add("return");
-        validCommandStrings.add("list");
+        validOperations = new ArrayList<Operation>();
+        validOperations.add(SEARCH);
+        validOperations.add(ISSUE);
+        validOperations.add(TRANSFER);
+        validOperations.add(RETURN);
     }
 
-    public static boolean isOperationValid(String operation){
-        if (validCommandStrings.contains(operation)) {
+    public static boolean isOperationValid(Operation operation){
+        if (validOperations.contains(operation)) {
             return true;
         }
         return false;

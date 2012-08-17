@@ -11,7 +11,7 @@ import com.rixon.lms_console.command.Parameter;
  */
 public class SearchParametersValidationStrategy extends CommonValidationStrategy {
     @Override
-    public boolean validateParameter(Parameter parameter) {
+    public boolean validateParameter(Parameter<String> parameter) {
         return super.validateParameter(parameter);
         //TODO check if any Search specific logic needs to be added;
     }
