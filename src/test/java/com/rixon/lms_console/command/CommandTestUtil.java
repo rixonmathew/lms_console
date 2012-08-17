@@ -1,4 +1,4 @@
-package com.rixon.lms_console.commandbuilder;
+package com.rixon.lms_console.command;
 
 import com.rixon.lms_console.command.Command;
 import com.rixon.lms_console.command.builder.CommandBuilder;

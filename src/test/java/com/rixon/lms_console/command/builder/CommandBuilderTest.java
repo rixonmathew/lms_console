@@ -1,9 +1,10 @@
-package com.rixon.lms_console.commandbuilder;
+package com.rixon.lms_console.command.builder;
 
+import com.rixon.lms_console.command.AbstractCommandTest;
 import com.rixon.lms_console.command.Command;
-import com.rixon.lms_console.command.builder.CommandBuilder;
 import com.rixon.lms_console.command.operation.Operation;
 import com.rixon.lms_console.command.operation.OperationFlyWeightFactory;
+import com.rixon.lms_console.command.CommandTestUtil;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,25 +20,13 @@ import static org.junit.Assert.*;
  * Time: 7:52 PM
  * This class is responsible for testing the functionality of the CommandBuilder class
  */
-public class CommandBuilderTest {
-
-    private CommandBuilder builder;
-
-    @Before
-    public void setup() {
-        builder = new CommandBuilder();
-    }
-
-    @After
-    public void tearDown() {
-        builder = null;
-    }
+public class CommandBuilderTest extends AbstractCommandTest{
 
     @Test
     public void testBasicCommandCreation() {
         final String searchOperation = "search";
         final String searchParameter = "1123331232";
-        Command bookSearchCommand = CommandTestUtil.createCommand(searchOperation,searchParameter,builder);
+        Command bookSearchCommand = CommandTestUtil.createCommand(searchOperation, searchParameter, builder);
         assertNotNull(bookSearchCommand);
         Operation operation = bookSearchCommand.getOperation();
         assertEquals("OperationTypes is not same", OperationFlyWeightFactory.operationForType(searchOperation),

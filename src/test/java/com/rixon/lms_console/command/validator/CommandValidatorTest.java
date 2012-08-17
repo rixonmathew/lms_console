@@ -1,6 +1,8 @@
-package com.rixon.lms_console.commandbuilder;
+package com.rixon.lms_console.command.validator;
 
+import com.rixon.lms_console.command.AbstractCommandTest;
 import com.rixon.lms_console.command.Command;
+import com.rixon.lms_console.command.CommandTestUtil;
 import com.rixon.lms_console.command.builder.CommandBuilder;
 import org.junit.After;
 import org.junit.Before;
@@ -14,26 +16,14 @@ import static junit.framework.Assert.assertEquals;
  * Date: 12/08/12
  * Time: 10:25 AM
  */
-public class CommandValidatorTest {
-
-    private CommandBuilder builder;
-
-    @Before
-    public void setup() {
-        builder = new CommandBuilder();
-    }
-
-    @After
-    public void tearDown() {
-        builder = null;
-    }
+public class CommandValidatorTest extends AbstractCommandTest {
 
     @Test
     public void validateBasicInvalidSearchCommand() {
         final String operationString = "search";
         final String parameterString = "";
         final String expectedUsageString = "Usage: search <book1> <book2> ..";
-        Command searchCommand = CommandTestUtil.createCommand(operationString,parameterString,builder);
+        Command searchCommand = CommandTestUtil.createCommand(operationString, parameterString, builder);
         CommandTestUtil.assertValidationResult(searchCommand.getValidationResult(),false);
         String actualUsageString = searchCommand.getOperation().getUsage();
         assertEquals("Usage string not equal",expectedUsageString,actualUsageString);
