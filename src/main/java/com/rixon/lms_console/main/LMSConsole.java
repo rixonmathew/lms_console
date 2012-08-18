@@ -34,6 +34,7 @@ public class LMSConsole {
         System.setProperty(ServiceFacadeFactory.LMS_MODE,ServiceFacadeFactory.FAKE);
         if (console!=null){
             printBanner();
+            initializeEnvironment();
             do{
               userCommandString = console.readLine("LMS>");
               //create the command object. if command is invalid display general help
@@ -64,13 +65,13 @@ public class LMSConsole {
         int columns = tableModel.getColumnCount();
         int rows = tableModel.getRowCount();
         for (int column=0;column<columns;column++){
-            console.printf("%1$4s  ",tableModel.getColumnName(column));
+            console.printf("%1$12S  ",tableModel.getColumnName(column));
         }
         console.printf("%n");
         console.printf("===================================================%n");
         for (int row=0;row<rows;row++){
             for (int column=0;column<columns;column++){
-                console.printf("%1$4s  ",tableModel.getValueAt(row,column));
+                console.printf("%1$12S  ",tableModel.getValueAt(row,column));
             }
             console.printf("%n");
         }

@@ -55,4 +55,9 @@ public abstract class AbstractResultTableModel extends AbstractTableModel {
      * @return cell value
      */
     protected abstract Object getCellValueAt(int rowIndex,int columnIndex);
+
+    @Override
+    public String getColumnName(int column) {
+        return headerNames.get(Integer.valueOf(column));
+    }
 }
