@@ -1,13 +1,10 @@
 package com.rixon.lms_console.command.result;
 
 import com.rixon.lms_console.domain.Book;
-import javax.swing.table.AbstractTableModel;
-
 
 import javax.swing.table.TableModel;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * This class represents the search results for books

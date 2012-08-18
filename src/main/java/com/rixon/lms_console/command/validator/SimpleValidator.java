@@ -28,7 +28,7 @@ public class SimpleValidator implements Validator<String> {
             hintKey = DEFAULT_KEY;
         }
         validationMessage = ValidationMessageProvider.getMessageForKey(messageKey);
-        validationHint = ValidationHintProvider.getHintForKey(hintKey);
+        validationHint =  operation.getUsage();//ValidationHintProvider.getHintForKey(hintKey);
         ValidationResult validationResult = new BasicValidationResult(isCommandValid,validationMessage,
                 validationHint);
         return validationResult;

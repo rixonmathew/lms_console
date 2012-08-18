@@ -11,11 +11,11 @@ import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.Result;
 
 /**
- * User: 229921|Date: 8/17/12|Time: 7:20 PM
+ * User: 229921|Date: 8/18/12|Time: 9:22 PM
  */
-public class SearchService implements Service {
+public class ReturnService implements Service {
     @Override
     public Result executeService(Parameter<String> parameter) {
-        return null; //TODO inject DAO and get the values from DAO
+        return null;  //TODO add real implementation
     }
 }

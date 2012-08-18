@@ -7,13 +7,9 @@
 
 package com.rixon.lms_console.command.result;
 
-import com.rixon.lms_console.domain.Book;
-
-import javax.swing.table.AbstractTableModel;
 import javax.swing.table.TableModel;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * User: 229921|Date: 8/17/12|Time: 9:28 PM
@@ -36,7 +32,7 @@ public class HelpResult extends AbstractResult {
 
         protected void initHeader() {
             headerNames = new HashMap<Integer, String>();
-            headerNames.put(0, "command");
+            headerNames.put(0, "");
         }
 
         protected Object getCellValueAt(int rowIndex, int columnIndex) {

@@ -1,7 +1,5 @@
 package com.rixon.lms_console.command.result;
 
-import com.rixon.lms_console.command.Command;
-
 import javax.swing.table.TableModel;
 
 /**

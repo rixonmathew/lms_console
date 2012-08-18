@@ -7,41 +7,15 @@
 
 package com.rixon.lms_console.command.result;
 
-import javax.swing.table.AbstractTableModel;
-import javax.swing.table.TableModel;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
+ * This class is used to return the result of issue command.
  * User: 229921|Date: 8/17/12|Time: 11:24 PM
  */
-public class IssueResult extends AbstractResult {
+public class IssueResult extends ResultWithMessage {
 
     public IssueResult(List results) {
         super(results);
-    }
-
-    @Override
-    protected TableModel convertListToModel(List searchItems) {
-        return new IssueResultTableModel(searchItems);
-    }
-
-    class IssueResultTableModel extends AbstractResultTableModel {
-
-        protected IssueResultTableModel(List results) {
-            super(results);
-        }
-
-        protected void initHeader() {
-            headerNames = new HashMap<Integer, String>();
-            headerNames.put(0, "result");
-        }
-
-
-        protected Object getCellValueAt(int rowIndex, int columnIndex) {
-            String operation = ((List<String>)results).get(rowIndex);
-            return operation;
-        }
     }
 }

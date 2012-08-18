@@ -28,6 +28,7 @@ public class StrategyContext {
         validationStrategyMap.put(RETURN,new ReturnParameterValidationStrategy());
         validationStrategyMap.put(HELP,new HelpParameterValidationStrategy());
         validationStrategyMap.put(COMMON,new CommonValidationStrategy());
+        validationStrategyMap.put(EXIT,new ExitValidationStrategy());
     }
 
     public static ParameterValidationStrategy strategyForOperation(String operationType){

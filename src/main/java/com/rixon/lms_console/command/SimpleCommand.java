@@ -15,8 +15,10 @@ public class SimpleCommand implements Command {
     private Operation operation;
     private Parameter<String> parameter;
     private ValidationResult validationResult;
+    private String originalCommandString;
 
-    public SimpleCommand(Operation operation, Parameter<String> parameter, ValidationResult validationResult) {
+    public SimpleCommand(String originalCommandString,Operation operation, Parameter<String> parameter, ValidationResult validationResult) {
+        this.originalCommandString = originalCommandString;
         this.operation = operation;
         this.parameter = parameter;
         this.validationResult = validationResult;
@@ -40,5 +42,10 @@ public class SimpleCommand implements Command {
     @Override
     public ValidationResult getValidationResult() {
         return this.validationResult;
+    }
+
+    @Override
+    public String getOriginalCommandString() {
+        return originalCommandString;
     }
 }

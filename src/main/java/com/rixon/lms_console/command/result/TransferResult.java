@@ -7,40 +7,14 @@
 
 package com.rixon.lms_console.command.result;
 
-import javax.swing.table.AbstractTableModel;
-import javax.swing.table.TableModel;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
+ * This class represents the result associated with the transfer command
  * User: 229921|Date: 8/17/12|Time: 11:40 PM
  */
-public class TransferResult extends AbstractResult {
-
+public class TransferResult extends ResultWithMessage {
     public TransferResult(List results) {
         super(results);
-    }
-
-    @Override
-    protected TableModel convertListToModel(List searchItems) {
-        return new TransferResultTableModel(searchItems);
-    }
-
-    class TransferResultTableModel extends AbstractResultTableModel {
-
-        protected TransferResultTableModel(List results) {
-            super(results);
-        }
-
-        protected void initHeader() {
-            headerNames = new HashMap<Integer, String>();
-            headerNames.put(0, "result");
-        }
-
-        public Object getCellValueAt(int rowIndex, int columnIndex) {
-            String result = ((List<String>)results).get(rowIndex);
-            return result;
-        }
     }
 }

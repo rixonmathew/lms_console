@@ -14,4 +14,5 @@ public final class OperationTypes {
    public static final String ISSUE = "issue";
    public static final String TRANSFER = "transfer";
    public static final String RETURN = "return";
+   public static final String EXIT = "exit";
 }

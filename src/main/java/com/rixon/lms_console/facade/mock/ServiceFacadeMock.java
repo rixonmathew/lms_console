@@ -34,6 +34,7 @@ public class ServiceFacadeMock implements ServiceFacade {
         serviceMap.put(ISSUE,new IssueServiceMock());
         serviceMap.put(TRANSFER,new TransferServiceMock());
         serviceMap.put(RETURN,new ReturnServiceMock());
+        serviceMap.put(EXIT,new ExitServiceMock());
     }
     public Service serviceForOperation(String operationName) {
         Service service = serviceMap.get(operationName);

@@ -7,10 +7,10 @@
 
 package com.rixon.lms_console.facade;
 
+import com.rixon.lms_console.service.*;
+
 import java.util.HashMap;
 import java.util.Map;
-
-import com.rixon.lms_console.service.*;
 
 import static com.rixon.lms_console.command.operation.OperationTypes.*;
 

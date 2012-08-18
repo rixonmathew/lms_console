@@ -38,4 +38,10 @@ public interface Command {
      * @return
      */
     public ValidationResult getValidationResult();
+
+    /**
+     * This method will return the original command string that was used to parse the command object
+     * @return original command string
+     */
+    public String getOriginalCommandString();
 }

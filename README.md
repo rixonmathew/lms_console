@@ -7,12 +7,12 @@ a simple project to build a console based lms system using TDD and other clean c
 Things to be incorporated
 =========================
 10) Result formatter that provides formatted output for the console
-11) Handle specific help
 12  Introduce list command to see all books, users etc
 13) Do not treat exit as invalid command
 14) do clean up before exit
 15) introduce command to see items checked out to user
 16) introduce command to see who has checked out
+17) If the command is invalid the message to user should be different
 
 Refactorings
 ============
@@ -31,3 +31,4 @@ Done
 8) Create mock/real service to provide the data for the command
 6) Validate Search results
 7) Validate results of other commands
+11) Handle specific help

@@ -20,16 +20,13 @@ import java.io.Console;
 public class LMSConsole {
 
     public static final String EXIT_COMMAND = "exit";
-    public static final String EXIT_MESSAGE = "Have a good day %n";
     public static final Console console = System.console();
 
     public static CommandBuilder builder;
     public static CommandExecutor executor;
 
     public static void main(String[] args) {
-        //TODO Display the results of the command validation
-        //TODO Display the results of the command
-
+        //TODO split LMSConsole into LMSMain and LMSConsole. LMSMain should only be the entry point;
         String userCommandString="";
         System.setProperty(ServiceFacadeFactory.LMS_MODE,ServiceFacadeFactory.FAKE);
         if (console!=null){
@@ -37,22 +34,21 @@ public class LMSConsole {
             initializeEnvironment();
             do{
               userCommandString = console.readLine("LMS>");
-              //create the command object. if command is invalid display general help
-              // if operations is valid and then parameters are invlaid print out the usage from je operatioms
-              //if commad is valid process the command, format the result and display the same
-              //console.printf("Command typed is: %1$4s%n",userCommandString);
               Command command = builder.buildCommand(userCommandString);
               Result result =  executor.executeCommand(command);
-              displayResultInConsole(result);
+              if (command.isValid()) {
+                  displayResultInConsole(result);
+              }  else {
+                  displayErrorInConsole(command);
+              }
             }
             while (!userCommandString.equalsIgnoreCase(EXIT_COMMAND));
-            printExitMessage();
         }
-
     }
 
-    private static void printExitMessage() {
-        console.printf(EXIT_MESSAGE);
+    private static void displayErrorInConsole(Command command) {
+        console.printf("Invalid command %1$s %n",command.getOriginalCommandString());
+        console.printf("%1$s %2$s%n",command.getValidationResult().validationMessage(),command.getValidationResult().hint());
     }
 
     private static void initializeEnvironment(){
@@ -65,22 +61,30 @@ public class LMSConsole {
         int columns = tableModel.getColumnCount();
         int rows = tableModel.getRowCount();
         for (int column=0;column<columns;column++){
-            console.printf("%1$12S  ",tableModel.getColumnName(column));
+            console.printf("%1$12s  ",tableModel.getColumnName(column));
         }
         console.printf("%n");
-        console.printf("===================================================%n");
+        drawLine(50);
         for (int row=0;row<rows;row++){
             for (int column=0;column<columns;column++){
-                console.printf("%1$12S  ",tableModel.getValueAt(row,column));
+                console.printf("%1$12s  ",tableModel.getValueAt(row,column));
             }
             console.printf("%n");
         }
-        console.printf("===================================================%n");
+        drawLine(50);
     }
 
     private static void printBanner() {
         console.printf("****** Welcome to LMS ******.%n");
-        console.printf("-----------------------------.%n");
+        drawLine(50);
         console.printf("(Type help to get help, exit|quit to quit the application)%n");
+    }
+
+    private static void drawLine(int length) {
+        final String LINE_CHAR = "_";
+        for (int i=0;i<length;i++) {
+            console.printf(LINE_CHAR);
+        }
+        console.printf("%n");
     }
 }

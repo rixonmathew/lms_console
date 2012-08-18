@@ -10,10 +10,13 @@ import java.util.Map;
 public class ValidationMessageProvider {
     private static Map<String, String> validationMessages;
     private final static String DEFAULT_MESSAGE = "This command cannot be executed. Type help for more details";
+    private final static String ERROR_MESSAGE = "There was an error in the command syntax. refer usage of the command via help";
+    private final static String SUCCESS_MESSAGE = "The command has been executed successfully";
+
     static {
         validationMessages = new HashMap<String,String>();
-        validationMessages.put("default","default message");
-        validationMessages.put("success","success");
+        validationMessages.put("default", ERROR_MESSAGE);
+        validationMessages.put("success", SUCCESS_MESSAGE);
     }
 
     public static String getMessageForKey(String key) {

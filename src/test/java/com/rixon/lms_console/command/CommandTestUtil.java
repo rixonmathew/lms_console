@@ -1,6 +1,5 @@
 package com.rixon.lms_console.command;
 
-import com.rixon.lms_console.command.Command;
 import com.rixon.lms_console.command.builder.CommandBuilder;
 import com.rixon.lms_console.command.validator.ValidationResult;
 

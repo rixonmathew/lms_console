@@ -2,11 +2,9 @@ package com.rixon.lms_console.command.builder;
 
 import com.rixon.lms_console.command.AbstractCommandTest;
 import com.rixon.lms_console.command.Command;
+import com.rixon.lms_console.command.CommandTestUtil;
 import com.rixon.lms_console.command.operation.Operation;
 import com.rixon.lms_console.command.operation.OperationFlyWeightFactory;
-import com.rixon.lms_console.command.CommandTestUtil;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
@@ -55,6 +53,7 @@ public class CommandBuilderTest extends AbstractCommandTest{
         final String books = "bb123 12312323 123123";
         Command invalidCommand =  CommandTestUtil.createCommand(invalidSearchCommand,books,builder);
         assertFalse("isValid flag should be no", invalidCommand.isValid());
+        assertEquals("Command string is not same", invalidSearchCommand + " " + books, invalidCommand.getOriginalCommandString());
         CommandTestUtil.assertValidationResult(invalidCommand.getValidationResult(), false);
     }
 
@@ -62,7 +61,7 @@ public class CommandBuilderTest extends AbstractCommandTest{
     public void testValidationMessage() {
         final String invalidIssueCommand = "iisue";
         final String parameters = "123123,123123223,1112323";
-        final String expectedValidationMessage = "default message";
+        final String expectedValidationMessage = "There was an error in the command syntax. refer usage of the command via help";
         Command bookIssueCommand = CommandTestUtil.createCommand(invalidIssueCommand,parameters,builder);
         assertNotNull(bookIssueCommand);
         CommandTestUtil.assertValidationResult(bookIssueCommand.getValidationResult(), false);

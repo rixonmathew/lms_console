@@ -21,6 +21,7 @@ public class OperationsCatalog {
         validOperationTypes.add(TRANSFER);
         validOperationTypes.add(RETURN);
         validOperationTypes.add(HELP);
+        validOperationTypes.add(EXIT);
     }
 
     public static boolean isOperationValid(String operationType){

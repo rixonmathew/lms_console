@@ -103,7 +103,24 @@ public class CommandExecutorTest extends AbstractCommandTest {
         assertEquals("Displayed rows for invalid command is not same",2,tableModel.getRowCount());
         assertCellValues(tableModel);
     }
+
+    @Test
+    public void testExitCommandExecution() {
+        Command exitCommand = CommandTestUtil.createCommand("exit","",builder);
+        Result result = executor.executeCommand(exitCommand);
+        assertNotNull(result);
+        TableModel tableModel = result.getResultsTable();
+        assertEquals("Displayed rows for invalid command is not same",1,tableModel.getRowCount());
+        assertCellValues(tableModel);
+    }
+
     private void assertCellValues(TableModel tableModel) {
+
+        for(int column=0;column<tableModel.getColumnCount();column++) {
+            Object columnName = tableModel.getColumnName(column);
+            assertNotNull("Column name is null at "+column,columnName);
+        }
+
         for (int row=0;row<tableModel.getRowCount();row++) {
             for (int column=0;column<tableModel.getColumnCount();column++){
                 Object cellValue = tableModel.getValueAt(row,column);

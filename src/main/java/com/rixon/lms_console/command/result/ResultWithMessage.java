@@ -12,35 +12,36 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * This class provides the validation messages in the result format
- * User: 229921|Date: 8/17/12|Time: 11:53 PM
+ * This class represents the result of command where only a message is to
+ * be displayed instead of a table
+ * User: 229921|Date: 8/18/12|Time: 8:43 PM
  */
-public class ValidationMessageResult extends AbstractResult {
+public class ResultWithMessage extends AbstractResult {
 
-    public ValidationMessageResult(List results) {
+    public ResultWithMessage(List results) {
         super(results);
     }
 
     @Override
     protected TableModel convertListToModel(List searchItems) {
-        return new ValidationResultTableModel(searchItems);
+        return new SimpleResultTableModel(searchItems);
     }
 
-    class ValidationResultTableModel extends AbstractResultTableModel {
+    class SimpleResultTableModel extends AbstractResultTableModel {
 
-        protected ValidationResultTableModel(List results) {
+        protected SimpleResultTableModel(List results) {
             super(results);
         }
 
+        @Override
         protected void initHeader() {
             headerNames = new HashMap<Integer, String>();
-            headerNames.put(0, "message");
+            headerNames.put(0, "");
         }
 
         @Override
-        public Object getCellValueAt(int rowIndex, int columnIndex) {
-            String message = ((List<String>)results).get(rowIndex);
-            return message;
+        protected Object getCellValueAt(int rowIndex, int columnIndex) {
+            return results.get(0);
         }
     }
 }

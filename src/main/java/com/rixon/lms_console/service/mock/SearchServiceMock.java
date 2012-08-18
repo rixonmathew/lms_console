@@ -10,7 +10,6 @@ package com.rixon.lms_console.service.mock;
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.command.result.SearchResult;
-import com.rixon.lms_console.command.result.SearchResult;
 import com.rixon.lms_console.domain.Book;
 import com.rixon.lms_console.service.Service;
 import com.rixon.lms_console.util.DateUtil;

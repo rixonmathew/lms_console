@@ -9,21 +9,24 @@ package com.rixon.lms_console.service.mock;
 
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.Result;
-import com.rixon.lms_console.command.result.TransferResult;
+import com.rixon.lms_console.command.result.ResultWithMessage;
 import com.rixon.lms_console.service.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * User: 229921|Date: 8/17/12|Time: 11:39 PM
+ * This class represents the mock service for Exit operation
+ * User: 229921|Date: 8/18/12|Time: 8:37 PM
  */
-public class TransferServiceMock implements Service {
+public class ExitServiceMock implements Service {
+
+    private static final String EXIT_MESSAGE = "Have a good day :-)";
     @Override
     public Result executeService(Parameter<String> parameter) {
-        String result = "Book transferred successfully to user";
-        List<String> issueResult = new ArrayList<String>();
-        issueResult.add(result);
-        return new TransferResult(issueResult);
+        String exitMessage = EXIT_MESSAGE;
+        List<String> messages = new ArrayList<String>();
+        messages.add(exitMessage);
+        return new ResultWithMessage(messages);
     }
 }

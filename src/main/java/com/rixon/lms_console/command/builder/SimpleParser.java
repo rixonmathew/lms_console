@@ -58,6 +58,6 @@ public class SimpleParser implements Parser {
     }
 
     private void createCommand(){
-      this.command = new SimpleCommand(operation,parameter,validationResult);
+      this.command = new SimpleCommand(commandString,operation,parameter,validationResult);
     }
 }

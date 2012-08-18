@@ -3,9 +3,6 @@ package com.rixon.lms_console.command.validator;
 import com.rixon.lms_console.command.AbstractCommandTest;
 import com.rixon.lms_console.command.Command;
 import com.rixon.lms_console.command.CommandTestUtil;
-import com.rixon.lms_console.command.builder.CommandBuilder;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;

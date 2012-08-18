@@ -7,40 +7,15 @@
 
 package com.rixon.lms_console.command.result;
 
-import javax.swing.table.AbstractTableModel;
-import javax.swing.table.TableModel;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
+ * This class represents the result object for return operation
  * User: 229921|Date: 8/18/12|Time: 7:49 AM
  */
-public class ReturnResult extends AbstractResult {
+public class ReturnResult extends ResultWithMessage {
 
     public ReturnResult(List results) {
         super(results);
-    }
-
-    @Override
-    protected TableModel convertListToModel(List searchItems) {
-        return new ReturnResultTableModel(searchItems);
-    }
-
-    class ReturnResultTableModel extends AbstractResultTableModel {
-
-        protected ReturnResultTableModel(List results) {
-            super(results);
-        }
-
-        protected void initHeader() {
-            headerNames = new HashMap<Integer, String>();
-            headerNames.put(0, "message");
-        }
-
-        protected Object getCellValueAt(int rowIndex, int columnIndex) {
-            String message = ((List<String>)results).get(rowIndex);
-            return message;
-        }
     }
 }
