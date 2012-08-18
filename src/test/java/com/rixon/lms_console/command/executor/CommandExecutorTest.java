@@ -54,6 +54,17 @@ public class CommandExecutorTest extends AbstractCommandTest {
     }
 
     @Test
+    public void testHelpCommandExecutionForOperation() {
+        Command helpCommand = CommandTestUtil.createCommand("help","search",builder);
+        Result result = executor.executeCommand(helpCommand);
+        assertNotNull(result);
+        TableModel tableModel = result.getResultsTable();
+        assertEquals("Displayed count of commands is not same",1,tableModel.getRowCount());
+        assertEquals("Displayed count of result columns is not same",1,tableModel.getColumnCount());
+        assertCellValues(tableModel);
+    }
+
+    @Test
     public void testIssueCommandExecution() {
         Command issueCommand = CommandTestUtil.createCommand("issue","1123122 u100120",builder);
         Result result = executor.executeCommand(issueCommand);

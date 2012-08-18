@@ -8,6 +8,8 @@
 package com.rixon.lms_console.service.mock;
 
 import com.rixon.lms_console.command.Parameter;
+import com.rixon.lms_console.command.operation.Operation;
+import com.rixon.lms_console.command.operation.OperationFlyWeightFactory;
 import com.rixon.lms_console.command.operation.OperationTypes;
 import com.rixon.lms_console.command.result.HelpResult;
 import com.rixon.lms_console.command.result.Result;
@@ -23,10 +25,21 @@ public class HelpServiceMock implements Service {
     @Override
     public Result executeService(Parameter<String> parameter) {
         List<String> commands = new ArrayList<String>();
-        commands.add(OperationTypes.SEARCH);
-        commands.add(OperationTypes.ISSUE);
-        commands.add(OperationTypes.TRANSFER);
-        commands.add(OperationTypes.RETURN);
+        List<String> helpParameter = (List<String>)parameter.getParameters();
+
+        if (helpParameter==null||helpParameter.size()==0){
+            commands.add(OperationTypes.SEARCH);
+            commands.add(OperationTypes.ISSUE);
+            commands.add(OperationTypes.TRANSFER);
+            commands.add(OperationTypes.RETURN);
+        }  else {
+            for (String string:helpParameter) {
+                Operation operation = OperationFlyWeightFactory.operationForType(string);
+                if (operation!=null) {
+                    commands.add(operation.getUsage());
+                }
+            }
+        }
         return new HelpResult(commands);
     }
 }
