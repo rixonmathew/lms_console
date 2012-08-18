@@ -14,33 +14,35 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * User: 229921|Date: 8/17/12|Time: 11:40 PM
+ * This class provides the validation messages in the result format
+ * User: 229921|Date: 8/17/12|Time: 11:53 PM
  */
-public class TransferResult extends AbstractResult {
+public class ValidationMessageResult extends AbstractResult {
 
-    public TransferResult(List results) {
+    public ValidationMessageResult(List results) {
         super(results);
     }
 
     @Override
     protected TableModel convertListToModel(List searchItems) {
-        return new TransferResultTableModel(searchItems);
+        return new ValidationResultTableModel(searchItems);
     }
 
-    class TransferResultTableModel extends AbstractResultTableModel {
+    class ValidationResultTableModel extends AbstractResultTableModel {
 
-        protected TransferResultTableModel(List results) {
+        protected ValidationResultTableModel(List results) {
             super(results);
         }
 
         protected void initHeader() {
             headerNames = new HashMap<Integer, String>();
-            headerNames.put(0, "result");
+            headerNames.put(0, "message");
         }
 
+        @Override
         public Object getCellValueAt(int rowIndex, int columnIndex) {
-            String result = ((List<String>)results).get(rowIndex);
-            return result;
+            String message = ((List<String>)results).get(rowIndex);
+            return message;
         }
     }
 }

@@ -24,7 +24,7 @@ public class DateUtil {
             return dateFormat.parse(dateString);
         } catch (ParseException e) {
             e.printStackTrace();
+            throw new IllegalArgumentException("Invalid date string "+dateString);
         }
-        throw new IllegalArgumentException("Invalid date string "+dateString);
     }
 }

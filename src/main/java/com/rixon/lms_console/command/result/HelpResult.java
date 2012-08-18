@@ -28,40 +28,21 @@ public class HelpResult extends AbstractResult {
         return new HelpResultsTableModel(searchItems);
     }
 
-    class HelpResultsTableModel extends AbstractTableModel {
+    class HelpResultsTableModel extends AbstractResultTableModel {
 
-        List<String> commands;
-        private Map<Integer, String> headerNames;
-
-        HelpResultsTableModel(List<String> commands) {
-            this.commands = commands;
-            initHeader();
+        protected HelpResultsTableModel(List results) {
+            super(results);
         }
 
-        private void initHeader() {
+        protected void initHeader() {
             headerNames = new HashMap<Integer, String>();
             headerNames.put(0, "command");
         }
 
-        @Override
-        public int getRowCount() {
-            return commands.size();
-        }
-
-        @Override
-        public int getColumnCount() {
-            return headerNames.values().size();
-        }
-
-        @Override
-        public Object getValueAt(int rowIndex, int columnIndex) {
+        protected Object getCellValueAt(int rowIndex, int columnIndex) {
             String operation = null;
-            if (rowIndex < 0 || rowIndex > commands.size() ||
-                    columnIndex < 0 || columnIndex > headerNames.values().size())
-                return operation;
-            operation = commands.get(rowIndex);
+            operation = ((List<String>)results).get(rowIndex);
             return operation;
-
         }
     }
 }

@@ -27,37 +27,20 @@ public class IssueResult extends AbstractResult {
         return new IssueResultTableModel(searchItems);
     }
 
-    class IssueResultTableModel extends AbstractTableModel {
-        List<String> issueResult;
-        private Map<Integer, String> headerNames;
+    class IssueResultTableModel extends AbstractResultTableModel {
 
-        private void initHeader() {
+        protected IssueResultTableModel(List results) {
+            super(results);
+        }
+
+        protected void initHeader() {
             headerNames = new HashMap<Integer, String>();
             headerNames.put(0, "result");
         }
 
-        IssueResultTableModel(List<String> issueResult) {
-            this.issueResult = issueResult;
-            initHeader();
-        }
 
-        @Override
-        public int getRowCount() {
-            return issueResult.size();
-        }
-
-        @Override
-        public int getColumnCount() {
-            return headerNames.values().size();
-        }
-
-        @Override
-        public Object getValueAt(int rowIndex, int columnIndex) {
-            String operation = null;
-            if (rowIndex < 0 || rowIndex > issueResult.size() ||
-                    columnIndex < 0 || columnIndex > headerNames.values().size())
-                return operation;
-            operation = issueResult.get(rowIndex);
+        protected Object getCellValueAt(int rowIndex, int columnIndex) {
+            String operation = ((List<String>)results).get(rowIndex);
             return operation;
         }
     }

@@ -9,10 +9,7 @@ package com.rixon.lms_console.facade.mock;
 
 import com.rixon.lms_console.facade.ServiceFacade;
 import com.rixon.lms_console.service.Service;
-import com.rixon.lms_console.service.mock.HelpServiceMock;
-import com.rixon.lms_console.service.mock.IssueServiceMock;
-import com.rixon.lms_console.service.mock.SearchServiceMock;
-import com.rixon.lms_console.service.mock.TransferServiceMock;
+import com.rixon.lms_console.service.mock.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -36,6 +33,7 @@ public class ServiceFacadeMock implements ServiceFacade {
         serviceMap.put(HELP,new HelpServiceMock());
         serviceMap.put(ISSUE,new IssueServiceMock());
         serviceMap.put(TRANSFER,new TransferServiceMock());
+        serviceMap.put(RETURN,new ReturnServiceMock());
     }
     public Service serviceForOperation(String operationName) {
         Service service = serviceMap.get(operationName);

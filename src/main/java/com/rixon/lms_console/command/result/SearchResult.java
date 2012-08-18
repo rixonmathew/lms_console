@@ -16,28 +16,24 @@ import java.util.Map;
  * Time: 6:29 PM
  */
 
-public class SearchBookResult extends AbstractResult {
+public class SearchResult extends AbstractResult {
 
-    public SearchBookResult(List results) {
+    public SearchResult(List results) {
         super(results);
     }
 
     @Override
     protected TableModel convertListToModel(List searchItems) {
-        return new BookTableModel(searchItems);
+        return new SearchTableModel(searchItems);
     }
 
-    class BookTableModel extends AbstractTableModel{
+    class SearchTableModel extends AbstractResultTableModel{
 
-        private Map<Integer,String> headerNames;
-        private List<Book> books;
-
-        BookTableModel(List<Book> books) {
-            this.books = books;
-            initHeader();
+        protected SearchTableModel(List results) {
+            super(results);
         }
 
-        private void initHeader() {
+        protected void initHeader() {
             headerNames = new HashMap<Integer, String>();
             headerNames.put(0,"isbn");
             headerNames.put(1,"Title");
@@ -46,23 +42,8 @@ public class SearchBookResult extends AbstractResult {
             headerNames.put(4,"Published Date");
         }
 
-        @Override
-        public int getRowCount() {
-            return books.size();
-        }
-
-        @Override
-        public int getColumnCount() {
-            return headerNames.values().size();
-        }
-
-        @Override
-        public Object getValueAt(int rowIndex, int columnIndex) {
-            Book book = null; //TODO null object pattern
-            if (rowIndex<0|| rowIndex>books.size()||
-                columnIndex<0||columnIndex>headerNames.values().size())
-                return book;
-            book = books.get(rowIndex);
+        protected Object getCellValueAt(int rowIndex,int columnIndex){
+          Book book = ((List<Book>)results).get(rowIndex);
             Object cellValue = null;
             switch (columnIndex){
                 case 0:

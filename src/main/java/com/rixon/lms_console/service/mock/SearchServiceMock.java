@@ -9,7 +9,8 @@ package com.rixon.lms_console.service.mock;
 
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.Result;
-import com.rixon.lms_console.command.result.SearchBookResult;
+import com.rixon.lms_console.command.result.SearchResult;
+import com.rixon.lms_console.command.result.SearchResult;
 import com.rixon.lms_console.domain.Book;
 import com.rixon.lms_console.service.Service;
 import com.rixon.lms_console.util.DateUtil;
@@ -28,8 +29,8 @@ public class SearchServiceMock implements Service {
         List<Book> books = new ArrayList<Book>();
         books.add(book1);
         books.add(book2);
-        SearchBookResult searchBookResult = new SearchBookResult(books);
-        return searchBookResult;
+        SearchResult searchResult = new SearchResult(books);
+        return searchResult;
     }
 
     private Book createBook(String isbn,String title,String author,String publisher,String releaseDate) {

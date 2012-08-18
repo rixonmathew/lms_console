@@ -14,33 +14,33 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * User: 229921|Date: 8/17/12|Time: 11:40 PM
+ * User: 229921|Date: 8/18/12|Time: 7:49 AM
  */
-public class TransferResult extends AbstractResult {
+public class ReturnResult extends AbstractResult {
 
-    public TransferResult(List results) {
+    public ReturnResult(List results) {
         super(results);
     }
 
     @Override
     protected TableModel convertListToModel(List searchItems) {
-        return new TransferResultTableModel(searchItems);
+        return new ReturnResultTableModel(searchItems);
     }
 
-    class TransferResultTableModel extends AbstractResultTableModel {
+    class ReturnResultTableModel extends AbstractResultTableModel {
 
-        protected TransferResultTableModel(List results) {
+        protected ReturnResultTableModel(List results) {
             super(results);
         }
 
         protected void initHeader() {
             headerNames = new HashMap<Integer, String>();
-            headerNames.put(0, "result");
+            headerNames.put(0, "message");
         }
 
-        public Object getCellValueAt(int rowIndex, int columnIndex) {
-            String result = ((List<String>)results).get(rowIndex);
-            return result;
+        protected Object getCellValueAt(int rowIndex, int columnIndex) {
+            String message = ((List<String>)results).get(rowIndex);
+            return message;
         }
     }
 }
