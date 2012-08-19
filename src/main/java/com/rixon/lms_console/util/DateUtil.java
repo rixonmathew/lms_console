@@ -13,6 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
+ * This class contains all utility functions associated with date formatting
  * User: 229921|Date: 8/17/12|Time: 10:36 PM
  */
 public class DateUtil {

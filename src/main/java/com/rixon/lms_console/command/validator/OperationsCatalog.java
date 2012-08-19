@@ -6,7 +6,7 @@ import java.util.List;
 import static com.rixon.lms_console.command.operation.OperationTypes.*;
 
 /**
- * ${CLASS_NAME}
+ * This class represents the catalog of operations in the system.
  * User: 229921|Date: 8/3/12|Time: 8:30 PM
  */
 public class OperationsCatalog {

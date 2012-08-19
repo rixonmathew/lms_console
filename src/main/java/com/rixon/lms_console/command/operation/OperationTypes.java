@@ -1,11 +1,8 @@
 package com.rixon.lms_console.command.operation;
 
 /**
- * This class constains all the constant string files used as operations
- * User: 229921
- * Date: 8/17/12
- * Time: 8:57 AM
- * To change this template use File | Settings | File Templates.
+ * This class represents the operations associated with the command
+ * User: 229921|Date: 8/17/12|Time: 10:01 AM
  */
 public final class OperationTypes {
    public static final String HELP = "help";

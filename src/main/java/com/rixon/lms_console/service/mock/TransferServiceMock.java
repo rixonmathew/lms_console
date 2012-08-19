@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * This class implements the mock service for transfer operation
  * User: 229921|Date: 8/17/12|Time: 11:39 PM
  */
 public class TransferServiceMock implements Service {

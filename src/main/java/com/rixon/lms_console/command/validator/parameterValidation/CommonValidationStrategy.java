@@ -5,11 +5,9 @@ import com.rixon.lms_console.command.Parameter;
 import java.util.Collection;
 
 /**
- * This class represents the common validation logic that needs to be implemented for all
- * User: rixonmathew
- * Date: 12/08/12
- * Time: 12:25 PM
- * To change this template use File | Settings | File Templates.
+ * This class represents the base strategy for validating the operations. If
+ * no specific strategy is found for validating an operation
+ * User: 229921|Date: 8/17/12|Time: 10:01 AM
  */
 public class CommonValidationStrategy implements ParameterValidationStrategy{
 

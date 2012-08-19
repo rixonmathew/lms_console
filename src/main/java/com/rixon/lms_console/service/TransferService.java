@@ -11,6 +11,7 @@ import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.Result;
 
 /**
+ * This class implements the service for transfer operation
  * User: 229921|Date: 8/17/12|Time: 11:39 PM
  */
 public class TransferService implements Service {

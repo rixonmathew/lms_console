@@ -4,11 +4,9 @@ import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.operation.Operation;
 
 /**
- * Created with IntelliJ IDEA.
- * User: rixonmathew
- * Date: 12/08/12
- * Time: 10:52 AM
- * The function of this class is to validate the parameters required for a given operation.
+ * This class represents the class for validating the parameters associated with a
+ * given operation
+ * User: 229921|Date: 8/17/12|Time: 10:01 AM
  */
 public class ParameterValidator {
 

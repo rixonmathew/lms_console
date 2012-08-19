@@ -1,10 +1,9 @@
 package com.rixon.lms_console.command.operation;
 
 /**
- * @see com.rixon.lms_console.command.operation.Operation
- * User: 229921
- * Date: 8/17/12
- * Time: 11:01 AM
+ * This class represents the Abstract operation and is an implementation
+ * of Operation interface @see Operation
+ * User: 229921|Date: 8/17/12|Time: 10:01 AM
  */
 public abstract class AbstractOperation implements Operation {
 

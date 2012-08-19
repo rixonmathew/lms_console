@@ -3,11 +3,8 @@ package com.rixon.lms_console.command.validator.parameterValidation;
 import com.rixon.lms_console.command.Parameter;
 
 /**
- * Created with IntelliJ IDEA.
- * User: rixonmathew
- * Date: 12/08/12
- * Time: 12:22 PM
- * To change this template use File | Settings | File Templates.
+ * This class represents the strategy for validating the search command
+ * User: 229921|Date: 8/17/12|Time: 10:01 AM
  */
 public class SearchParametersValidationStrategy extends CommonValidationStrategy {
     @Override

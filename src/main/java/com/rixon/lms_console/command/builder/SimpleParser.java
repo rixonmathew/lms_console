@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 /**
+ * This class is an implementation of the Parser interface
  * @see Parser
  * User: 229921|Date: 8/1/12|Time: 8:13 PM
  */
@@ -27,6 +28,8 @@ public class SimpleParser implements Parser {
     private Command command;
     private Validator commandValidator;
 
+    private final static String DELIMITER=" ";
+
     @Override
     public Command parse(String commandString) {
         this.commandString = commandString;
@@ -37,7 +40,7 @@ public class SimpleParser implements Parser {
     }
 
     private void tokenizeCommandString() {
-        StringTokenizer tokenizer = new StringTokenizer(commandString, " ");
+        StringTokenizer tokenizer = new StringTokenizer(commandString, DELIMITER);
         List<String> parameterList = new ArrayList<String>();
         int i = 0;
         while (tokenizer.hasMoreTokens()) {

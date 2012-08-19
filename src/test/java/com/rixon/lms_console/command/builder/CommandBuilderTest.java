@@ -12,11 +12,8 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 /**
- * Created with IntelliJ IDEA.
- * User: 229921
- * Date: 8/1/12
- * Time: 7:52 PM
- * This class is responsible for testing the functionality of the CommandBuilder class
+ * This class is used for testing te command building functionality
+ * User: 229921|Date: 8/17/12|Time: 10:01 AM
  */
 public class CommandBuilderTest extends AbstractCommandTest{
 

@@ -2,7 +2,6 @@ package com.rixon.lms_console.command.validator;
 
 /**
  * This interface will hold the result of the validation process
- *
  * User: 229921|Date: 8/2/12|Time: 1:38 AM
  */
 public interface ValidationResult {

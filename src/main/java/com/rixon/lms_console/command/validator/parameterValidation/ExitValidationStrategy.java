@@ -10,7 +10,8 @@ package com.rixon.lms_console.command.validator.parameterValidation;
 import com.rixon.lms_console.command.Parameter;
 
 /**
- * User: 229921|Date: 8/18/12|Time: 8:19 PM
+ * This class represents the strategy for validating the exit command
+ * User: 229921|Date: 8/17/12|Time: 10:01 AM
  */
 public class ExitValidationStrategy implements ParameterValidationStrategy {
     @Override

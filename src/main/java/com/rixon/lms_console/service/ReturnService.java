@@ -11,6 +11,7 @@ import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.Result;
 
 /**
+ * This class implements the service for return operation
  * User: 229921|Date: 8/18/12|Time: 9:22 PM
  */
 public class ReturnService implements Service {

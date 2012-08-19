@@ -17,6 +17,7 @@ import java.util.Map;
 import static com.rixon.lms_console.command.operation.OperationTypes.*;
 
 /**
+ * This class represents the facade for accessing the mock services.
  * User: 229921|Date: 8/17/12|Time: 8:57 PM
  */
 public class ServiceFacadeMock implements ServiceFacade {

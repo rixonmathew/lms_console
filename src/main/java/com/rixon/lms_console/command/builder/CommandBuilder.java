@@ -3,11 +3,8 @@ package com.rixon.lms_console.command.builder;
 import com.rixon.lms_console.command.Command;
 
 /**
- * Created with IntelliJ IDEA.
- * User: 229921
- * Date: 8/1/12
- * Time: 7:57 PM
- * To change this template use File | Settings | File Templates.
+ * This class represents the builder of the command from the given input string
+ * User: 229921|Date: 8/17/12|Time: 10:01 AM
  */
 public class CommandBuilder {
 

@@ -13,6 +13,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * This class represents the factory that produces ServiceFacade. Depending upon the set
+ * environment a correct instance of Service Facade is returned. This class implements GoF
+ * Abstract Factory Pattern
  * User: 229921|Date: 8/17/12|Time: 8:54 PM
  */
 public class ServiceFacadeFactory {

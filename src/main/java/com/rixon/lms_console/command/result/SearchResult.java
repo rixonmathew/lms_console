@@ -8,9 +8,7 @@ import java.util.List;
 
 /**
  * This class represents the search results for books
- * User: 229921
- * Date: 8/17/12
- * Time: 6:29 PM
+ * User: 229921|Date: 8/17/12|Time: 6:29 PM
  */
 
 public class SearchResult extends AbstractResult {

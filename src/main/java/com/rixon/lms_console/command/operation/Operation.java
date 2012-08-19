@@ -2,11 +2,9 @@ package com.rixon.lms_console.command.operation;
 
 /**
  * This interface represents an operation part of the command.
- * User: 229921
- * Date: 8/17/12
- * Time: 10:58 AM
- * To change this template use File | Settings | File Templates.
+ * User: 229921|Date: 8/17/12|Time: 10:01 AM
  */
+
 public interface Operation {
 
     /**

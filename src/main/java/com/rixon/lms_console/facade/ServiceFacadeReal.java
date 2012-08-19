@@ -16,9 +16,7 @@ import static com.rixon.lms_console.command.operation.OperationTypes.*;
 
 /**
  * This class represents the facade to access all the services associated with LMS
- * User: 229921
- * Date: 8/17/12
- * Time: 7:05 PM
+ * User: 229921|Date: 8/17/12|Time: 7:05 PM
  */
 public class ServiceFacadeReal implements ServiceFacade {
 
@@ -34,7 +32,10 @@ public class ServiceFacadeReal implements ServiceFacade {
         serviceMap.put(HELP,new HelpService());
         serviceMap.put(ISSUE,new IssueService());
         serviceMap.put(TRANSFER,new TransferService());
+        serviceMap.put(RETURN,new ReturnService());
+        serviceMap.put(EXIT,new ExitService());
     }
+
     public Service serviceForOperation(String operationName) {
       Service service = serviceMap.get(operationName);
       return service;

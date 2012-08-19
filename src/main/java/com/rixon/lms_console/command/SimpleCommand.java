@@ -4,11 +4,8 @@ import com.rixon.lms_console.command.operation.Operation;
 import com.rixon.lms_console.command.validator.ValidationResult;
 
 /**
- * Created with IntelliJ IDEA.
- * User: 229921
- * Date: 8/1/12
- * Time: 8:04 PM
- * To change this template use File | Settings | File Templates.
+ * This class represents a simple implementation of Command interface
+ * User: 229921|Date: 8/1/12|Time: 8:04 PM
  */
 public class SimpleCommand implements Command {
 

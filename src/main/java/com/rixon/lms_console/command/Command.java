@@ -6,10 +6,7 @@ import com.rixon.lms_console.command.validator.ValidationResult;
 /**
  * This interface represents a command to be executed. The command consists of two parts
  * operation and parameters required to perform the operation.
- * User: 229921
- * Date: 8/1/12
- * Time: 7:58 PM
- *
+ * User: 229921|Date: 8/1/12|Time: 7:58 PM
  */
 public interface Command {
 

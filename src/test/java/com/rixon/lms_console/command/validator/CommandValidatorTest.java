@@ -9,9 +9,7 @@ import static junit.framework.Assert.assertEquals;
 
 /**
  * This class is responsible for verifying the validator logic of the command
- * User: rixonmathew
- * Date: 12/08/12
- * Time: 10:25 AM
+ * User: 229921|Date: 8/17/12|Time: 10:01 AM
  */
 public class CommandValidatorTest extends AbstractCommandTest {
 

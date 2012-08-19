@@ -11,11 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
- * User: 229921
- * Date: 8/17/12
- * Time: 5:09 PM
- * To change this template use File | Settings | File Templates.
+ * This class represents the implementation of the CommandExecutor interface
+ * @see CommandExecutor
+ * User: 229921|Date: 8/17/12|Time: 10:01 AM
  */
 public class SimpleCommandExecutor implements CommandExecutor {
     @Override

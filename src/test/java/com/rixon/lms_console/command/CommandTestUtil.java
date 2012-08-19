@@ -7,11 +7,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 /**
- * Created with IntelliJ IDEA.
- * User: rixonmathew
- * Date: 12/08/12
- * Time: 10:32 AM
  * This class provides all the util functionality while creating, validating the command objects
+ * User: 229921|Date: 8/17/12|Time: 10:01 AM
  */
 public class CommandTestUtil {
 

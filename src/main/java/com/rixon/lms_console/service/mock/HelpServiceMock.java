@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * This class implements the mock service for help operation
  * User: 229921|Date: 8/17/12|Time: 9:26 PM
  */
 public class HelpServiceMock implements Service {

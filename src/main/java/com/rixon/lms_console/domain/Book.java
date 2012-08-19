@@ -4,9 +4,7 @@ import java.util.Date;
 
 /**
  * This class represents the book entity
- * User: 229921
- * Date: 8/17/12
- * Time: 6:01 PM
+ * User: 229921|Date: 8/17/12|Time: 6:01 PM
  */
 public class Book {
     private String isbn;

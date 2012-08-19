@@ -3,12 +3,9 @@ package com.rixon.lms_console.command;
 import java.util.Collection;
 
 /**
- * Created with IntelliJ IDEA.
- * User: 229921
- * Date: 8/1/12
- * Time: 8:01 PM
  * This interface represents the parameters that is required for the command to
  * execute the operation
+ * User: 229921|Date: 8/1/12|Time: 8:01 PM
  */
 public interface Parameter<TYPE> {
 

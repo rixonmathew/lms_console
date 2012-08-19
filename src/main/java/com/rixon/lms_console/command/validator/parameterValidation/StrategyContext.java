@@ -9,9 +9,7 @@ import static com.rixon.lms_console.command.operation.OperationTypes.*;
 /**
  * This class represents the context in the Strategy design pattern. This class will
  * provide the required strategy based on the operation
- * User: rixonmathew
- * Date: 12/08/12
- * Time: 12:16 PM
+ * User: 229921|Date: 12/08/12|Time: 12:16 PM
  */
 public class StrategyContext {
     private static Map<String,ParameterValidationStrategy> validationStrategyMap;
@@ -33,9 +31,6 @@ public class StrategyContext {
 
     public static ParameterValidationStrategy strategyForOperation(String operationType){
         ParameterValidationStrategy validationStrategy = validationStrategyMap.get(operationType);
-        if(validationStrategy==null){
-            validationStrategy = validationStrategyMap.get(COMMON);
-        }
         return validationStrategy;
     }
 }

@@ -8,7 +8,8 @@
 package com.rixon.lms_console.command.operation;
 
 /**
- * User: 229921|Date: 8/18/12|Time: 8:30 PM
+ * This class represents the exit operation
+ * User: 229921|Date: 8/17/12|Time: 10:01 AM
  */
 public class ExitOperation extends AbstractOperation {
     public ExitOperation(String operationType) {

@@ -4,11 +4,8 @@ import javax.swing.table.TableModel;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
- * User: 229921
- * Date: 8/17/12
- * Time: 5:09 PM
- * To change this template use File | Settings | File Templates.
+ * This class represents the abstract result and is the implementation of the Result interface
+ * User: 229921|Date: 8/17/12|Time: 10:01 AM
  */
 public abstract class AbstractResult implements Result {
 

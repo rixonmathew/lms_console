@@ -11,7 +11,8 @@ import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.Result;
 
 /**
- * User: 229921|Date: 8/17/12|Time: 7:20 PM
+ * This class implements the service for search operation
+ *  User: 229921|Date: 8/17/12|Time: 7:20 PM
  */
 public class SearchService implements Service {
     @Override

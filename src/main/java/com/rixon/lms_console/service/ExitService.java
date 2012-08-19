@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * This class implements the service for exit operation
  * User: 229921|Date: 8/18/12|Time: 9:24 PM
  */
 public class ExitService implements Service {

@@ -8,10 +8,7 @@ import static com.rixon.lms_console.command.operation.OperationTypes.*;
 /**
  * This class represents the flyweight factory used to get the shared instances of
  * operation object
- * User: 229921
- * Date: 8/17/12
- * Time: 11:27 AM
- * To change this template use File | Settings | File Templates.
+ * User: 229921|Date: 8/17/12|Time: 10:01 AM
  */
 public class OperationFlyWeightFactory {
 
