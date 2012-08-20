@@ -1,4 +1,0 @@
-#NOTE: This is an internal implementation file, its format can be changed without prior notice.
-#Mon Aug 06 11:15:50 IST 2012
-http\://indigorepo.cognizant.com/maven2/.error=Could not transfer artifact org.apache.maven.plugins\:maven-resources-plugin\:pom\:2.4.3 from/to indigorepo (http\://indigorepo.cognizant.com/maven2/)\: Error transferring file\: Server returned HTTP response code\: 500 for URL\: http\://indigorepo.cognizant.com/maven2/org/apache/maven/plugins/maven-resources-plugin/2.4.3/maven-resources-plugin-2.4.3.pom
-a8c65e807269592164eef6d455f73ae506a7787a@proxy.cognizant.com\:6050>da39a3ee5e6b4b0d3255bfef95601890afd80709@default-http\://indigorepo.cognizant.com/maven2/.lastUpdated=1344231950511

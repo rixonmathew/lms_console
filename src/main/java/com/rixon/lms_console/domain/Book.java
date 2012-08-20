@@ -1,17 +1,24 @@
 package com.rixon.lms_console.domain;
 
+import javax.persistence.*;
 import java.util.Date;
 
 /**
  * This class represents the book entity
  * User: 229921|Date: 8/17/12|Time: 6:01 PM
  */
+@Entity
+@Table(name = "BOOK")
+@NamedQuery(name=Book.ALL_BOOKS_QUERY, query="select book from Book book")
 public class Book {
+    @Id
     private String isbn;
     private String title;
     private String author;
     private String publisher;
+    @Temporal(TemporalType.DATE)
     private Date releaseDate;
+    public static final String ALL_BOOKS_QUERY = "all_books_query";
 
     public String getIsbn() {
         return isbn;

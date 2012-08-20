@@ -1,4 +1,4 @@
-package com.rixon.lms_console.command.validator;
+package com.rixon.lms_console.command.operation;
 
 import java.util.ArrayList;
 import java.util.List;

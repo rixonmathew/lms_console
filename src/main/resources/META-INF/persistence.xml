@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2012.
+  ~ Author: Rixon Mathew (email:rixon.mathew@cognizant.com)
+  ~ This source is distributed as is without warranty of any kind. Please use this at your
+  ~ own risk. You are free to reuse as long as the credit is provided to me for this work
+  -->
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence ">
+    <persistence-unit name="lms-eclipselink" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>com.rixon.lms_console.domain.Book</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbc.JDBCDriver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:hsql://localhost:9654/lms_db"/>
+            <property name="javax.persistence.jdbc.user" value="SA"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+        </properties>
+    </persistence-unit>
+
+    <!--
+    <persistence-unit name = "lms-local" transaction-name = "RESOURCE_LOCAL">
+        <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+        <class>com.rixon.lms.dao.resultset.ItemTypeRSRS</class>
+        <properties>
+
+        <propertyRS name="openjpa.ConnectionDriverName" value="oracle.jdbc.driver.OracleDriver"/>
+        <propertyRS name="openjpa.ConnectionURL" value="jdbc:oracle:thin:@rixpc:1521:rixorcl"/>
+        <propertyRS name="openjpa.ConnectionUserName" value="rixon"/>
+        <propertyRS name="openjpa.ConnectionPassword" value="oracle"/>
+        <propertyRS name="openjpa.Log" value="DefaultLevel=WARN,SQL=Trace"/>
+
+        <propertyRS name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbc.JDBCDriver"/>
+        <propertyRS name="javax.persistence.jdbc.url" value="jdbc:hsqldb:hsql://localhost:9654/lms_db"/>
+        <propertyRS name="javax.persistence.jdbc.user" value="sa"/>
+        <propertyRS name="javax.persistence.jdbc.password" value=""/>
+
+        <propertyRS name="openjpa.ConnectionDriverName" value="org.hsqldb.jdbc.JDBCDriver"/>
+        <propertyRS name="openjpa.ConnectionURL" value="jdbc:hsqldb:hsql://localhost:9654/lms_db"/>
+        <propertyRS name="openjpa.ConnectionUserName" value="sa"/>
+        <propertyRS name="openjpa.ConnectionPassword" value=""/>
+
+        <propertyRS name="openjpa.jdbc.DBDictionary" value="hsql"/>
+
+        <propertyRS name="openjpa.DataCache"                value="true"/>
+        <propertyRS name="openjpa.RemoteCommitProvider"     value="sjvm"/>
+        <propertyRS name="openjpa.InitializeEagerly"        value="true"/>
+
+        <propertyRS name="openjpa.DynamicEnhancementAgent"  value="false"/>
+        <propertyRS name="openjpa.RuntimeUnenhancedClasses" value="supported"/>
+
+        <propertyRS name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
+        <propertyRS name="openjpa.jdbc.QuerySQLCache"       value="true(EnableStatistics=true)"/>
+        </properties>
+</persistence-unit>
+-->
+</persistence>

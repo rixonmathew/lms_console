@@ -2,6 +2,7 @@ package com.rixon.lms_console.command.validator;
 
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.operation.Operation;
+import com.rixon.lms_console.command.operation.OperationsCatalog;
 import com.rixon.lms_console.command.validator.parameterValidation.ParameterValidator;
 
 /**
