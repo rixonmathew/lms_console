@@ -7,6 +7,7 @@
 
 package com.rixon.lms_console.dao;
 
+import com.rixon.lms_console.dao.recordset.ItemTypeRecord;
 import com.rixon.lms_console.dao.recordset.MemberRecord;
 import com.rixon.lms_console.domain.Book;
 
@@ -29,5 +30,34 @@ public interface LMSDao {
      * @return
      */
     public List<MemberRecord> getAllMembers();
+
+    /**
+     * This dao metod will provide the member record based on the email id and password
+     * @param emailId
+     * @param password
+     * @return MemberRecord
+     */
+    MemberRecord findMember(String emailId, String password);
+
+
+    /**
+     * This method will get the item types that are possible in the system
+     * @return list of all item type record
+     */
+    List<ItemTypeRecord> getAllItemTypes();
+
+    /**
+     * This method is for adding a new member record to the data base
+     * @param memberRecord
+     */
+    void addMember(MemberRecord memberRecord);
+
+    /**
+     * This method will remove the member record. As of now this will not remove any transactions associated with
+     * the member
+     * TODO: add functionality to soft delete the member and all related tables of the member
+     * @param memberRecord
+     */
+    void removeMember(MemberRecord memberRecord);
 }
 

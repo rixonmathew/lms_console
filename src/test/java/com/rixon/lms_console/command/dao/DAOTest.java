@@ -9,6 +9,7 @@ package com.rixon.lms_console.command.dao;
 
 import com.rixon.lms_console.dao.LMSDao;
 import com.rixon.lms_console.dao.LMSDaoSQL;
+import com.rixon.lms_console.dao.recordset.ItemTypeRecord;
 import com.rixon.lms_console.dao.recordset.MemberRecord;
 import com.rixon.lms_console.domain.Book;
 import org.junit.After;
@@ -19,6 +20,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 /**
  * User: 229921|Date: 8/19/12|Time: 12:05 PM
@@ -40,8 +42,8 @@ public class DAOTest {
     public void testGetAllBooks() {
         List<Book> books = lmsDao.getAllBooks();
         assertNotNull(books);
-        final int expectecBookCount = 11;
-        assertEquals("Size of list is not as expected", expectecBookCount,books.size());
+        final int expectedBookCount = 11;
+        assertEquals("Size of list is not as expected", expectedBookCount,books.size());
     }
 
     @Test
@@ -51,5 +53,59 @@ public class DAOTest {
         final int expectedMemberCount = 4;
         assertEquals("size of member list is not as expected",expectedMemberCount,memberRecords.size());
     }
+
+    @Test
+    public void testValidMember() {
+        final String emailId="rixonmathew@gmail.com";
+        final String password="lms123#";
+        MemberRecord memberRecord = lmsDao.findMember(emailId,password);
+        assertNotNull(memberRecord);
+        assertEquals("Email id does not match", emailId, memberRecord.getEmailId());
+        assertEquals("Password does not match",password,memberRecord.getPassword());
+    }
+
+    @Test
+    public void testInvalidMember() {
+        final String emailId="notpresent@gmail.com";
+        final String password="password";
+        MemberRecord memberRecord = lmsDao.findMember(emailId,password);
+        assertNull(memberRecord);
+    }
+
+
+    @Test
+    public void testAddNewMember() {
+        final String email = "stevejobs@apple.com";
+        final String password = "apple123";
+        MemberRecord memberRecord = DAOMockDataProvider.getMemberRecord("Steve","Jobs",email,"1158876659","Cupertino in United States of America", password);
+        lmsDao.addMember(memberRecord);
+        memberRecord = lmsDao.findMember(email,password);
+        assertNotNull(memberRecord);
+        assertEquals("Email id does not match", email, memberRecord.getEmailId());
+        assertEquals("Password does not match", password, memberRecord.getPassword());
+        lmsDao.removeMember(memberRecord);
+    }
+
+//    @Test
+//    public void testRemoveMember() {
+//        final String emailId = "stevejobs@apple.com";
+//        final String password = "apple123";
+//        MemberRecord memberRecord = lmsDao.findMember(emailId,password);
+//        assertNotNull(memberRecord);
+//        lmsDao.removeMember(memberRecord);
+//        memberRecord = lmsDao.findMember(emailId,password);
+//        assertNull(memberRecord);
+//    }
+
+
+
+    @Test
+    public void testGetAllItemTypes()  {
+        List<ItemTypeRecord> itemTypeRecords = lmsDao.getAllItemTypes();
+        assertNotNull(itemTypeRecords);
+        final int expectedCount = 7;
+        assertEquals("size of item type list is not as expected",expectedCount,itemTypeRecords.size());
+    }
+
 
 }

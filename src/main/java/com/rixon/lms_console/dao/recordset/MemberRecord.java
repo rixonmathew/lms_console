@@ -16,13 +16,13 @@ import javax.persistence.*;
 @Entity
 @Table(name="MEMBER")
 @NamedQueries({
-        @NamedQuery(name=MemberRecord.FIND_MEMBER,query = "select x from MemberRS x where x.emailId = :emailId and x.password = :password"),
-        @NamedQuery(name=MemberRecord.ALL_MEMBERS,query = "select x from MemberRS x")
+        @NamedQuery(name=MemberRecord.FIND_MEMBER_QUERY,query = "select x from MemberRecord x where x.emailId = :emailId and x.password = :password"),
+        @NamedQuery(name=MemberRecord.ALL_MEMBERS_QUERY,query = "select x from MemberRecord x")
 })
 public class MemberRecord {
 
-    public static final String FIND_MEMBER = "find_member";
-    public static final String ALL_MEMBERS = "all_members";
+    public static final String FIND_MEMBER_QUERY = "find_member";
+    public static final String ALL_MEMBERS_QUERY = "all_members";
 
     private int id;
     private String firstName;

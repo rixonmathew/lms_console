@@ -7,13 +7,11 @@
 
 package com.rixon.lms_console.dao;
 
+import com.rixon.lms_console.dao.recordset.ItemTypeRecord;
 import com.rixon.lms_console.dao.recordset.MemberRecord;
 import com.rixon.lms_console.domain.Book;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -40,8 +38,44 @@ public class LMSDaoSQL implements LMSDao {
 
     @Override
     public List<MemberRecord> getAllMembers() {
-        Query allMembersQuery = entityManager.createNamedQuery(MemberRecord.ALL_MEMBERS);
+        Query allMembersQuery = entityManager.createNamedQuery(MemberRecord.ALL_MEMBERS_QUERY);
         List results = allMembersQuery.getResultList();
         return (List<MemberRecord>)results;
+    }
+
+    @Override
+    public MemberRecord findMember(String emailId, String password) {
+        Query membberSearchQuery = entityManager.createNamedQuery(MemberRecord.FIND_MEMBER_QUERY);
+        membberSearchQuery.setParameter("emailId",emailId);
+        membberSearchQuery.setParameter("password",password);
+        List results = membberSearchQuery.getResultList();
+        MemberRecord memberRecord = null;
+        if (results!=null && results.size()>0){
+            memberRecord = ((List<MemberRecord>)results).get(0);
+        }
+        return memberRecord;
+    }
+
+    @Override
+    public void addMember(MemberRecord memberRecord) {
+        EntityTransaction transaction = entityManager.getTransaction();
+        transaction.begin();
+        entityManager.persist(memberRecord);
+        transaction.commit();
+    }
+
+    @Override
+    public void removeMember(MemberRecord memberRecord) {
+        EntityTransaction transaction = entityManager.getTransaction();
+        transaction.begin();
+        entityManager.remove(memberRecord);
+        transaction.commit();
+    }
+
+    @Override
+    public List<ItemTypeRecord> getAllItemTypes() {
+        Query allMembersQuery = entityManager.createNamedQuery(ItemTypeRecord.ALL_ITEM_TYPES_QUERY);
+        List results = allMembersQuery.getResultList();
+        return (List<ItemTypeRecord>)results;
     }
 }
