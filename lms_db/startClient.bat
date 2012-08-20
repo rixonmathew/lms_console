@@ -1,0 +1,1 @@
+java -cp C:\Users\229921\.m2\repository\org\hsqldb\hsqldb\2.2.8\hsqldb-2.2.8.jar org.hsqldb.util.DatabaseManagerSwing --url jdbc:hsqldb:hsql://localhost:9654/lms_db --user SA

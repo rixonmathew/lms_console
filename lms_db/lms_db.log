@@ -1,0 +1,11 @@
+/*C13*/SET SCHEMA PUBLIC
+CREATE TABLE MEMBER\u000a(\u000a  ID              INTEGER                 PRIMARY KEY,\u000a  FIRST_NAME      VARCHAR(100)            NOT NULL,\u000a  LAST_NAME       VARCHAR(100)            NOT NULL,\u000a  EMAIL_ID        VARCHAR(100)            NOT NULL,\u000a  MOBILE_NUMBER   VARCHAR(30),\u000a  POSTAL_ADDRESS  VARCHAR(4000)\u000a)\u000a
+INSERT INTO MEMBER VALUES(1,'Rixon','Mathew','rixonmathew@gmail.com','9545590291','Pune')
+COMMIT
+INSERT INTO MEMBER VALUES(2,'Dinkar','Gupta','dinkargupta@gmail.com','9965842261','Pune')
+COMMIT
+INSERT INTO MEMBER VALUES(3,'Vaibhav','Deshpande','vaibhavdeshpande@gmail.com','9956654487','Jaipur')
+COMMIT
+INSERT INTO MEMBER VALUES(4,'Divya','Jain','divyajain@gmail.com','6656744548','Zurich')
+COMMIT
+create sequence member_id_seq as bigint start with 1 increment by 1
