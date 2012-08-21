@@ -7,9 +7,13 @@
 
 package com.rixon.lms_console.command.simulator;
 
+import com.rixon.lms_console.util.DateUtil;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import static org.junit.Assert.assertNotNull;
@@ -18,6 +22,18 @@ import static org.junit.Assert.assertNotNull;
  * User: 229921|Date: 8/20/12|Time: 1:15 AM
  */
 public class DataSimulatorTest {
+
+    DataSimulator dataSimulator;
+
+    @Before
+    public void setup() {
+        dataSimulator = new DataSimulator();
+    }
+
+    @After
+    public void tearDown() {
+        dataSimulator = null;
+    }
 
     @Test
     public void testTitleGenerationFromDataPool() {
@@ -30,13 +46,28 @@ public class DataSimulatorTest {
         seedWords.add("Meaning");
         seedWords.add("Defense");
         seedWords.add("Arcade");
-        DataSimulator dataSimulator = new DataSimulator();
         dataSimulator.setTitleSeed(seedWords);
         List<String> titles = dataSimulator.mockTitles(20);
         assertNotNull(titles);
         for (String title:titles) {
             System.out.println(title);
         }
-
     }
+
+   @Test
+    public void testDateGenerationFromDataPool() {
+       List<Date> seedDates = new ArrayList<Date>();
+       seedDates.add(DateUtil.getFormattedDate("01/01/2001"));
+       seedDates.add(DateUtil.getFormattedDate("01/01/2002"));
+       seedDates.add(DateUtil.getFormattedDate("01/01/2003"));
+       seedDates.add(DateUtil.getFormattedDate("01/01/2005"));
+       seedDates.add(DateUtil.getFormattedDate("01/01/2006"));
+       seedDates.add(DateUtil.getFormattedDate("12/21/2001"));
+       dataSimulator.setDateSeed(seedDates);
+       List<Date> dates = dataSimulator.mockDates(20);
+       assertNotNull(dates);
+       for (Date date:dates) {
+           System.out.println(DateUtil.getDateAsString(date));
+       }
+   }
 }

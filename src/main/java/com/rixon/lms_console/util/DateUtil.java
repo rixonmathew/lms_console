@@ -28,4 +28,8 @@ public class DateUtil {
             throw new IllegalArgumentException("Invalid date string "+dateString);
         }
     }
+
+    public static String getDateAsString(Date date) {
+        return dateFormat.format(date);
+    }
 }

@@ -18,10 +18,7 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-
+import static org.junit.Assert.*;
 /**
  * User: 229921|Date: 8/19/12|Time: 12:05 PM
  */
@@ -104,8 +101,6 @@ public class DAOTest {
         List<ItemTypeRecord> itemTypeRecords = lmsDao.getAllItemTypes();
         assertNotNull(itemTypeRecords);
         final int expectedCount = 7;
-        assertEquals("size of item type list is not as expected",expectedCount,itemTypeRecords.size());
+        assertEquals("size of item type list is not as expected", expectedCount, itemTypeRecords.size());
     }
-
-
 }
