@@ -133,6 +133,17 @@ public class DAOTest {
         assertNotNull(itemRecords);
         final int expectedCount = 6;
         assertEquals("size of role records is not as expected", expectedCount, itemRecords.size());
+        for (ItemRecord itemRecord:itemRecords) {
+            assertNotNull(itemRecord.getId());
+            assertNotNull(itemRecord.getName());
+            assertNotNull(itemRecord.getDescription());
+            assertNotNull(itemRecord.getItemTypeRecord());
+            assertNotNull(itemRecord.getProperties());
+            for (PropertyRecord propertyRecord:itemRecord.getProperties().keySet()){
+                ItemPropertyRecord itemPropertyRecord = itemRecord.getProperties().get(propertyRecord);
+                assertNotNull(itemPropertyRecord);
+            }
+        }
     }
 
     @Test
@@ -141,6 +152,7 @@ public class DAOTest {
         assertNotNull(propertyRecords);
         final int expectedCount = 13;
         assertEquals("size of role records is not as expected", expectedCount, propertyRecords.size());
+
     }
 
 }

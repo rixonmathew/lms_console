@@ -23,7 +23,7 @@ public class ItemRecord {
     private ItemTypeRecord itemTypeRecord;
     private String name;
     private String description;
-    //private Map<PropertyRecord,ItemPropertyRS> properties;
+    private Map<PropertyRecord,ItemPropertyRecord> properties;
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "item_id_gen")
@@ -62,5 +62,27 @@ public class ItemRecord {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @OneToMany(fetch = FetchType.EAGER)
+    @JoinColumn(name="ITEM_ID")
+    @MapKey(name = "propertyRecord")
+    public Map<PropertyRecord, ItemPropertyRecord> getProperties() {
+        return properties;
+    }
+
+    public void setProperties(Map<PropertyRecord, ItemPropertyRecord> properties) {
+        this.properties = properties;
+    }
+
+    @Override
+    public String toString() {
+        return "ItemRecord{" +
+                "id=" + id +
+                ", itemTypeRecord=" + itemTypeRecord +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", properties=" + properties +
+                '}';
     }
 }

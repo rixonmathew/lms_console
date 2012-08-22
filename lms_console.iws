@@ -6,16 +6,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" name="Default" comment="updated to include Strategy for validation&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemRecord.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/PropertyRecord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_db.lck" afterPath="$PROJECT_DIR$/lms_db/lms_db.lck" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_db.script" afterPath="$PROJECT_DIR$/lms_db/lms_db.script" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemPropertyRecord.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_console.iws" afterPath="$PROJECT_DIR$/lms_console.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_db.log" afterPath="$PROJECT_DIR$/lms_db/lms_db.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_db.properties" afterPath="$PROJECT_DIR$/lms_db/lms_db.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/LMSDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/LMSDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/LMSDaoSQL.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/LMSDaoSQL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/FeatureRecord.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/FeatureRecord.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemRecord.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemRecord.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/PropertyRecord.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/PropertyRecord.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/dao/DAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/dao/DAOTest.java" />
     </list>
@@ -320,7 +315,7 @@
       <file leaf-file-name="DAOTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/dao/DAOTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="36" selection-start="4943" selection-end="4943" vertical-scroll-proportion="0.6727273">
+            <state line="141" column="19" selection-start="5070" selection-end="5070" vertical-scroll-proportion="1.1363636">
               <folding />
             </state>
           </provider>
@@ -329,7 +324,7 @@
       <file leaf-file-name="PropertyRecord.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/PropertyRecord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="23" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0">
+            <state line="55" column="18" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -338,10 +333,19 @@
       <file leaf-file-name="ItemRecord.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemRecord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="869" selection-end="1042" vertical-scroll-proportion="0.0">
+            <state line="78" column="18" selection-start="2146" selection-end="2146" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemPropertyRecord.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemPropertyRecord.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="64" column="60" selection-start="1784" selection-end="1784" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -367,7 +371,7 @@
       <file leaf-file-name="persistence.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0">
+            <state line="20" column="69" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -400,15 +404,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoleRecord.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/RoleRecord.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="1035" selection-end="1060" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -432,7 +427,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/console/LMSConsoleTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/dao/DAOMockDataProvider.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/executor/CommandExecutorTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/simulator/DataPumpTest.java" />
@@ -442,11 +436,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/RoleRecord.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/CategoryRecord.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/FeatureRecord.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemRecord.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/LMSDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/PropertyRecord.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/LMSDaoSQL.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemRecord.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/PropertyRecord.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemPropertyRecord.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/dao/DAOTest.java" />
       </list>
     </option>
@@ -1008,11 +1003,11 @@
       <recent name="com.rixon.lms_console.facade" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.rixon.lms_console.dao.recordset" />
       <recent name="com.rixon.lms_console.command.dao" />
       <recent name="com.rixon.lms_console.command.simulator" />
       <recent name="com.rixon.lms_console.facade.mock" />
       <recent name="com.rixon.lms_console.command.operation" />
-      <recent name="com.rixon.lms_console.command.validator.parameterValidation" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.rixon.lms_console" />
@@ -1021,7 +1016,7 @@
       <recent name="com.rixon.lms_console.command.builder" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DAOTest.testGetAllProperties">
+  <component name="RunManager" selected="JUnit.All_Tests">
     <configuration default="false" name="DAOTest.testGetAllRoles" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="lms_console" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -1502,11 +1497,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/simulator/DataPumpTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="9" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/simulator/DataSimulator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="9" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0" />
@@ -1558,25 +1548,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="869" selection-end="1042" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/LMSDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="83" column="22" selection-start="2422" selection-end="2422" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/PropertyRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="23" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1590,14 +1564,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0">
+        <state line="20" column="69" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="18" selection-start="2146" selection-end="2146" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/PropertyRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="18" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemPropertyRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="60" selection-start="1784" selection-end="1784" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/dao/DAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="36" selection-start="4943" selection-end="4943" vertical-scroll-proportion="0.6727273">
+        <state line="141" column="19" selection-start="5070" selection-end="5070" vertical-scroll-proportion="1.1363636">
           <folding />
         </state>
       </provider>
