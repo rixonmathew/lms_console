@@ -7,10 +7,7 @@
 
 package com.rixon.lms_console.dao;
 
-import com.rixon.lms_console.dao.recordset.CategoryRecord;
-import com.rixon.lms_console.dao.recordset.ItemTypeRecord;
-import com.rixon.lms_console.dao.recordset.MemberRecord;
-import com.rixon.lms_console.dao.recordset.RoleRecord;
+import com.rixon.lms_console.dao.recordset.*;
 import com.rixon.lms_console.domain.Book;
 
 import java.util.List;
@@ -64,14 +61,32 @@ public interface LMSDao {
 
     /**
      * This method will provide all the roles defined in the system
-     * @return
+     * @return list of all roles
      */
     List<RoleRecord> getAllRoles();
 
     /**
      * this method will return all the categories under which properties are placed
-     * @return
+     * @return list of all categories
      */
     List<CategoryRecord> getAllCategories();
+
+    /**
+     * This method will return all the features available in the system
+     * @return list of all features
+     */
+    List<FeatureRecord> getAllFeatures();
+
+    /**
+     * This method will return all the items available in the system
+     * @return
+     */
+    List<ItemRecord> getAllItems();
+
+    /**
+     * This method will return all the properties available in the system
+     * @return
+     */
+    List<PropertyRecord> getAllProperties();
 }
 

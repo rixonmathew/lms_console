@@ -10,22 +10,22 @@ package com.rixon.lms_console.dao.recordset;
 import javax.persistence.*;
 
 /**
- * This entity represents a record in the CATEGORY table
- *  User: rixon|Date: 8/22/12|Time: 1:42 PM
+ * This class represents a record in the table Property
+ * User:rixon|Date: 8/22/12|Time: 7:48 PM
  */
 @Entity
-@Table(name = "Feature")
-@NamedQuery(name = FeatureRecord.ALL_FEATURES_QUERY,query = "select feature from FeatureRecord feature")
-public class FeatureRecord {
+@Table(name="PROPERTY")
+@NamedQuery(name= PropertyRecord.ALL_PROPERTIES_QUERY,query="select property from PropertyRecord property")
+public class PropertyRecord {
+    public static final String ALL_PROPERTIES_QUERY = "all_property_query";
 
-    public static final String ALL_FEATURES_QUERY = "all_features_query";
     private int id;
-    private String feature;
+    private String name;
     private String description;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "feature_id_gen")
-    @SequenceGenerator(name="feature_id_gen",sequenceName = "feature_id_seq",allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "property_id_gen")
+    @SequenceGenerator(name="property_id_gen",sequenceName = "property_id_seq",allocationSize = 1)
     public int getId() {
         return id;
     }
@@ -34,13 +34,13 @@ public class FeatureRecord {
         this.id = id;
     }
 
-    @Column(name="FEATURE")
-    public String getFeature() {
-        return feature;
+    @Column(name="NAME")
+    public String getName() {
+        return name;
     }
 
-    public void setFeature(String feature) {
-        this.feature = feature;
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Column(name="DESCRIPTION")

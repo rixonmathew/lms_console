@@ -15,6 +15,9 @@
         <class>com.rixon.lms_console.dao.recordset.ItemTypeRecord</class>
         <class>com.rixon.lms_console.dao.recordset.RoleRecord</class>
         <class>com.rixon.lms_console.dao.recordset.CategoryRecord</class>
+        <class>com.rixon.lms_console.dao.recordset.FeatureRecord</class>
+        <class>com.rixon.lms_console.dao.recordset.ItemRecord</class>
+        <class>com.rixon.lms_console.dao.recordset.PropertyRecord</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbc.JDBCDriver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:hsql://localhost:9654/lms_db"/>

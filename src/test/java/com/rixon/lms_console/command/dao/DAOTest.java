@@ -9,10 +9,7 @@ package com.rixon.lms_console.command.dao;
 
 import com.rixon.lms_console.dao.LMSDao;
 import com.rixon.lms_console.dao.LMSDaoSQL;
-import com.rixon.lms_console.dao.recordset.CategoryRecord;
-import com.rixon.lms_console.dao.recordset.ItemTypeRecord;
-import com.rixon.lms_console.dao.recordset.MemberRecord;
-import com.rixon.lms_console.dao.recordset.RoleRecord;
+import com.rixon.lms_console.dao.recordset.*;
 import com.rixon.lms_console.domain.Book;
 import org.junit.After;
 import org.junit.Before;
@@ -126,8 +123,24 @@ public class DAOTest {
     public void testGetAllFeatures() {
         List<FeatureRecord> featureRecords = lmsDao.getAllFeatures();
         assertNotNull(featureRecords);
-        final int expectedCount = 4;
+        final int expectedCount = 5;
         assertEquals("size of role records is not as expected", expectedCount, featureRecords.size());
+    }
+
+    @Test
+    public void testGetAllItems() {
+        List<ItemRecord> itemRecords = lmsDao.getAllItems();
+        assertNotNull(itemRecords);
+        final int expectedCount = 6;
+        assertEquals("size of role records is not as expected", expectedCount, itemRecords.size());
+    }
+
+    @Test
+    public void testGetAllProperties() {
+        List<PropertyRecord> propertyRecords = lmsDao.getAllProperties();
+        assertNotNull(propertyRecords);
+        final int expectedCount = 13;
+        assertEquals("size of role records is not as expected", expectedCount, propertyRecords.size());
     }
 
 }

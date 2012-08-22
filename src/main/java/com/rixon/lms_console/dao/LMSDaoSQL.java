@@ -7,10 +7,7 @@
 
 package com.rixon.lms_console.dao;
 
-import com.rixon.lms_console.dao.recordset.CategoryRecord;
-import com.rixon.lms_console.dao.recordset.ItemTypeRecord;
-import com.rixon.lms_console.dao.recordset.MemberRecord;
-import com.rixon.lms_console.dao.recordset.RoleRecord;
+import com.rixon.lms_console.dao.recordset.*;
 import com.rixon.lms_console.domain.Book;
 
 import javax.persistence.*;
@@ -94,4 +91,26 @@ public class LMSDaoSQL implements LMSDao {
         List results = allCategoriesQuery.getResultList();
         return (List<CategoryRecord>)results;
     }
+
+    @Override
+    public List<FeatureRecord> getAllFeatures() {
+        Query allFeaturesQuery = entityManager.createNamedQuery(FeatureRecord.ALL_FEATURES_QUERY);
+        List results = allFeaturesQuery.getResultList();
+        return (List<FeatureRecord>)results;
+    }
+
+    @Override
+    public List<ItemRecord> getAllItems() {
+        Query allItemsQuery = entityManager.createNamedQuery(ItemRecord.ALL_ITEMS_QUERY);
+        List results = allItemsQuery.getResultList();
+        return (List<ItemRecord>)results;
+    }
+
+    @Override
+    public List<PropertyRecord> getAllProperties() {
+        Query allPropertiesQuery = entityManager.createNamedQuery(PropertyRecord.ALL_PROPERTIES_QUERY);
+        List results = allPropertiesQuery.getResultList();
+        return (List<PropertyRecord>)results;
+    }
+
 }
