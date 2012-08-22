@@ -302,3 +302,13 @@ Insert into ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
  Values
    (109, 6, 9, '911-11139212-812-9');
+   
+   
+insert into role(id,role,description) 
+values(next value for role_id_seq,'MEMBER','Member of the Library');
+insert into role(id,role,description) 
+values(next value for role_id_seq,'USER','Standard user  of the Library');
+insert into role(id,role,description) 
+values(next value for role_id_seq,'ADMIN','User with admin privileges of the Library');
+insert into role(id,role,description) 
+values(next value for role_id_seq,'GUEST','Guest user of the Library');

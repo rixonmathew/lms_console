@@ -7,6 +7,7 @@
 
 package com.rixon.lms_console.dao;
 
+import com.rixon.lms_console.dao.recordset.CategoryRecord;
 import com.rixon.lms_console.dao.recordset.ItemTypeRecord;
 import com.rixon.lms_console.dao.recordset.MemberRecord;
 import com.rixon.lms_console.dao.recordset.RoleRecord;
@@ -66,5 +67,11 @@ public interface LMSDao {
      * @return
      */
     List<RoleRecord> getAllRoles();
+
+    /**
+     * this method will return all the categories under which properties are placed
+     * @return
+     */
+    List<CategoryRecord> getAllCategories();
 }
 

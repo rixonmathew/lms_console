@@ -7,6 +7,7 @@
 
 package com.rixon.lms_console.dao;
 
+import com.rixon.lms_console.dao.recordset.CategoryRecord;
 import com.rixon.lms_console.dao.recordset.ItemTypeRecord;
 import com.rixon.lms_console.dao.recordset.MemberRecord;
 import com.rixon.lms_console.dao.recordset.RoleRecord;
@@ -47,8 +48,8 @@ public class LMSDaoSQL implements LMSDao {
     @Override
     public MemberRecord findMember(String emailId, String password) {
         Query membberSearchQuery = entityManager.createNamedQuery(MemberRecord.FIND_MEMBER_QUERY);
-        membberSearchQuery.setParameter("emailId",emailId);
-        membberSearchQuery.setParameter("password",password);
+        membberSearchQuery.setParameter("emailId", emailId);
+        membberSearchQuery.setParameter("password", password);
         List results = membberSearchQuery.getResultList();
         MemberRecord memberRecord = null;
         if (results!=null && results.size()>0){
@@ -87,5 +88,10 @@ public class LMSDaoSQL implements LMSDao {
         return (List<RoleRecord>)results;
     }
 
-
+    @Override
+    public List<CategoryRecord> getAllCategories() {
+        Query allCategoriesQuery = entityManager.createNamedQuery(CategoryRecord.ALL_CATEGORIES_QUERY);
+        List results = allCategoriesQuery.getResultList();
+        return (List<CategoryRecord>)results;
+    }
 }

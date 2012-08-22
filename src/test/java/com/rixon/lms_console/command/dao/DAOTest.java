@@ -9,6 +9,7 @@ package com.rixon.lms_console.command.dao;
 
 import com.rixon.lms_console.dao.LMSDao;
 import com.rixon.lms_console.dao.LMSDaoSQL;
+import com.rixon.lms_console.dao.recordset.CategoryRecord;
 import com.rixon.lms_console.dao.recordset.ItemTypeRecord;
 import com.rixon.lms_console.dao.recordset.MemberRecord;
 import com.rixon.lms_console.dao.recordset.RoleRecord;
@@ -110,6 +111,23 @@ public class DAOTest {
         assertNotNull(roleRecords);
         final int expectedCount = 4;
         assertEquals("size of role records is not as expected",expectedCount,roleRecords.size());
+    }
+
+    @Test
+    public void testGetAllCategories() {
+        List<CategoryRecord> categoryRecords = lmsDao.getAllCategories();
+        assertNotNull(categoryRecords);
+        final int expectedCount = 4;
+        assertEquals("size of role records is not as expected", expectedCount, categoryRecords.size());
+    }
+
+
+    @Test
+    public void testGetAllFeatures() {
+        List<FeatureRecord> featureRecords = lmsDao.getAllFeatures();
+        assertNotNull(featureRecords);
+        final int expectedCount = 4;
+        assertEquals("size of role records is not as expected", expectedCount, featureRecords.size());
     }
 
 }

@@ -11,22 +11,22 @@ import javax.persistence.*;
 
 /**
  * This entity represents a record in the Role table
- * User: rixon|Date: 8/22/12|Time: 1:05 PM
+ * User: rixon|Date: 8/22/12|Time: 1:24 PM
  */
 @Entity
-@Table(name = "ROLE")
-@NamedQuery(name = RoleRecord.ALL_ROLES_QUERY,query = "select role from RoleRecord role")
-public class RoleRecord {
+@Table(name = "CATEGORY")
+@NamedQuery(name = CategoryRecord.ALL_CATEGORIES_QUERY,query = "select category from CategoryRecord category")
+public class CategoryRecord {
 
-    public static final String ALL_ROLES_QUERY = "all_roles_query";
+    public static final String ALL_CATEGORIES_QUERY = "all_categories_query";
 
     private int id;
-    private String role;
+    private String name;
     private String description;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "role_id_gen")
-    @SequenceGenerator(name="role_id_gen",sequenceName = "role_id_seq",allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "category_id_gen")
+    @SequenceGenerator(name="category_id_gen",sequenceName = "category_id_seq",allocationSize = 1)
     public int getId() {
         return id;
     }
@@ -35,13 +35,13 @@ public class RoleRecord {
         this.id = id;
     }
 
-    @Column(name="ROLE")
-    public String getRole() {
-        return role;
+    @Column(name="NAME")
+    public String getName() {
+        return name;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Column(name="DESCRIPTION")
