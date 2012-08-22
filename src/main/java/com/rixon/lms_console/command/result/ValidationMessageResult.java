@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * This class provides the validation messages in the result format
- * User: 229921|Date: 8/17/12|Time: 11:53 PM
+ * User: rixon|Date: 8/17/12|Time: 11:53 PM
  */
 public class ValidationMessageResult extends AbstractResult {
 

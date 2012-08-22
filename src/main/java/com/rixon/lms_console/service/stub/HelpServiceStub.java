@@ -5,7 +5,7 @@
  * own risk. You are free to reuse as long as the credit is provided to me for this work
  */
 
-package com.rixon.lms_console.service.mock;
+package com.rixon.lms_console.service.stub;
 
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.operation.Operation;
@@ -19,10 +19,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This class implements the mock service for help operation
- * User: 229921|Date: 8/17/12|Time: 9:26 PM
+ * This class implements the stub service for help operation
+ * User: rixon|Date: 8/17/12|Time: 9:26 PM
  */
-public class HelpServiceMock implements Service {
+public class HelpServiceStub implements Service {
     @Override
     public Result executeService(Parameter<String> parameter) {
         List<String> commands = new ArrayList<String>();

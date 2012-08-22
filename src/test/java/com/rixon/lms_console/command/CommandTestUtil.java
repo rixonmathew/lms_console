@@ -8,7 +8,7 @@ import static org.junit.Assert.assertNotNull;
 
 /**
  * This class provides all the util functionality while creating, validating the command objects
- * User: 229921|Date: 8/17/12|Time: 10:01 AM
+ * User: rixon|Date: 8/17/12|Time: 10:01 AM
  */
 public class CommandTestUtil {
 

@@ -10,8 +10,8 @@ package com.rixon.lms_console.command.dao;
 import com.rixon.lms_console.dao.recordset.MemberRecord;
 
 /**
- * This class provides mock objects for help in testing
- * User: 229921|Date: 8/20/12|Time: 12:52 PM
+ * This class provides stub data objects for help in testing
+ * User: rixon|Date: 8/20/12|Time: 12:52 PM
  */
 public class DAOMockDataProvider {
     public static MemberRecord getMemberRecord(String firstName, String lastName, String email, String mobileNumber, String postalAddress, String password) {
@@ -19,8 +19,6 @@ public class DAOMockDataProvider {
         memberRecord.setFirstName(firstName);
         memberRecord.setLastName(lastName);
         memberRecord.setEmailId(email);
-        memberRecord.setMobileNumber(mobileNumber);
-        memberRecord.setPostalAddress(postalAddress);
         memberRecord.setPassword(password);
         return memberRecord;
     }

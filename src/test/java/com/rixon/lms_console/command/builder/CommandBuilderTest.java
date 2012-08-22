@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 
 /**
  * This class is used for testing te command building functionality
- * User: 229921|Date: 8/17/12|Time: 10:01 AM
+ * User: rixon|Date: 8/17/12|Time: 10:01 AM
  */
 public class CommandBuilderTest extends AbstractCommandTest{
 

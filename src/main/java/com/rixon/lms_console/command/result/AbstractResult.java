@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * This class represents the abstract result and is the implementation of the Result interface
- * User: 229921|Date: 8/17/12|Time: 10:01 AM
+ * User: rixon|Date: 8/17/12|Time: 10:01 AM
  */
 public abstract class AbstractResult implements Result {
 

@@ -9,13 +9,14 @@ package com.rixon.lms_console.dao;
 
 import com.rixon.lms_console.dao.recordset.ItemTypeRecord;
 import com.rixon.lms_console.dao.recordset.MemberRecord;
+import com.rixon.lms_console.dao.recordset.RoleRecord;
 import com.rixon.lms_console.domain.Book;
 
 import java.util.List;
 
 /**
  * This interface represents the DAO interface for the library managment system
- * User: 229921|Date: 8/19/12|Time: 12:08 PM
+ * User: rixon|Date: 8/19/12|Time: 12:08 PM
  */
 public interface LMSDao {
 
@@ -59,5 +60,11 @@ public interface LMSDao {
      * @param memberRecord
      */
     void removeMember(MemberRecord memberRecord);
+
+    /**
+     * This method will provide all the roles defined in the system
+     * @return
+     */
+    List<RoleRecord> getAllRoles();
 }
 

@@ -4,7 +4,7 @@ import com.rixon.lms_console.command.Command;
 
 /**
  * This interface is responsible for parsing the input string into a command object
- * User: 229921| Date: 8/1/12|Time: 8:08 PM
+ * User: rixon| Date: 8/1/12|Time: 8:08 PM
  */
 public interface Parser {
 

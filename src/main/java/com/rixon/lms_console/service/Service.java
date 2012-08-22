@@ -5,7 +5,7 @@ import com.rixon.lms_console.command.result.Result;
 
 /**
  * This interface represents the services for performing operations
- * User: 229921
+ * User: rixon
  * Date: 8/17/12
  * Time: 7:00 PM
  */

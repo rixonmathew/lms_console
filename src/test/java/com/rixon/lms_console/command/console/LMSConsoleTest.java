@@ -12,7 +12,7 @@ import org.junit.Test;
 
 /**
  * This class is used for testing the LMSConsole functionality
- * User: 229921|Date: 8/18/12|Time: 9:59 PM
+ * User: rixon|Date: 8/18/12|Time: 9:59 PM
  */
 public class LMSConsoleTest {
     @Test

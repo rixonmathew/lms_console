@@ -12,7 +12,7 @@ import java.io.Console;
 
 /**
  * This class is represents the console for the LMS system
- * User: 229921|Date: 8/19/12|Time: 12:16 AM
+ * User: rixon|Date: 8/19/12|Time: 12:16 AM
  */
 public class LMSConsole {
 

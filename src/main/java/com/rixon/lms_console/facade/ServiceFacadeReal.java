@@ -16,7 +16,7 @@ import static com.rixon.lms_console.command.operation.OperationTypes.*;
 
 /**
  * This class represents the facade to access all the services associated with LMS
- * User: 229921|Date: 8/17/12|Time: 7:05 PM
+ * User: rixon|Date: 8/17/12|Time: 7:05 PM
  */
 public class ServiceFacadeReal implements ServiceFacade {
 

@@ -6,7 +6,7 @@ import com.rixon.lms_console.command.operation.Operation;
 /**
  * This class represents the class for validating the parameters associated with a
  * given operation
- * User: 229921|Date: 8/17/12|Time: 10:01 AM
+ * User: rixon|Date: 8/17/12|Time: 10:01 AM
  */
 public class ParameterValidator {
 

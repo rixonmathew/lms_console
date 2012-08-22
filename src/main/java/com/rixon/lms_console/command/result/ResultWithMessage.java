@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * This class represents the result of command where only a message is to
  * be displayed instead of a table
- * User: 229921|Date: 8/18/12|Time: 8:43 PM
+ * User: rixon|Date: 8/18/12|Time: 8:43 PM
  */
 public class ResultWithMessage extends AbstractResult {
 

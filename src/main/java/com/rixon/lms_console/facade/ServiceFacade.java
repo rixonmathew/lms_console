@@ -12,7 +12,7 @@ import com.rixon.lms_console.service.Service;
 /**
  * This interface represents the facade for accessing the service. It is an implementation of
  * Abstract Factory Design Pattern by GoF
- * User: 229921|Date: 8/17/12|Time: 8:51 PM
+ * User: rixon|Date: 8/17/12|Time: 8:51 PM
  */
 public interface ServiceFacade {
 

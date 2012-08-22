@@ -12,7 +12,7 @@ import com.rixon.lms_console.command.result.Result;
 
 /**
  * This class implements the service for issue operation
- * User: 229921|Date: 8/17/12|Time: 11:31 PM
+ * User: rixon|Date: 8/17/12|Time: 11:31 PM
  */
 public class IssueService implements Service {
     @Override

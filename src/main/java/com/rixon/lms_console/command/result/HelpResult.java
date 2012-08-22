@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * This class is used to represent the results associated with Help command
- * User: 229921|Date: 8/17/12|Time: 9:28 PM
+ * User: rixon|Date: 8/17/12|Time: 9:28 PM
  */
 public class HelpResult extends AbstractResult {
     public HelpResult(List results) {

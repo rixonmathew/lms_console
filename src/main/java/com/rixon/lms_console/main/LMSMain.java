@@ -9,7 +9,7 @@ package com.rixon.lms_console.main;
 
 /**
  * This class is the main entry point of the application where it initiates the console
- * User: 229921|Date: 8/19/12|Time: 12:16 AM
+ * User: rixon|Date: 8/19/12|Time: 12:16 AM
  */
 public class LMSMain {
 

@@ -7,7 +7,7 @@ import com.rixon.lms_console.command.validator.parameterValidation.ParameterVali
 
 /**
  * ${CLASS_NAME}
- * User: 229921|Date: 8/3/12|Time: 8:27 PM
+ * User: rixon|Date: 8/3/12|Time: 8:27 PM
  */
 public class SimpleValidator implements Validator<String> {
 

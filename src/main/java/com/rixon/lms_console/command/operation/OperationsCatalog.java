@@ -7,7 +7,7 @@ import static com.rixon.lms_console.command.operation.OperationTypes.*;
 
 /**
  * This class represents the catalog of operations in the system.
- * User: 229921|Date: 8/3/12|Time: 8:30 PM
+ * User: rixon|Date: 8/3/12|Time: 8:30 PM
  */
 public class OperationsCatalog {
 

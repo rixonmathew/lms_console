@@ -4,7 +4,7 @@ import com.rixon.lms_console.command.Command;
 
 /**
  * This class represents the builder of the command from the given input string
- * User: 229921|Date: 8/17/12|Time: 10:01 AM
+ * User: rixon|Date: 8/17/12|Time: 10:01 AM
  */
 public class CommandBuilder {
 

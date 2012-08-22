@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  * This class implements the service for help operation
- * User: 229921|Date: 8/17/12|Time: 11:30 PM
+ * User: rixon|Date: 8/17/12|Time: 11:30 PM
  */
 public class HelpService implements Service {
     @Override

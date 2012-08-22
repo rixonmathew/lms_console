@@ -6,7 +6,7 @@ import org.junit.Before;
 
 /**
  * This class is the abstract test associated with testing the command
- * User: 229921|Date: 8/17/12|Time: 10:01 AM
+ * User: rixon|Date: 8/17/12|Time: 10:01 AM
  */
 public abstract class AbstractCommandTest {
 

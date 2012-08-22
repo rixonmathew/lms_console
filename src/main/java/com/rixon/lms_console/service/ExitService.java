@@ -16,10 +16,10 @@ import java.util.List;
 
 /**
  * This class implements the service for exit operation
- * User: 229921|Date: 8/18/12|Time: 9:24 PM
+ * User: rixon|Date: 8/18/12|Time: 9:24 PM
  */
 public class ExitService implements Service {
-    //TODO how to keep duplication to minimum between real and mock services
+    //TODO how to keep duplication to minimum between real and stub services
     private static final String EXIT_MESSAGE = "Have a good day :-)";
     @Override
     public Result executeService(Parameter<String> parameter) {

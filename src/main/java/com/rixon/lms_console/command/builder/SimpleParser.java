@@ -17,7 +17,7 @@ import java.util.StringTokenizer;
 /**
  * This class is an implementation of the Parser interface
  * @see Parser
- * User: 229921|Date: 8/1/12|Time: 8:13 PM
+ * User: rixon|Date: 8/1/12|Time: 8:13 PM
  */
 public class SimpleParser implements Parser {
 

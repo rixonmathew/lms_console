@@ -5,7 +5,7 @@ import com.rixon.lms_console.command.operation.Operation;
 
 /**
  * This class is responsible for validating the command object
- * User: 229921|Date: 8/2/12|Time: 1:37 AM
+ * User: rixon|Date: 8/2/12|Time: 1:37 AM
  */
 public interface Validator<TYPE> {
 

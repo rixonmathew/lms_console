@@ -19,7 +19,8 @@ import java.util.List;
 import static org.junit.Assert.assertNotNull;
 
 /**
- * User: 229921|Date: 8/20/12|Time: 1:15 AM
+ * This is a test file for validating the DataSimulator
+ * User: rixon|Date: 8/20/12|Time: 1:15 AM
  */
 public class DataSimulatorTest {
 

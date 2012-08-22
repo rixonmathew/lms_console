@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * This class is used to return the result of issue command.
- * User: 229921|Date: 8/17/12|Time: 11:24 PM
+ * User: rixon|Date: 8/17/12|Time: 11:24 PM
  */
 public class IssueResult extends ResultWithMessage {
 

@@ -10,7 +10,7 @@ package com.rixon.lms_console.command.simulator;
 import org.junit.Test;
 
 /**
- * User: 229921|Date: 8/21/12|Time: 8:19 PM
+ * User: rixon|Date: 8/21/12|Time: 8:19 PM
  */
 public class DataPumpTest {
 

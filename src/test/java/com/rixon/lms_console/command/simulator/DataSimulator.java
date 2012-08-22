@@ -10,10 +10,10 @@ package com.rixon.lms_console.command.simulator;
 import java.util.*;
 
 /**
- * This class is used to simulate mock titles based on a set of seed entries. This logic can
+ * This class is used to simulate stub titles based on a set of seed entries. This logic can
  * be used to create random values that conform to a given pattern with random values in the
  * places where pattern is not required
- * User: 229921|Date: 8/20/12|Time: 1:18 AM
+ * User: rixon|Date: 8/20/12|Time: 1:18 AM
  */
 public class DataSimulator {
 

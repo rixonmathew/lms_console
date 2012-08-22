@@ -15,7 +15,7 @@ import static org.junit.Assert.assertNotNull;
 
 /**
  * This class is for testing the command execution functionality
- * User: 229921|Date: 8/17/12|Time: 10:01 AM
+ * User: rixon|Date: 8/17/12|Time: 10:01 AM
  */
 public class CommandExecutorTest extends AbstractCommandTest {
 

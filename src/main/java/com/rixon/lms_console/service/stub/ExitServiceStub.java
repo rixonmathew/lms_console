@@ -5,7 +5,7 @@
  * own risk. You are free to reuse as long as the credit is provided to me for this work
  */
 
-package com.rixon.lms_console.service.mock;
+package com.rixon.lms_console.service.stub;
 
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.Result;
@@ -16,10 +16,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This class represents the mock service for Exit operation
- * User: 229921|Date: 8/18/12|Time: 8:37 PM
+ * This class represents the stub service for Exit operation
+ * User: rixon|Date: 8/18/12|Time: 8:37 PM
  */
-public class ExitServiceMock implements Service {
+public class ExitServiceStub implements Service {
 
     private static final String EXIT_MESSAGE = "Have a good day :-)";
     @Override

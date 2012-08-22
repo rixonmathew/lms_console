@@ -5,26 +5,26 @@
  * own risk. You are free to reuse as long as the credit is provided to me for this work
  */
 
-package com.rixon.lms_console.service.mock;
+package com.rixon.lms_console.service.stub;
 
 import com.rixon.lms_console.command.Parameter;
-import com.rixon.lms_console.command.result.IssueResult;
 import com.rixon.lms_console.command.result.Result;
+import com.rixon.lms_console.command.result.ReturnResult;
 import com.rixon.lms_console.service.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This class implements the mock service for issue operation
- * User: 229921|Date: 8/17/12|Time: 11:19 PM
+ * This class implements the stub service for return operation
+ * User: rixon|Date: 8/18/12|Time: 7:37 AM
  */
-public class IssueServiceMock implements Service {
+public class ReturnServiceStub implements Service {
     @Override
     public Result executeService(Parameter<String> parameter) {
-        String result = "Book issued successfully to user";
-        List<String> issueResult = new ArrayList<String>();
-        issueResult.add(result);
-        return new IssueResult(issueResult);
+        String returnResult = "Returned book successfully";
+        List<String> messages = new ArrayList<String>();
+        messages.add(returnResult);
+        return new ReturnResult(messages);
     }
 }

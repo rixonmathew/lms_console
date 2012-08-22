@@ -9,7 +9,7 @@ package com.rixon.lms_console.facade.mock;
 
 import com.rixon.lms_console.facade.ServiceFacade;
 import com.rixon.lms_console.service.Service;
-import com.rixon.lms_console.service.mock.*;
+import com.rixon.lms_console.service.stub.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,8 +17,8 @@ import java.util.Map;
 import static com.rixon.lms_console.command.operation.OperationTypes.*;
 
 /**
- * This class represents the facade for accessing the mock services.
- * User: 229921|Date: 8/17/12|Time: 8:57 PM
+ * This class represents the facade for accessing the stub services.
+ * User: rixon|Date: 8/17/12|Time: 8:57 PM
  */
 public class ServiceFacadeMock implements ServiceFacade {
 
@@ -30,12 +30,12 @@ public class ServiceFacadeMock implements ServiceFacade {
 
     private void loadServiceMap(){
         serviceMap  = new HashMap<String,Service>();
-        serviceMap.put(SEARCH,new SearchServiceMock());
-        serviceMap.put(HELP,new HelpServiceMock());
-        serviceMap.put(ISSUE,new IssueServiceMock());
-        serviceMap.put(TRANSFER,new TransferServiceMock());
-        serviceMap.put(RETURN,new ReturnServiceMock());
-        serviceMap.put(EXIT,new ExitServiceMock());
+        serviceMap.put(SEARCH,new SearchServiceStub());
+        serviceMap.put(HELP,new HelpServiceStub());
+        serviceMap.put(ISSUE,new IssueServiceStub());
+        serviceMap.put(TRANSFER,new TransferServiceStub());
+        serviceMap.put(RETURN,new ReturnServiceStub());
+        serviceMap.put(EXIT,new ExitServiceStub());
     }
     public Service serviceForOperation(String operationName) {
         Service service = serviceMap.get(operationName);

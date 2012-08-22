@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * This class is responsible for providing the validation messages depending on the error type
- * User: 229921|Date: 8/3/12|Time: 8:39 PM
+ * User: rixon|Date: 8/3/12|Time: 8:39 PM
  */
 public class ValidationMessageProvider {
     private static Map<String, String> validationMessages;

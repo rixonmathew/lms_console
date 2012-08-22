@@ -9,13 +9,14 @@ package com.rixon.lms_console.dao;
 
 import com.rixon.lms_console.dao.recordset.ItemTypeRecord;
 import com.rixon.lms_console.dao.recordset.MemberRecord;
+import com.rixon.lms_console.dao.recordset.RoleRecord;
 import com.rixon.lms_console.domain.Book;
 
 import javax.persistence.*;
 import java.util.List;
 
 /**
- * User: 229921|Date: 8/19/12|Time: 12:10 PM
+ * User: rixon|Date: 8/19/12|Time: 12:10 PM
  */
 
 public class LMSDaoSQL implements LMSDao {
@@ -78,4 +79,13 @@ public class LMSDaoSQL implements LMSDao {
         List results = allMembersQuery.getResultList();
         return (List<ItemTypeRecord>)results;
     }
+
+    @Override
+    public List<RoleRecord> getAllRoles() {
+        Query allRolesQuery = entityManager.createNamedQuery(RoleRecord.ALL_ROLES_QUERY);
+        List results = allRolesQuery.getResultList();
+        return (List<RoleRecord>)results;
+    }
+
+
 }

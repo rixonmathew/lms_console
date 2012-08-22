@@ -11,6 +11,7 @@ import com.rixon.lms_console.dao.LMSDao;
 import com.rixon.lms_console.dao.LMSDaoSQL;
 import com.rixon.lms_console.dao.recordset.ItemTypeRecord;
 import com.rixon.lms_console.dao.recordset.MemberRecord;
+import com.rixon.lms_console.dao.recordset.RoleRecord;
 import com.rixon.lms_console.domain.Book;
 import org.junit.After;
 import org.junit.Before;
@@ -20,7 +21,7 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 /**
- * User: 229921|Date: 8/19/12|Time: 12:05 PM
+ * User: rixon|Date: 8/19/12|Time: 12:05 PM
  */
 public class DAOTest {
 
@@ -84,6 +85,7 @@ public class DAOTest {
     }
 
 //    @Test
+//    //TODO Is this functionality required?
 //    public void testRemoveMember() {
 //        final String emailId = "stevejobs@apple.com";
 //        final String password = "apple123";
@@ -94,8 +96,6 @@ public class DAOTest {
 //        assertNull(memberRecord);
 //    }
 
-
-
     @Test
     public void testGetAllItemTypes()  {
         List<ItemTypeRecord> itemTypeRecords = lmsDao.getAllItemTypes();
@@ -103,4 +103,14 @@ public class DAOTest {
         final int expectedCount = 7;
         assertEquals("size of item type list is not as expected", expectedCount, itemTypeRecords.size());
     }
+
+    @Test
+    public void testGetAllRoles() {
+        List<RoleRecord> roleRecords = lmsDao.getAllRoles();
+        assertNotNull(roleRecords);
+        final int expectedCount = 4;
+        assertEquals("size of role records is not as expected",expectedCount,roleRecords.size());
+    }
+
 }
+

@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * This class represents the result associated with the transfer command
- * User: 229921|Date: 8/17/12|Time: 11:40 PM
+ * User: rixon|Date: 8/17/12|Time: 11:40 PM
  */
 public class TransferResult extends ResultWithMessage {
     public TransferResult(List results) {

@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * This class represents the result object for return operation
- * User: 229921|Date: 8/18/12|Time: 7:49 AM
+ * User: rixon|Date: 8/18/12|Time: 7:49 AM
  */
 public class ReturnResult extends ResultWithMessage {
 

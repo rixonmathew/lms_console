@@ -11,7 +11,7 @@ import javax.persistence.*;
 
 /**
  * This entity represents a record in the MEMBER table
- * User: 229921|Date: 8/20/12|Time: 9:03 AM
+ * User: rixon|Date: 8/20/12|Time: 9:03 AM
  */
 @Entity
 @Table(name="MEMBER")
@@ -28,8 +28,6 @@ public class MemberRecord {
     private String firstName;
     private String lastName;
     private String emailId;
-    private String mobileNumber;
-    private String postalAddress;
     private String password;
 
     @Id
@@ -68,24 +66,6 @@ public class MemberRecord {
 
     public void setEmailId(String emailId) {
         this.emailId = emailId;
-    }
-
-    @Column(name="MOBILE_NUMBER")
-    public String getMobileNumber() {
-        return mobileNumber;
-    }
-
-    public void setMobileNumber(String mobileNumber) {
-        this.mobileNumber = mobileNumber;
-    }
-
-    @Column(name="POSTAL_ADDRESS")
-    public String getPostalAddress() {
-        return postalAddress;
-    }
-
-    public void setPostalAddress(String postalAddress) {
-        this.postalAddress = postalAddress;
     }
 
     @Column(name="PASSWORD")

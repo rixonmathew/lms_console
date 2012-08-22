@@ -5,7 +5,7 @@ import com.rixon.lms_console.command.validator.ValidationResult;
 
 /**
  * This class represents a simple implementation of Command interface
- * User: 229921|Date: 8/1/12|Time: 8:04 PM
+ * User: rixon|Date: 8/1/12|Time: 8:04 PM
  */
 public class SimpleCommand implements Command {
 

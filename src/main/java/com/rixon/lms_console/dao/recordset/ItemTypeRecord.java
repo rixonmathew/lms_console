@@ -11,7 +11,7 @@ import javax.persistence.*;
 
 /**
  * This class represents a record of ItemType
- * User: 229921|Date: 8/20/12|Time: 1:06 PM
+ * User: rixon|Date: 8/20/12|Time: 1:06 PM
  */
 @Entity
 @Table(name = "ITEM_TYPE")

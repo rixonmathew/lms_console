@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
  * This class is the abstract class for table model associated with results
- * User: 229921|Date: 8/18/12|Time: 8:04 AM
+ * User: rixon|Date: 8/18/12|Time: 8:04 AM
  */
 public abstract class AbstractResultTableModel extends AbstractTableModel {
 
