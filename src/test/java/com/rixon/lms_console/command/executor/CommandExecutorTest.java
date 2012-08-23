@@ -45,7 +45,8 @@ public class CommandExecutorTest extends AbstractCommandTest {
         Result result = executor.executeCommand(helpCommand);
         assertNotNull(result);
         TableModel tableModel = result.getResultsTable();
-        assertEquals("Displayed count of commands is not same",4,tableModel.getRowCount());
+        final int expected = 7;
+        assertEquals("Displayed count of commands is not same", expected,tableModel.getRowCount());
         assertEquals("Displayed count of result columns is not same",1,tableModel.getColumnCount());
         assertCellValues(tableModel);
     }
@@ -120,6 +121,20 @@ public class CommandExecutorTest extends AbstractCommandTest {
         assertEquals("Displayed rows for invalid command is not same",2,tableModel.getRowCount());
         assertCellValues(tableModel);
     }
+
+    @Test
+    public void testReserveCommand() {
+        Command reservedCommand = CommandTestUtil.createCommand("reserve","112321123 user123",builder);
+        CommandTestUtil.assertValidationResult(reservedCommand.getValidationResult(), true);
+        Result result = executor.executeCommand(reservedCommand);
+        assertNotNull(result);
+        TableModel tableModel = result.getResultsTable();
+        final int expectedMessageCount = 1;
+        assertEquals("Displayed rows for invalid command is not same", expectedMessageCount,tableModel.getRowCount());
+        assertCellValues(tableModel);
+    }
+
+
 
     private void assertCellValues(TableModel tableModel) {
 

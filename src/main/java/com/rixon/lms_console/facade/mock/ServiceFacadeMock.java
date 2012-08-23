@@ -36,10 +36,10 @@ public class ServiceFacadeMock implements ServiceFacade {
         serviceMap.put(TRANSFER,new TransferServiceStub());
         serviceMap.put(RETURN,new ReturnServiceStub());
         serviceMap.put(EXIT,new ExitServiceStub());
+        serviceMap.put(RESERVE,new ReserveServiceStub());
     }
     public Service serviceForOperation(String operationName) {
-        Service service = serviceMap.get(operationName);
-        return service;
+        return serviceMap.get(operationName);
     }
 
 }

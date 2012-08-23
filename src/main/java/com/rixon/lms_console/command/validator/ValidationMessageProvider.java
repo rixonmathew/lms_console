@@ -10,7 +10,7 @@ import java.util.Map;
 public class ValidationMessageProvider {
     private static Map<String, String> validationMessages;
     private final static String DEFAULT_MESSAGE = "This command cannot be executed. Type help for more details";
-    private final static String ERROR_MESSAGE = "There was an error in the command syntax. refer usage of the command via help";
+    private final static String ERROR_MESSAGE = "There was an error in the command syntax. refer usage of the command via help \n";
     private final static String SUCCESS_MESSAGE = "The command has been executed successfully";
 
     static {

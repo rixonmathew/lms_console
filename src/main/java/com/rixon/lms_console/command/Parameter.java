@@ -10,7 +10,7 @@ import java.util.Collection;
 public interface Parameter<TYPE> {
 
     /**
-     * This method will return all the parmeters of a particular type
+     * This method will return all the parameters of a particular type
      * @return collection of parameters
      */
     public Collection<TYPE> getParameters();

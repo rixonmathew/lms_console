@@ -37,7 +37,6 @@ public class ServiceFacadeReal implements ServiceFacade {
     }
 
     public Service serviceForOperation(String operationName) {
-      Service service = serviceMap.get(operationName);
-      return service;
+        return serviceMap.get(operationName);
     }
 }

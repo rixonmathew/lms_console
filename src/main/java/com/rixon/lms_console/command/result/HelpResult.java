@@ -37,7 +37,7 @@ public class HelpResult extends AbstractResult {
         }
 
         protected Object getCellValueAt(int rowIndex, int columnIndex) {
-            String operation = null;
+            String operation;
             operation = ((List<String>)results).get(rowIndex);
             return operation;
         }

@@ -16,7 +16,6 @@ import java.io.Console;
  */
 public class LMSConsole {
 
-    private final String EXIT_COMMAND = "exit";
     private final Console console = System.console();
 
     private CommandBuilder builder;
@@ -32,11 +31,12 @@ public class LMSConsole {
     }
 
     public void start() {
-        String userCommandString="";
+        String userCommandString;
         System.setProperty(ServiceFacadeFactory.LMS_MODE,ServiceFacadeFactory.FAKE);
         if (console!=null){
             printBanner();
             initializeEnvironment();
+            String EXIT_COMMAND = "exit";
             do{
                 userCommandString = console.readLine("LMS>");
                 Command command = builder.buildCommand(userCommandString);

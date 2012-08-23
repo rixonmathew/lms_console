@@ -58,7 +58,7 @@ public class CommandBuilderTest extends AbstractCommandTest{
     public void testValidationMessage() {
         final String invalidIssueCommand = "iisue";
         final String parameters = "123123,123123223,1112323";
-        final String expectedValidationMessage = "There was an error in the command syntax. refer usage of the command via help";
+        final String expectedValidationMessage = "There was an error in the command syntax. refer usage of the command via help \n";
         Command bookIssueCommand = CommandTestUtil.createCommand(invalidIssueCommand,parameters,builder);
         assertNotNull(bookIssueCommand);
         CommandTestUtil.assertValidationResult(bookIssueCommand.getValidationResult(), false);

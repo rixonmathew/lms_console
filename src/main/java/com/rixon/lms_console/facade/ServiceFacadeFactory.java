@@ -36,8 +36,7 @@ public class ServiceFacadeFactory {
     }
     public static ServiceFacade serviceFacade() {
         String mode = determineServiceMode();
-        ServiceFacade serviceFacade = serviceFacadeMap.get(mode);
-        return serviceFacade;
+        return serviceFacadeMap.get(mode);
     }
 
     private static String determineServiceMode() {

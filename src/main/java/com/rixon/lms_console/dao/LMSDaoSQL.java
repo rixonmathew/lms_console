@@ -44,10 +44,10 @@ public class LMSDaoSQL implements LMSDao {
 
     @Override
     public MemberRecord findMember(String emailId, String password) {
-        Query membberSearchQuery = entityManager.createNamedQuery(MemberRecord.FIND_MEMBER_QUERY);
-        membberSearchQuery.setParameter("emailId", emailId);
-        membberSearchQuery.setParameter("password", password);
-        List results = membberSearchQuery.getResultList();
+        Query memberSearchQuery = entityManager.createNamedQuery(MemberRecord.FIND_MEMBER_QUERY);
+        memberSearchQuery.setParameter("emailId", emailId);
+        memberSearchQuery.setParameter("password", password);
+        List results = memberSearchQuery.getResultList();
         MemberRecord memberRecord = null;
         if (results!=null && results.size()>0){
             memberRecord = ((List<MemberRecord>)results).get(0);

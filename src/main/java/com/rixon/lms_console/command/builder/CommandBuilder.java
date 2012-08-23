@@ -10,7 +10,6 @@ public class CommandBuilder {
 
     public Command buildCommand(String commandString) {
         Parser stringParser = new SimpleParser();
-        Command command = stringParser.parse(commandString);
-        return command;
+        return stringParser.parse(commandString);
     }
 }

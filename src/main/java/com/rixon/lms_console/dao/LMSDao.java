@@ -13,7 +13,7 @@ import com.rixon.lms_console.domain.Book;
 import java.util.List;
 
 /**
- * This interface represents the DAO interface for the library managment system
+ * This interface represents the DAO interface for the library management system
  * User: rixon|Date: 8/19/12|Time: 12:08 PM
  */
 public interface LMSDao {
@@ -31,7 +31,7 @@ public interface LMSDao {
     public List<MemberRecord> getAllMembers();
 
     /**
-     * This dao metod will provide the member record based on the email id and password
+     * This dao method will provide the member record based on the email id and password
      * @param emailId
      * @param password
      * @return MemberRecord

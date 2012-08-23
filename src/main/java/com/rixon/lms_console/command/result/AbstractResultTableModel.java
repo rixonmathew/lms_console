@@ -59,6 +59,6 @@ public abstract class AbstractResultTableModel extends AbstractTableModel {
 
     @Override
     public String getColumnName(int column) {
-        return headerNames.get(Integer.valueOf(column));
+        return headerNames.get(column);
     }
 }

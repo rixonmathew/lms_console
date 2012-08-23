@@ -1,6 +1,7 @@
 package com.rixon.lms_console.command.operation;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import static com.rixon.lms_console.command.operation.OperationTypes.*;
@@ -22,12 +23,14 @@ public class OperationsCatalog {
         validOperationTypes.add(RETURN);
         validOperationTypes.add(HELP);
         validOperationTypes.add(EXIT);
+        validOperationTypes.add(RESERVE);
     }
 
     public static boolean isOperationValid(String operationType){
-        if (validOperationTypes.contains(operationType)) {
-            return true;
-        }
-        return false;
+        return validOperationTypes.contains(operationType);
+    }
+
+    public static List<String> allValidOperations() {
+        return validOperationTypes;
     }
 }

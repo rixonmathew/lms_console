@@ -39,8 +39,7 @@ public class ValidationMessageResult extends AbstractResult {
 
         @Override
         public Object getCellValueAt(int rowIndex, int columnIndex) {
-            String message = ((List<String>)results).get(rowIndex);
-            return message;
+            return ((List<String>)results).get(rowIndex);
         }
     }
 }

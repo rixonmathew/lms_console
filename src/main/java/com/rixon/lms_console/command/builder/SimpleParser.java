@@ -26,7 +26,6 @@ public class SimpleParser implements Parser {
     private String commandString;
     private ValidationResult validationResult;
     private Command command;
-    private Validator commandValidator;
 
     private final static String DELIMITER=" ";
 
@@ -56,8 +55,8 @@ public class SimpleParser implements Parser {
     }
 
     private void validateCommand() {
-        commandValidator = new SimpleValidator();
-        this.validationResult = commandValidator.validateCommand(this.operation,this.parameter);
+        Validator commandValidator = new SimpleValidator();
+        this.validationResult = commandValidator.validateCommand(this.operation, this.parameter);
     }
 
     private void createCommand(){

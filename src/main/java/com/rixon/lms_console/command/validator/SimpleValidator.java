@@ -20,18 +20,15 @@ public class SimpleValidator implements Validator<String> {
         boolean areParametersValid = ParameterValidator.validateParameter(parameter, operation);
         boolean isCommandValid = isOperationValid && areParametersValid;
         String validationMessage, validationHint;
-        String messageKey, hintKey;
+        String messageKey;
         if (isCommandValid) {
             messageKey = SUCCESS_KEY;
-            hintKey = SUCCESS_KEY;
         } else {
             messageKey = DEFAULT_KEY;
-            hintKey = DEFAULT_KEY;
         }
         validationMessage = ValidationMessageProvider.getMessageForKey(messageKey);
         validationHint =  operation.getUsage();//ValidationHintProvider.getHintForKey(hintKey);
-        ValidationResult validationResult = new BasicValidationResult(isCommandValid,validationMessage,
+        return new BasicValidationResult(isCommandValid,validationMessage,
                 validationHint);
-        return validationResult;
     }
 }

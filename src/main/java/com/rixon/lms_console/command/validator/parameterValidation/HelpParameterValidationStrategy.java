@@ -9,16 +9,12 @@ import com.rixon.lms_console.command.Parameter;
 public class HelpParameterValidationStrategy extends CommonValidationStrategy {
     @Override
     public boolean validateParameter(Parameter<String> parameter) {
-        boolean isValid=false;
+        boolean isValid;
         if (parameter == null || parameter.getParameters().size()==0){
             isValid = true;
             return isValid;
         }
-        if (parameter!=null && parameter.getParameters().size()!=1) {
-            isValid = false;
-        } else {
-            isValid = true;
-        }
+        isValid = !(parameter != null && parameter.getParameters().size() != 1);
         return isValid;
     }
 }

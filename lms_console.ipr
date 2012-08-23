@@ -197,6 +197,17 @@
       </item>
     </group>
   </component>
+  <component name="ProjectDictionaryState">
+    <dictionary name="229921">
+      <words>
+        <w>eclipselink</w>
+        <w>hsql</w>
+        <w>jdbc</w>
+        <w>recordset</w>
+        <w>rixon</w>
+      </words>
+    </dictionary>
+  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/lms_console.iml" filepath="$PROJECT_DIR$/lms_console.iml" />

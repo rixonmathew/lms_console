@@ -27,10 +27,10 @@ public class StrategyContext {
         validationStrategyMap.put(HELP,new HelpParameterValidationStrategy());
         validationStrategyMap.put(COMMON,new CommonValidationStrategy());
         validationStrategyMap.put(EXIT,new ExitValidationStrategy());
+        validationStrategyMap.put(RESERVE,new ReserveParameterValidationStrategy());
     }
 
     public static ParameterValidationStrategy strategyForOperation(String operationType){
-        ParameterValidationStrategy validationStrategy = validationStrategyMap.get(operationType);
-        return validationStrategy;
+        return validationStrategyMap.get(operationType);
     }
 }

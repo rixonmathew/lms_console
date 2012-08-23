@@ -18,7 +18,6 @@ import java.util.*;
 public class DataSimulator {
 
     private List<String> seedWords;
-    private String titlePattern = " %1$s %2$s %3$s %4$s" ;
     Random random = new Random();
     private List<Date> seedDates;
 
@@ -30,6 +29,7 @@ public class DataSimulator {
         List<String> mockTitles = new ArrayList<String>();
         for (int i=0;i<number;i++) {
             Formatter stringFormatter = new Formatter();
+            String titlePattern = " %1$s %2$s %3$s %4$s";
             String sampleTitle = stringFormatter.format(titlePattern, randomTitle(),
                                             randomTitle(),randomTitle(),randomTitle()).toString();
             mockTitles.add(sampleTitle);

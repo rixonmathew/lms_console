@@ -11,6 +11,7 @@ import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.operation.Operation;
 import com.rixon.lms_console.command.operation.OperationFlyWeightFactory;
 import com.rixon.lms_console.command.operation.OperationTypes;
+import com.rixon.lms_console.command.operation.OperationsCatalog;
 import com.rixon.lms_console.command.result.HelpResult;
 import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.service.Service;
@@ -29,10 +30,7 @@ public class HelpServiceStub implements Service {
         List<String> helpParameter = (List<String>)parameter.getParameters();
 
         if (helpParameter==null||helpParameter.size()==0){
-            commands.add(OperationTypes.SEARCH);
-            commands.add(OperationTypes.ISSUE);
-            commands.add(OperationTypes.TRANSFER);
-            commands.add(OperationTypes.RETURN);
+            commands.addAll(OperationsCatalog.allValidOperations());
         }  else {
             for (String string:helpParameter) {
                 Operation operation = OperationFlyWeightFactory.operationForType(string);

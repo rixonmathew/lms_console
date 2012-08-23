@@ -29,8 +29,7 @@ public class SearchServiceStub implements Service {
         List<Book> books = new ArrayList<Book>();
         books.add(book1);
         books.add(book2);
-        SearchResult searchResult = new SearchResult(books);
-        return searchResult;
+        return new SearchResult(books);
     }
 
     private Book createBook(String isbn,String title,String author,String publisher,String releaseDate) {
