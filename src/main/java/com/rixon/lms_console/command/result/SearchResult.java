@@ -1,11 +1,13 @@
 package com.rixon.lms_console.command.result;
 
-import com.rixon.lms_console.domain.Book;
+import com.rixon.lms_console.business.PropertyProvider;
+import com.rixon.lms_console.dao.Item;
 
 import javax.swing.table.TableModel;
 import java.util.HashMap;
 import java.util.List;
 
+import static com.rixon.lms_console.util.PropertyConstants.*;
 /**
  * This class represents the search results for books
  * User: rixon|Date: 8/17/12|Time: 6:29 PM
@@ -38,23 +40,24 @@ public class SearchResult extends AbstractResult {
         }
 
         protected Object getCellValueAt(int rowIndex,int columnIndex){
-          Book book = ((List<Book>)results).get(rowIndex);
+            Item item  = ((List<Item>)results).get(rowIndex);
+
             Object cellValue = null;
             switch (columnIndex){
                 case 0:
-                    cellValue = book.getIsbn();
+                    cellValue = item.getItemPropertyValue(PropertyProvider.getProperty(ISBN));
                     break;
                 case 1:
-                    cellValue = book.getTitle();
+                    cellValue = item.getName();
                     break;
                 case 2:
-                    cellValue = book.getAuthor();
+                    cellValue = item.getItemPropertyValue(PropertyProvider.getProperty(AUTHOR));
                     break;
                 case 3:
-                    cellValue = book.getPublisher();
+                    cellValue = item.getItemPropertyValue(PropertyProvider.getProperty(PUBLISHER));
                     break;
                 case 4:
-                    cellValue = book.getReleaseDate();
+                    cellValue = item.getItemPropertyValue(PropertyProvider.getProperty(PUBLISHED_DATE));
                     break;
             }
             return cellValue;

@@ -21,7 +21,7 @@ import java.util.List;
  */
 public class TransferServiceStub implements Service {
     @Override
-    public Result executeService(Parameter<String> parameter) {
+    public Result execute(Parameter<String> parameter) {
         String result = "Book transferred successfully to user";
         List<String> issueResult = new ArrayList<String>();
         issueResult.add(result);

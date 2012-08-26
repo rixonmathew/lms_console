@@ -10,36 +10,56 @@ package com.rixon.lms_console.service.stub;
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.command.result.SearchResult;
-import com.rixon.lms_console.domain.Book;
+import com.rixon.lms_console.dao.Item;
+import com.rixon.lms_console.dao.ItemPropertyValue;
+import com.rixon.lms_console.dao.ItemType;
+import com.rixon.lms_console.dao.Property;
 import com.rixon.lms_console.service.Service;
-import com.rixon.lms_console.util.DateUtil;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import static com.rixon.lms_console.util.PropertyConstants.*;
 /**
  * This class implements the stub service for search operation
  * User: rixon|Date: 8/17/12|Time: 9:16 PM
  */
 public class SearchServiceStub implements Service {
     @Override
-    public Result executeService(Parameter<String> parameter) {
-        Book book1 = createBook("11231","Test Book","Author1","Some publisher","01/01/2000");
-        Book book2 = createBook("22231","Test Book2","Author2","Some publisher","01/01/2001");
-        List<Book> books = new ArrayList<Book>();
-        books.add(book1);
-        books.add(book2);
-        return new SearchResult(books);
+    public Result execute(Parameter<String> parameter) {
+        List<Item> items = new ArrayList<Item>();
+        Item item = createMockItem("Book1", "A sample Book");
+        Item item2 = createMockItem("Book2", "Sample book2");
+        Item item3 = createMockItem("Book3", "Sample book3");
+        items.add(item);
+        items.add(item2);
+        items.add(item3);
+        return new SearchResult(items);
     }
 
-    private Book createBook(String isbn,String title,String author,String publisher,String releaseDate) {
-        Book book = new Book();
-        book.setIsbn(isbn);
-        book.setTitle(title);
-        book.setAuthor(author);
-        book.setPublisher(publisher);
-        book.setReleaseDate(DateUtil.getFormattedDate(releaseDate));
-        return book;
+    private Item createMockItem(String name, String description) {
+        Item.ItemBuilder itemBuilder = new Item.ItemBuilder();
+        itemBuilder.setName(name);
+        itemBuilder.setDescription(description);
+        ItemType.ItemTypeBuilder itemTypeBuilder = new ItemType.ItemTypeBuilder();
+        ItemType itemType=itemTypeBuilder.setType("BOOK").setDescription("Book").createItemType();
+        itemBuilder.setItemType(itemType);
+        Property.PropertyBuilder propertyBuilder = new Property.PropertyBuilder();
+        Property isbn = propertyBuilder.setName(ISBN).setDescription("ISBN").createProperty();
+        ItemPropertyValue.ItemPropertyValueBuilder propertyValueBuilder = new ItemPropertyValue.ItemPropertyValueBuilder();
+        ItemPropertyValue isbnPropertyValue = propertyValueBuilder.setProperty(isbn).setPropertyValue("1123123123").createItemPropertyValue();
+        Property author = propertyBuilder.setName(AUTHOR).setDescription("Author").createProperty();
+        ItemPropertyValue authorPropertyValue = propertyValueBuilder.setProperty(author).setPropertyValue("Thomas Edison").createItemPropertyValue();
+        Property publishedDate = propertyBuilder.setName(PUBLISHED_DATE).setDescription("Published Date").createProperty();
+        ItemPropertyValue publishedDatePropertyValue = propertyValueBuilder.setProperty(publishedDate).setPropertyValue("01/01/2010").createItemPropertyValue();
+        Map<Property,ItemPropertyValue> properties = new HashMap<Property,ItemPropertyValue>();
+        properties.put(isbn,isbnPropertyValue);
+        properties.put(author,authorPropertyValue);
+        properties.put(publishedDate,publishedDatePropertyValue);
+        itemBuilder.setItemProperties(properties);
+        return itemBuilder.createItem();
     }
 
 }

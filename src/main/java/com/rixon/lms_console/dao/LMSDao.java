@@ -8,7 +8,6 @@
 package com.rixon.lms_console.dao;
 
 import com.rixon.lms_console.dao.recordset.*;
-import com.rixon.lms_console.domain.Book;
 
 import java.util.List;
 
@@ -17,12 +16,6 @@ import java.util.List;
  * User: rixon|Date: 8/19/12|Time: 12:08 PM
  */
 public interface LMSDao {
-
-    /**
-     * This interface is used to provide all the books available in the system in a list
-     * @return list of books
-     */
-    public List<Book> getAllBooks();
 
     /**
      * This method is used to get all the members of the library

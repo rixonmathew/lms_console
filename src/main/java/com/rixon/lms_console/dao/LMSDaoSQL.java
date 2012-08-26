@@ -8,7 +8,6 @@
 package com.rixon.lms_console.dao;
 
 import com.rixon.lms_console.dao.recordset.*;
-import com.rixon.lms_console.domain.Book;
 
 import javax.persistence.*;
 import java.util.List;
@@ -28,12 +27,6 @@ public class LMSDaoSQL implements LMSDao {
 
     }
 
-    @Override
-    public List<Book> getAllBooks() {
-        Query allBooksQuery  = entityManager.createNamedQuery(Book.ALL_BOOKS_QUERY);
-        List results = allBooksQuery.getResultList();
-        return (List<Book>)results;
-    }
 
     @Override
     public List<MemberRecord> getAllMembers() {

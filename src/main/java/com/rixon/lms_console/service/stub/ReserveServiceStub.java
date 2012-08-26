@@ -20,7 +20,7 @@ import java.util.List;
  */
 public class ReserveServiceStub implements Service {
     @Override
-    public Result executeService(Parameter<String> parameter) {
+    public Result execute(Parameter<String> parameter) {
         String returnResult = "Reserved book successfully";
         List<String> messages = new ArrayList<String>();
         messages.add(returnResult);

@@ -25,7 +25,7 @@ public class SimpleCommandExecutor implements CommandExecutor {
         String operationName = command.getOperation().getOperationType();
         ServiceFacade serviceFacade = ServiceFacadeFactory.serviceFacade();
         Service service = serviceFacade.serviceForOperation(operationName);
-        return service.executeService(command.getParameter());
+        return service.execute(command.getParameter());
     }
 
     private Result resultWithValidationMessage(Command command) {

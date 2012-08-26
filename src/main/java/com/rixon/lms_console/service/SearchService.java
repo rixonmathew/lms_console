@@ -7,8 +7,11 @@
 
 package com.rixon.lms_console.service;
 
+import com.rixon.lms_console.business.SimpleStore;
+import com.rixon.lms_console.business.Store;
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.Result;
+import com.rixon.lms_console.dao.SearchQuery;
 
 /**
  * This class implements the service for search operation
@@ -16,7 +19,9 @@ import com.rixon.lms_console.command.result.Result;
  */
 public class SearchService implements Service {
     @Override
-    public Result executeService(Parameter<String> parameter) {
-        return null; //TODO inject DAO and get the values from DAO
+    public Result execute(Parameter<String> parameter) {
+        Store store = SimpleStore.getInstance();
+        SearchQuery searchQuery = new SearchQuery(parameter,false);
+        return store.searchItemByTitle(searchQuery);
     }
 }

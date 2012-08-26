@@ -24,7 +24,7 @@ import java.util.List;
  */
 public class HelpService implements Service {
     @Override
-    public Result executeService(Parameter<String> parameter) {
+    public Result execute(Parameter<String> parameter) {
         List<String> commands = new ArrayList<String>();
         List<String> helpParameter = (List<String>)parameter.getParameters();
 

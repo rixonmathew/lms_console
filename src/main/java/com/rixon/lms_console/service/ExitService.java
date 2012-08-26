@@ -22,7 +22,7 @@ public class ExitService implements Service {
     //TODO how to keep duplication to minimum between real and stub services
     private static final String EXIT_MESSAGE = "Have a good day :-)";
     @Override
-    public Result executeService(Parameter<String> parameter) {
+    public Result execute(Parameter<String> parameter) {
         String exitMessage = EXIT_MESSAGE;
         List<String> messages = new ArrayList<String>();
         messages.add(exitMessage);

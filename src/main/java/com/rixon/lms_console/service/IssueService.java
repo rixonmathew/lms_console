@@ -16,7 +16,7 @@ import com.rixon.lms_console.command.result.Result;
  */
 public class IssueService implements Service {
     @Override
-    public Result executeService(Parameter<String> parameter) {
+    public Result execute(Parameter<String> parameter) {
         return null;  //TODO inject DAO and get the data from there.
     }
 }
