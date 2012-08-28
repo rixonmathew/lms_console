@@ -43,4 +43,27 @@ public class ItemMapper {
         return itemPropertyValueMap;
     }
 
+    public static ItemRecord mapToItemRecord(Item item) {
+        if(item==null) {
+            return null;
+        }
+        ItemRecord itemRecord = new ItemRecord();
+        itemRecord.setName(item.getName());
+        itemRecord.setDescription(item.getDescription());
+        itemRecord.setItemTypeRecord(ItemTypeMapper.mapToItemTypeRecord(item.getItemType()));
+        itemRecord.setProperties(mapItemPropertyRecords(item.getItemProperties()));
+        return itemRecord;
+    }
+
+    private static Map<PropertyRecord, ItemPropertyRecord> mapItemPropertyRecords(Map<Property, ItemPropertyValue> itemProperties) {
+
+        Map<PropertyRecord,ItemPropertyRecord> itemPropertyRecordMap = new HashMap<PropertyRecord,ItemPropertyRecord>();
+        for (Property property:itemProperties.keySet()){
+            ItemPropertyValue itemPropertyValue = itemProperties.get(property);
+            PropertyRecord propertyRecord = PropertyMapper.mapToPropertyRecord(property);
+            ItemPropertyRecord itemPropertyRecord = ItemPropertyMapper.mapToItemPropertyRecord(itemPropertyValue);
+            itemPropertyRecordMap.put(propertyRecord,itemPropertyRecord);
+        }
+        return itemPropertyRecordMap;
+    }
 }

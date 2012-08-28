@@ -81,5 +81,11 @@ public interface LMSDao {
      * @return
      */
     List<PropertyRecord> getAllProperties();
+
+    /**
+     * This method is used to add multiple items into the database
+     * @param itemRecords
+     */
+    void addMultipleItemRecords(List<ItemRecord> itemRecords);
 }
 

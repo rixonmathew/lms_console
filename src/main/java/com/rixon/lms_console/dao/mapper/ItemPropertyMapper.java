@@ -24,4 +24,11 @@ public class ItemPropertyMapper {
         itemPropertyValueBuilder.setPropertyValue(itemPropertyRecord.getValue());
         return itemPropertyValueBuilder.createItemPropertyValue();
     }
+
+    public static ItemPropertyRecord mapToItemPropertyRecord(ItemPropertyValue itemPropertyValue) {
+        ItemPropertyRecord itemPropertyRecord = new ItemPropertyRecord();
+        itemPropertyRecord.setPropertyRecord(PropertyMapper.mapToPropertyRecord(itemPropertyValue.getProperty()));
+        itemPropertyRecord.setValue(itemPropertyValue.getPropertyValue());
+        return itemPropertyRecord;
+    }
 }

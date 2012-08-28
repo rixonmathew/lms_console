@@ -14,10 +14,12 @@ public class Property {
 
     private final String name;
     private final String description;
+    private final Category category;
 
-    private  Property(String name, String description) {
+    private  Property(String name, String description,Category category) {
         this.name = name;
         this.description = description;
+        this.category = category;
     }
 
     public String getName() {
@@ -28,9 +30,23 @@ public class Property {
         return description;
     }
 
+    public Category getCategory() {
+        return category;
+    }
+
+    @Override
+    public String toString() {
+        return "Property{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", category=" + category +
+                '}';
+    }
+
     public static class PropertyBuilder {
         private String name;
         private String description;
+        private Category category;
 
         public PropertyBuilder setName(String name) {
             this.name = name;
@@ -42,9 +58,13 @@ public class Property {
             return this;
         }
 
+        public PropertyBuilder setCategory(Category category) {
+            this.category = category;
+            return this;
+        }
+
         public Property createProperty() {
-            return new Property(name, description);
+            return new Property(name, description,category);
         }
     }
-
 }

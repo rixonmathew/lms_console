@@ -8,12 +8,21 @@
 package com.rixon.lms_console.util;
 
 /**
- * This enum provides the various type of properties
+ * This class provides the various type of properties
  * User: rixon|Date: 8/25/12|Time: 9:39 PM
  */
-public class  PropertyConstants {
+public class Constants {
     public final static String ISBN = "ISBN";
     public final static String AUTHOR = "ISBN";
     public final static String PUBLISHER = "PUBLISHER";
     public final static String PUBLISHED_DATE = "PUBLISHED_DATE";
+
+    //Constants for the various categories used
+    public final static String CATEGORY_ITEM_PROPERTY = "ITEM_PROPERTY";
+    public final static String CATEGORY_INSTANCE_PROPERTY = "INSTANCE_PROPERTY";
+    public final static String CATEGORY_OWNER_TYPES = "OWNER_TYPES";
+    public final static String CATEGORY_TRANSACTION_PROPERTY = "TRANSACTION_PROPERTY";
+
+
+
 }

@@ -8,7 +8,10 @@
 package com.rixon.lms_console.business;
 
 import com.rixon.lms_console.command.result.Result;
+import com.rixon.lms_console.dao.Item;
 import com.rixon.lms_console.dao.SearchQuery;
+import com.rixon.lms_console.dao.recordset.CategoryRecord;
+import com.rixon.lms_console.dao.recordset.ItemTypeRecord;
 import com.rixon.lms_console.dao.recordset.PropertyRecord;
 
 import java.util.List;
@@ -29,4 +32,10 @@ public interface Store {
     public Result searchItemByTitle(SearchQuery searchQuery);
 
     List<PropertyRecord> allProperties();
+
+    List<ItemTypeRecord> allItemTypes();
+
+    List<CategoryRecord> allCategories();
+
+    void addItemsToLibrary(List<Item> items);
 }

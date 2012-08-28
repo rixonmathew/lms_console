@@ -71,4 +71,25 @@ public class DataSimulatorTest {
            System.out.println(DateUtil.getDateAsString(date));
        }
    }
+
+  @Test
+  public void testISBNGenerationFromDataPool() {
+      List<String> isbns = new ArrayList<String>();
+      isbns.add("0");
+      isbns.add("1");
+      isbns.add("2");
+      isbns.add("3");
+      isbns.add("4");
+      isbns.add("5");
+      isbns.add("6");
+      isbns.add("7");
+      isbns.add("8");
+      isbns.add("9");
+      dataSimulator.setISBNSeed(isbns);
+      List<String> mockISBNs = dataSimulator.mockISBNs(100);
+      assertNotNull(mockISBNs);
+      for(String isbn:mockISBNs) {
+          System.out.println(isbn);
+      }
+  }
 }

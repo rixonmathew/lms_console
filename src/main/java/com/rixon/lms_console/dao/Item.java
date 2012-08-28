@@ -20,6 +20,7 @@ public class Item {
     private final ItemType itemType;
     private final Map<Property,ItemPropertyValue> itemProperties;
     private final UniqueIdentifier identifier;
+    private Object propertyMap;
 
     private Item(String name, String description,  ItemType itemType,
                         Map<Property,ItemPropertyValue> itemProperties, UniqueIdentifier identifier) {
@@ -69,6 +70,21 @@ public class Item {
      */
     public UniqueIdentifier getUniqueId() {
         return identifier;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", itemType=" + itemType +
+                ", itemProperties=" + itemProperties +
+                ", identifier=" + identifier +
+                '}';
+    }
+
+    public Map<Property,ItemPropertyValue> getItemProperties() {
+        return  itemProperties;
     }
 
     /**

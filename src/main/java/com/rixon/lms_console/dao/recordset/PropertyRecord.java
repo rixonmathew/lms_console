@@ -22,6 +22,7 @@ public class PropertyRecord {
     private int id;
     private String name;
     private String description;
+    private CategoryRecord categoryRecord;
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "property_id_gen")
@@ -52,12 +53,23 @@ public class PropertyRecord {
         this.description = description;
     }
 
+    @ManyToOne
+    @JoinColumn(name="CATEGORY_ID")
+    public CategoryRecord getCategoryRecord() {
+        return categoryRecord;
+    }
+
+    public void setCategoryRecord(CategoryRecord categoryRecord) {
+        this.categoryRecord = categoryRecord;
+    }
+
     @Override
     public String toString() {
         return "PropertyRecord{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
+                ", categoryRecord=" + categoryRecord +
                 '}';
     }
 }

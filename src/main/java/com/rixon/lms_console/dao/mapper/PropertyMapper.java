@@ -19,6 +19,18 @@ public class PropertyMapper {
         Property.PropertyBuilder propertyBuilder = new Property.PropertyBuilder();
         propertyBuilder.setName(propertyRecord.getName());
         propertyBuilder.setDescription(propertyRecord.getDescription());
+        propertyBuilder.setCategory(CategoryMapper.mapToCategory(propertyRecord.getCategoryRecord()));
         return propertyBuilder.createProperty();
+    }
+
+    public static PropertyRecord mapToPropertyRecord(Property property) {
+        if (property==null) {
+            return null;
+        }
+        PropertyRecord propertyRecord = new PropertyRecord();
+        propertyRecord.setName(property.getName());
+        propertyRecord.setDescription(property.getDescription());
+        propertyRecord.setCategoryRecord(CategoryMapper.mapToCategoryRecord(property.getCategory()));
+        return propertyRecord;
     }
 }

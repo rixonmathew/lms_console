@@ -7,7 +7,7 @@ import javax.swing.table.TableModel;
 import java.util.HashMap;
 import java.util.List;
 
-import static com.rixon.lms_console.util.PropertyConstants.*;
+import static com.rixon.lms_console.util.Constants.*;
 /**
  * This class represents the search results for books
  * User: rixon|Date: 8/17/12|Time: 6:29 PM

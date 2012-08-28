@@ -22,4 +22,14 @@ public class ItemTypeMapper {
         itemTypeBuilder.setType(itemTypeRecord.getType());
         return itemTypeBuilder.createItemType();
     }
+
+    public static ItemTypeRecord mapToItemTypeRecord(ItemType itemType) {
+        if (itemType==null) {
+            return null;
+        }
+        ItemTypeRecord itemTypeRecord = new ItemTypeRecord();
+        itemTypeRecord.setType(itemType.getType());
+        itemTypeRecord.setDescription(itemType.getDescription());
+        return itemTypeRecord;
+    }
 }

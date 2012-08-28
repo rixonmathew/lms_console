@@ -31,6 +31,14 @@ public class ItemPropertyValue {
         return propertyValue;
     }
 
+    @Override
+    public String toString() {
+        return "ItemPropertyValue{" +
+                "property=" + property +
+                ", propertyValue='" + propertyValue + '\'' +
+                '}';
+    }
+
     public static class ItemPropertyValueBuilder {
         private Property property;
         private String propertyValue;

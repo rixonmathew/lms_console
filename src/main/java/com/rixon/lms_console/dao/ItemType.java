@@ -15,6 +15,11 @@ public class ItemType {
     private final String type;
     private final String description;
 
+    private ItemType(String type, String description) {
+        this.type = type;
+        this.description = description;
+    }
+
     public String getType() {
         return type;
     }
@@ -23,9 +28,12 @@ public class ItemType {
         return description;
     }
 
-    private ItemType(String type, String description) {
-        this.type = type;
-        this.description = description;
+    @Override
+    public String toString() {
+        return "ItemType{" +
+                "type='" + type + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 
     public static class ItemTypeBuilder {

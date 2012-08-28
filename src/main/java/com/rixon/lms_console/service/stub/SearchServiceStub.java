@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.rixon.lms_console.util.PropertyConstants.*;
+import static com.rixon.lms_console.util.Constants.*;
 /**
  * This class implements the stub service for search operation
  * User: rixon|Date: 8/17/12|Time: 9:16 PM

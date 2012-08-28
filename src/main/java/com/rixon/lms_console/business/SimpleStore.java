@@ -14,7 +14,9 @@ import com.rixon.lms_console.dao.LMSDao;
 import com.rixon.lms_console.dao.SearchQuery;
 import com.rixon.lms_console.dao.factory.DAOFactory;
 import com.rixon.lms_console.dao.mapper.ItemMapper;
+import com.rixon.lms_console.dao.recordset.CategoryRecord;
 import com.rixon.lms_console.dao.recordset.ItemRecord;
+import com.rixon.lms_console.dao.recordset.ItemTypeRecord;
 import com.rixon.lms_console.dao.recordset.PropertyRecord;
 
 import java.util.ArrayList;
@@ -45,6 +47,7 @@ public class SimpleStore implements Store {
     @Override
     public Result searchItemByTitle(SearchQuery searchQuery) {
         List<ItemRecord> itemRecords= lmsDao.getAllItems();
+        //TODO replace get all Items with an equivalent dao method to search by title only
         List<Item> items = new ArrayList<Item>();
         for (ItemRecord itemRecord:itemRecords) {
             Item item = ItemMapper.mapToItem(itemRecord);
@@ -58,4 +61,25 @@ public class SimpleStore implements Store {
         return lmsDao.getAllProperties();
     }
 
+    @Override
+    public List<ItemTypeRecord> allItemTypes() {
+        return lmsDao.getAllItemTypes();
+    }
+
+    @Override
+    public List<CategoryRecord> allCategories() {
+        return lmsDao.getAllCategories();
+    }
+
+    @Override
+    public void addItemsToLibrary(List<Item> items) {
+        List<ItemRecord> itemRecords = new ArrayList<ItemRecord>();
+        for (Item item:items) {
+            ItemRecord itemRecord = ItemMapper.mapToItemRecord(item);
+            itemRecords.add(itemRecord);
+        }
+        if (itemRecords.size()>0) {
+            lmsDao.addMultipleItemRecords(itemRecords);
+        }
+    }
 }

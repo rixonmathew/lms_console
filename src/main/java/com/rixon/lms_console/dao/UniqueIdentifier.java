@@ -32,6 +32,14 @@ public class UniqueIdentifier {
         return value;
     }
 
+    @Override
+    public String toString() {
+        return "UniqueIdentifier{" +
+                "type='" + type + '\'' +
+                ", value='" + value + '\'' +
+                '}';
+    }
+
     public static class UniqueIdentifierBuilder {
         private String type;
         private String value;
