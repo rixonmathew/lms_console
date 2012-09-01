@@ -37,6 +37,10 @@ public class CategoryProvider {
     }
 
     public static Category getCategory(String categoryName){
-        return categoryMap.get(categoryName);
+        Category category = categoryMap.get(categoryName);
+        if (category==null) {
+            throw new IllegalArgumentException("Invalid category name :"+categoryName);
+        }
+        return category;
     }
 }

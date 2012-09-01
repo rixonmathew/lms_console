@@ -46,7 +46,7 @@ public class DataPumpTest {
         dataSimulator = null;
     }
 
-    @Test
+    //@Test
     public void testItemPump() {
         /**
          * 1) Identify the seed tables

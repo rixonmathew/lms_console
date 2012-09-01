@@ -45,19 +45,19 @@ public class SearchResult extends AbstractResult {
             Object cellValue = null;
             switch (columnIndex){
                 case 0:
-                    cellValue = item.getItemPropertyValue(PropertyProvider.getProperty(ISBN));
+                    cellValue = "11232";//item.getItemPropertyValue(PropertyProvider.getProperty(ISBN));
                     break;
                 case 1:
                     cellValue = item.getName();
                     break;
                 case 2:
-                    cellValue = item.getItemPropertyValue(PropertyProvider.getProperty(AUTHOR));
+                    cellValue = "Author";//item.getItemPropertyValue(PropertyProvider.getProperty(AUTHOR));
                     break;
                 case 3:
-                    cellValue = item.getItemPropertyValue(PropertyProvider.getProperty(PUBLISHER));
+                    cellValue = "Test Publisher"; //item.getItemPropertyValue(PropertyProvider.getProperty(PUBLISHER));
                     break;
                 case 4:
-                    cellValue = item.getItemPropertyValue(PropertyProvider.getProperty(PUBLISHED_DATE));
+                    cellValue = "01/01/2010";//item.getItemPropertyValue(PropertyProvider.getProperty(PUBLISHED_DATE));
                     break;
             }
             return cellValue;

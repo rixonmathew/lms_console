@@ -28,7 +28,6 @@ public class Category {
         return description;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -36,16 +35,17 @@ public class Category {
 
         Category category = (Category) o;
 
-        if (!description.equals(category.description)) return false;
-        if (!name.equals(category.name)) return false;
+        if (description != null ? !description.equals(category.description) : category.description != null)
+            return false;
+        if (name != null ? !name.equals(category.name) : category.name != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = name.hashCode();
-        result = 31 * result + description.hashCode();
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + (description != null ? description.hashCode() : 0);
         return result;
     }
 
@@ -74,6 +74,5 @@ public class Category {
         public Category createCategory() {
             return new Category(name, description);
         }
-
     }
 }
