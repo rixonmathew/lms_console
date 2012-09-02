@@ -312,3 +312,21 @@ insert into role(id,role,description)
 values(next value for role_id_seq,'ADMIN','User with admin privileges of the Library');
 insert into role(id,role,description) 
 values(next value for role_id_seq,'GUEST','Guest user of the Library');
+
+insert into role_feature(id,role_id,feature_id,allowed)
+values(next value for role_feature_id_seq,104,100,'Y')
+insert into role_feature(id,role_id,feature_id,allowed)
+values(next value for role_feature_id_seq,104,101,'Y')
+insert into role_feature(id,role_id,feature_id,allowed)
+values(next value for role_feature_id_seq,104,102,'Y')
+
+insert into role_feature(id,role_id,feature_id,allowed)
+values(next value for role_feature_id_seq,106,100,'Y')
+insert into role_feature(id,role_id,feature_id,allowed)
+values(next value for role_feature_id_seq,106,101,'Y')
+insert into role_feature(id,role_id,feature_id,allowed)
+values(next value for role_feature_id_seq,106,102,'Y')
+insert into role_feature(id,role_id,feature_id,allowed)
+values(next value for role_feature_id_seq,106,103,'Y')
+insert into role_feature(id,role_id,feature_id,allowed)
+values(next value for role_feature_id_seq,106,104,'Y')

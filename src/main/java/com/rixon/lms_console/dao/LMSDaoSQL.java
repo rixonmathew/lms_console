@@ -32,7 +32,7 @@ public class LMSDaoSQL implements LMSDao {
     public List<MemberRecord> getAllMembers() {
         Query allMembersQuery = entityManager.createNamedQuery(MemberRecord.ALL_MEMBERS_QUERY);
         List results = allMembersQuery.getResultList();
-        return (List<MemberRecord>)results;
+        return (List<MemberRecord>) results;
     }
 
     @Override
@@ -42,8 +42,8 @@ public class LMSDaoSQL implements LMSDao {
         memberSearchQuery.setParameter("password", password);
         List results = memberSearchQuery.getResultList();
         MemberRecord memberRecord = null;
-        if (results!=null && results.size()>0){
-            memberRecord = ((List<MemberRecord>)results).get(0);
+        if (results != null && results.size() > 0) {
+            memberRecord = ((List<MemberRecord>) results).get(0);
         }
         return memberRecord;
     }
@@ -68,42 +68,42 @@ public class LMSDaoSQL implements LMSDao {
     public List<ItemTypeRecord> getAllItemTypes() {
         Query allMembersQuery = entityManager.createNamedQuery(ItemTypeRecord.ALL_ITEM_TYPES_QUERY);
         List results = allMembersQuery.getResultList();
-        return (List<ItemTypeRecord>)results;
+        return (List<ItemTypeRecord>) results;
     }
 
     @Override
     public List<RoleRecord> getAllRoles() {
         Query allRolesQuery = entityManager.createNamedQuery(RoleRecord.ALL_ROLES_QUERY);
         List results = allRolesQuery.getResultList();
-        return (List<RoleRecord>)results;
+        return (List<RoleRecord>) results;
     }
 
     @Override
     public List<CategoryRecord> getAllCategories() {
         Query allCategoriesQuery = entityManager.createNamedQuery(CategoryRecord.ALL_CATEGORIES_QUERY);
         List results = allCategoriesQuery.getResultList();
-        return (List<CategoryRecord>)results;
+        return (List<CategoryRecord>) results;
     }
 
     @Override
     public List<FeatureRecord> getAllFeatures() {
         Query allFeaturesQuery = entityManager.createNamedQuery(FeatureRecord.ALL_FEATURES_QUERY);
         List results = allFeaturesQuery.getResultList();
-        return (List<FeatureRecord>)results;
+        return (List<FeatureRecord>) results;
     }
 
     @Override
     public List<ItemRecord> getAllItems() {
         Query allItemsQuery = entityManager.createNamedQuery(ItemRecord.ALL_ITEMS_QUERY);
         List results = allItemsQuery.getResultList();
-        return (List<ItemRecord>)results;
+        return (List<ItemRecord>) results;
     }
 
     @Override
     public List<PropertyRecord> getAllProperties() {
         Query allPropertiesQuery = entityManager.createNamedQuery(PropertyRecord.ALL_PROPERTIES_QUERY);
         List results = allPropertiesQuery.getResultList();
-        return (List<PropertyRecord>)results;
+        return (List<PropertyRecord>) results;
     }
 
     @Override
@@ -112,13 +112,20 @@ public class LMSDaoSQL implements LMSDao {
         final int flushCount = 20;
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
-        for(ItemRecord itemRecord:itemRecords) {
+        for (ItemRecord itemRecord : itemRecords) {
             entityManager.persist(itemRecord);
             recordCounter++;
-            if (recordCounter%flushCount==0) {
+            if (recordCounter % flushCount == 0) {
                 entityManager.flush();
             }
         }
         transaction.commit();
+    }
+
+    @Override
+    public List<FeatureRecord> featuresForRole(String role) {
+        Query featuresForRoleQuery = entityManager.createNamedQuery(FeatureRecord.FEATURES_FOR_ROLE_QUERY);
+        featuresForRoleQuery.setParameter("role", role);
+        return (List<FeatureRecord>) featuresForRoleQuery.getResultList();
     }
 }

@@ -18,12 +18,11 @@ public class Item {
     private final String name;
     private final String description;
     private final ItemType itemType;
-    private final Map<Property,ItemPropertyValue> itemProperties;
+    private final Map<Property, ItemPropertyValue> itemProperties;
     private final UniqueIdentifier identifier;
-    private Object propertyMap;
 
-    private Item(String name, String description,  ItemType itemType,
-                        Map<Property,ItemPropertyValue> itemProperties, UniqueIdentifier identifier) {
+    private Item(String name, String description, ItemType itemType,
+                 Map<Property, ItemPropertyValue> itemProperties, UniqueIdentifier identifier) {
         this.name = name;
         this.description = description;
         this.itemType = itemType;
@@ -33,14 +32,16 @@ public class Item {
 
     /**
      * This method will return the name of the item
+     *
      * @return name
      */
     public String getName() {
-       return name;
+        return name;
     }
 
     /**
      * This method will return the description associated with item
+     *
      * @return description
      */
     public String getDescription() {
@@ -49,6 +50,7 @@ public class Item {
 
     /**
      * This method will return the item type
+     *
      * @return item type
      */
     public ItemType getItemType() {
@@ -57,6 +59,7 @@ public class Item {
 
     /**
      * This method will return the property value associated with given property
+     *
      * @param property
      * @return property value
      */
@@ -66,6 +69,7 @@ public class Item {
 
     /**
      * This method will return the id of the item
+     *
      * @return unique identifier
      */
     public UniqueIdentifier getUniqueId() {
@@ -83,8 +87,8 @@ public class Item {
                 '}';
     }
 
-    public Map<Property,ItemPropertyValue> getItemProperties() {
-        return  itemProperties;
+    public Map<Property, ItemPropertyValue> getItemProperties() {
+        return itemProperties;
     }
 
     /**

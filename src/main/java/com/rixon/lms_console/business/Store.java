@@ -10,9 +10,7 @@ package com.rixon.lms_console.business;
 import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.dao.Item;
 import com.rixon.lms_console.dao.SearchQuery;
-import com.rixon.lms_console.dao.recordset.CategoryRecord;
-import com.rixon.lms_console.dao.recordset.ItemTypeRecord;
-import com.rixon.lms_console.dao.recordset.PropertyRecord;
+import com.rixon.lms_console.dao.recordset.*;
 
 import java.util.List;
 
@@ -26,16 +24,59 @@ public interface Store {
     /**
      * This method will return all items where title matches the text provided in the
      * query
+     *
      * @param searchQuery
      * @return
      */
     public Result searchItemByTitle(SearchQuery searchQuery);
 
+    /**
+     * This method is used to get all Property Record from the database
+     *
+     * @return list of all property records
+     */
     List<PropertyRecord> allProperties();
 
+    /**
+     * This method is used to get all the item type records in the data base
+     *
+     * @return list of all item type records
+     */
     List<ItemTypeRecord> allItemTypes();
 
+    /**
+     * This method is used get all the Category records in the database
+     *
+     * @return list of all category records
+     */
     List<CategoryRecord> allCategories();
 
-    void addItemsToLibrary(List<Item> items);
+    /**
+     * This method is used to add a list of Items to the database
+     *
+     * @param items
+     */
+    public void addItemsToLibrary(List<Item> items);
+
+    /**
+     * This method will
+     *
+     * @return
+     */
+    public List<RoleRecord> allRoles();
+
+    /**
+     * This method will provide all features
+     *
+     * @return
+     */
+    public List<FeatureRecord> allFeatures();
+
+    /**
+     * This method will return all the features that are accessible for a given role
+     *
+     * @param role
+     * @return list of features;
+     */
+    List<FeatureRecord> featuresForRole(String role);
 }

@@ -14,10 +14,7 @@ import com.rixon.lms_console.dao.LMSDao;
 import com.rixon.lms_console.dao.SearchQuery;
 import com.rixon.lms_console.dao.factory.DAOFactory;
 import com.rixon.lms_console.dao.mapper.ItemMapper;
-import com.rixon.lms_console.dao.recordset.CategoryRecord;
-import com.rixon.lms_console.dao.recordset.ItemRecord;
-import com.rixon.lms_console.dao.recordset.ItemTypeRecord;
-import com.rixon.lms_console.dao.recordset.PropertyRecord;
+import com.rixon.lms_console.dao.recordset.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +29,7 @@ public class SimpleStore implements Store {
     private static Store storeInstance;
 
     public static Store getInstance() {
-        if (storeInstance==null) {
+        if (storeInstance == null) {
             storeInstance = new SimpleStore();
         }
         return storeInstance;
@@ -46,10 +43,10 @@ public class SimpleStore implements Store {
 
     @Override
     public Result searchItemByTitle(SearchQuery searchQuery) {
-        List<ItemRecord> itemRecords= lmsDao.getAllItems();
+        List<ItemRecord> itemRecords = lmsDao.getAllItems();
         //TODO replace get all Items with an equivalent dao method to search by title only
         List<Item> items = new ArrayList<Item>();
-        for (ItemRecord itemRecord:itemRecords) {
+        for (ItemRecord itemRecord : itemRecords) {
             Item item = ItemMapper.mapToItem(itemRecord);
             items.add(item);
         }
@@ -74,12 +71,27 @@ public class SimpleStore implements Store {
     @Override
     public void addItemsToLibrary(List<Item> items) {
         List<ItemRecord> itemRecords = new ArrayList<ItemRecord>();
-        for (Item item:items) {
+        for (Item item : items) {
             ItemRecord itemRecord = ItemMapper.mapToItemRecord(item);
             itemRecords.add(itemRecord);
         }
-        if (itemRecords.size()>0) {
+        if (itemRecords.size() > 0) {
             lmsDao.addMultipleItemRecords(itemRecords);
         }
+    }
+
+    @Override
+    public List<RoleRecord> allRoles() {
+        return lmsDao.getAllRoles();
+    }
+
+    @Override
+    public List<FeatureRecord> allFeatures() {
+        return lmsDao.getAllFeatures();
+    }
+
+    @Override
+    public List<FeatureRecord> featuresForRole(String role) {
+        return lmsDao.featuresForRole(role);
     }
 }
