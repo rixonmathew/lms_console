@@ -10,6 +10,7 @@ package com.rixon.lms_console.dao.mapper;
 import com.rixon.lms_console.dao.ItemPropertyValue;
 import com.rixon.lms_console.dao.Property;
 import com.rixon.lms_console.dao.recordset.ItemPropertyRecord;
+import com.rixon.lms_console.dao.recordset.ItemRecord;
 
 /**
  * This class is used to map the ItemPropertyRecord to ItemProperty entity
@@ -25,8 +26,9 @@ public class ItemPropertyMapper {
         return itemPropertyValueBuilder.createItemPropertyValue();
     }
 
-    public static ItemPropertyRecord mapToItemPropertyRecord(ItemPropertyValue itemPropertyValue) {
+    public static ItemPropertyRecord mapToItemPropertyRecord(ItemPropertyValue itemPropertyValue, ItemRecord itemRecord) {
         ItemPropertyRecord itemPropertyRecord = new ItemPropertyRecord();
+        itemPropertyRecord.setItemRecord(itemRecord);
         itemPropertyRecord.setPropertyRecord(PropertyMapper.mapToPropertyRecord(itemPropertyValue.getProperty()));
         itemPropertyRecord.setValue(itemPropertyValue.getPropertyValue());
         return itemPropertyRecord;

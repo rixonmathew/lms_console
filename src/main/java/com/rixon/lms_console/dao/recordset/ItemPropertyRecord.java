@@ -14,18 +14,20 @@ import javax.persistence.*;
  * User: rixon|Date: 8/22/12|Time: 7:59 PM
  */
 @Entity()
-@Table(name="ITEM_PROPERTY")
-@NamedQuery(name=ItemPropertyRecord.ALL_ITEM_PROPERTY_QUERY,query = "select itemProperty from ItemPropertyRecord itemProperty")
+@Table(name = "ITEM_PROPERTY")
+@NamedQuery(name = ItemPropertyRecord.ITEM_PROPERTY_QUERY, query = "select itemProperty from " +
+        "ItemPropertyRecord itemProperty where itemProperty.itemRecord = :itemRecord"
+)
 public class ItemPropertyRecord {
-    public static final String ALL_ITEM_PROPERTY_QUERY = "all_item_property_query";
+    public static final String ITEM_PROPERTY_QUERY = "all_item_property_query";
     private int id;
-    private int item_id;
+    private ItemRecord itemRecord;
     private PropertyRecord propertyRecord;
     private String value;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "item_property_id_gen")
-    @SequenceGenerator(name="item_property_id_gen",sequenceName = "item_property_id_seq",allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "item_property_id_gen")
+    @SequenceGenerator(name = "item_property_id_gen", sequenceName = "item_property_id_seq", allocationSize = 1)
     public int getId() {
         return id;
     }
@@ -34,16 +36,17 @@ public class ItemPropertyRecord {
         this.id = id;
     }
 
-    @Column(name="ITEM_ID")
-    public int getItem_id() {
-        return item_id;
+    @ManyToOne
+    @JoinColumn(name = "ITEM_ID")
+    public ItemRecord getItemRecord() {
+        return itemRecord;
     }
 
-    public void setItem_id(int item_id) {
-        this.item_id = item_id;
+    public void setItemRecord(ItemRecord itemRecord) {
+        this.itemRecord = itemRecord;
     }
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "PROPERTY_ID")
     public PropertyRecord getPropertyRecord() {
         return propertyRecord;
@@ -53,7 +56,7 @@ public class ItemPropertyRecord {
         this.propertyRecord = propertyRecord;
     }
 
-    @Column(name="PROPERTY_VALUE")
+    @Column(name = "PROPERTY_VALUE")
     public String getValue() {
         return value;
     }
@@ -66,7 +69,7 @@ public class ItemPropertyRecord {
     public String toString() {
         return "ItemPropertyRecord{" +
                 "id=" + id +
-                ", item_id=" + item_id +
+                ", itemRecord=" + itemRecord +
                 ", propertyRecord=" + propertyRecord +
                 ", value='" + value + '\'' +
                 '}';

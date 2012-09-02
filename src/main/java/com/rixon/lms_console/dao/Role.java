@@ -12,18 +12,12 @@ package com.rixon.lms_console.dao;
  * User: rixon|Date: 8/25/12|Time: 9:00 PM
  */
 public class Role {
-    private int id;
     private String role;
     private String description;
 
-    private Role(int id,String role,String description) {
-        this.id = id;
+    private Role(String role, String description) {
         this.role = role;
         this.description = description;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public String getRole() {
@@ -35,27 +29,21 @@ public class Role {
     }
 
     public static class RoleBuilder {
-        private int id;
         private String role;
         private String description;
 
-        public RoleBuilder setId(int id){
-            this.id = id;
-            return this;
-        }
-
-        public RoleBuilder setRole(String role){
+        public RoleBuilder setRole(String role) {
             this.role = role;
             return this;
         }
 
-        public RoleBuilder setDescription(String description){
+        public RoleBuilder setDescription(String description) {
             this.description = description;
             return this;
         }
 
-        public Role createRole(){
-            return new Role(id,role,description);
+        public Role createRole() {
+            return new Role(role, description);
         }
     }
 }

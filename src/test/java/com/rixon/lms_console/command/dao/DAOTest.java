@@ -17,6 +17,7 @@ import org.junit.Test;
 import java.util.List;
 
 import static org.junit.Assert.*;
+
 /**
  * User: rixon|Date: 8/19/12|Time: 12:05 PM
  */
@@ -25,16 +26,17 @@ public class DAOTest {
     LMSDao lmsDao;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         lmsDao = new LMSDaoSQL();
         final String DAO_MODE = "com.rixon.lms_console.dao_mode";
-        System.setProperty(DAO_MODE,"SQL");
+        System.setProperty(DAO_MODE, "SQL");
     }
 
     @After
     public void tearDown() {
         lmsDao = null;
     }
+
     @Test
     public void testGetAllBooks() {
 //TODO Introduce Library Item
@@ -49,24 +51,24 @@ public class DAOTest {
         List<MemberRecord> memberRecords = lmsDao.getAllMembers();
         assertNotNull(memberRecords);
         final int expectedMemberCount = 4;
-        assertEquals("size of member list is not as expected",expectedMemberCount,memberRecords.size());
+        assertEquals("size of member list is not as expected", expectedMemberCount, memberRecords.size());
     }
 
     @Test
     public void testValidMember() {
-        final String emailId="rixonmathew@gmail.com";
-        final String password="lms123#";
-        MemberRecord memberRecord = lmsDao.findMember(emailId,password);
+        final String emailId = "rixonmathew@gmail.com";
+        final String password = "lms123#";
+        MemberRecord memberRecord = lmsDao.findMember(emailId, password);
         assertNotNull(memberRecord);
         assertEquals("Email id does not match", emailId, memberRecord.getEmailId());
-        assertEquals("Password does not match",password,memberRecord.getPassword());
+        assertEquals("Password does not match", password, memberRecord.getPassword());
     }
 
     @Test
     public void testInvalidMember() {
-        final String emailId="notpresent@gmail.com";
-        final String password="password";
-        MemberRecord memberRecord = lmsDao.findMember(emailId,password);
+        final String emailId = "notpresent@gmail.com";
+        final String password = "password";
+        MemberRecord memberRecord = lmsDao.findMember(emailId, password);
         assertNull(memberRecord);
     }
 
@@ -75,9 +77,9 @@ public class DAOTest {
     public void testAddNewMember() {
         final String email = "stevejobs@apple.com";
         final String password = "apple123";
-        MemberRecord memberRecord = DAOMockDataProvider.getMemberRecord("Steve","Jobs",email,"1158876659","Cupertino in United States of America", password);
+        MemberRecord memberRecord = DAOMockDataProvider.getMemberRecord("Steve", "Jobs", email, "1158876659", "Cupertino in United States of America", password);
         lmsDao.addMember(memberRecord);
-        memberRecord = lmsDao.findMember(email,password);
+        memberRecord = lmsDao.findMember(email, password);
         assertNotNull(memberRecord);
         assertEquals("Email id does not match", email, memberRecord.getEmailId());
         assertEquals("Password does not match", password, memberRecord.getPassword());
@@ -97,7 +99,7 @@ public class DAOTest {
 //    }
 
     @Test
-    public void testGetAllItemTypes()  {
+    public void testGetAllItemTypes() {
         List<ItemTypeRecord> itemTypeRecords = lmsDao.getAllItemTypes();
         assertNotNull(itemTypeRecords);
         final int expectedCount = 7;
@@ -109,7 +111,7 @@ public class DAOTest {
         List<RoleRecord> roleRecords = lmsDao.getAllRoles();
         assertNotNull(roleRecords);
         final int expectedCount = 4;
-        assertEquals("size of role records is not as expected",expectedCount,roleRecords.size());
+        assertEquals("size of role records is not as expected", expectedCount, roleRecords.size());
     }
 
     @Test
@@ -135,16 +137,11 @@ public class DAOTest {
         assertNotNull(itemRecords);
         final int expectedCount = 6;
         assertEquals("size of role records is not as expected", expectedCount, itemRecords.size());
-        for (ItemRecord itemRecord:itemRecords) {
+        for (ItemRecord itemRecord : itemRecords) {
             assertNotNull(itemRecord.getId());
             assertNotNull(itemRecord.getName());
             assertNotNull(itemRecord.getDescription());
             assertNotNull(itemRecord.getItemTypeRecord());
-            assertNotNull(itemRecord.getProperties());
-            for (PropertyRecord propertyRecord:itemRecord.getProperties().keySet()){
-                ItemPropertyRecord itemPropertyRecord = itemRecord.getProperties().get(propertyRecord);
-                assertNotNull(itemPropertyRecord);
-            }
         }
     }
 
@@ -154,7 +151,7 @@ public class DAOTest {
         assertNotNull(propertyRecords);
         final int expectedCount = 13;
         assertEquals("size of role records is not as expected", expectedCount, propertyRecords.size());
-        for(PropertyRecord propertyRecord:propertyRecords) {
+        for (PropertyRecord propertyRecord : propertyRecords) {
             System.out.println("propertyRecord = " + propertyRecord);
         }
     }

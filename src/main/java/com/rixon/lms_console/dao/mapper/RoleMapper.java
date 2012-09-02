@@ -17,7 +17,6 @@ import com.rixon.lms_console.dao.recordset.RoleRecord;
 public class RoleMapper {
     public static Role mapToRole(RoleRecord roleRecord) {
         Role.RoleBuilder roleBuilder = new Role.RoleBuilder();
-        roleBuilder.setId(roleRecord.getId());
         roleBuilder.setDescription(roleRecord.getDescription());
         roleBuilder.setRole(roleRecord.getRole());
         return roleBuilder.createRole();

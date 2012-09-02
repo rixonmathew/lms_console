@@ -47,7 +47,8 @@ public class SimpleStore implements Store {
         //TODO replace get all Items with an equivalent dao method to search by title only
         List<Item> items = new ArrayList<Item>();
         for (ItemRecord itemRecord : itemRecords) {
-            Item item = ItemMapper.mapToItem(itemRecord);
+            List<ItemPropertyRecord> itemPropertyRecords = lmsDao.propertiesForItem(itemRecord);
+            Item item = ItemMapper.mapToItem(itemRecord, itemPropertyRecords);
             items.add(item);
         }
         return new SearchResult(items);

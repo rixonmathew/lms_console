@@ -14,7 +14,9 @@ import com.rixon.lms_console.dao.recordset.ItemPropertyRecord;
 import com.rixon.lms_console.dao.recordset.ItemRecord;
 import com.rixon.lms_console.dao.recordset.PropertyRecord;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -23,47 +25,46 @@ import java.util.Map;
  */
 public class ItemMapper {
 
-    public static Item mapToItem(ItemRecord itemRecord) {
+    public static Item mapToItem(ItemRecord itemRecord, List<ItemPropertyRecord> itemProperties) {
         Item.ItemBuilder itemBuilder = new Item.ItemBuilder();
         itemBuilder.setName(itemRecord.getName());
         itemBuilder.setDescription(itemRecord.getDescription());
-        itemBuilder.setItemProperties(mapItemProperties(itemRecord.getProperties()));
+        itemBuilder.setItemProperties(mapItemProperties(itemProperties));
         itemBuilder.setItemType(ItemTypeMapper.mapToItemType(itemRecord.getItemTypeRecord()));
-        //TODO add mapping for other items
         return itemBuilder.createItem();
     }
 
-    private static Map<Property,ItemPropertyValue> mapItemProperties(Map<PropertyRecord,ItemPropertyRecord> itemPropertyRecordMap) {
-        Map<Property,ItemPropertyValue> itemPropertyValueMap = new HashMap<Property, ItemPropertyValue>();
-        for (PropertyRecord propertyRecord:itemPropertyRecordMap.keySet()) {
-            Property property = PropertyMapper.mapToProperty(propertyRecord);
-            ItemPropertyValue propertyValue = ItemPropertyMapper.mapToItemPropertyValue(itemPropertyRecordMap.get(propertyRecord));
-            itemPropertyValueMap.put(property,propertyValue);
+    private static Map<Property, ItemPropertyValue> mapItemProperties(List<ItemPropertyRecord> itemPropertyRecords) {
+        Map<Property, ItemPropertyValue> itemPropertyValueMap = new HashMap<Property, ItemPropertyValue>();
+        for (ItemPropertyRecord itemPropertyRecord : itemPropertyRecords) {
+            Property property = PropertyMapper.mapToProperty(itemPropertyRecord.getPropertyRecord());
+            ItemPropertyValue propertyValue = ItemPropertyMapper.mapToItemPropertyValue(itemPropertyRecord);
+            itemPropertyValueMap.put(property, propertyValue);
         }
         return itemPropertyValueMap;
     }
 
     public static ItemRecord mapToItemRecord(Item item) {
-        if(item==null) {
+        if (item == null) {
             return null;
         }
         ItemRecord itemRecord = new ItemRecord();
         itemRecord.setName(item.getName());
         itemRecord.setDescription(item.getDescription());
         itemRecord.setItemTypeRecord(ItemTypeMapper.mapToItemTypeRecord(item.getItemType()));
-        itemRecord.setProperties(mapItemPropertyRecords(item.getItemProperties()));
         return itemRecord;
     }
 
-    private static Map<PropertyRecord, ItemPropertyRecord> mapItemPropertyRecords(Map<Property, ItemPropertyValue> itemProperties) {
+    public static List<ItemPropertyRecord> mapItemPropertyRecords(Map<Property, ItemPropertyValue> itemProperties,
+                                                                  ItemRecord itemRecord) {
 
-        Map<PropertyRecord,ItemPropertyRecord> itemPropertyRecordMap = new HashMap<PropertyRecord,ItemPropertyRecord>();
-        for (Property property:itemProperties.keySet()){
-            ItemPropertyValue itemPropertyValue = itemProperties.get(property);
-            PropertyRecord propertyRecord = PropertyMapper.mapToPropertyRecord(property);
-            ItemPropertyRecord itemPropertyRecord = ItemPropertyMapper.mapToItemPropertyRecord(itemPropertyValue);
-            itemPropertyRecordMap.put(propertyRecord,itemPropertyRecord);
+        List<ItemPropertyRecord> itemPropertyRecords = new ArrayList<ItemPropertyRecord>();
+        Map<PropertyRecord, ItemPropertyRecord> itemPropertyRecordMap = new HashMap<PropertyRecord, ItemPropertyRecord>();
+        for (ItemPropertyValue itemPropertyValue : itemProperties.values()) {
+            ItemPropertyRecord itemPropertyRecord = ItemPropertyMapper.mapToItemPropertyRecord(itemPropertyValue, itemRecord);
+
+            itemPropertyRecords.add(itemPropertyRecord);
         }
-        return itemPropertyRecordMap;
+        return itemPropertyRecords;
     }
 }

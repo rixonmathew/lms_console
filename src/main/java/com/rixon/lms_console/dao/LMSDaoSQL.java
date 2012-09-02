@@ -13,6 +13,7 @@ import javax.persistence.*;
 import java.util.List;
 
 /**
+ * This class represents the implementation of the LMSDao based on a SQL database
  * User: rixon|Date: 8/19/12|Time: 12:10 PM
  */
 
@@ -127,5 +128,12 @@ public class LMSDaoSQL implements LMSDao {
         Query featuresForRoleQuery = entityManager.createNamedQuery(FeatureRecord.FEATURES_FOR_ROLE_QUERY);
         featuresForRoleQuery.setParameter("role", role);
         return (List<FeatureRecord>) featuresForRoleQuery.getResultList();
+    }
+
+    @Override
+    public List<ItemPropertyRecord> propertiesForItem(ItemRecord itemRecord) {
+        Query itemPropertiesQuery = entityManager.createNamedQuery(ItemPropertyRecord.ITEM_PROPERTY_QUERY);
+        itemPropertiesQuery.setParameter("itemRecord", itemRecord);
+        return (List<ItemPropertyRecord>) itemPropertiesQuery.getResultList();
     }
 }
