@@ -9,16 +9,11 @@ package com.rixon.lms_console.command.simulator;
 
 import com.rixon.lms_console.business.SimpleStore;
 import com.rixon.lms_console.dao.Item;
-import com.rixon.lms_console.dao.mapper.ItemMapper;
-import com.rixon.lms_console.dao.recordset.ItemRecord;
-import com.rixon.lms_console.util.DateUtil;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -46,7 +41,7 @@ public class DataPumpTest {
         dataSimulator = null;
     }
 
-    //@Test
+    @Test
     public void testItemPump() {
         /**
          * 1) Identify the seed tables
@@ -62,14 +57,14 @@ public class DataPumpTest {
          * 8) assert count in all related tables to be same as master count
          */
         DataPump dataPump = new DataPump(dataSimulator);
-        final int expectedMockItems = 50;//  100;
+        final int expectedMockItems = 5;//  100;
         List<Item> mockItems = dataPump.generateMockItems(expectedMockItems);
         assertNotNull(mockItems);
         assertEquals("Size of item list is not as expected", expectedMockItems, mockItems.size());
-        for (Item item:mockItems) {
+        for (Item item : mockItems) {
             System.out.println("item = " + item);
         }
-        //SimpleStore.getInstance().addItemsToLibrary(mockItems);
+        SimpleStore.getInstance().addItemsToLibrary(mockItems);
 
     }
 }

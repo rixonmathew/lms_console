@@ -97,7 +97,7 @@ public interface LMSDao {
      *
      * @param itemRecords
      */
-    public void addMultipleItemRecords(List<ItemRecord> itemRecords);
+    public void addMultipleItemRecords(List<ItemRecordWithProperties> itemRecords);
 
     /**
      * This method will return all the feature records for the a given role

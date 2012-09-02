@@ -71,10 +71,16 @@ public class SimpleStore implements Store {
 
     @Override
     public void addItemsToLibrary(List<Item> items) {
-        List<ItemRecord> itemRecords = new ArrayList<ItemRecord>();
+        List<ItemRecordWithProperties> itemRecords = new ArrayList<ItemRecordWithProperties>();
         for (Item item : items) {
             ItemRecord itemRecord = ItemMapper.mapToItemRecord(item);
-            itemRecords.add(itemRecord);
+            List<ItemPropertyRecord> itemPropertyRecords = ItemMapper.
+                    mapItemPropertyRecords(item.allPropertiesMap(), itemRecord);
+            ItemRecordWithProperties.ItemRecordWithPropertiesBuilder builder =
+                    new ItemRecordWithProperties.ItemRecordWithPropertiesBuilder();
+            builder.setItemRecord(itemRecord);
+            builder.setItemProperties(itemPropertyRecords);
+            itemRecords.add(builder.createItem());
         }
         if (itemRecords.size() > 0) {
             lmsDao.addMultipleItemRecords(itemRecords);

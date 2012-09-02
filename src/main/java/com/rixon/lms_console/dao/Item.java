@@ -76,6 +76,10 @@ public class Item {
         return identifier;
     }
 
+    public Map<Property, ItemPropertyValue> allPropertiesMap() {
+        return itemProperties;
+    }
+
     @Override
     public String toString() {
         return "Item{" +

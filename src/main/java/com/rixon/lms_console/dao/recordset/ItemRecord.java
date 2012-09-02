@@ -34,7 +34,7 @@ public class ItemRecord {
         this.id = id;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REFRESH)
     @JoinColumn(name = "ITEM_TYPE_ID")
     public ItemTypeRecord getItemTypeRecord() {
         return itemTypeRecord;

@@ -7,6 +7,7 @@
 
 package com.rixon.lms_console.dao.mapper;
 
+import com.rixon.lms_console.business.ItemTypeProvider;
 import com.rixon.lms_console.dao.ItemType;
 import com.rixon.lms_console.dao.recordset.ItemTypeRecord;
 
@@ -24,12 +25,9 @@ public class ItemTypeMapper {
     }
 
     public static ItemTypeRecord mapToItemTypeRecord(ItemType itemType) {
-        if (itemType==null) {
+        if (itemType == null) {
             return null;
         }
-        ItemTypeRecord itemTypeRecord = new ItemTypeRecord();
-        itemTypeRecord.setType(itemType.getType());
-        itemTypeRecord.setDescription(itemType.getDescription());
-        return itemTypeRecord;
+        return ItemTypeProvider.getItemTypeRecord(itemType.getType());
     }
 }

@@ -108,14 +108,20 @@ public class LMSDaoSQL implements LMSDao {
     }
 
     @Override
-    public void addMultipleItemRecords(List<ItemRecord> itemRecords) {
+    public void addMultipleItemRecords(List<ItemRecordWithProperties> itemRecords) {
         int recordCounter = 0;
         final int flushCount = 20;
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
-        for (ItemRecord itemRecord : itemRecords) {
+        for (ItemRecordWithProperties itemRecordWithProperties : itemRecords) {
+            ItemRecord itemRecord = itemRecordWithProperties.getItemRecord();
+            List<ItemPropertyRecord> itemPropertyRecords = itemRecordWithProperties.getItemProperties();
             entityManager.persist(itemRecord);
             recordCounter++;
+            for (ItemPropertyRecord itemPropertyRecord : itemPropertyRecords) {
+                entityManager.persist(itemPropertyRecord);
+                recordCounter++;
+            }
             if (recordCounter % flushCount == 0) {
                 entityManager.flush();
             }

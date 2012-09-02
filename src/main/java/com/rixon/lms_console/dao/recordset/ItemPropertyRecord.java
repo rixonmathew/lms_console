@@ -36,7 +36,7 @@ public class ItemPropertyRecord {
         this.id = id;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "ITEM_ID")
     public ItemRecord getItemRecord() {
         return itemRecord;
@@ -46,7 +46,7 @@ public class ItemPropertyRecord {
         this.itemRecord = itemRecord;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "PROPERTY_ID")
     public PropertyRecord getPropertyRecord() {
         return propertyRecord;

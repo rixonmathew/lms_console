@@ -14,8 +14,8 @@ import javax.persistence.*;
  * User:rixon|Date: 8/22/12|Time: 7:48 PM
  */
 @Entity
-@Table(name="PROPERTY")
-@NamedQuery(name= PropertyRecord.ALL_PROPERTIES_QUERY,query="select property from PropertyRecord property")
+@Table(name = "PROPERTY")
+@NamedQuery(name = PropertyRecord.ALL_PROPERTIES_QUERY, query = "select property from PropertyRecord property")
 public class PropertyRecord {
     public static final String ALL_PROPERTIES_QUERY = "all_property_query";
 
@@ -25,8 +25,8 @@ public class PropertyRecord {
     private CategoryRecord categoryRecord;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "property_id_gen")
-    @SequenceGenerator(name="property_id_gen",sequenceName = "property_id_seq",allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "property_id_gen")
+    @SequenceGenerator(name = "property_id_gen", sequenceName = "property_id_seq", allocationSize = 1)
     public int getId() {
         return id;
     }
@@ -35,7 +35,7 @@ public class PropertyRecord {
         this.id = id;
     }
 
-    @Column(name="NAME")
+    @Column(name = "NAME")
     public String getName() {
         return name;
     }
@@ -44,7 +44,7 @@ public class PropertyRecord {
         this.name = name;
     }
 
-    @Column(name="DESCRIPTION")
+    @Column(name = "DESCRIPTION")
     public String getDescription() {
         return description;
     }
@@ -53,8 +53,8 @@ public class PropertyRecord {
         this.description = description;
     }
 
-    @ManyToOne
-    @JoinColumn(name="CATEGORY_ID")
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "CATEGORY_ID")
     public CategoryRecord getCategoryRecord() {
         return categoryRecord;
     }

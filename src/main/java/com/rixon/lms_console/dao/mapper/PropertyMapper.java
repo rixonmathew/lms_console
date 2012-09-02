@@ -7,6 +7,7 @@
 
 package com.rixon.lms_console.dao.mapper;
 
+import com.rixon.lms_console.business.PropertyProvider;
 import com.rixon.lms_console.dao.Property;
 import com.rixon.lms_console.dao.recordset.PropertyRecord;
 
@@ -24,13 +25,9 @@ public class PropertyMapper {
     }
 
     public static PropertyRecord mapToPropertyRecord(Property property) {
-        if (property==null) {
+        if (property == null) {
             return null;
         }
-        PropertyRecord propertyRecord = new PropertyRecord();
-        propertyRecord.setName(property.getName());
-        propertyRecord.setDescription(property.getDescription());
-        propertyRecord.setCategoryRecord(CategoryMapper.mapToCategoryRecord(property.getCategory()));
-        return propertyRecord;
+        return PropertyProvider.getPropertyRecord(property.getName());
     }
 }

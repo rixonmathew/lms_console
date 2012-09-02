@@ -78,5 +78,5 @@ public interface Store {
      * @param role
      * @return list of features;
      */
-    List<FeatureRecord> featuresForRole(String role);
+    public List<FeatureRecord> featuresForRole(String role);
 }

@@ -26,24 +26,27 @@ import java.util.Map;
  */
 public class PropertyProvider {
 
-    private static Map<String,Property> propertyMap;
-    private static Map<Category,List<Property>> propertyByCategoryMap;
+    private static Map<String, Property> propertyMap;
+    private static Map<String, PropertyRecord> propertyRecordMap;
+    private static Map<Category, List<Property>> propertyByCategoryMap;
 
-    static  {
+    static {
         loadPropertiesMap();
     }
 
     private static void loadPropertiesMap() {
         propertyMap = new HashMap<String, Property>();
-        propertyByCategoryMap = new HashMap<Category,List<Property>>();
-        List<PropertyRecord> properties= SimpleStore.getInstance().allProperties();
-        for(PropertyRecord propertyRecord :properties) {
+        propertyRecordMap = new HashMap<String, PropertyRecord>();
+        propertyByCategoryMap = new HashMap<Category, List<Property>>();
+        List<PropertyRecord> properties = SimpleStore.getInstance().allProperties();
+        for (PropertyRecord propertyRecord : properties) {
             final Property property = PropertyMapper.mapToProperty(propertyRecord);
             propertyMap.put(propertyRecord.getName(), property);
+            propertyRecordMap.put(propertyRecord.getName(), propertyRecord);
             CategoryRecord categoryRecord = propertyRecord.getCategoryRecord();
             Category category = CategoryMapper.mapToCategory(categoryRecord);
             List<Property> propertyForCategory = propertyByCategoryMap.get(category);
-            if (propertyForCategory==null || propertyForCategory.isEmpty()) {
+            if (propertyForCategory == null || propertyForCategory.isEmpty()) {
                 propertyForCategory = new ArrayList<Property>();
                 propertyForCategory.add(property);
                 propertyByCategoryMap.put(category, propertyForCategory);
@@ -59,14 +62,23 @@ public class PropertyProvider {
         if (propertyMap.containsKey(property)) {
             return propertyMap.get(property);
         }
-        throw new IllegalArgumentException("No property exists by name "+property);
+        throw new IllegalArgumentException("No property exists by name " + property);
     }
+
+    public static PropertyRecord getPropertyRecord(String property) {
+
+        if (propertyRecordMap.containsKey(property)) {
+            return propertyRecordMap.get(property);
+        }
+        throw new IllegalArgumentException("No property record exists by name " + property);
+    }
+
 
     public static List<Property> getPropertiesForCategory(String categoryName) {
         Category category = CategoryProvider.getCategory(categoryName);
         if (propertyByCategoryMap.containsKey(category)) {
             return propertyByCategoryMap.get(category);
         }
-        throw new IllegalArgumentException("No properties exist for given category "+categoryName);
+        throw new IllegalArgumentException("No properties exist for given category " + categoryName);
     }
 }

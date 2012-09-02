@@ -22,23 +22,33 @@ import java.util.Map;
  */
 public class ItemTypeProvider {
 
-    private final static Map<String,ItemType> itemTypeMap = new HashMap<String, ItemType>();
+    private final static Map<String, ItemType> itemTypeMap = new HashMap<String, ItemType>();
+    private final static Map<String, ItemTypeRecord> itemTypeRecordMap = new HashMap<String, ItemTypeRecord>();
 
-    public static ItemType getItemType(String code)
-    {
+    public static ItemType getItemType(String code) {
         loadItemTypeCacheIfRequired();
         ItemType itemType = itemTypeMap.get(code);
-        if (itemType ==null) {
-            throw new IllegalArgumentException("Invalid code type "+code);
+        if (itemType == null) {
+            throw new IllegalArgumentException("Invalid code type " + code);
         }
         return itemType;
     }
 
-    private static void  loadItemTypeCacheIfRequired() {
+    public static ItemTypeRecord getItemTypeRecord(String code) {
+        loadItemTypeCacheIfRequired();
+        ItemTypeRecord itemTypeRecord = itemTypeRecordMap.get(code);
+        if (itemTypeRecord == null) {
+            throw new IllegalArgumentException("Invalid code type " + code);
+        }
+        return itemTypeRecord;
+    }
+
+    private static void loadItemTypeCacheIfRequired() {
         if (itemTypeMap.isEmpty()) {
             List<ItemTypeRecord> itemTypeRecords = SimpleStore.getInstance().allItemTypes();
-            for (ItemTypeRecord itemTypeRecord: itemTypeRecords) {
+            for (ItemTypeRecord itemTypeRecord : itemTypeRecords) {
                 itemTypeMap.put(itemTypeRecord.getType(), ItemTypeMapper.mapToItemType(itemTypeRecord));
+                itemTypeRecordMap.put(itemTypeRecord.getType(), itemTypeRecord);
             }
         }
     }
