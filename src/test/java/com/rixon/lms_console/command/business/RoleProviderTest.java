@@ -22,9 +22,11 @@ public class RoleProviderTest {
     @Test
     public void testValidRole() {
         final String expectedRoleName = "MEMBER";
+        final String expectedDescription = "Member of the Library";
         Role role = RoleProvider.roleForName(expectedRoleName);
         assertNotNull(role);
         assertThat("Role name is not as expected", expectedRoleName, equalTo(role.getRole()));
+        assertThat("Role description is not as expected", expectedDescription, equalTo(role.getDescription()));
     }
 
     @Test(expected = IllegalArgumentException.class)

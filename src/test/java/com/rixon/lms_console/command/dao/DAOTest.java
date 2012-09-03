@@ -176,4 +176,12 @@ public class DAOTest {
         final int expectedPropertiesCount = 8;
         assertEquals("Count of properties is not as expected", expectedPropertiesCount, itemPropertyRecords.size());
     }
+
+    @Test
+    public void testAllRoleFeatureRecord() {
+        List<RoleFeatureRecord> allRoleFeatures = lmsDao.getAllRoleFeatures();
+        assertNotNull(allRoleFeatures);
+        final int expectedCount = 8;
+        assertEquals("Count of role features is not as expected", expectedCount, allRoleFeatures.size());
+    }
 }

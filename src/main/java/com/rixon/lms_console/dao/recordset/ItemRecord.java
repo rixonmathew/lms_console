@@ -17,11 +17,13 @@ import javax.persistence.*;
 @Table(name = "ITEM")
 @NamedQueries({
         @NamedQuery(name = ItemRecord.ALL_ITEMS_QUERY, query = "select item from ItemRecord item"),
-        @NamedQuery(name = ItemRecord.ITEM_ID_QUERY, query = "select item from ItemRecord item where item.id=:id")
+        @NamedQuery(name = ItemRecord.ITEM_ID_QUERY, query = "select item from ItemRecord item where item.id=:id"),
+        @NamedQuery(name = ItemRecord.ITEM_NAME_QUERY, query = "select item from ItemRecord item where item.name like :name")
 })
 public class ItemRecord {
     public static final String ALL_ITEMS_QUERY = "all_items_query";
     public static final String ITEM_ID_QUERY = "item_id_query";
+    public static final String ITEM_NAME_QUERY = "item_name_query";
     private int id;
     private ItemTypeRecord itemTypeRecord;
     private String name;

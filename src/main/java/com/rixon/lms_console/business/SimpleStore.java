@@ -43,7 +43,7 @@ public class SimpleStore implements Store {
 
     @Override
     public Result searchItemByTitle(SearchQuery searchQuery) {
-        List<ItemRecord> itemRecords = lmsDao.getAllItems();
+        List<ItemRecord> itemRecords = lmsDao.getItemsForQuery(searchQuery);
         //TODO replace get all Items with an equivalent dao method to search by title only
         List<Item> items = new ArrayList<Item>();
         for (ItemRecord itemRecord : itemRecords) {

@@ -7,9 +7,11 @@
 
 package com.rixon.lms_console.dao;
 
+import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.dao.recordset.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -101,6 +103,20 @@ public class LMSDaoSQL implements LMSDao {
     }
 
     @Override
+    public List<ItemRecord> getItemsForQuery(SearchQuery searchQuery) {
+        List<ItemRecord> results = new ArrayList<ItemRecord>();
+        if (searchQuery == null) {
+            return results;
+        }
+        Query itemSearchQuery = entityManager.createNamedQuery(ItemRecord.ITEM_NAME_QUERY);
+        Parameter<String> parameter = searchQuery.getSearchParameters();
+        String searchTerm = ((List<String>) parameter.getParameters()).get(0);
+        itemSearchQuery.setParameter("name", searchTerm);
+        results = (List<ItemRecord>) itemSearchQuery.getResultList();
+        return results;
+    }
+
+    @Override
     public List<PropertyRecord> getAllProperties() {
         Query allPropertiesQuery = entityManager.createNamedQuery(PropertyRecord.ALL_PROPERTIES_QUERY);
         List results = allPropertiesQuery.getResultList();
@@ -153,5 +169,11 @@ public class LMSDaoSQL implements LMSDao {
             itemRecord = itemRecords.get(0);
         }
         return itemRecord;
+    }
+
+    @Override
+    public List<RoleFeatureRecord> getAllRoleFeatures() {
+        Query allRoleFeaturesQuery = entityManager.createNamedQuery(RoleFeatureRecord.ALL_ROLE_FEATURES);
+        return (List<RoleFeatureRecord>) allRoleFeaturesQuery.getResultList();
     }
 }

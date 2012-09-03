@@ -86,6 +86,16 @@ public interface LMSDao {
     public List<ItemRecord> getAllItems();
 
     /**
+     * This method will return all the ItemRecords where results match
+     * the searchQuery
+     *
+     * @param searchQuery
+     * @return list of ItemRecords
+     */
+    List<ItemRecord> getItemsForQuery(SearchQuery searchQuery);
+
+
+    /**
      * This method will return all the properties available in the system
      *
      * @return
@@ -122,5 +132,13 @@ public interface LMSDao {
      * @return
      */
     public ItemRecord itemWithId(int expectedItemID);
+
+    /**
+     * This method will return all roles with the features
+     *
+     * @return
+     */
+    public List<RoleFeatureRecord> getAllRoleFeatures();
+
 }
 

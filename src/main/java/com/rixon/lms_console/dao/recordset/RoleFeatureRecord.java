@@ -14,12 +14,14 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "ROLE_FEATURE")
+@NamedQuery(name = RoleFeatureRecord.ALL_ROLE_FEATURES, query = "select roleFeature from RoleFeatureRecord roleFeature")
 public class RoleFeatureRecord {
 
     private int id;
     private int role_id;
     private int feature_id;
     private String allowed;
+    public static final String ALL_ROLE_FEATURES = "all_role_features";
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "role_feature_id_gen")
