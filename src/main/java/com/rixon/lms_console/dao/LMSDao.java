@@ -114,5 +114,13 @@ public interface LMSDao {
      * @return
      */
     public List<ItemPropertyRecord> propertiesForItem(ItemRecord itemRecord);
+
+    /**
+     * This method will return the ItemRecord with a given id
+     *
+     * @param expectedItemID
+     * @return
+     */
+    public ItemRecord itemWithId(int expectedItemID);
 }
 

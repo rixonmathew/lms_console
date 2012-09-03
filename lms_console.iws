@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemRecordWithProperties.java" />
+    <list default="true" id="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" name="Default" comment="fixed DataPumpTest to insert multiple records">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.clover/coverage.db" afterPath="$PROJECT_DIR$/.clover/coverage.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_db.lck" afterPath="$PROJECT_DIR$/lms_db/lms_db.lck" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_console.iws" afterPath="$PROJECT_DIR$/lms_console.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_db.log" afterPath="$PROJECT_DIR$/lms_db/lms_db.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/ItemTypeProvider.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/ItemTypeProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/PropertyProvider.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/PropertyProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/SimpleStore.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/SimpleStore.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/Store.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/Store.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/Item.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/Item.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_db.properties" afterPath="$PROJECT_DIR$/lms_db/lms_db.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_db.script" afterPath="$PROJECT_DIR$/lms_db/lms_db.script" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/LMSDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/LMSDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/LMSDaoSQL.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/LMSDaoSQL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/mapper/ItemTypeMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/mapper/ItemTypeMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/mapper/PropertyMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/mapper/PropertyMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemPropertyRecord.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemPropertyRecord.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemRecord.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemRecord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/PropertyRecord.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/PropertyRecord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/simulator/DataPumpTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/simulator/DataPumpTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/dao/DAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/dao/DAOTest.java" />
     </list>
     <ignored path="lms_console.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -395,61 +389,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="lms_console_db_useful_queries.sql" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lms_db/lms_console_db_useful_queries.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="24" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataPumpTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/simulator/DataPumpTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="66" column="8" selection-start="2298" selection-end="2298" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DAOTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/dao/DAOTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="137" column="0" selection-start="4728" selection-end="4728" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Category.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/Category.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="58" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.8982036">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LMSDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/LMSDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="115" column="46" selection-start="3122" selection-end="3122" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="LMSDaoSQL.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/LMSDaoSQL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="74" selection-start="4699" selection-end="4699" vertical-scroll-proportion="0.0">
+            <state line="19" column="13" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PropertyProvider.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/PropertyProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="63" selection-start="2875" selection-end="2875" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PropertyMapper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/mapper/PropertyMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="70" selection-start="1255" selection-end="1255" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lms_console_db_useful_queries.sql" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lms_db/lms_console_db_useful_queries.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="35" selection-end="409" vertical-scroll-proportion="0.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemTypeProvider.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/ItemTypeProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="37" selection-start="1597" selection-end="1597" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#792#810#0" expanded="true" />
-                <element signature="e#897#921#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemMapper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/mapper/ItemMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="63" selection-start="2332" selection-end="2332" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#2672#2692#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -457,7 +446,7 @@
       <file leaf-file-name="ItemTypeMapper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/mapper/ItemTypeMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="8" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.0">
+            <state line="30" column="8" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -475,7 +464,7 @@
       <file leaf-file-name="PropertyRecord.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/PropertyRecord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="61" selection-start="1309" selection-end="1309" vertical-scroll-proportion="0.0">
+            <state line="46" column="33" selection-start="1324" selection-end="1324" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -484,7 +473,7 @@
       <file leaf-file-name="ItemRecord.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemRecord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="33" selection-start="1873" selection-end="1873" vertical-scroll-proportion="0.0">
+            <state line="22" column="52" selection-start="789" selection-end="789" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -513,22 +502,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/mapper/ItemPropertyMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/mapper/ItemMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/Item.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/SimpleStore.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/LMSDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemRecordWithProperties.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/LMSDaoSQL.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/simulator/DataPumpTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemPropertyRecord.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/PropertyRecord.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemRecord.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/ItemTypeProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/Store.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/mapper/ItemTypeMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/PropertyProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/mapper/PropertyMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/LMSDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/LMSDaoSQL.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemRecord.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/simulator/DataPumpTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/dao/DAOTest.java" />
       </list>
     </option>
   </component>
@@ -648,8 +637,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="width" value="1296" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -859,6 +848,30 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms_console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms_console" />
+              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PackageViewModuleNodeWrapper" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -893,30 +906,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lms_console" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lms_console" />
-              <option name="myItemType" value="com.cenqua.clover.idea.projectview.PackageViewModuleNodeWrapper" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="ProjectViewSettings">
@@ -941,12 +930,12 @@
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -969,35 +958,7 @@
       <recent name="com.rixon.lms_console.command.builder" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DataPumpTest.testItemPump">
-    <configuration default="false" name="FeatureProviderTest.testFeaturesForRole" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="lms_console" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.rixon.lms_console.command.business" />
-      <option name="MAIN_CLASS_NAME" value="com.rixon.lms_console.command.business.FeatureProviderTest" />
-      <option name="METHOD_NAME" value="testFeaturesForRole" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="wholeProject" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Clover Optimizing Runner">
-        <option name="discardSnapshots" value="false" />
-        <option name="compilesBeforeStaleSnapshot" value="10" />
-        <option name="minimize" value="true" />
-        <option name="reorder" value="FAILFAST" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.All_Tests">
     <configuration default="false" name="FeatureProviderTest.testInvalidFeature" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="lms_console" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -1107,6 +1068,28 @@
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="DAOTest.testGetPropertiesForItem" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="lms_console" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.rixon.lms_console.command.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.rixon.lms_console.command.dao.DAOTest" />
+      <option name="METHOD_NAME" value="testGetPropertiesForItem" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -1247,11 +1230,11 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All_Tests" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.FeatureProviderTest.testFeaturesForRole" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.FeatureProviderTest.testInvalidFeature" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.FeatureProviderTest.testFeatureForRole" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.CommandExecutorTest.testReserveCommandWithInvalidParameters" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.DataPumpTest.testItemPump" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.FeatureProviderTest.testInvalidFeature" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.FeatureProviderTest.testFeatureForRole" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CommandExecutorTest.testReserveCommandWithInvalidParameters" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.DataPumpTest.testItemPump" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.DAOTest.testGetPropertiesForItem" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -1325,7 +1308,11 @@
       <created>1346593104508</created>
       <updated>1346593104508</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed DataPumpTest to insert multiple records">
+      <created>1346608758676</created>
+      <updated>1346608758676</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1349,31 +1336,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="1040" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.67087275" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32428116" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249694" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38977635" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30670926" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30571762" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cloverage" active="false" anchor="left" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.24905087" sideWeight="0.6661342" order="2" side_tool="true" content_ui="tabs" x="519" y="71" width="328" height="626" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24905087" sideWeight="0.600639" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18754746" sideWeight="0.9600639" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3996328" sideWeight="0.67087275" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3682612" sideWeight="0.7220447" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24905087" sideWeight="0.67571884" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27795526" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3679935" sideWeight="0.7222222" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26984128" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Test Runs" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953683" sideWeight="0.6661342" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Aspects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24905087" sideWeight="0.67571884" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32428116" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="EJB" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1417,7 +1404,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed ItemPropertyRecord from ItemRecord" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed DataPumpTest to insert multiple records" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1437,6 +1424,7 @@
     <MESSAGE value="Introduced features and features per role" />
     <MESSAGE value="added test for Reserve command where parameters are invalid" />
     <MESSAGE value="removed ItemPropertyRecord from ItemRecord" />
+    <MESSAGE value="fixed DataPumpTest to insert multiple records" />
   </component>
   <component name="VssConfiguration">
     <CheckoutOptions>
@@ -1514,121 +1502,96 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/SimpleStore.java">
+    <entry file="file://$PROJECT_DIR$/lms_db/lms_console_db_fake_data.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="30" selection-start="2910" selection-end="2910" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2225#2251#0" expanded="true" />
-          </folding>
+        <state line="281" column="54" selection-start="8721" selection-end="8721" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemPropertyRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="18" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/PropertyProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="51" selection-start="2886" selection-end="2886" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/mapper/PropertyMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="70" selection-start="1257" selection-end="1257" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/ItemTypeProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="36" selection-start="1596" selection-end="1596" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/mapper/ItemMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="63" selection-start="2332" selection-end="2332" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/mapper/ItemTypeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="8" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/Store.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="11" selection-start="2040" selection-end="2040" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/PropertyRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="33" selection-start="1324" selection-end="1324" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lms_db/lms_console_db_useful_queries.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="24" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/LMSDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="34" selection-start="2901" selection-end="2901" vertical-scroll-proportion="0.0">
+        <state line="115" column="46" selection-start="3122" selection-end="3122" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemRecordWithProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="39" selection-start="833" selection-end="833" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lms_db/lms_console_db_fake_data.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="281" column="54" selection-start="8721" selection-end="8721" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/simulator/DataPumpTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="20" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemPropertyRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="18" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/PropertyRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="61" selection-start="1309" selection-end="1309" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/mapper/ItemMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="63" selection-start="2332" selection-end="2332" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2672#2692#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemRecord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="33" selection-start="1873" selection-end="1873" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/ItemTypeProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="37" selection-start="1597" selection-end="1597" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#792#810#0" expanded="true" />
-            <element signature="e#897#921#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/Store.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="11" selection-start="2040" selection-end="2040" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/mapper/ItemTypeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="8" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.0">
+        <state line="22" column="52" selection-start="789" selection-end="789" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/LMSDaoSQL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="74" selection-start="4699" selection-end="4699" vertical-scroll-proportion="0.0">
+        <state line="19" column="13" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/PropertyProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/dao/DAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="63" selection-start="2875" selection-end="2875" vertical-scroll-proportion="0.0">
+        <state line="137" column="0" selection-start="4728" selection-end="4728" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/mapper/PropertyMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/simulator/DataPumpTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="70" selection-start="1255" selection-end="1255" vertical-scroll-proportion="0.0">
+        <state line="66" column="8" selection-start="2298" selection-end="2298" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lms_db/lms_console_db_useful_queries.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/Category.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="35" selection-end="409" vertical-scroll-proportion="0.625">
+        <state line="55" column="58" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.8982036">
           <folding />
         </state>
       </provider>
