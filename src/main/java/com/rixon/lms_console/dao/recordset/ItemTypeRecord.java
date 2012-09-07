@@ -15,14 +15,14 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "ITEM_TYPE")
-@NamedQuery(name = ItemTypeRecord.ALL_ITEM_TYPES_QUERY,query = "select a from ItemTypeRecord a")
+@NamedQuery(name = ItemTypeRecord.ALL_ITEM_TYPES_QUERY, query = "select a from ItemTypeRecord a")
 public class ItemTypeRecord {
     public final static String ALL_ITEM_TYPES_QUERY = "allItemTypes";
     private Integer id;
     private String type;
     private String description;
 
-    public ItemTypeRecord(){
+    public ItemTypeRecord() {
     }
 
     @Id
@@ -30,20 +30,12 @@ public class ItemTypeRecord {
         return id;
     }
 
-    /**
-     * Method to get ths short description of the ItemRS Type Code
-     * @return Code for the ItemRS Type
-     */
-    @Column(name="TYPE")
+    @Column(name = "TYPE")
     public String getType() {
         return type;
     }
 
-    /**
-     * Method to get the detailed Description of the ItemRS
-     * @return
-     */
-    @Column(name="DESCRIPTION")
+    @Column(name = "DESCRIPTION")
     public String getDescription() {
         return description;
     }

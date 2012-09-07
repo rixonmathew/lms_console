@@ -20,15 +20,15 @@ public interface LMSDao {
     /**
      * This method is used to get all the members of the library
      *
-     * @return
+     * @return list of member records
      */
     public List<MemberRecord> getAllMembers();
 
     /**
      * This dao method will provide the member record based on the email id and password
      *
-     * @param emailId
-     * @param password
+     * @param emailId  emailId
+     * @param password password
      * @return MemberRecord
      */
     public MemberRecord findMember(String emailId, String password);
@@ -44,7 +44,7 @@ public interface LMSDao {
     /**
      * This method is for adding a new member record to the data base
      *
-     * @param memberRecord
+     * @param memberRecord the member record
      */
     public void addMember(MemberRecord memberRecord);
 
@@ -53,7 +53,7 @@ public interface LMSDao {
      * the member
      * TODO: add functionality to soft delete the member and all related tables of the member
      *
-     * @param memberRecord
+     * @param memberRecord the member record
      */
     public void removeMember(MemberRecord memberRecord);
 
@@ -89,7 +89,7 @@ public interface LMSDao {
      * This method will return all the ItemRecords where results match
      * the searchQuery
      *
-     * @param searchQuery
+     * @param searchQuery the search query object
      * @return list of ItemRecords
      */
     List<ItemRecord> getItemsForQuery(SearchQuery searchQuery);
@@ -98,21 +98,21 @@ public interface LMSDao {
     /**
      * This method will return all the properties available in the system
      *
-     * @return
+     * @return list of all property records
      */
     public List<PropertyRecord> getAllProperties();
 
     /**
      * This method is used to add multiple items into the database
      *
-     * @param itemRecords
+     * @param itemRecords list of item records to be added
      */
     public void addMultipleItemRecords(List<ItemRecordWithProperties> itemRecords);
 
     /**
      * This method will return all the feature records for the a given role
      *
-     * @param role
+     * @param role the role for which features are required
      * @return list of feature records
      */
     public List<FeatureRecord> featuresForRole(String role);
@@ -120,25 +120,24 @@ public interface LMSDao {
     /**
      * This method will return all the item properties for a particular itemRecords
      *
-     * @param itemRecord
-     * @return
+     * @param itemRecord the item for which properties are required
+     * @return list of ItemPropertyRecords
      */
     public List<ItemPropertyRecord> propertiesForItem(ItemRecord itemRecord);
 
     /**
      * This method will return the ItemRecord with a given id
      *
-     * @param expectedItemID
-     * @return
+     * @param expectedItemID the id of item
+     * @return ItemRecord object
      */
     public ItemRecord itemWithId(int expectedItemID);
 
     /**
      * This method will return all roles with the features
      *
-     * @return
+     * @return list of RoleFeatureRecords
      */
     public List<RoleFeatureRecord> getAllRoleFeatures();
 
 }
-

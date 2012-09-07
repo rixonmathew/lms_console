@@ -38,12 +38,12 @@ public abstract class AbstractResultTableModel extends AbstractTableModel {
     }
 
     @Override
-    public Object getValueAt(int rowIndex, int columnIndex){
+    public Object getValueAt(int rowIndex, int columnIndex) {
         Object cellValue = null;
         if (rowIndex < 0 || rowIndex > results.size() ||
                 columnIndex < 0 || columnIndex > headerNames.values().size())
             return cellValue;
-        cellValue = getCellValueAt(rowIndex,columnIndex);
+        cellValue = getCellValueAt(rowIndex, columnIndex);
         return cellValue;
     }
 
@@ -51,11 +51,12 @@ public abstract class AbstractResultTableModel extends AbstractTableModel {
      * This method will query the data source to return the cell value at a particular row
      * and column. No validations needs to be done in this method since it will be performed
      * in the calling method
-     * @param rowIndex
-     * @param columnIndex
+     *
+     * @param rowIndex    the index for the row
+     * @param columnIndex the index for the column
      * @return cell value
      */
-    protected abstract Object getCellValueAt(int rowIndex,int columnIndex);
+    protected abstract Object getCellValueAt(int rowIndex, int columnIndex);
 
     @Override
     public String getColumnName(int column) {

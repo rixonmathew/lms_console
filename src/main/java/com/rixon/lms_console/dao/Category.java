@@ -37,9 +37,8 @@ public class Category {
 
         if (description != null ? !description.equals(category.description) : category.description != null)
             return false;
-        if (name != null ? !name.equals(category.name) : category.name != null) return false;
+        return !(name != null ? !name.equals(category.name) : category.name != null);
 
-        return true;
     }
 
     @Override
@@ -57,7 +56,7 @@ public class Category {
                 '}';
     }
 
-    public static class CategoryBuilder{
+    public static class CategoryBuilder {
         private String name;
         private String description;
 

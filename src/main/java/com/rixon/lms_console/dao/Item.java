@@ -60,7 +60,7 @@ public class Item {
     /**
      * This method will return the property value associated with given property
      *
-     * @param property
+     * @param property the property object
      * @return property value
      */
     public ItemPropertyValue getItemPropertyValue(Property property) {

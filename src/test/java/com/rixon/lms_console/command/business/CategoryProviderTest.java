@@ -24,7 +24,7 @@ public class CategoryProviderTest {
     public void testCategory() {
         final String expectedCategoryName = "ITEM_PROPERTY";
         Category category = CategoryProvider.getCategory(expectedCategoryName);
-        assertThat("Category name is not as expected",expectedCategoryName,equalTo(category.getName()));
+        assertThat("Category name is not as expected", expectedCategoryName, equalTo(category.getName()));
         System.out.println("category = " + category);
     }
 
@@ -32,7 +32,7 @@ public class CategoryProviderTest {
     public void testInvalidCategory() {
         final String expectedCategoryName = "ABCD_PROPERTY";
         CategoryProvider.getCategory(expectedCategoryName);
-        fail("An excpetion should have been raised for invalid category");
+        fail("An exception should have been raised for invalid category");
     }
 
 }

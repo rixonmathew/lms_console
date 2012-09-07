@@ -8,7 +8,7 @@
 package com.rixon.lms_console.dao;
 
 /**
- * This class is used to hold the proprety value for a given property.
+ * This class is used to hold the property value for a given property.
  * All property values are stored as String
  * User: rixon|Date: 8/25/12|Time: 8:05 PM
  */

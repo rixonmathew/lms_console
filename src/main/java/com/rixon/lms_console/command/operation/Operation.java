@@ -9,14 +9,16 @@ public interface Operation {
 
     /**
      * This method will return the type of the operation.
-     * @return
+     *
+     * @return the operation type
      */
     public String getOperationType();
 
     /**
      * This method will provide the usage of the operation. This usage will be provided
      * to the user when the format of the command is invalid
-     * @return
+     *
+     * @return the usage of the operation
      */
     public String getUsage();
 }

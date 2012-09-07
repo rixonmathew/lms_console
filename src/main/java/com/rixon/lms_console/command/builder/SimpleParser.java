@@ -16,8 +16,9 @@ import java.util.StringTokenizer;
 
 /**
  * This class is an implementation of the Parser interface
+ *
  * @see Parser
- * User: rixon|Date: 8/1/12|Time: 8:13 PM
+ *      User: rixon|Date: 8/1/12|Time: 8:13 PM
  */
 public class SimpleParser implements Parser {
 
@@ -27,7 +28,7 @@ public class SimpleParser implements Parser {
     private ValidationResult validationResult;
     private Command command;
 
-    private final static String DELIMITER=" ";
+    private final static String DELIMITER = " ";
 
     @Override
     public Command parse(String commandString) {
@@ -55,11 +56,11 @@ public class SimpleParser implements Parser {
     }
 
     private void validateCommand() {
-        Validator commandValidator = new SimpleValidator();
+        Validator<String> commandValidator = new SimpleValidator();
         this.validationResult = commandValidator.validateCommand(this.operation, this.parameter);
     }
 
-    private void createCommand(){
-      this.command = new SimpleCommand(commandString,operation,parameter,validationResult);
+    private void createCommand() {
+        this.command = new SimpleCommand(commandString, operation, parameter, validationResult);
     }
 }

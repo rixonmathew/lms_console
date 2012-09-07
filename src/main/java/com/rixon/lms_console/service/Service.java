@@ -14,7 +14,8 @@ public interface Service {
     /**
      * This method executes the operations using the parameter
      * and provides a result instance containing the results
-     * @param parameter
+     *
+     * @param parameter the parameter object
      * @return an instance of Result
      */
     public Result execute(Parameter<String> parameter);

@@ -11,7 +11,8 @@ public interface CommandExecutor {
 
     /**
      * This method is used to execute a command and return the result associated with the command
-     * @param command
+     *
+     * @param command the command object
      * @return Result associated with the command
      */
     public Result executeCommand(Command command);

@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * The purpose of this class is to provide the valid propery instances
+ * The purpose of this class is to provide the valid property instances
  * as per the master data
  * User: rixon|Date: 8/25/12|Time: 9:47 PM
  */

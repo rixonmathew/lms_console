@@ -37,18 +37,36 @@ public class DataSimulator {
 
     public List<String> mockTitles(int number) {
         List<String> mockTitles = new ArrayList<String>();
-        String titlePattern = " %1$s %2$s %3$s %4$s";
-        for (int i=0;i<number;i++) {
+        String titlePattern = " %1$s %2$s";
+        for (int i = 0; i < number; i++) {
             Formatter stringFormatter = new Formatter();
             String sampleTitle = stringFormatter.format(titlePattern, randomTitle(),
-                                            randomTitle(),randomTitle(),randomTitle()).toString();
+                    randomTitle()).toString();
             mockTitles.add(sampleTitle);
         }
         return mockTitles;
     }
 
+    public List<String> mockDescriptions(int number) {
+        List<String> mockDescriptions = new ArrayList<String>();
+        String descriptionPattern = "The %1$s is always %2$s to %3$s do %4$s something about %5$s.";
+        for (int i = 0; i < number; i++) {
+            Formatter stringFormatter = new Formatter();
+            String sampleTitle = stringFormatter.format(descriptionPattern, randomTitle(),
+                    randomTitle(), randomTitle(), randomTitle(), randomTitle()).toString();
+            mockDescriptions.add(sampleTitle);
+        }
+        return mockDescriptions;
+    }
+
+
     private String randomTitle() {
-        return seedWordsTitle.get(random.nextInt(seedWordsTitle.size()));
+
+        final int size = seedWordsTitle.size();
+        System.out.println("size = " + size);
+        final int index = random.nextInt(size);
+        System.out.println("index = " + index);
+        return seedWordsTitle.get(index);
     }
 
     public void setDateSeed(List<Date> seedDates) {
@@ -57,7 +75,7 @@ public class DataSimulator {
 
     public List<Date> mockDates(int number) {
         List<Date> mockDates = new ArrayList<Date>();
-        for (int i=0;i<number;i++) {
+        for (int i = 0; i < number; i++) {
             mockDates.add(randomDate());
         }
         return mockDates;
@@ -68,15 +86,15 @@ public class DataSimulator {
     }
 
     public void setISBNSeed(List<String> isbns) {
-       this.seedISBNs = isbns;
+        this.seedISBNs = isbns;
     }
 
     public List<String> mockISBNs(int number) {
         List<String> mockISBNs = new ArrayList<String>();
-        String isbnFormat = "%d%d%d-%d-%d%d%d-%d%d%d%d%d-%d" ;  //"%1$d%2$d%3$d-%4$d-%5$d%6$d%7$d-%8$d%9$d%10$d%11$d%12$d%13$d-%14$d";
-        for (int i=0;i<number;i++) {
+        String isbnFormat = "%d%d%d-%d-%d%d%d-%d%d%d%d%d-%d";  //"%1$d%2$d%3$d-%4$d-%5$d%6$d%7$d-%8$d%9$d%10$d%11$d%12$d%13$d-%14$d";
+        for (int i = 0; i < number; i++) {
             Formatter stringFormatter = new Formatter();
-            String mockISBN = stringFormatter.format(isbnFormat,numbersForISBN(13)).toString();
+            String mockISBN = stringFormatter.format(isbnFormat, numbersForISBN(13)).toString();
             mockISBNs.add(mockISBN);
         }
         return mockISBNs;
@@ -84,7 +102,7 @@ public class DataSimulator {
 
     private Integer[] numbersForISBN(int size) {
         Integer[] numbers = new Integer[size];
-        for (int i=0;i<size;i++) {
+        for (int i = 0; i < size; i++) {
             numbers[i] = randomNumber();
         }
         return numbers;
@@ -101,7 +119,7 @@ public class DataSimulator {
     public List<String> mockPropertyValues(int expectedMockItems) {
         List<String> mockValues = new ArrayList<String>();
         String titlePattern = " %1$s %2$s";
-        for (int i=0;i<expectedMockItems;i++) {
+        for (int i = 0; i < expectedMockItems; i++) {
             Formatter stringFormatter = new Formatter();
             String sampleTitle = stringFormatter.format(titlePattern, randomPropertyValue(),
                     randomPropertyValue()).toString();
@@ -130,11 +148,11 @@ public class DataSimulator {
         seedWordsDescription = stringsFromFile(SimulatedDataFiles.DESCRIPTION_FILE);
     }
 
-    private void loadDates() throws IOException{
+    private void loadDates() throws IOException {
         seedDates = datesFormFile(SimulatedDataFiles.DATES_FILE);
     }
 
-    private void loadPropertyValues() throws IOException{
+    private void loadPropertyValues() throws IOException {
         seedPropertyValues = stringsFromFile(SimulatedDataFiles.PROPERTY_FILE);
     }
 
@@ -142,7 +160,7 @@ public class DataSimulator {
         seedISBNs = stringsFromFile(SimulatedDataFiles.NUMBERS_FILE);
     }
 
-    private List<String> stringsFromFile(String fileName) throws IOException{
+    private List<String> stringsFromFile(String fileName) throws IOException {
         URL fileURL = SimulatedDataFiles.class.getResource(fileName);
         List<String> fileContents = new ArrayList<String>();
         if (fileURL == null) {

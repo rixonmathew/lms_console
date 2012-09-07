@@ -10,11 +10,11 @@ public class HelpParameterValidationStrategy extends CommonValidationStrategy {
     @Override
     public boolean validateParameter(Parameter<String> parameter) {
         boolean isValid;
-        if (parameter == null || parameter.getParameters().size()==0){
+        if (parameter == null || parameter.getParameters().size() == 0) {
             isValid = true;
             return isValid;
         }
-        isValid = !(parameter != null && parameter.getParameters().size() != 1);
+        isValid = !(parameter.getParameters().size() != 1);
         return isValid;
     }
 }

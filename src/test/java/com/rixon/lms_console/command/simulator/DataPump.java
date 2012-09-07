@@ -16,7 +16,8 @@ import com.rixon.lms_console.util.DateUtil;
 
 import java.util.*;
 
-import static com.rixon.lms_console.util.Constants.*;
+import static com.rixon.lms_console.util.Constants.CATEGORY_ITEM_PROPERTY;
+import static com.rixon.lms_console.util.Constants.PUBLISHED_DATE;
 
 /**
  * User: rixon|Date: 8/26/12|Time: 3:24 PM
@@ -38,7 +39,7 @@ public class DataPump {
         ArrayList<Item> items = new ArrayList<Item>();
         Item.ItemBuilder itemBuilder = new Item.ItemBuilder();
         populateDataLists(expectedMockItems);
-        for (int i=0;i<expectedMockItems;i++) {
+        for (int i = 0; i < expectedMockItems; i++) {
             itemBuilder.setName(mockNames.get(i));
             itemBuilder.setDescription(mockDescriptions.get(i));
             itemBuilder.setItemType(ItemTypeProvider.getItemType("BOOK"));
@@ -51,14 +52,14 @@ public class DataPump {
 
     private void populateDataLists(int expectedMockItems) {
         mockNames = dataSimulator.mockTitles(expectedMockItems);
-        mockDescriptions = dataSimulator.mockTitles(expectedMockItems);
+        mockDescriptions = dataSimulator.mockDescriptions(expectedMockItems);
         mockDates = dataSimulator.mockDates(expectedMockItems);
         mockPropertyValues = dataSimulator.mockPropertyValues(expectedMockItems);
     }
 
     private Map<Property, ItemPropertyValue> generateMockProperties(List<Property> properties) {
-        Map<Property,ItemPropertyValue> itemPropertyValueMap = new HashMap<Property,ItemPropertyValue>();
-        for(Property property:properties) {
+        Map<Property, ItemPropertyValue> itemPropertyValueMap = new HashMap<Property, ItemPropertyValue>();
+        for (Property property : properties) {
             ItemPropertyValue.ItemPropertyValueBuilder itemPropertyValueBuilder = new ItemPropertyValue.
                     ItemPropertyValueBuilder();
             itemPropertyValueBuilder.setProperty(property);
@@ -68,7 +69,7 @@ public class DataPump {
             } else {
                 itemPropertyValueBuilder.setPropertyValue(getRandomPropertyValue());
             }
-            itemPropertyValueMap.put(property,itemPropertyValueBuilder.createItemPropertyValue());
+            itemPropertyValueMap.put(property, itemPropertyValueBuilder.createItemPropertyValue());
         }
         return itemPropertyValueMap;
     }

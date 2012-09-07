@@ -57,7 +57,7 @@ public class DataPumpTest {
          * 8) assert count in all related tables to be same as master count
          */
         DataPump dataPump = new DataPump(dataSimulator);
-        final int expectedMockItems = 50;//  100;
+        final int expectedMockItems = 500;//  100;
         List<Item> mockItems = dataPump.generateMockItems(expectedMockItems);
         assertNotNull(mockItems);
         assertEquals("Size of item list is not as expected", expectedMockItems, mockItems.size());

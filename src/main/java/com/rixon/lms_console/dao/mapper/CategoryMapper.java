@@ -19,8 +19,7 @@ public class CategoryMapper {
     public static Category mapToCategory(CategoryRecord categoryRecord) {
         Category.CategoryBuilder categoryBuilder = new Category.CategoryBuilder();
         categoryBuilder.setName(categoryRecord.getName()).setDescription(categoryRecord.getDescription());
-        Category category = categoryBuilder.createCategory();
-        return category;
+        return categoryBuilder.createCategory();
     }
 
     public static CategoryRecord mapToCategoryRecord(Category category) {

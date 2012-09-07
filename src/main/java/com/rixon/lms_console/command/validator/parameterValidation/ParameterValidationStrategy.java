@@ -10,8 +10,9 @@ public interface ParameterValidationStrategy {
 
     /**
      * This method represents the interface that validates the parameters.
-     * @param parameter
-     * @return true if valid
+     *
+     * @param parameter the parameter that has to be validated
+     * @return true if valid else false
      */
     public boolean validateParameter(Parameter<String> parameter);
 }

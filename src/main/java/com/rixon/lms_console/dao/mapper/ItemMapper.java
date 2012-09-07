@@ -12,7 +12,6 @@ import com.rixon.lms_console.dao.ItemPropertyValue;
 import com.rixon.lms_console.dao.Property;
 import com.rixon.lms_console.dao.recordset.ItemPropertyRecord;
 import com.rixon.lms_console.dao.recordset.ItemRecord;
-import com.rixon.lms_console.dao.recordset.PropertyRecord;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -59,7 +58,6 @@ public class ItemMapper {
                                                                   ItemRecord itemRecord) {
 
         List<ItemPropertyRecord> itemPropertyRecords = new ArrayList<ItemPropertyRecord>();
-        Map<PropertyRecord, ItemPropertyRecord> itemPropertyRecordMap = new HashMap<PropertyRecord, ItemPropertyRecord>();
         for (ItemPropertyValue itemPropertyValue : itemProperties.values()) {
             ItemPropertyRecord itemPropertyRecord = ItemPropertyMapper.mapToItemPropertyRecord(itemPropertyValue, itemRecord);
 
