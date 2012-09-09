@@ -330,3 +330,29 @@ insert into role_feature(id,role_id,feature_id,allowed)
 values(next value for role_feature_id_seq,106,103,'Y')
 insert into role_feature(id,role_id,feature_id,allowed)
 values(next value for role_feature_id_seq,106,104,'Y')
+
+
+--Properties for instance
+/*
+  AVAILABLE
+  MEDIA_TYPE
+  ADDED_DATE
+*/
+
+--Propertes for Transaction
+/*
+  --CHECK_OUT
+  CHECKED_OUT_DATE
+  RETURN_DATE
+  RENEWED
+
+  --RETURN
+  RETURNED_DATE
+  FINE
+
+  --RENEW
+  RENEWED_DATE
+  RETURN_DATE
+
+
+*/

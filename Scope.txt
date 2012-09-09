@@ -1,5 +1,6 @@
 Things to be incorporated
 =========================
+ Update datapump to create item instance properties
  Introduce list command to see all books, users etc
  Introduce command to add new user into the system
  Introduce command to add new media item into the system

@@ -60,7 +60,34 @@ public class ServiceTest {
         TableModel tableModel = helpResult.getResultsTable();
         final int expectedCount = 1;
         assertEquals("Count is not same", expectedCount, tableModel.getRowCount());
-
     }
 
+    @Test
+    public void testSearchServiceWithOneParameter() {
+        Service searchService = facade.serviceForOperation(OperationTypes.SEARCH);
+        Parameter<String> parameter = CommandTestUtil.parameterWithString("Charlie");
+        Result searchResult = searchService.execute(parameter);
+        assertNotNull(searchResult);
+        TableModel tableModel = searchResult.getResultsTable();
+        final int expectedCount = 26;
+        assertEquals("Count of search results not as expected", expectedCount, tableModel.getRowCount());
+    }
+
+    @Test
+    public void testSearchServiceWithMultipleParameters() {
+        Service searchService = facade.serviceForOperation(OperationTypes.SEARCH);
+        Parameter<String> searchParameter = CommandTestUtil.parameterWithString("Charlie", "Goa");
+        Result searchResult = searchService.execute(searchParameter);
+        assertNotNull(searchResult);
+        TableModel tableModel = searchResult.getResultsTable();
+        final int expectedCount = 49;
+        assertEquals("Count of search results not as expected", expectedCount, tableModel.getRowCount());
+    }
+
+    @Test
+    public void testIssueServiceWithWithValidItem() {
+        Service issueService = facade.serviceForOperation(OperationTypes.ISSUE);
+        Parameter<String> issueParameter = CommandTestUtil.parameterWithString("101", "1");
+
+    }
 }

@@ -12,6 +12,7 @@ import com.rixon.lms_console.dao.recordset.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -108,11 +109,14 @@ public class LMSDaoSQL implements LMSDao {
         if (searchQuery == null) {
             return results;
         }
-        Query itemSearchQuery = entityManager.createNamedQuery(ItemRecord.ITEM_NAME_QUERY);
         Parameter<String> parameter = searchQuery.getSearchParameters();
-        String searchTerm = ((List<String>) parameter.getParameters()).get(0);
-        itemSearchQuery.setParameter("name", searchTerm);
-        results = (List<ItemRecord>) itemSearchQuery.getResultList();
+        Collection<String> parameterValues = parameter.getParameters();
+        for (String searchTerm : parameterValues) {
+            Query itemSearchQuery = entityManager.createNamedQuery(ItemRecord.ITEM_NAME_QUERY);
+            itemSearchQuery.setParameter("name", "%" + searchTerm + "%");
+            List<ItemRecord> searchResults = (List<ItemRecord>) itemSearchQuery.getResultList();
+            results.addAll(searchResults);
+        }
         return results;
     }
 
