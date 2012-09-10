@@ -9,6 +9,7 @@ package com.rixon.lms_console.dao.mapper;
 
 import com.rixon.lms_console.dao.Category;
 import com.rixon.lms_console.dao.recordset.CategoryRecord;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * This class will map the CategoryRecord to Category entity
@@ -16,17 +17,10 @@ import com.rixon.lms_console.dao.recordset.CategoryRecord;
  */
 public class CategoryMapper {
 
-    public static Category mapToCategory(CategoryRecord categoryRecord) {
+    public static Category mapToCategory(@NotNull CategoryRecord categoryRecord) {
         Category.CategoryBuilder categoryBuilder = new Category.CategoryBuilder();
         categoryBuilder.setName(categoryRecord.getName()).setDescription(categoryRecord.getDescription());
         return categoryBuilder.createCategory();
-    }
-
-    public static CategoryRecord mapToCategoryRecord(Category category) {
-        CategoryRecord categoryRecord = new CategoryRecord();
-        categoryRecord.setName(category.getName());
-        categoryRecord.setDescription(category.getDescription());
-        return categoryRecord;
     }
 }
 

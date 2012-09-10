@@ -10,6 +10,8 @@ package com.rixon.lms_console.dao.mapper;
 import com.rixon.lms_console.business.ItemTypeProvider;
 import com.rixon.lms_console.dao.ItemType;
 import com.rixon.lms_console.dao.recordset.ItemTypeRecord;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * This class is used for mapping the itemTypeRecord to ItemType
@@ -17,14 +19,16 @@ import com.rixon.lms_console.dao.recordset.ItemTypeRecord;
  */
 public class ItemTypeMapper {
 
-    public static ItemType mapToItemType(ItemTypeRecord itemTypeRecord) {
+    @NotNull
+    public static ItemType mapToItemType(@NotNull ItemTypeRecord itemTypeRecord) {
         ItemType.ItemTypeBuilder itemTypeBuilder = new ItemType.ItemTypeBuilder();
         itemTypeBuilder.setDescription(itemTypeRecord.getDescription());
         itemTypeBuilder.setType(itemTypeRecord.getType());
         return itemTypeBuilder.createItemType();
     }
 
-    public static ItemTypeRecord mapToItemTypeRecord(ItemType itemType) {
+    @Nullable
+    public static ItemTypeRecord mapToItemTypeRecord(@Nullable ItemType itemType) {
         if (itemType == null) {
             return null;
         }

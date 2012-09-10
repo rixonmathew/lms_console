@@ -7,6 +7,8 @@
 
 package com.rixon.lms_console.dao.recordset;
 
+import org.jetbrains.annotations.NotNull;
+
 import javax.persistence.*;
 
 /**
@@ -63,6 +65,7 @@ public class PropertyRecord {
         this.categoryRecord = categoryRecord;
     }
 
+    @NotNull
     @Override
     public String toString() {
         return "PropertyRecord{" +

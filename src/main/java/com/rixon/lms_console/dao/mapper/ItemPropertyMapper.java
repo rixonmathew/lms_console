@@ -11,6 +11,7 @@ import com.rixon.lms_console.dao.Property;
 import com.rixon.lms_console.dao.PropertyValue;
 import com.rixon.lms_console.dao.recordset.ItemPropertyRecord;
 import com.rixon.lms_console.dao.recordset.ItemRecord;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * This class is used to map the ItemPropertyRecord to ItemProperty entity
@@ -18,7 +19,8 @@ import com.rixon.lms_console.dao.recordset.ItemRecord;
  */
 public class ItemPropertyMapper {
 
-    public static PropertyValue mapToItemPropertyValue(ItemPropertyRecord itemPropertyRecord) {
+    @NotNull
+    public static PropertyValue mapToItemPropertyValue(@NotNull ItemPropertyRecord itemPropertyRecord) {
         PropertyValue.PropertyValueBuilder propertyValueBuilder = new PropertyValue.PropertyValueBuilder();
         Property property = PropertyMapper.mapToProperty(itemPropertyRecord.getPropertyRecord());
         propertyValueBuilder.setProperty(property);
@@ -26,7 +28,8 @@ public class ItemPropertyMapper {
         return propertyValueBuilder.createPropertyValue();
     }
 
-    public static ItemPropertyRecord mapToItemPropertyRecord(PropertyValue propertyValue, ItemRecord itemRecord) {
+    @NotNull
+    public static ItemPropertyRecord mapToItemPropertyRecord(@NotNull PropertyValue propertyValue, ItemRecord itemRecord) {
         ItemPropertyRecord itemPropertyRecord = new ItemPropertyRecord();
         itemPropertyRecord.setItemRecord(itemRecord);
         itemPropertyRecord.setPropertyRecord(PropertyMapper.mapToPropertyRecord(propertyValue.getProperty()));

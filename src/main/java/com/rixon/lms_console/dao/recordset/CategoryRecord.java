@@ -7,6 +7,8 @@
 
 package com.rixon.lms_console.dao.recordset;
 
+import org.jetbrains.annotations.NotNull;
+
 import javax.persistence.*;
 
 /**
@@ -15,7 +17,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "CATEGORY")
-@NamedQuery(name = CategoryRecord.ALL_CATEGORIES_QUERY,query = "select category from CategoryRecord category")
+@NamedQuery(name = CategoryRecord.ALL_CATEGORIES_QUERY, query = "select category from CategoryRecord category")
 public class CategoryRecord {
 
     public static final String ALL_CATEGORIES_QUERY = "all_categories_query";
@@ -25,8 +27,8 @@ public class CategoryRecord {
     private String description;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "category_id_gen")
-    @SequenceGenerator(name="category_id_gen",sequenceName = "category_id_seq",allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "category_id_gen")
+    @SequenceGenerator(name = "category_id_gen", sequenceName = "category_id_seq", allocationSize = 1)
     public int getId() {
         return id;
     }
@@ -35,7 +37,7 @@ public class CategoryRecord {
         this.id = id;
     }
 
-    @Column(name="NAME")
+    @Column(name = "NAME")
     public String getName() {
         return name;
     }
@@ -44,7 +46,7 @@ public class CategoryRecord {
         this.name = name;
     }
 
-    @Column(name="DESCRIPTION")
+    @Column(name = "DESCRIPTION")
     public String getDescription() {
         return description;
     }
@@ -53,6 +55,7 @@ public class CategoryRecord {
         this.description = description;
     }
 
+    @NotNull
     @Override
     public String toString() {
         return "CategoryRecord{" +

@@ -11,6 +11,7 @@ import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.ReservationResult;
 import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.service.Service;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +20,7 @@ import java.util.List;
  * User: rixon|Date: 8/23/12|Time: 8:49 PM
  */
 public class ReserveServiceStub implements Service {
+    @NotNull
     @Override
     public Result execute(Parameter<String> parameter) {
         String returnResult = "Reserved book successfully";

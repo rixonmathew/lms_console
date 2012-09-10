@@ -12,8 +12,8 @@ package com.rixon.lms_console.dao;
  * User: rixon|Date: 8/25/12|Time: 9:00 PM
  */
 public class Role {
-    private String role;
-    private String description;
+    private final String role;
+    private final String description;
 
     private Role(String role, String description) {
         this.role = role;

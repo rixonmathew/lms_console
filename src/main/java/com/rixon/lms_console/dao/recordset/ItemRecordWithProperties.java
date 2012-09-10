@@ -14,8 +14,8 @@ import java.util.List;
  * User: rixon|Date: 9/2/12|Time: 9:02 PM
  */
 public class ItemRecordWithProperties {
-    private ItemRecord itemRecord;
-    private List<ItemPropertyRecord> itemProperties;
+    private final ItemRecord itemRecord;
+    private final List<ItemPropertyRecord> itemProperties;
 
     private ItemRecordWithProperties(ItemRecord itemRecord, List<ItemPropertyRecord> itemProperties) {
         this.itemRecord = itemRecord;

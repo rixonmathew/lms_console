@@ -9,13 +9,14 @@ package com.rixon.lms_console.dao.mapper;
 
 import com.rixon.lms_console.dao.Role;
 import com.rixon.lms_console.dao.recordset.RoleRecord;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * This class is used to map the RoleRecord to Role
  * User: rixon|Date: 8/25/12|Time: 8:58 PM
  */
 public class RoleMapper {
-    public static Role mapToRole(RoleRecord roleRecord) {
+    public static Role mapToRole(@NotNull RoleRecord roleRecord) {
         Role.RoleBuilder roleBuilder = new Role.RoleBuilder();
         roleBuilder.setDescription(roleRecord.getDescription());
         roleBuilder.setRole(roleRecord.getRole());

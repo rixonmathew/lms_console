@@ -10,6 +10,7 @@ package com.rixon.lms_console.dao.mapper;
 import com.rixon.lms_console.dao.PropertyValue;
 import com.rixon.lms_console.dao.recordset.ItemInstancePropertyRecord;
 import com.rixon.lms_console.dao.recordset.ItemInstanceRecord;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * This class is used for mapping the ItemInstancePropertyRecord object to PropertyValue and vice versa
@@ -17,14 +18,16 @@ import com.rixon.lms_console.dao.recordset.ItemInstanceRecord;
  */
 public class ItemInstancePropertyMapper {
 
-    public static PropertyValue mapToPropertyValue(ItemInstancePropertyRecord itemInstancePropertyRecord) {
+    @NotNull
+    public static PropertyValue mapToPropertyValue(@NotNull ItemInstancePropertyRecord itemInstancePropertyRecord) {
         PropertyValue.PropertyValueBuilder builder = new PropertyValue.PropertyValueBuilder();
         builder.setProperty(PropertyMapper.mapToProperty(itemInstancePropertyRecord.getPropertyRecord()));
         builder.setPropertyValue(itemInstancePropertyRecord.getValue());
         return builder.createPropertyValue();
     }
 
-    public static ItemInstancePropertyRecord mapToItemInstancePropertyRecord(PropertyValue propertyValue,
+    @NotNull
+    public static ItemInstancePropertyRecord mapToItemInstancePropertyRecord(@NotNull PropertyValue propertyValue,
                                                                              ItemInstanceRecord itemInstanceRecord) {
         ItemInstancePropertyRecord itemInstancePropertyRecord = new ItemInstancePropertyRecord();
         itemInstancePropertyRecord.setItemInstanceRecord(itemInstanceRecord);

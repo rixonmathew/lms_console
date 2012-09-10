@@ -17,6 +17,8 @@ import com.rixon.lms_console.dao.factory.DAOFactory;
 import com.rixon.lms_console.dao.mapper.ItemInstanceMapper;
 import com.rixon.lms_console.dao.mapper.ItemMapper;
 import com.rixon.lms_console.dao.recordset.*;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +28,8 @@ import java.util.List;
  */
 public class SimpleStore implements Store {
 
-    private LMSDao lmsDao;
+    @Nullable
+    private final LMSDao lmsDao;
 
     private static Store storeInstance;
 
@@ -43,6 +46,7 @@ public class SimpleStore implements Store {
     }
 
 
+    @NotNull
     @Override
     public Result searchItemByTitle(SearchQuery searchQuery) {
         List<ItemRecord> itemRecords = lmsDao.getItemsForQuery(searchQuery);
@@ -86,6 +90,7 @@ public class SimpleStore implements Store {
         return lmsDao.featuresForRole(role);
     }
 
+    @NotNull
     @Override
     public List<Item> allItems() {
         List<Item> items = new ArrayList<Item>();
@@ -99,7 +104,7 @@ public class SimpleStore implements Store {
     }
 
     @Override
-    public void addItemsToLibrary(List<Item> items) {
+    public void addItemsToLibrary(@NotNull List<Item> items) {
         List<ItemRecordWithProperties> itemRecords = new ArrayList<ItemRecordWithProperties>();
         for (Item item : items) {
             ItemRecord itemRecord = ItemMapper.mapToItemRecord(item);
@@ -117,7 +122,7 @@ public class SimpleStore implements Store {
     }
 
     @Override
-    public void addItemInstancesToLibrary(List<ItemInstance> itemInstances) {
+    public void addItemInstancesToLibrary(@NotNull List<ItemInstance> itemInstances) {
         List<ItemInstanceRecordWithProperties> itemInstanceRecordWithProperties =
                 new ArrayList<ItemInstanceRecordWithProperties>();
         for (ItemInstance itemInstance : itemInstances) {

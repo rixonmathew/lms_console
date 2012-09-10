@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class SimpleParameter implements Parameter<String> {
 
-    List<String> parameters;
+    final List<String> parameters;
 
 
     public SimpleParameter(List<String> parameters) {

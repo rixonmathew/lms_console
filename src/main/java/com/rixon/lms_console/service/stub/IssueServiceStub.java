@@ -11,6 +11,7 @@ import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.IssueResult;
 import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.service.Service;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,7 @@ import java.util.List;
  * User: rixon|Date: 8/17/12|Time: 11:19 PM
  */
 public class IssueServiceStub implements Service {
+    @NotNull
     @Override
     public Result execute(Parameter<String> parameter) {
         String result = "Book issued successfully to user";

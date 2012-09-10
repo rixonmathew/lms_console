@@ -13,6 +13,8 @@ import com.rixon.lms_console.dao.PropertyValue;
 import com.rixon.lms_console.dao.factory.DAOFactory;
 import com.rixon.lms_console.dao.recordset.ItemPropertyRecord;
 import com.rixon.lms_console.dao.recordset.ItemRecord;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,7 +27,8 @@ import java.util.Map;
  */
 public class ItemMapper {
 
-    public static Item mapToItem(ItemRecord itemRecord, List<ItemPropertyRecord> itemProperties) {
+    @NotNull
+    public static Item mapToItem(@NotNull ItemRecord itemRecord, @NotNull List<ItemPropertyRecord> itemProperties) {
         Item.ItemBuilder itemBuilder = new Item.ItemBuilder();
         itemBuilder.setId(itemRecord.getId());
         itemBuilder.setName(itemRecord.getName());
@@ -35,7 +38,8 @@ public class ItemMapper {
         return itemBuilder.createItem();
     }
 
-    private static Map<Property, PropertyValue> mapItemProperties(List<ItemPropertyRecord> itemPropertyRecords) {
+    @NotNull
+    private static Map<Property, PropertyValue> mapItemProperties(@NotNull List<ItemPropertyRecord> itemPropertyRecords) {
         Map<Property, PropertyValue> itemPropertyValueMap = new HashMap<Property, PropertyValue>();
         for (ItemPropertyRecord itemPropertyRecord : itemPropertyRecords) {
             Property property = PropertyMapper.mapToProperty(itemPropertyRecord.getPropertyRecord());
@@ -45,7 +49,8 @@ public class ItemMapper {
         return itemPropertyValueMap;
     }
 
-    public static ItemRecord mapToItemRecord(Item item) {
+    @Nullable
+    public static ItemRecord mapToItemRecord(@Nullable Item item) {
         if (item == null) {
             return null;
         }
@@ -61,7 +66,8 @@ public class ItemMapper {
         return itemRecord;
     }
 
-    public static List<ItemPropertyRecord> mapItemPropertyRecords(Map<Property, PropertyValue> itemProperties,
+    @NotNull
+    public static List<ItemPropertyRecord> mapItemPropertyRecords(@NotNull Map<Property, PropertyValue> itemProperties,
                                                                   ItemRecord itemRecord) {
 
         List<ItemPropertyRecord> itemPropertyRecords = new ArrayList<ItemPropertyRecord>();

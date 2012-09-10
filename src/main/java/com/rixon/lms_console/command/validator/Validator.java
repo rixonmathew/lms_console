@@ -2,6 +2,7 @@ package com.rixon.lms_console.command.validator;
 
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.operation.Operation;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * This class is responsible for validating the command object
@@ -14,9 +15,11 @@ public interface Validator<TYPE> {
      * If the operationTypes is valid then the isValid flag will be yes and the message and hint can be ignored.
      * If the operationTypes is invalid then the message will contain the reason why the validation failed and hint
      * will provide users the hint to correct the operationTypes
+     *
      * @param operation operationTypes for the command
      * @param parameter the parameters for the operationTypes
      * @return validationResult
      */
-    public ValidationResult validateCommand(Operation operation,Parameter<TYPE> parameter);
+    @NotNull
+    public ValidationResult validateCommand(Operation operation, Parameter<TYPE> parameter);
 }

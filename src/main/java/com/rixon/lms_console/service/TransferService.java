@@ -9,12 +9,14 @@ package com.rixon.lms_console.service;
 
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.Result;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * This class implements the service for transfer operation
  * User: rixon|Date: 8/17/12|Time: 11:39 PM
  */
 public class TransferService implements Service {
+    @Nullable
     @Override
     public Result execute(Parameter<String> parameter) {
         return null;  //TODO inject DAO and assign

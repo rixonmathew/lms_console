@@ -10,6 +10,7 @@ package com.rixon.lms_console.command.simulator;
 import com.rixon.lms_console.business.SimpleStore;
 import com.rixon.lms_console.dao.Item;
 import com.rixon.lms_console.dao.ItemInstance;
+import org.jetbrains.annotations.Nullable;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,6 +26,7 @@ import static org.junit.Assert.assertNotNull;
  */
 public class DataPumpTest {
 
+    @Nullable
     private DataSimulator dataSimulator;
 
     @Before

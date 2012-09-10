@@ -15,6 +15,7 @@ import com.rixon.lms_console.dao.ItemInstance;
 import com.rixon.lms_console.dao.Property;
 import com.rixon.lms_console.dao.PropertyValue;
 import com.rixon.lms_console.util.DateUtil;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
@@ -23,19 +24,20 @@ import static com.rixon.lms_console.util.Constants.*;
 /**
  * User: rixon|Date: 8/26/12|Time: 3:24 PM
  */
-public class DataPump {
+class DataPump {
 
     private final DataSimulator dataSimulator;
-    List<String> mockNames;
-    List<String> mockDescriptions;
-    List<String> mockPropertyValues;
-    List<Date> mockDates;
-    Random random = new Random();
+    private List<String> mockNames;
+    private List<String> mockDescriptions;
+    private List<String> mockPropertyValues;
+    private List<Date> mockDates;
+    private final Random random = new Random();
 
     public DataPump(DataSimulator dataSimulator) {
         this.dataSimulator = dataSimulator;
     }
 
+    @NotNull
     public List<Item> generateMockItems(int expectedMockItems) {
         ArrayList<Item> items = new ArrayList<Item>();
         Item.ItemBuilder itemBuilder = new Item.ItemBuilder();
@@ -58,7 +60,8 @@ public class DataPump {
         mockPropertyValues = dataSimulator.mockPropertyValues(expectedMockItems);
     }
 
-    private Map<Property, PropertyValue> generateMockProperties(List<Property> properties) {
+    @NotNull
+    private Map<Property, PropertyValue> generateMockProperties(@NotNull List<Property> properties) {
         Map<Property, PropertyValue> itemPropertyValueMap = new HashMap<Property, PropertyValue>();
         for (Property property : properties) {
             PropertyValue.PropertyValueBuilder propertyValueBuilder = new PropertyValue.PropertyValueBuilder();
@@ -74,7 +77,7 @@ public class DataPump {
         return itemPropertyValueMap;
     }
 
-    private boolean isDateProperty(Property property) {
+    private boolean isDateProperty(@NotNull Property property) {
         return property.getName().equalsIgnoreCase(PUBLISHED_DATE) || property.getName().equalsIgnoreCase(ADDED_DATE);
     }
 
@@ -82,10 +85,11 @@ public class DataPump {
         return mockDates.get(random.nextInt(mockDates.size()));
     }
 
-    public String getRandomPropertyValue() {
+    String getRandomPropertyValue() {
         return mockPropertyValues.get(random.nextInt(mockPropertyValues.size()));
     }
 
+    @NotNull
     public List<ItemInstance> generateMockItemInstances(int expectedInstances) {
         List<Item> allItems = getItems(expectedInstances);
         List<ItemInstance> itemInstances = new ArrayList<ItemInstance>();
@@ -103,6 +107,7 @@ public class DataPump {
         return itemInstances;
     }
 
+    @NotNull
     private List<Item> getItems(int expectedInstances) {
         List<Item> allItems = SimpleStore.getInstance().allItems();
         List<Item> items = new ArrayList<Item>();

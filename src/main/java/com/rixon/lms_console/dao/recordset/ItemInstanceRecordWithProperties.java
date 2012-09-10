@@ -14,8 +14,8 @@ import java.util.List;
  */
 public class ItemInstanceRecordWithProperties {
 
-    private ItemInstanceRecord itemInstanceRecord;
-    private List<ItemInstancePropertyRecord> itemInstancePropertyRecords;
+    private final ItemInstanceRecord itemInstanceRecord;
+    private final List<ItemInstancePropertyRecord> itemInstancePropertyRecords;
 
     public ItemInstanceRecord getItemInstanceRecord() {
         return itemInstanceRecord;

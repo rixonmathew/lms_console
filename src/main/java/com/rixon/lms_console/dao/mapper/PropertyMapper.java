@@ -10,13 +10,16 @@ package com.rixon.lms_console.dao.mapper;
 import com.rixon.lms_console.business.PropertyProvider;
 import com.rixon.lms_console.dao.Property;
 import com.rixon.lms_console.dao.recordset.PropertyRecord;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * This class represents the mapper to et the
  * User: rixon|Date: 8/25/12|Time: 8:41 PM
  */
 public class PropertyMapper {
-    public static Property mapToProperty(PropertyRecord propertyRecord) {
+    @NotNull
+    public static Property mapToProperty(@NotNull PropertyRecord propertyRecord) {
         Property.PropertyBuilder propertyBuilder = new Property.PropertyBuilder();
         propertyBuilder.setName(propertyRecord.getName());
         propertyBuilder.setDescription(propertyRecord.getDescription());
@@ -24,7 +27,8 @@ public class PropertyMapper {
         return propertyBuilder.createProperty();
     }
 
-    public static PropertyRecord mapToPropertyRecord(Property property) {
+    @Nullable
+    public static PropertyRecord mapToPropertyRecord(@Nullable Property property) {
         if (property == null) {
             return null;
         }

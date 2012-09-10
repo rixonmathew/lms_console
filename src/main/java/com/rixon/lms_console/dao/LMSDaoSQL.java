@@ -9,6 +9,8 @@ package com.rixon.lms_console.dao;
 
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.dao.recordset.*;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -31,6 +33,7 @@ public class LMSDaoSQL implements LMSDao {
     }
 
 
+    @NotNull
     @Override
     public List<MemberRecord> getAllMembers() {
         Query allMembersQuery = entityManager.createNamedQuery(MemberRecord.ALL_MEMBERS_QUERY);
@@ -38,6 +41,7 @@ public class LMSDaoSQL implements LMSDao {
         return (List<MemberRecord>) results;
     }
 
+    @Nullable
     @Override
     public MemberRecord findMember(String emailId, String password) {
         Query memberSearchQuery = entityManager.createNamedQuery(MemberRecord.FIND_MEMBER_QUERY);
@@ -67,6 +71,7 @@ public class LMSDaoSQL implements LMSDao {
         transaction.commit();
     }
 
+    @NotNull
     @Override
     public List<ItemTypeRecord> getAllItemTypes() {
         Query allMembersQuery = entityManager.createNamedQuery(ItemTypeRecord.ALL_ITEM_TYPES_QUERY);
@@ -74,6 +79,7 @@ public class LMSDaoSQL implements LMSDao {
         return (List<ItemTypeRecord>) results;
     }
 
+    @NotNull
     @Override
     public List<RoleRecord> getAllRoles() {
         Query allRolesQuery = entityManager.createNamedQuery(RoleRecord.ALL_ROLES_QUERY);
@@ -81,6 +87,7 @@ public class LMSDaoSQL implements LMSDao {
         return (List<RoleRecord>) results;
     }
 
+    @NotNull
     @Override
     public List<CategoryRecord> getAllCategories() {
         Query allCategoriesQuery = entityManager.createNamedQuery(CategoryRecord.ALL_CATEGORIES_QUERY);
@@ -88,6 +95,7 @@ public class LMSDaoSQL implements LMSDao {
         return (List<CategoryRecord>) results;
     }
 
+    @NotNull
     @Override
     public List<FeatureRecord> getAllFeatures() {
         Query allFeaturesQuery = entityManager.createNamedQuery(FeatureRecord.ALL_FEATURES_QUERY);
@@ -95,6 +103,7 @@ public class LMSDaoSQL implements LMSDao {
         return (List<FeatureRecord>) results;
     }
 
+    @NotNull
     @Override
     public List<ItemRecord> getAllItems() {
         Query allItemsQuery = entityManager.createNamedQuery(ItemRecord.ALL_ITEMS_QUERY);
@@ -102,8 +111,9 @@ public class LMSDaoSQL implements LMSDao {
         return (List<ItemRecord>) results;
     }
 
+    @NotNull
     @Override
-    public List<ItemRecord> getItemsForQuery(SearchQuery searchQuery) {
+    public List<ItemRecord> getItemsForQuery(@Nullable SearchQuery searchQuery) {
         List<ItemRecord> results = new ArrayList<ItemRecord>();
         if (searchQuery == null) {
             return results;
@@ -119,6 +129,7 @@ public class LMSDaoSQL implements LMSDao {
         return results;
     }
 
+    @NotNull
     @Override
     public List<PropertyRecord> getAllProperties() {
         Query allPropertiesQuery = entityManager.createNamedQuery(PropertyRecord.ALL_PROPERTIES_QUERY);
@@ -127,6 +138,7 @@ public class LMSDaoSQL implements LMSDao {
     }
 
 
+    @NotNull
     @Override
     public List<FeatureRecord> featuresForRole(String role) {
         Query featuresForRoleQuery = entityManager.createNamedQuery(FeatureRecord.FEATURES_FOR_ROLE_QUERY);
@@ -134,6 +146,7 @@ public class LMSDaoSQL implements LMSDao {
         return (List<FeatureRecord>) featuresForRoleQuery.getResultList();
     }
 
+    @NotNull
     @Override
     public List<ItemPropertyRecord> propertiesForItem(ItemRecord itemRecord) {
         Query itemPropertiesQuery = entityManager.createNamedQuery(ItemPropertyRecord.ITEM_PROPERTY_QUERY);
@@ -141,6 +154,7 @@ public class LMSDaoSQL implements LMSDao {
         return (List<ItemPropertyRecord>) itemPropertiesQuery.getResultList();
     }
 
+    @Nullable
     @Override
     public ItemRecord itemWithId(long expectedItemID) {
         Query itemIDQuery = entityManager.createNamedQuery(ItemRecord.ITEM_ID_QUERY);
@@ -153,6 +167,7 @@ public class LMSDaoSQL implements LMSDao {
         return itemRecord;
     }
 
+    @NotNull
     @Override
     public List<RoleFeatureRecord> getAllRoleFeatures() {
         Query allRoleFeaturesQuery = entityManager.createNamedQuery(RoleFeatureRecord.ALL_ROLE_FEATURES);
@@ -160,7 +175,7 @@ public class LMSDaoSQL implements LMSDao {
     }
 
     @Override
-    public void addMultipleItemRecords(List<ItemRecordWithProperties> itemRecords) {
+    public void addMultipleItemRecords(@NotNull List<ItemRecordWithProperties> itemRecords) {
         int recordCounter = 0;
         final int flushCount = 20;
         EntityTransaction transaction = entityManager.getTransaction();
@@ -182,7 +197,7 @@ public class LMSDaoSQL implements LMSDao {
     }
 
     @Override
-    public void addMultipleItemInstanceRecords(List<ItemInstanceRecordWithProperties> itemInstanceRecordWithProperties) {
+    public void addMultipleItemInstanceRecords(@NotNull List<ItemInstanceRecordWithProperties> itemInstanceRecordWithProperties) {
         int recordCounter = 0;
         final int flushCount = 20;
         EntityTransaction transaction = entityManager.getTransaction();

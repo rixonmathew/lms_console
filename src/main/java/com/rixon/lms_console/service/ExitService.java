@@ -10,6 +10,7 @@ package com.rixon.lms_console.service;
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.command.result.ResultWithMessage;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +22,8 @@ import java.util.List;
 public class ExitService implements Service {
     //TODO how to keep duplication to minimum between real and stub services
     private static final String EXIT_MESSAGE = "Have a good day :-)";
+
+    @NotNull
     @Override
     public Result execute(Parameter<String> parameter) {
         String exitMessage = EXIT_MESSAGE;

@@ -23,7 +23,7 @@ import static org.junit.Assert.*;
  */
 public class DAOTest {
 
-    LMSDao lmsDao;
+    private LMSDao lmsDao;
 
     @Before
     public void setUp() {

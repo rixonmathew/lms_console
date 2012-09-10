@@ -7,6 +7,8 @@
 
 package com.rixon.lms_console.dao;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * This class is used to hold the property value for a given property.
  * All property values are stored as String
@@ -31,6 +33,7 @@ public class PropertyValue {
         return propertyValue;
     }
 
+    @NotNull
     @Override
     public String toString() {
         return "PropertyValue{" +
@@ -43,16 +46,19 @@ public class PropertyValue {
         private Property property;
         private String propertyValue;
 
+        @NotNull
         public PropertyValueBuilder setProperty(Property property) {
             this.property = property;
             return this;
         }
 
+        @NotNull
         public PropertyValueBuilder setPropertyValue(String propertyValue) {
             this.propertyValue = propertyValue;
             return this;
         }
 
+        @NotNull
         public PropertyValue createPropertyValue() {
             return new PropertyValue(property, propertyValue);
         }

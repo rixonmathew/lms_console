@@ -7,6 +7,8 @@
 
 package com.rixon.lms_console.command.result;
 
+import org.jetbrains.annotations.NotNull;
+
 import javax.swing.table.TableModel;
 import java.util.HashMap;
 import java.util.List;
@@ -21,6 +23,7 @@ public class ValidationMessageResult extends AbstractResult {
         super(results);
     }
 
+    @NotNull
     @Override
     protected TableModel convertListToModel(List searchItems) {
         return new ValidationResultTableModel(searchItems);
@@ -39,7 +42,7 @@ public class ValidationMessageResult extends AbstractResult {
 
         @Override
         public Object getCellValueAt(int rowIndex, int columnIndex) {
-            return ((List<String>)results).get(rowIndex);
+            return ((List<String>) results).get(rowIndex);
         }
     }
 }

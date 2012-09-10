@@ -2,6 +2,7 @@ package com.rixon.lms_console.command.validator.parameterValidation;
 
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.operation.Operation;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * This class represents the class for validating the parameters associated with a
@@ -10,8 +11,8 @@ import com.rixon.lms_console.command.operation.Operation;
  */
 public class ParameterValidator {
 
-    public static boolean validateParameter(Parameter<String> parameter, Operation operation) {
-       ParameterValidationStrategy validationStrategy = StrategyContext.strategyForOperation(operation.getOperationType());
-       return validationStrategy.validateParameter(parameter);
+    public static boolean validateParameter(Parameter<String> parameter, @NotNull Operation operation) {
+        ParameterValidationStrategy validationStrategy = StrategyContext.strategyForOperation(operation.getOperationType());
+        return validationStrategy.validateParameter(parameter);
     }
 }

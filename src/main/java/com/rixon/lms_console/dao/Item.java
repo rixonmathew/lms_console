@@ -7,6 +7,8 @@
 
 package com.rixon.lms_console.dao;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Map;
 
 /**
@@ -86,6 +88,7 @@ public class Item {
         return itemProperties;
     }
 
+    @NotNull
     @Override
     public String toString() {
         return "Item{" +

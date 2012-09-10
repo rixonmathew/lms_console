@@ -7,13 +7,15 @@
 
 package com.rixon.lms_console.dao;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * User: rixon|Date: 8/26/12|Time: 4:06 PM
  */
 public class Category {
 
-    private String name;
-    private String description;
+    private final String name;
+    private final String description;
 
     private Category(String name, String description) {
         this.name = name;
@@ -48,6 +50,7 @@ public class Category {
         return result;
     }
 
+    @NotNull
     @Override
     public String toString() {
         return "Category{" +

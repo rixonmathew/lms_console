@@ -7,6 +7,8 @@
 
 package com.rixon.lms_console.dao.recordset;
 
+import org.jetbrains.annotations.NotNull;
+
 import javax.persistence.*;
 
 /**
@@ -68,6 +70,7 @@ public class ItemRecord {
         this.description = description;
     }
 
+    @NotNull
     @Override
     public String toString() {
         return "ItemRecord{" +

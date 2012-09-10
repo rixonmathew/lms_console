@@ -81,7 +81,7 @@ public interface LMSDao {
     /**
      * This method will return all the items available in the system
      *
-     * @return
+     * @return list of all items
      */
     public List<ItemRecord> getAllItems();
 
@@ -145,7 +145,7 @@ public interface LMSDao {
      * This method is used add multiple item instances into the database
      *
      * @param itemInstanceRecordWithProperties
-     *
+     *         list of itemInstancesWithRecordProperties
      */
     void addMultipleItemInstanceRecords(List<ItemInstanceRecordWithProperties> itemInstanceRecordWithProperties);
 }

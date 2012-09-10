@@ -8,6 +8,7 @@
 package com.rixon.lms_console.command.simulator;
 
 import com.rixon.lms_console.util.DateUtil;
+import org.jetbrains.annotations.Nullable;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -24,6 +25,8 @@ import static org.junit.Assert.assertNotNull;
  */
 public class DataSimulatorTest {
 
+    @Nullable
+    private
     DataSimulator dataSimulator;
 
     @Before

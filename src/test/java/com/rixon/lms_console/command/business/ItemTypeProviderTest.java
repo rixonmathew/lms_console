@@ -13,9 +13,7 @@ import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 /**
  * This class is used for testing the ItemTypeProvider class
@@ -28,7 +26,7 @@ public class ItemTypeProviderTest {
         final String expectedItemTypeName = "BOOK";
         ItemType itemType = ItemTypeProvider.getItemType(expectedItemTypeName);
         assertNotNull(itemType);
-        assertThat("ItemType is not as expected",itemType.getType(),equalTo(expectedItemTypeName));
+        assertThat("ItemType is not as expected", itemType.getType(), equalTo(expectedItemTypeName));
     }
 
     @Test(expected = IllegalArgumentException.class)

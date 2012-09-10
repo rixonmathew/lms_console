@@ -9,12 +9,14 @@ package com.rixon.lms_console.service;
 
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.Result;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * This class implements the service for return operation
  * User: rixon|Date: 8/18/12|Time: 9:22 PM
  */
 public class ReturnService implements Service {
+    @Nullable
     @Override
     public Result execute(Parameter<String> parameter) {
         return null;  //TODO add real implementation

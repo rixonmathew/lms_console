@@ -7,6 +7,8 @@
 
 package com.rixon.lms_console.command.result;
 
+import org.jetbrains.annotations.Nullable;
+
 import javax.swing.table.AbstractTableModel;
 import java.util.List;
 import java.util.Map;
@@ -15,9 +17,9 @@ import java.util.Map;
  * This class is the abstract class for table model associated with results
  * User: rixon|Date: 8/18/12|Time: 8:04 AM
  */
-public abstract class AbstractResultTableModel extends AbstractTableModel {
+abstract class AbstractResultTableModel extends AbstractTableModel {
 
-    protected List results;
+    protected final List results;
     protected Map<Integer, String> headerNames;
 
     protected abstract void initHeader();
@@ -37,6 +39,7 @@ public abstract class AbstractResultTableModel extends AbstractTableModel {
         return headerNames.size();
     }
 
+    @Nullable
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         Object cellValue = null;

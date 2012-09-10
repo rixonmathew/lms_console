@@ -10,11 +10,11 @@ package com.rixon.lms_console.service.stub;
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.operation.Operation;
 import com.rixon.lms_console.command.operation.OperationFlyWeightFactory;
-import com.rixon.lms_console.command.operation.OperationTypes;
 import com.rixon.lms_console.command.operation.OperationsCatalog;
 import com.rixon.lms_console.command.result.HelpResult;
 import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.service.Service;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,17 +24,18 @@ import java.util.List;
  * User: rixon|Date: 8/17/12|Time: 9:26 PM
  */
 public class HelpServiceStub implements Service {
+    @NotNull
     @Override
-    public Result execute(Parameter<String> parameter) {
+    public Result execute(@NotNull Parameter<String> parameter) {
         List<String> commands = new ArrayList<String>();
-        List<String> helpParameter = (List<String>)parameter.getParameters();
+        List<String> helpParameter = (List<String>) parameter.getParameters();
 
-        if (helpParameter==null||helpParameter.size()==0){
+        if (helpParameter == null || helpParameter.size() == 0) {
             commands.addAll(OperationsCatalog.allValidOperations());
-        }  else {
-            for (String string:helpParameter) {
+        } else {
+            for (String string : helpParameter) {
                 Operation operation = OperationFlyWeightFactory.operationForType(string);
-                if (operation!=null) {
+                if (operation != null) {
                     commands.add(operation.getUsage());
                 }
             }

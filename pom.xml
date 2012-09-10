@@ -56,9 +56,11 @@
                             <mainClass>com.rixon.lms_console.main.LMSMain</mainClass>
                         </manifest>
                     </archive>
+                    <!--
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
+                    -->
                 </configuration>
             </plugin>
             <plugin>

@@ -31,13 +31,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.10" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-all:1.3" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.persistence:eclipselink:2.4.0" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.persistence:javax.persistence:2.0.4.v201112161009" level="project" />
-    <orderEntry type="library" name="Maven: commonj.sdo:commonj.sdo:2.1.1.v201112051852" level="project" />
-    <orderEntry type="library" name="Maven: org.hsqldb:hsqldb:2.2.8" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -47,6 +40,13 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.10" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-all:1.3" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.persistence:eclipselink:2.4.0" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.persistence:javax.persistence:2.0.4.v201112161009" level="project" />
+    <orderEntry type="library" name="Maven: commonj.sdo:commonj.sdo:2.1.1.v201112051852" level="project" />
+    <orderEntry type="library" name="Maven: org.hsqldb:hsqldb:2.2.8" level="project" />
   </component>
 </module>
 

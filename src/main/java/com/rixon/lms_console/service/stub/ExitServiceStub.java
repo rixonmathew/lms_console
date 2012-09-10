@@ -11,6 +11,7 @@ import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.command.result.ResultWithMessage;
 import com.rixon.lms_console.service.Service;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +23,8 @@ import java.util.List;
 public class ExitServiceStub implements Service {
 
     private static final String EXIT_MESSAGE = "Have a good day :-)";
+
+    @NotNull
     @Override
     public Result execute(Parameter<String> parameter) {
         String exitMessage = EXIT_MESSAGE;

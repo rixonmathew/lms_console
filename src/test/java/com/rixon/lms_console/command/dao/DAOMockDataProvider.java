@@ -8,12 +8,14 @@
 package com.rixon.lms_console.command.dao;
 
 import com.rixon.lms_console.dao.recordset.MemberRecord;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * This class provides stub data objects for help in testing
  * User: rixon|Date: 8/20/12|Time: 12:52 PM
  */
-public class DAOMockDataProvider {
+class DAOMockDataProvider {
+    @NotNull
     public static MemberRecord getMemberRecord(String firstName, String lastName, String email, String mobileNumber, String postalAddress, String password) {
         MemberRecord memberRecord = new MemberRecord();
         memberRecord.setFirstName(firstName);

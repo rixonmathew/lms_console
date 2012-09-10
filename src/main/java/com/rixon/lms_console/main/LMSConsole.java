@@ -5,6 +5,7 @@ import com.rixon.lms_console.command.builder.CommandBuilder;
 import com.rixon.lms_console.command.executor.CommandExecutor;
 import com.rixon.lms_console.command.executor.SimpleCommandExecutor;
 import com.rixon.lms_console.command.result.Result;
+import org.jetbrains.annotations.NotNull;
 
 import javax.swing.table.TableModel;
 import java.io.Console;
@@ -51,13 +52,13 @@ public class LMSConsole {
     }
 
 
-    private void displayErrorInConsole(Command command) {
+    private void displayErrorInConsole(@NotNull Command command) {
         console.printf("Invalid command %1$s %n", command.getOriginalCommandString());
         console.printf("%1$s %2$s%n", command.getValidationResult().validationMessage(), command.getValidationResult().hint());
     }
 
 
-    private void displayResultInConsole(Result result) {
+    private void displayResultInConsole(@NotNull Result result) {
         TableModel tableModel = result.getResultsTable();
         int columns = tableModel.getColumnCount();
         int rows = tableModel.getRowCount();

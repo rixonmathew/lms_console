@@ -8,6 +8,7 @@
 package com.rixon.lms_console.command.validator.parameterValidation;
 
 import com.rixon.lms_console.command.Parameter;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * This class represents the strategy for validating the exit command
@@ -15,9 +16,9 @@ import com.rixon.lms_console.command.Parameter;
  */
 public class ExitValidationStrategy implements ParameterValidationStrategy {
     @Override
-    public boolean validateParameter(Parameter<String> parameter) {
+    public boolean validateParameter(@NotNull Parameter<String> parameter) {
         boolean isValid = true;
-        if (parameter.getParameters()!=null && parameter.getParameters().size()>0) {
+        if (parameter.getParameters() != null && parameter.getParameters().size() > 0) {
             isValid = false;
         }
         return isValid;

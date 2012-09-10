@@ -7,6 +7,8 @@
 
 package com.rixon.lms_console.command.result;
 
+import org.jetbrains.annotations.NotNull;
+
 import javax.swing.table.TableModel;
 import java.util.HashMap;
 import java.util.List;
@@ -20,6 +22,7 @@ public class HelpResult extends AbstractResult {
         super(results);
     }
 
+    @NotNull
     @Override
     protected TableModel convertListToModel(List searchItems) {
         return new HelpResultsTableModel(searchItems);
@@ -38,7 +41,7 @@ public class HelpResult extends AbstractResult {
 
         protected Object getCellValueAt(int rowIndex, int columnIndex) {
             String operation;
-            operation = ((List<String>)results).get(rowIndex);
+            operation = ((List<String>) results).get(rowIndex);
             return operation;
         }
     }

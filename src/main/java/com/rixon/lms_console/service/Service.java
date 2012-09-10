@@ -2,6 +2,7 @@ package com.rixon.lms_console.service;
 
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.Result;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * This interface represents the services for performing operations
@@ -18,5 +19,6 @@ public interface Service {
      * @param parameter the parameter object
      * @return an instance of Result
      */
+    @Nullable
     public Result execute(Parameter<String> parameter);
 }

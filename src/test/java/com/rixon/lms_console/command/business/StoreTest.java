@@ -13,6 +13,8 @@ import com.rixon.lms_console.command.CommandTestUtil;
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.dao.SearchQuery;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -28,6 +30,7 @@ import static org.junit.Assert.assertTrue;
  */
 public class StoreTest {
 
+    @Nullable
     Store store;
 
     @Before
@@ -53,6 +56,7 @@ public class StoreTest {
 
     }
 
+    @NotNull
     private SearchQuery getSearchQueryWithParameters(boolean anyFieldMatch, String... searchTexts) {
         Parameter<String> simpleParameter = CommandTestUtil.parameterWithString(searchTexts);
         return new SearchQuery(simpleParameter, anyFieldMatch);

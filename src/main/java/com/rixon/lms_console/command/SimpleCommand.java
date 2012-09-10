@@ -9,12 +9,12 @@ import com.rixon.lms_console.command.validator.ValidationResult;
  */
 public class SimpleCommand implements Command {
 
-    private Operation operation;
-    private Parameter<String> parameter;
-    private ValidationResult validationResult;
-    private String originalCommandString;
+    private final Operation operation;
+    private final Parameter<String> parameter;
+    private final ValidationResult validationResult;
+    private final String originalCommandString;
 
-    public SimpleCommand(String originalCommandString,Operation operation, Parameter<String> parameter, ValidationResult validationResult) {
+    public SimpleCommand(String originalCommandString, Operation operation, Parameter<String> parameter, ValidationResult validationResult) {
         this.originalCommandString = originalCommandString;
         this.operation = operation;
         this.parameter = parameter;

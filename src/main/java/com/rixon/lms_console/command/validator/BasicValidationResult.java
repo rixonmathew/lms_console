@@ -6,9 +6,9 @@ package com.rixon.lms_console.command.validator;
  */
 public class BasicValidationResult implements ValidationResult {
 
-    private boolean isValid;
-    private String validationMessage;
-    private String hint;
+    private final boolean isValid;
+    private final String validationMessage;
+    private final String hint;
 
     public BasicValidationResult(boolean valid, String validationMessage, String hint) {
         isValid = valid;

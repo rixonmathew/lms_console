@@ -7,6 +7,8 @@
 
 package com.rixon.lms_console.dao;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.UUID;
 
 /**
@@ -32,6 +34,7 @@ public class UniqueIdentifier {
         return value;
     }
 
+    @NotNull
     @Override
     public String toString() {
         return "UniqueIdentifier{" +
@@ -44,20 +47,25 @@ public class UniqueIdentifier {
         private String type;
         private String value;
 
+        @NotNull
         public UniqueIdentifierBuilder setType(String type) {
             this.type = type;
             return this;
         }
 
+        @NotNull
         public UniqueIdentifierBuilder setValue(String value) {
             this.value = value;
             return this;
         }
 
+        @NotNull
         public UniqueIdentifierBuilder generateUniqueValue() {
             this.value = UUID.randomUUID().toString();
             return this;
         }
+
+        @NotNull
         public UniqueIdentifier createUniqueIdentifier() {
             return new UniqueIdentifier(type, value);
         }

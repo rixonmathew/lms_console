@@ -7,6 +7,8 @@
 
 package com.rixon.lms_console.dao;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * This class represents the entity ItemType
  * User: rixon|Date: 8/25/12|Time: 7:54 PM
@@ -28,6 +30,7 @@ public class ItemType {
         return description;
     }
 
+    @NotNull
     @Override
     public String toString() {
         return "ItemType{" +
@@ -40,16 +43,19 @@ public class ItemType {
         private String type;
         private String description;
 
+        @NotNull
         public ItemTypeBuilder setType(String type) {
             this.type = type;
             return this;
         }
 
+        @NotNull
         public ItemTypeBuilder setDescription(String description) {
             this.description = description;
             return this;
         }
 
+        @NotNull
         public ItemType createItemType() {
             return new ItemType(type, description);
         }

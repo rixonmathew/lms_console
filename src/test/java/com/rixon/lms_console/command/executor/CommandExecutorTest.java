@@ -5,6 +5,7 @@ import com.rixon.lms_console.command.Command;
 import com.rixon.lms_console.command.CommandTestUtil;
 import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.facade.ServiceFacadeFactory;
+import org.jetbrains.annotations.NotNull;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -19,7 +20,7 @@ import static org.junit.Assert.assertNotNull;
  */
 public class CommandExecutorTest extends AbstractCommandTest {
 
-    CommandExecutor executor;
+    private CommandExecutor executor;
 
     @Before
     public void setUp() {
@@ -149,7 +150,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
     }
 
 
-    private void assertCellValues(TableModel tableModel) {
+    private void assertCellValues(@NotNull TableModel tableModel) {
 
         for (int column = 0; column < tableModel.getColumnCount(); column++) {
             Object columnName = tableModel.getColumnName(column);

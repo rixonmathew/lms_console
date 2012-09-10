@@ -1,6 +1,7 @@
 package com.rixon.lms_console.command;
 
 import com.rixon.lms_console.command.builder.CommandBuilder;
+import org.jetbrains.annotations.Nullable;
 import org.junit.After;
 import org.junit.Before;
 
@@ -10,6 +11,7 @@ import org.junit.Before;
  */
 public abstract class AbstractCommandTest {
 
+    @Nullable
     protected CommandBuilder builder;
 
     @Before

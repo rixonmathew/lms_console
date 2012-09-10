@@ -15,8 +15,8 @@ import com.rixon.lms_console.command.Parameter;
  */
 public class SearchQuery {
 
-    private Parameter<String> searchParameters;
-    private boolean anyFieldMatch;
+    private final Parameter<String> searchParameters;
+    private final boolean anyFieldMatch;
 
     public SearchQuery(Parameter<String> searchParameters, boolean anyFieldMatch) {
         this.searchParameters = searchParameters;

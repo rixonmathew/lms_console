@@ -9,12 +9,13 @@ package com.rixon.lms_console.dao.mapper;
 
 import com.rixon.lms_console.dao.Feature;
 import com.rixon.lms_console.dao.recordset.FeatureRecord;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * User: rixon|Date: 9/2/12|Time: 11:06 AM
  */
 public class FeatureMapper {
-    public static Feature mapToFeature(FeatureRecord featureRecord) {
+    public static Feature mapToFeature(@NotNull FeatureRecord featureRecord) {
         Feature.FeatureBuilder featureBuilder = new Feature.FeatureBuilder();
         featureBuilder.setName(featureRecord.getName());
         featureBuilder.setDescription(featureRecord.getDescription());

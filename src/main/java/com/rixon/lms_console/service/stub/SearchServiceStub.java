@@ -15,6 +15,7 @@ import com.rixon.lms_console.dao.ItemType;
 import com.rixon.lms_console.dao.Property;
 import com.rixon.lms_console.dao.PropertyValue;
 import com.rixon.lms_console.service.Service;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,6 +29,7 @@ import static com.rixon.lms_console.util.Constants.*;
  * User: rixon|Date: 8/17/12|Time: 9:16 PM
  */
 public class SearchServiceStub implements Service {
+    @NotNull
     @Override
     public Result execute(Parameter<String> parameter) {
         List<Item> items = new ArrayList<Item>();
@@ -40,6 +42,7 @@ public class SearchServiceStub implements Service {
         return new SearchResult(items);
     }
 
+    @NotNull
     private Item createMockItem(String name, String description) {
         Item.ItemBuilder itemBuilder = new Item.ItemBuilder();
         itemBuilder.setName(name);

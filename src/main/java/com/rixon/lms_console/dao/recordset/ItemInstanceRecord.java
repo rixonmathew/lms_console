@@ -7,6 +7,8 @@
 
 package com.rixon.lms_console.dao.recordset;
 
+import org.jetbrains.annotations.NotNull;
+
 import javax.persistence.*;
 
 /**
@@ -24,10 +26,11 @@ import javax.persistence.*;
 })
 public class ItemInstanceRecord {
 
-    private long id;
-    private ItemRecord itemRecord;
     public static final String ALL_ITEM_INSTANCES_QUERY = "all_item_instances_query";
     public static final String ITEM_RECORD_QUERY = "item_record_query";
+
+    private long id;
+    private ItemRecord itemRecord;
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "item_instance_id_gen")
@@ -50,6 +53,7 @@ public class ItemInstanceRecord {
         this.itemRecord = itemRecord;
     }
 
+    @NotNull
     @Override
     public String toString() {
         return "ItemInstanceRecord{" +

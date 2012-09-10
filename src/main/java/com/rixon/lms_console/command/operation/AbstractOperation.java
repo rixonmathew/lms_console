@@ -7,11 +7,11 @@ package com.rixon.lms_console.command.operation;
  */
 public abstract class AbstractOperation implements Operation {
 
-    private String operationType;
+    private final String operationType;
     protected String usage;
 
 
-    public AbstractOperation(String operationType)  {
+    AbstractOperation(String operationType) {
         this.operationType = operationType;
     }
 
@@ -22,6 +22,6 @@ public abstract class AbstractOperation implements Operation {
 
     @Override
     public String getUsage() {
-      return usage;
+        return usage;
     }
 }

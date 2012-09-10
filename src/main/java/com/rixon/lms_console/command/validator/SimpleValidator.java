@@ -4,6 +4,7 @@ import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.operation.Operation;
 import com.rixon.lms_console.command.operation.OperationsCatalog;
 import com.rixon.lms_console.command.validator.parameterValidation.ParameterValidator;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * ${CLASS_NAME}
@@ -14,8 +15,9 @@ public class SimpleValidator implements Validator<String> {
     private final static String SUCCESS_KEY = "success";
     private final static String DEFAULT_KEY = "default";
 
+    @NotNull
     @Override
-    public ValidationResult validateCommand(Operation operation,Parameter<String> parameter) {
+    public ValidationResult validateCommand(@NotNull Operation operation, Parameter<String> parameter) {
         boolean isOperationValid = OperationsCatalog.isOperationValid(operation.getOperationType());
         boolean areParametersValid = ParameterValidator.validateParameter(parameter, operation);
         boolean isCommandValid = isOperationValid && areParametersValid;
@@ -27,8 +29,8 @@ public class SimpleValidator implements Validator<String> {
             messageKey = DEFAULT_KEY;
         }
         validationMessage = ValidationMessageProvider.getMessageForKey(messageKey);
-        validationHint =  operation.getUsage();//ValidationHintProvider.getHintForKey(hintKey);
-        return new BasicValidationResult(isCommandValid,validationMessage,
+        validationHint = operation.getUsage();//ValidationHintProvider.getHintForKey(hintKey);
+        return new BasicValidationResult(isCommandValid, validationMessage,
                 validationHint);
     }
 }

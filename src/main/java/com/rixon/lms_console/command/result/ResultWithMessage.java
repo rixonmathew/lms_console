@@ -7,6 +7,8 @@
 
 package com.rixon.lms_console.command.result;
 
+import org.jetbrains.annotations.NotNull;
+
 import javax.swing.table.TableModel;
 import java.util.HashMap;
 import java.util.List;
@@ -22,6 +24,7 @@ public class ResultWithMessage extends AbstractResult {
         super(results);
     }
 
+    @NotNull
     @Override
     protected TableModel convertListToModel(List searchItems) {
         return new SimpleResultTableModel(searchItems);

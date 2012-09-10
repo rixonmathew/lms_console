@@ -9,9 +9,9 @@ import java.util.List;
  */
 public abstract class AbstractResult implements Result {
 
-    protected TableModel tableModel;
+    protected final TableModel tableModel;
 
-    public AbstractResult(List results){
+    AbstractResult(List results) {
         this.tableModel = convertListToModel(results);
     }
 

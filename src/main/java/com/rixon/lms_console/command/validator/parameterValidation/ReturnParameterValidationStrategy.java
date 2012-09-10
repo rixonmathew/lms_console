@@ -1,6 +1,7 @@
 package com.rixon.lms_console.command.validator.parameterValidation;
 
 import com.rixon.lms_console.command.Parameter;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * This class represents the strategy for validating the return command
@@ -9,11 +10,11 @@ import com.rixon.lms_console.command.Parameter;
 public class ReturnParameterValidationStrategy extends CommonValidationStrategy {
 
     @Override
-    public boolean validateParameter(Parameter<String> parameter) {
-        boolean isValid =  super.validateParameter(parameter);
+    public boolean validateParameter(@NotNull Parameter<String> parameter) {
+        boolean isValid = super.validateParameter(parameter);
         if (isValid) {
             int length = parameter.getParameters().size();
-            if (length!=2){
+            if (length != 2) {
                 isValid = false;
             }
         }

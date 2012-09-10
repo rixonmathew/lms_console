@@ -1,6 +1,7 @@
 package com.rixon.lms_console.command.validator.parameterValidation;
 
 import com.rixon.lms_console.command.Parameter;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * This class represents the strategy for validating the help command
@@ -8,7 +9,7 @@ import com.rixon.lms_console.command.Parameter;
  */
 public class HelpParameterValidationStrategy extends CommonValidationStrategy {
     @Override
-    public boolean validateParameter(Parameter<String> parameter) {
+    public boolean validateParameter(@Nullable Parameter<String> parameter) {
         boolean isValid;
         if (parameter == null || parameter.getParameters().size() == 0) {
             isValid = true;
