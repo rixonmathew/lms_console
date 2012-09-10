@@ -109,6 +109,21 @@ Insert into PROPERTY
 Values
 (13, 1, 'RATING', 'Rating', 'String');
 
+Insert into PROPERTY
+(ID, CATEGORY_ID, NAME, DESCRIPTION, DATA_TYPE)
+Values
+(next value for property_id_seq, 2, 'AVAILABLE', 'Available', 'String');
+
+Insert into PROPERTY
+(ID, CATEGORY_ID, NAME, DESCRIPTION, DATA_TYPE)
+Values
+(next value for property_id_seq, 2, 'MEDIA_TYPE', 'Media Type', 'String');
+Insert into PROPERTY
+(ID, CATEGORY_ID, NAME, DESCRIPTION, DATA_TYPE)
+Values
+(next value for property_id_seq, 2, 'ADDED_DATE', 'Added Date', 'String');
+
+
 --ITEM_PROPERTY
 Insert into ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
@@ -330,6 +345,9 @@ insert into role_feature(id,role_id,feature_id,allowed)
 values(next value for role_feature_id_seq,106,103,'Y')
 insert into role_feature(id,role_id,feature_id,allowed)
 values(next value for role_feature_id_seq,106,104,'Y')
+
+
+
 
 
 --Properties for instance

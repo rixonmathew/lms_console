@@ -7,8 +7,8 @@
 
 package com.rixon.lms_console.dao.mapper;
 
-import com.rixon.lms_console.dao.ItemPropertyValue;
 import com.rixon.lms_console.dao.Property;
+import com.rixon.lms_console.dao.PropertyValue;
 import com.rixon.lms_console.dao.recordset.ItemPropertyRecord;
 import com.rixon.lms_console.dao.recordset.ItemRecord;
 
@@ -18,19 +18,19 @@ import com.rixon.lms_console.dao.recordset.ItemRecord;
  */
 public class ItemPropertyMapper {
 
-    public static ItemPropertyValue mapToItemPropertyValue(ItemPropertyRecord itemPropertyRecord) {
-        ItemPropertyValue.ItemPropertyValueBuilder itemPropertyValueBuilder = new ItemPropertyValue.ItemPropertyValueBuilder();
+    public static PropertyValue mapToItemPropertyValue(ItemPropertyRecord itemPropertyRecord) {
+        PropertyValue.PropertyValueBuilder propertyValueBuilder = new PropertyValue.PropertyValueBuilder();
         Property property = PropertyMapper.mapToProperty(itemPropertyRecord.getPropertyRecord());
-        itemPropertyValueBuilder.setProperty(property);
-        itemPropertyValueBuilder.setPropertyValue(itemPropertyRecord.getValue());
-        return itemPropertyValueBuilder.createItemPropertyValue();
+        propertyValueBuilder.setProperty(property);
+        propertyValueBuilder.setPropertyValue(itemPropertyRecord.getValue());
+        return propertyValueBuilder.createPropertyValue();
     }
 
-    public static ItemPropertyRecord mapToItemPropertyRecord(ItemPropertyValue itemPropertyValue, ItemRecord itemRecord) {
+    public static ItemPropertyRecord mapToItemPropertyRecord(PropertyValue propertyValue, ItemRecord itemRecord) {
         ItemPropertyRecord itemPropertyRecord = new ItemPropertyRecord();
         itemPropertyRecord.setItemRecord(itemRecord);
-        itemPropertyRecord.setPropertyRecord(PropertyMapper.mapToPropertyRecord(itemPropertyValue.getProperty()));
-        itemPropertyRecord.setValue(itemPropertyValue.getPropertyValue());
+        itemPropertyRecord.setPropertyRecord(PropertyMapper.mapToPropertyRecord(propertyValue.getProperty()));
+        itemPropertyRecord.setValue(propertyValue.getPropertyValue());
         return itemPropertyRecord;
     }
 }

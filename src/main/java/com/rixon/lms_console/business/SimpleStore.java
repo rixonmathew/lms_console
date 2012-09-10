@@ -10,9 +10,11 @@ package com.rixon.lms_console.business;
 import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.command.result.SearchResult;
 import com.rixon.lms_console.dao.Item;
+import com.rixon.lms_console.dao.ItemInstance;
 import com.rixon.lms_console.dao.LMSDao;
 import com.rixon.lms_console.dao.SearchQuery;
 import com.rixon.lms_console.dao.factory.DAOFactory;
+import com.rixon.lms_console.dao.mapper.ItemInstanceMapper;
 import com.rixon.lms_console.dao.mapper.ItemMapper;
 import com.rixon.lms_console.dao.recordset.*;
 
@@ -70,6 +72,33 @@ public class SimpleStore implements Store {
     }
 
     @Override
+    public List<RoleRecord> allRoles() {
+        return lmsDao.getAllRoles();
+    }
+
+    @Override
+    public List<FeatureRecord> allFeatures() {
+        return lmsDao.getAllFeatures();
+    }
+
+    @Override
+    public List<FeatureRecord> featuresForRole(String role) {
+        return lmsDao.featuresForRole(role);
+    }
+
+    @Override
+    public List<Item> allItems() {
+        List<Item> items = new ArrayList<Item>();
+        List<ItemRecord> itemRecords = lmsDao.getAllItems();
+        for (ItemRecord itemRecord : itemRecords) {
+            List<ItemPropertyRecord> itemPropertyRecords = lmsDao.propertiesForItem(itemRecord);
+            Item item = ItemMapper.mapToItem(itemRecord, itemPropertyRecords);
+            items.add(item);
+        }
+        return items;
+    }
+
+    @Override
     public void addItemsToLibrary(List<Item> items) {
         List<ItemRecordWithProperties> itemRecords = new ArrayList<ItemRecordWithProperties>();
         for (Item item : items) {
@@ -88,17 +117,21 @@ public class SimpleStore implements Store {
     }
 
     @Override
-    public List<RoleRecord> allRoles() {
-        return lmsDao.getAllRoles();
-    }
-
-    @Override
-    public List<FeatureRecord> allFeatures() {
-        return lmsDao.getAllFeatures();
-    }
-
-    @Override
-    public List<FeatureRecord> featuresForRole(String role) {
-        return lmsDao.featuresForRole(role);
+    public void addItemInstancesToLibrary(List<ItemInstance> itemInstances) {
+        List<ItemInstanceRecordWithProperties> itemInstanceRecordWithProperties =
+                new ArrayList<ItemInstanceRecordWithProperties>();
+        for (ItemInstance itemInstance : itemInstances) {
+            ItemInstanceRecord itemInstanceRecord = ItemInstanceMapper.mapToItemInstanceRecord(itemInstance);
+            List<ItemInstancePropertyRecord> itemInstancePropertyRecords = ItemInstanceMapper.
+                    mapItemInstancePropertyRecords(itemInstance.allPropertiesMap(), itemInstanceRecord);
+            ItemInstanceRecordWithProperties.ItemInstanceRecordWithPropertiesBuilder builder =
+                    new ItemInstanceRecordWithProperties.ItemInstanceRecordWithPropertiesBuilder();
+            builder.setItemInstanceRecord(itemInstanceRecord);
+            builder.setItemInstancePropertyRecords(itemInstancePropertyRecords);
+            itemInstanceRecordWithProperties.add(builder.createItemInstanceRecordWithProperties());
+        }
+        if (itemInstanceRecordWithProperties.size() > 0) {
+            lmsDao.addMultipleItemInstanceRecords(itemInstanceRecordWithProperties);
+        }
     }
 }

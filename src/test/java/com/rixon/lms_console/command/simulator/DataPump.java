@@ -9,15 +9,16 @@ package com.rixon.lms_console.command.simulator;
 
 import com.rixon.lms_console.business.ItemTypeProvider;
 import com.rixon.lms_console.business.PropertyProvider;
+import com.rixon.lms_console.business.SimpleStore;
 import com.rixon.lms_console.dao.Item;
-import com.rixon.lms_console.dao.ItemPropertyValue;
+import com.rixon.lms_console.dao.ItemInstance;
 import com.rixon.lms_console.dao.Property;
+import com.rixon.lms_console.dao.PropertyValue;
 import com.rixon.lms_console.util.DateUtil;
 
 import java.util.*;
 
-import static com.rixon.lms_console.util.Constants.CATEGORY_ITEM_PROPERTY;
-import static com.rixon.lms_console.util.Constants.PUBLISHED_DATE;
+import static com.rixon.lms_console.util.Constants.*;
 
 /**
  * User: rixon|Date: 8/26/12|Time: 3:24 PM
@@ -57,21 +58,24 @@ public class DataPump {
         mockPropertyValues = dataSimulator.mockPropertyValues(expectedMockItems);
     }
 
-    private Map<Property, ItemPropertyValue> generateMockProperties(List<Property> properties) {
-        Map<Property, ItemPropertyValue> itemPropertyValueMap = new HashMap<Property, ItemPropertyValue>();
+    private Map<Property, PropertyValue> generateMockProperties(List<Property> properties) {
+        Map<Property, PropertyValue> itemPropertyValueMap = new HashMap<Property, PropertyValue>();
         for (Property property : properties) {
-            ItemPropertyValue.ItemPropertyValueBuilder itemPropertyValueBuilder = new ItemPropertyValue.
-                    ItemPropertyValueBuilder();
-            itemPropertyValueBuilder.setProperty(property);
-            if (property.getName().equalsIgnoreCase(PUBLISHED_DATE)) {
+            PropertyValue.PropertyValueBuilder propertyValueBuilder = new PropertyValue.PropertyValueBuilder();
+            propertyValueBuilder.setProperty(property);
+            if (isDateProperty(property)) {
                 String dateValue = DateUtil.getDateAsString(getRandomDate());
-                itemPropertyValueBuilder.setPropertyValue(dateValue);
+                propertyValueBuilder.setPropertyValue(dateValue);
             } else {
-                itemPropertyValueBuilder.setPropertyValue(getRandomPropertyValue());
+                propertyValueBuilder.setPropertyValue(getRandomPropertyValue());
             }
-            itemPropertyValueMap.put(property, itemPropertyValueBuilder.createItemPropertyValue());
+            itemPropertyValueMap.put(property, propertyValueBuilder.createPropertyValue());
         }
         return itemPropertyValueMap;
+    }
+
+    private boolean isDateProperty(Property property) {
+        return property.getName().equalsIgnoreCase(PUBLISHED_DATE) || property.getName().equalsIgnoreCase(ADDED_DATE);
     }
 
     private Date getRandomDate() {
@@ -80,5 +84,35 @@ public class DataPump {
 
     public String getRandomPropertyValue() {
         return mockPropertyValues.get(random.nextInt(mockPropertyValues.size()));
+    }
+
+    public List<ItemInstance> generateMockItemInstances(int expectedInstances) {
+        List<Item> allItems = getItems(expectedInstances);
+        List<ItemInstance> itemInstances = new ArrayList<ItemInstance>();
+        populateDataLists(expectedInstances);
+        ItemInstance.ItemInstanceBuilder itemInstanceBuilder = new ItemInstance.ItemInstanceBuilder();
+        for (Item item : allItems) {
+            for (int i = 0; i < expectedInstances; i++) {
+                itemInstanceBuilder.setItem(item);
+                List<Property> properties = PropertyProvider.getPropertiesForCategory(CATEGORY_INSTANCE_PROPERTY);
+                itemInstanceBuilder.setItemInstanceProperties(generateMockProperties(properties));
+                ItemInstance itemInstance = itemInstanceBuilder.createItemInstance();
+                itemInstances.add(itemInstance);
+            }
+        }
+        return itemInstances;
+    }
+
+    private List<Item> getItems(int expectedInstances) {
+        List<Item> allItems = SimpleStore.getInstance().allItems();
+        List<Item> items = new ArrayList<Item>();
+        if (allItems == null) {
+            return items;
+        }
+        int maxItems = Math.min(expectedInstances, allItems.size());
+        for (int i = 0; i < maxItems; i++) {
+            items.add(allItems.get(i));
+        }
+        return items;
     }
 }

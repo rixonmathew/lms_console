@@ -102,12 +102,6 @@ public interface LMSDao {
      */
     public List<PropertyRecord> getAllProperties();
 
-    /**
-     * This method is used to add multiple items into the database
-     *
-     * @param itemRecords list of item records to be added
-     */
-    public void addMultipleItemRecords(List<ItemRecordWithProperties> itemRecords);
 
     /**
      * This method will return all the feature records for the a given role
@@ -131,7 +125,7 @@ public interface LMSDao {
      * @param expectedItemID the id of item
      * @return ItemRecord object
      */
-    public ItemRecord itemWithId(int expectedItemID);
+    public ItemRecord itemWithId(long expectedItemID);
 
     /**
      * This method will return all roles with the features
@@ -140,4 +134,18 @@ public interface LMSDao {
      */
     public List<RoleFeatureRecord> getAllRoleFeatures();
 
+    /**
+     * This method is used to add multiple items into the database
+     *
+     * @param itemRecords list of item records to be added
+     */
+    public void addMultipleItemRecords(List<ItemRecordWithProperties> itemRecords);
+
+    /**
+     * This method is used add multiple item instances into the database
+     *
+     * @param itemInstanceRecordWithProperties
+     *
+     */
+    void addMultipleItemInstanceRecords(List<ItemInstanceRecordWithProperties> itemInstanceRecordWithProperties);
 }

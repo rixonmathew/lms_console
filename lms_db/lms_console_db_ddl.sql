@@ -163,6 +163,8 @@ create sequence transaction_type_id_seq as bigint start with 100 increment by 1;
 create sequence category_id_seq as bigint start with 100 increment by 1;
 create sequence property_id_seq as bigint start with 100 increment by 1;
 create sequence item_property_id_seq as bigint start with 100 increment by 1;
+create sequence item_instance_id_seq as bigint start with 100 increment by 1;
+create sequence item_instance_property_id_seq as bigint start with 100 increment by 1;
 
 
 --Foriegn Keys for the tables

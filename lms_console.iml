@@ -38,6 +38,15 @@
     <orderEntry type="library" name="Maven: org.eclipse.persistence:javax.persistence:2.0.4.v201112161009" level="project" />
     <orderEntry type="library" name="Maven: commonj.sdo:commonj.sdo:2.1.1.v201112051852" level="project" />
     <orderEntry type="library" name="Maven: org.hsqldb:hsqldb:2.2.8" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/annotations.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
 

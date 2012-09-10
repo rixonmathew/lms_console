@@ -61,11 +61,8 @@ public class DataSimulator {
 
 
     private String randomTitle() {
-
         final int size = seedWordsTitle.size();
-        System.out.println("size = " + size);
         final int index = random.nextInt(size);
-        System.out.println("index = " + index);
         return seedWordsTitle.get(index);
     }
 

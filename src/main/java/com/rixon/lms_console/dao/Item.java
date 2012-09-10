@@ -15,19 +15,25 @@ import java.util.Map;
  */
 public class Item {
 
+    private final long id;
     private final String name;
     private final String description;
     private final ItemType itemType;
-    private final Map<Property, ItemPropertyValue> itemProperties;
+    private final Map<Property, PropertyValue> itemProperties;
     private final UniqueIdentifier identifier;
 
-    private Item(String name, String description, ItemType itemType,
-                 Map<Property, ItemPropertyValue> itemProperties, UniqueIdentifier identifier) {
+    private Item(long id, String name, String description, ItemType itemType,
+                 Map<Property, PropertyValue> itemProperties, UniqueIdentifier identifier) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.itemType = itemType;
         this.itemProperties = itemProperties;
         this.identifier = identifier;
+    }
+
+    public long getId() {
+        return id;
     }
 
     /**
@@ -63,7 +69,7 @@ public class Item {
      * @param property the property object
      * @return property value
      */
-    public ItemPropertyValue getItemPropertyValue(Property property) {
+    public PropertyValue getItemPropertyValue(Property property) {
         return itemProperties.get(property);
     }
 
@@ -76,7 +82,7 @@ public class Item {
         return identifier;
     }
 
-    public Map<Property, ItemPropertyValue> allPropertiesMap() {
+    public Map<Property, PropertyValue> allPropertiesMap() {
         return itemProperties;
     }
 
@@ -91,7 +97,7 @@ public class Item {
                 '}';
     }
 
-    public Map<Property, ItemPropertyValue> getItemProperties() {
+    public Map<Property, PropertyValue> getItemProperties() {
         return itemProperties;
     }
 
@@ -99,11 +105,17 @@ public class Item {
      * This class is the builder for building Item instances
      */
     public static class ItemBuilder {
+        private long id;
         private String name;
         private String description;
         private ItemType itemType;
-        private Map<Property, ItemPropertyValue> itemProperties;
+        private Map<Property, PropertyValue> itemProperties;
         private UniqueIdentifier identifier;
+
+        public ItemBuilder setId(long id) {
+            this.id = id;
+            return this;
+        }
 
         public ItemBuilder setName(String name) {
             this.name = name;
@@ -120,7 +132,7 @@ public class Item {
             return this;
         }
 
-        public ItemBuilder setItemProperties(Map<Property, ItemPropertyValue> itemProperties) {
+        public ItemBuilder setItemProperties(Map<Property, PropertyValue> itemProperties) {
             this.itemProperties = itemProperties;
             return this;
         }
@@ -131,7 +143,7 @@ public class Item {
         }
 
         public Item createItem() {
-            return new Item(name, description, itemType, itemProperties, identifier);
+            return new Item(id, name, description, itemType, itemProperties, identifier);
         }
     }
 }

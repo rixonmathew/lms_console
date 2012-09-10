@@ -11,9 +11,9 @@ import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.command.result.SearchResult;
 import com.rixon.lms_console.dao.Item;
-import com.rixon.lms_console.dao.ItemPropertyValue;
 import com.rixon.lms_console.dao.ItemType;
 import com.rixon.lms_console.dao.Property;
+import com.rixon.lms_console.dao.PropertyValue;
 import com.rixon.lms_console.service.Service;
 
 import java.util.ArrayList;
@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 import static com.rixon.lms_console.util.Constants.*;
+
 /**
  * This class implements the stub service for search operation
  * User: rixon|Date: 8/17/12|Time: 9:16 PM
@@ -44,20 +45,20 @@ public class SearchServiceStub implements Service {
         itemBuilder.setName(name);
         itemBuilder.setDescription(description);
         ItemType.ItemTypeBuilder itemTypeBuilder = new ItemType.ItemTypeBuilder();
-        ItemType itemType=itemTypeBuilder.setType("BOOK").setDescription("Book").createItemType();
+        ItemType itemType = itemTypeBuilder.setType("BOOK").setDescription("Book").createItemType();
         itemBuilder.setItemType(itemType);
         Property.PropertyBuilder propertyBuilder = new Property.PropertyBuilder();
         Property isbn = propertyBuilder.setName(ISBN).setDescription("ISBN").createProperty();
-        ItemPropertyValue.ItemPropertyValueBuilder propertyValueBuilder = new ItemPropertyValue.ItemPropertyValueBuilder();
-        ItemPropertyValue isbnPropertyValue = propertyValueBuilder.setProperty(isbn).setPropertyValue("1123123123").createItemPropertyValue();
+        PropertyValue.PropertyValueBuilder propertyValueBuilder = new PropertyValue.PropertyValueBuilder();
+        PropertyValue isbnPropertyValue = propertyValueBuilder.setProperty(isbn).setPropertyValue("1123123123").createPropertyValue();
         Property author = propertyBuilder.setName(AUTHOR).setDescription("Author").createProperty();
-        ItemPropertyValue authorPropertyValue = propertyValueBuilder.setProperty(author).setPropertyValue("Thomas Edison").createItemPropertyValue();
+        PropertyValue authorPropertyValue = propertyValueBuilder.setProperty(author).setPropertyValue("Thomas Edison").createPropertyValue();
         Property publishedDate = propertyBuilder.setName(PUBLISHED_DATE).setDescription("Published Date").createProperty();
-        ItemPropertyValue publishedDatePropertyValue = propertyValueBuilder.setProperty(publishedDate).setPropertyValue("01/01/2010").createItemPropertyValue();
-        Map<Property,ItemPropertyValue> properties = new HashMap<Property,ItemPropertyValue>();
-        properties.put(isbn,isbnPropertyValue);
-        properties.put(author,authorPropertyValue);
-        properties.put(publishedDate,publishedDatePropertyValue);
+        PropertyValue publishedDatePropertyValue = propertyValueBuilder.setProperty(publishedDate).setPropertyValue("01/01/2010").createPropertyValue();
+        Map<Property, PropertyValue> properties = new HashMap<Property, PropertyValue>();
+        properties.put(isbn, isbnPropertyValue);
+        properties.put(author, authorPropertyValue);
+        properties.put(publishedDate, publishedDatePropertyValue);
         itemBuilder.setItemProperties(properties);
         return itemBuilder.createItem();
     }

@@ -8,8 +8,9 @@
 package com.rixon.lms_console.dao.mapper;
 
 import com.rixon.lms_console.dao.Item;
-import com.rixon.lms_console.dao.ItemPropertyValue;
 import com.rixon.lms_console.dao.Property;
+import com.rixon.lms_console.dao.PropertyValue;
+import com.rixon.lms_console.dao.factory.DAOFactory;
 import com.rixon.lms_console.dao.recordset.ItemPropertyRecord;
 import com.rixon.lms_console.dao.recordset.ItemRecord;
 
@@ -26,6 +27,7 @@ public class ItemMapper {
 
     public static Item mapToItem(ItemRecord itemRecord, List<ItemPropertyRecord> itemProperties) {
         Item.ItemBuilder itemBuilder = new Item.ItemBuilder();
+        itemBuilder.setId(itemRecord.getId());
         itemBuilder.setName(itemRecord.getName());
         itemBuilder.setDescription(itemRecord.getDescription());
         itemBuilder.setItemProperties(mapItemProperties(itemProperties));
@@ -33,11 +35,11 @@ public class ItemMapper {
         return itemBuilder.createItem();
     }
 
-    private static Map<Property, ItemPropertyValue> mapItemProperties(List<ItemPropertyRecord> itemPropertyRecords) {
-        Map<Property, ItemPropertyValue> itemPropertyValueMap = new HashMap<Property, ItemPropertyValue>();
+    private static Map<Property, PropertyValue> mapItemProperties(List<ItemPropertyRecord> itemPropertyRecords) {
+        Map<Property, PropertyValue> itemPropertyValueMap = new HashMap<Property, PropertyValue>();
         for (ItemPropertyRecord itemPropertyRecord : itemPropertyRecords) {
             Property property = PropertyMapper.mapToProperty(itemPropertyRecord.getPropertyRecord());
-            ItemPropertyValue propertyValue = ItemPropertyMapper.mapToItemPropertyValue(itemPropertyRecord);
+            PropertyValue propertyValue = ItemPropertyMapper.mapToItemPropertyValue(itemPropertyRecord);
             itemPropertyValueMap.put(property, propertyValue);
         }
         return itemPropertyValueMap;
@@ -47,20 +49,24 @@ public class ItemMapper {
         if (item == null) {
             return null;
         }
-        ItemRecord itemRecord = new ItemRecord();
+
+        ItemRecord itemRecord = DAOFactory.lmsDao().itemWithId(item.getId());
+        if (itemRecord != null) {
+            return itemRecord;
+        }
+        itemRecord = new ItemRecord();
         itemRecord.setName(item.getName());
         itemRecord.setDescription(item.getDescription());
         itemRecord.setItemTypeRecord(ItemTypeMapper.mapToItemTypeRecord(item.getItemType()));
         return itemRecord;
     }
 
-    public static List<ItemPropertyRecord> mapItemPropertyRecords(Map<Property, ItemPropertyValue> itemProperties,
+    public static List<ItemPropertyRecord> mapItemPropertyRecords(Map<Property, PropertyValue> itemProperties,
                                                                   ItemRecord itemRecord) {
 
         List<ItemPropertyRecord> itemPropertyRecords = new ArrayList<ItemPropertyRecord>();
-        for (ItemPropertyValue itemPropertyValue : itemProperties.values()) {
-            ItemPropertyRecord itemPropertyRecord = ItemPropertyMapper.mapToItemPropertyRecord(itemPropertyValue, itemRecord);
-
+        for (PropertyValue propertyValue : itemProperties.values()) {
+            ItemPropertyRecord itemPropertyRecord = ItemPropertyMapper.mapToItemPropertyRecord(propertyValue, itemRecord);
             itemPropertyRecords.add(itemPropertyRecord);
         }
         return itemPropertyRecords;

@@ -16,13 +16,13 @@ public class Constants {
     public final static String AUTHOR = "ISBN";
     public final static String PUBLISHER = "PUBLISHER";
     public final static String PUBLISHED_DATE = "PUBLISHED_DATE";
+    public final static String ADDED_DATE = "ADDED_DATE";
 
     //Constants for the various categories used
     public final static String CATEGORY_ITEM_PROPERTY = "ITEM_PROPERTY";
     public final static String CATEGORY_INSTANCE_PROPERTY = "INSTANCE_PROPERTY";
     public final static String CATEGORY_OWNER_TYPES = "OWNER_TYPES";
     public final static String CATEGORY_TRANSACTION_PROPERTY = "TRANSACTION_PROPERTY";
-
 
 
 }

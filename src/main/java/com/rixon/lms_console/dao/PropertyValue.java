@@ -12,13 +12,13 @@ package com.rixon.lms_console.dao;
  * All property values are stored as String
  * User: rixon|Date: 8/25/12|Time: 8:05 PM
  */
-public class ItemPropertyValue {
+public class PropertyValue {
 
     private final Property property;
     private final String propertyValue;
 
-    private ItemPropertyValue(Property property,
-                              String propertyValue) {
+    private PropertyValue(Property property,
+                          String propertyValue) {
         this.property = property;
         this.propertyValue = propertyValue;
     }
@@ -33,28 +33,28 @@ public class ItemPropertyValue {
 
     @Override
     public String toString() {
-        return "ItemPropertyValue{" +
+        return "PropertyValue{" +
                 "property=" + property +
                 ", propertyValue='" + propertyValue + '\'' +
                 '}';
     }
 
-    public static class ItemPropertyValueBuilder {
+    public static class PropertyValueBuilder {
         private Property property;
         private String propertyValue;
 
-        public ItemPropertyValueBuilder setProperty(Property property) {
+        public PropertyValueBuilder setProperty(Property property) {
             this.property = property;
             return this;
         }
 
-        public ItemPropertyValueBuilder setPropertyValue(String propertyValue) {
+        public PropertyValueBuilder setPropertyValue(String propertyValue) {
             this.propertyValue = propertyValue;
             return this;
         }
 
-        public ItemPropertyValue createItemPropertyValue() {
-            return new ItemPropertyValue(property, propertyValue);
+        public PropertyValue createPropertyValue() {
+            return new PropertyValue(property, propertyValue);
         }
     }
 

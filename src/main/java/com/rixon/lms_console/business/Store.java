@@ -9,6 +9,7 @@ package com.rixon.lms_console.business;
 
 import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.dao.Item;
+import com.rixon.lms_console.dao.ItemInstance;
 import com.rixon.lms_console.dao.SearchQuery;
 import com.rixon.lms_console.dao.recordset.*;
 
@@ -79,4 +80,18 @@ public interface Store {
      * @return list of features;
      */
     public List<FeatureRecord> featuresForRole(String role);
+
+    /**
+     * This method will return all the items in the datastore
+     *
+     * @return list of all items
+     */
+    List<Item> allItems();
+
+    /**
+     * This method is used for adding the instances of Item to the database
+     *
+     * @param itemInstances list of item instances
+     */
+    void addItemInstancesToLibrary(List<ItemInstance> itemInstances);
 }

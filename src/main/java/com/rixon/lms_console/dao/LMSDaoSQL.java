@@ -24,7 +24,6 @@ public class LMSDaoSQL implements LMSDao {
 
     private final EntityManager entityManager;
 
-
     public LMSDaoSQL() {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("lms-eclipselink");
         entityManager = entityManagerFactory.createEntityManager();
@@ -127,6 +126,39 @@ public class LMSDaoSQL implements LMSDao {
         return (List<PropertyRecord>) results;
     }
 
+
+    @Override
+    public List<FeatureRecord> featuresForRole(String role) {
+        Query featuresForRoleQuery = entityManager.createNamedQuery(FeatureRecord.FEATURES_FOR_ROLE_QUERY);
+        featuresForRoleQuery.setParameter("role", role);
+        return (List<FeatureRecord>) featuresForRoleQuery.getResultList();
+    }
+
+    @Override
+    public List<ItemPropertyRecord> propertiesForItem(ItemRecord itemRecord) {
+        Query itemPropertiesQuery = entityManager.createNamedQuery(ItemPropertyRecord.ITEM_PROPERTY_QUERY);
+        itemPropertiesQuery.setParameter("itemRecord", itemRecord);
+        return (List<ItemPropertyRecord>) itemPropertiesQuery.getResultList();
+    }
+
+    @Override
+    public ItemRecord itemWithId(long expectedItemID) {
+        Query itemIDQuery = entityManager.createNamedQuery(ItemRecord.ITEM_ID_QUERY);
+        itemIDQuery.setParameter("id", expectedItemID);
+        List<ItemRecord> itemRecords = (List<ItemRecord>) itemIDQuery.getResultList();
+        ItemRecord itemRecord = null;
+        if ((itemRecords != null) && (itemRecords.size() > 0)) {
+            itemRecord = itemRecords.get(0);
+        }
+        return itemRecord;
+    }
+
+    @Override
+    public List<RoleFeatureRecord> getAllRoleFeatures() {
+        Query allRoleFeaturesQuery = entityManager.createNamedQuery(RoleFeatureRecord.ALL_ROLE_FEATURES);
+        return (List<RoleFeatureRecord>) allRoleFeaturesQuery.getResultList();
+    }
+
     @Override
     public void addMultipleItemRecords(List<ItemRecordWithProperties> itemRecords) {
         int recordCounter = 0;
@@ -150,34 +182,25 @@ public class LMSDaoSQL implements LMSDao {
     }
 
     @Override
-    public List<FeatureRecord> featuresForRole(String role) {
-        Query featuresForRoleQuery = entityManager.createNamedQuery(FeatureRecord.FEATURES_FOR_ROLE_QUERY);
-        featuresForRoleQuery.setParameter("role", role);
-        return (List<FeatureRecord>) featuresForRoleQuery.getResultList();
-    }
-
-    @Override
-    public List<ItemPropertyRecord> propertiesForItem(ItemRecord itemRecord) {
-        Query itemPropertiesQuery = entityManager.createNamedQuery(ItemPropertyRecord.ITEM_PROPERTY_QUERY);
-        itemPropertiesQuery.setParameter("itemRecord", itemRecord);
-        return (List<ItemPropertyRecord>) itemPropertiesQuery.getResultList();
-    }
-
-    @Override
-    public ItemRecord itemWithId(int expectedItemID) {
-        Query itemIDQuery = entityManager.createNamedQuery(ItemRecord.ITEM_ID_QUERY);
-        itemIDQuery.setParameter("id", expectedItemID);
-        List<ItemRecord> itemRecords = (List<ItemRecord>) itemIDQuery.getResultList();
-        ItemRecord itemRecord = null;
-        if ((itemRecords != null) && (itemRecords.size() > 0)) {
-            itemRecord = itemRecords.get(0);
+    public void addMultipleItemInstanceRecords(List<ItemInstanceRecordWithProperties> itemInstanceRecordWithProperties) {
+        int recordCounter = 0;
+        final int flushCount = 20;
+        EntityTransaction transaction = entityManager.getTransaction();
+        transaction.begin();
+        for (ItemInstanceRecordWithProperties itemInstance : itemInstanceRecordWithProperties) {
+            ItemInstanceRecord itemInstanceRecord = itemInstance.getItemInstanceRecord();
+            List<ItemInstancePropertyRecord> itemInstancePropertyRecords = itemInstance.getItemInstancePropertyRecords();
+            entityManager.persist(itemInstanceRecord);
+            recordCounter++;
+            for (ItemInstancePropertyRecord itemInstancePropertyRecord : itemInstancePropertyRecords) {
+                entityManager.persist(itemInstancePropertyRecord);
+                recordCounter++;
+            }
+            if (recordCounter % flushCount == 0) {
+                entityManager.flush();
+            }
         }
-        return itemRecord;
-    }
-
-    @Override
-    public List<RoleFeatureRecord> getAllRoleFeatures() {
-        Query allRoleFeaturesQuery = entityManager.createNamedQuery(RoleFeatureRecord.ALL_ROLE_FEATURES);
-        return (List<RoleFeatureRecord>) allRoleFeaturesQuery.getResultList();
+        //transaction.rollback();
+        transaction.commit();
     }
 }

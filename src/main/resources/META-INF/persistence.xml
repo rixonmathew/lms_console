@@ -20,6 +20,8 @@
         <class>com.rixon.lms_console.dao.recordset.PropertyRecord</class>
         <class>com.rixon.lms_console.dao.recordset.ItemPropertyRecord</class>
         <class>com.rixon.lms_console.dao.recordset.RoleFeatureRecord</class>
+        <class>com.rixon.lms_console.dao.recordset.ItemInstancePropertyRecord</class>
+        <class>com.rixon.lms_console.dao.recordset.ItemInstanceRecord</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbc.JDBCDriver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:hsql://localhost:9654/lms_db"/>
