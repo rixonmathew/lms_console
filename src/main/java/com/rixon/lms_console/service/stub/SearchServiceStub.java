@@ -7,6 +7,8 @@
 
 package com.rixon.lms_console.service.stub;
 
+import com.rixon.lms_console.business.ItemTypeProvider;
+import com.rixon.lms_console.business.PropertyProvider;
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.command.result.SearchResult;
@@ -47,20 +49,21 @@ public class SearchServiceStub implements Service {
         Item.ItemBuilder itemBuilder = new Item.ItemBuilder();
         itemBuilder.setName(name);
         itemBuilder.setDescription(description);
-        ItemType.ItemTypeBuilder itemTypeBuilder = new ItemType.ItemTypeBuilder();
-        ItemType itemType = itemTypeBuilder.setType("BOOK").setDescription("Book").createItemType();
+        ItemType itemType = ItemTypeProvider.getItemType(BOOK);
         itemBuilder.setItemType(itemType);
-        Property.PropertyBuilder propertyBuilder = new Property.PropertyBuilder();
-        Property isbn = propertyBuilder.setName(ISBN).setDescription("ISBN").createProperty();
+        Property isbn = PropertyProvider.getProperty(ISBN);
         PropertyValue.PropertyValueBuilder propertyValueBuilder = new PropertyValue.PropertyValueBuilder();
         PropertyValue isbnPropertyValue = propertyValueBuilder.setProperty(isbn).setPropertyValue("1123123123").createPropertyValue();
-        Property author = propertyBuilder.setName(AUTHOR).setDescription("Author").createProperty();
+        Property author = PropertyProvider.getProperty(AUTHOR);
         PropertyValue authorPropertyValue = propertyValueBuilder.setProperty(author).setPropertyValue("Thomas Edison").createPropertyValue();
-        Property publishedDate = propertyBuilder.setName(PUBLISHED_DATE).setDescription("Published Date").createProperty();
+        Property publisher = PropertyProvider.getProperty(PUBLISHER);
+        PropertyValue publisherPropertyValue = propertyValueBuilder.setProperty(publisher).setPropertyValue("Free Publishers").createPropertyValue();
+        Property publishedDate = PropertyProvider.getProperty(PUBLISHED_DATE);
         PropertyValue publishedDatePropertyValue = propertyValueBuilder.setProperty(publishedDate).setPropertyValue("01/01/2010").createPropertyValue();
         Map<Property, PropertyValue> properties = new HashMap<Property, PropertyValue>();
         properties.put(isbn, isbnPropertyValue);
         properties.put(author, authorPropertyValue);
+        properties.put(publisher, publisherPropertyValue);
         properties.put(publishedDate, publishedDatePropertyValue);
         itemBuilder.setItemProperties(properties);
         return itemBuilder.createItem();

@@ -152,9 +152,6 @@ public class DAOTest {
         assertNotNull(propertyRecords);
         final int expectedCount = 14;
         assertEquals("size of role records is not as expected", expectedCount, propertyRecords.size());
-        for (PropertyRecord propertyRecord : propertyRecords) {
-            System.out.println("propertyRecord = " + propertyRecord);
-        }
     }
 
     @Test

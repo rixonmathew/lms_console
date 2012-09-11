@@ -29,7 +29,8 @@ class DataPump {
     private final DataSimulator dataSimulator;
     private List<String> mockNames;
     private List<String> mockDescriptions;
-    private List<String> mockPropertyValues;
+    private Map<String, List<String>> mockPropertyValues;
+    //private List<String> mockPropertyValues;
     private List<Date> mockDates;
     private final Random random = new Random();
 
@@ -70,7 +71,7 @@ class DataPump {
                 String dateValue = DateUtil.getDateAsString(getRandomDate());
                 propertyValueBuilder.setPropertyValue(dateValue);
             } else {
-                propertyValueBuilder.setPropertyValue(getRandomPropertyValue());
+                propertyValueBuilder.setPropertyValue(getRandomPropertyValue(property.getName()));
             }
             itemPropertyValueMap.put(property, propertyValueBuilder.createPropertyValue());
         }
@@ -85,8 +86,14 @@ class DataPump {
         return mockDates.get(random.nextInt(mockDates.size()));
     }
 
-    String getRandomPropertyValue() {
-        return mockPropertyValues.get(random.nextInt(mockPropertyValues.size()));
+    String getRandomPropertyValue(String propertyName) {
+        String propertyValue = "#random#";
+        List<String> propertyValues = mockPropertyValues.get(propertyName);
+        if (propertyValues == null) {
+            return propertyValue;
+        }
+        propertyValue = propertyValues.get(random.nextInt(propertyValues.size()));
+        return propertyValue;
     }
 
     @NotNull

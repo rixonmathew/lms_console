@@ -22,4 +22,13 @@ public abstract class AbstractResult implements Result {
         return tableModel;
     }
 
+    @Override
+    public String getFormatStringForHeader(int columnIndex) {
+        return "%1$20s |";
+    }
+
+    @Override
+    public String getFormatStringForRecord(int columnIndex) {
+        return "%1$20s |";
+    }
 }

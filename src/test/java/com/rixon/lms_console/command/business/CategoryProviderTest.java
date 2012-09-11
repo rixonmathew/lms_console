@@ -25,7 +25,6 @@ public class CategoryProviderTest {
         final String expectedCategoryName = "ITEM_PROPERTY";
         Category category = CategoryProvider.getCategory(expectedCategoryName);
         assertThat("Category name is not as expected", expectedCategoryName, equalTo(category.getName()));
-        System.out.println("category = " + category);
     }
 
     @Test(expected = IllegalArgumentException.class)

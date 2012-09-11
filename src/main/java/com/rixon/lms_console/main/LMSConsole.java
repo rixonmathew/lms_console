@@ -20,6 +20,9 @@ public class LMSConsole {
 
     private CommandBuilder builder;
     private CommandExecutor executor;
+    private final String LMS_PROMPT = "LMS>";
+    private final String EXIT_COMMAND = "exit";
+    private final int LINE_LENGTH = 160;
 
     public LMSConsole() {
         initializeEnvironment();
@@ -31,24 +34,30 @@ public class LMSConsole {
     }
 
     public void start() {
-        String userCommandString;
-        //System.setProperty(ServiceFacadeFactory.LMS_MODE,ServiceFacadeFactory.FAKE);
         if (console != null) {
             printBanner();
             initializeEnvironment();
-            String EXIT_COMMAND = "exit";
-            do {
-                userCommandString = console.readLine("LMS>");
-                Command command = builder.buildCommand(userCommandString);
-                Result result = executor.executeCommand(command);
-                if (command.isValid()) {
-                    displayResultInConsole(result);
-                } else {
-                    displayErrorInConsole(command);
-                }
-            }
-            while (!userCommandString.equalsIgnoreCase(EXIT_COMMAND));
+            processUserInput();
         }
+    }
+
+    private void processUserInput() {
+        String userCommandString;
+        do {
+            userCommandString = console.readLine(LMS_PROMPT);
+            if ((userCommandString == null) || (userCommandString.length() == 0)) {
+                userCommandString = "continue";
+                continue;
+            }
+            Command command = builder.buildCommand(userCommandString);
+            Result result = executor.executeCommand(command);
+            if (command.isValid()) {
+                displayResultInConsole(result);
+            } else {
+                displayErrorInConsole(command);
+            }
+        }
+        while (!userCommandString.equalsIgnoreCase(EXIT_COMMAND));
     }
 
 
@@ -63,17 +72,17 @@ public class LMSConsole {
         int columns = tableModel.getColumnCount();
         int rows = tableModel.getRowCount();
         for (int column = 0; column < columns; column++) {
-            console.printf("%1$12s  ", tableModel.getColumnName(column));
+            console.printf(result.getFormatStringForHeader(column), tableModel.getColumnName(column));
         }
         console.printf("%n");
-        drawLine(120);
+        drawLine(LINE_LENGTH);
         for (int row = 0; row < rows; row++) {
             for (int column = 0; column < columns; column++) {
-                console.printf("%1$12s  ", tableModel.getValueAt(row, column));
+                console.printf(result.getFormatStringForRecord(column), tableModel.getValueAt(row, column));
             }
             console.printf("%n");
         }
-        drawLine(120);
+        drawLine(LINE_LENGTH);
     }
 
     private void printBanner() {

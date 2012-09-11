@@ -14,7 +14,6 @@ import org.jetbrains.annotations.Nullable;
 import org.junit.After;
 import org.junit.Before;
 
-import java.io.IOException;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -32,11 +31,6 @@ public class DataPumpTest {
     @Before
     public void setUp() {
         dataSimulator = new DataSimulator();
-        try {
-            dataSimulator.loadSeedsFromFiles();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     @After
@@ -84,9 +78,9 @@ public class DataPumpTest {
         List<Item> mockItems = dataPump.generateMockItems(expectedMockItems, itemType);
         assertNotNull(mockItems);
         assertEquals("Size of item list is not as expected", expectedMockItems, mockItems.size());
-        for (Item item : mockItems) {
-            System.out.println("item = " + item);
-        }
+//        for (Item item : mockItems) {
+//            System.out.println("item = " + item);
+//        }
         SimpleStore.getInstance().addItemsToLibrary(mockItems);
     }
 
@@ -97,7 +91,7 @@ public class DataPumpTest {
         final int expectedInstances = 10;
         List<ItemInstance> mockItemInstances = dataPump.generateMockItemInstances(expectedInstances);
         assertNotNull(mockItemInstances);
-        System.out.println("count = " + mockItemInstances.size());
+        //System.out.println("count = " + mockItemInstances.size());
         SimpleStore.getInstance().addItemInstancesToLibrary(mockItemInstances);
     }
 }

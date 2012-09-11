@@ -1,5 +1,6 @@
 package com.rixon.lms_console.command.result;
 
+import com.rixon.lms_console.business.PropertyProvider;
 import com.rixon.lms_console.dao.Item;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -7,6 +8,8 @@ import org.jetbrains.annotations.Nullable;
 import javax.swing.table.TableModel;
 import java.util.HashMap;
 import java.util.List;
+
+import static com.rixon.lms_console.util.Constants.*;
 
 /**
  * This class represents the search results for books
@@ -47,19 +50,19 @@ public class SearchResult extends AbstractResult {
             Object cellValue = null;
             switch (columnIndex) {
                 case 0:
-                    cellValue = "11232";//item.getItemPropertyValue(PropertyProvider.getProperty(ISBN));
+                    cellValue = item.getItemPropertyValue(PropertyProvider.getProperty(ISBN)).getPropertyValue();
                     break;
                 case 1:
                     cellValue = item.getName();
                     break;
                 case 2:
-                    cellValue = "Author";//item.getItemPropertyValue(PropertyProvider.getProperty(AUTHOR));
+                    cellValue = item.getItemPropertyValue(PropertyProvider.getProperty(AUTHOR)).getPropertyValue();
                     break;
                 case 3:
-                    cellValue = "Test Publisher"; //item.getItemPropertyValue(PropertyProvider.getProperty(PUBLISHER));
+                    cellValue = item.getItemPropertyValue(PropertyProvider.getProperty(PUBLISHER)).getPropertyValue();
                     break;
                 case 4:
-                    cellValue = "01/01/2010";//item.getItemPropertyValue(PropertyProvider.getProperty(PUBLISHED_DATE));
+                    cellValue = item.getItemPropertyValue(PropertyProvider.getProperty(PUBLISHED_DATE)).getPropertyValue();
                     break;
             }
             return cellValue;

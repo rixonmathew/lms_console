@@ -16,7 +16,7 @@ public class Property {
     private final String description;
     private final Category category;
 
-    private  Property(String name, String description,Category category) {
+    private Property(String name, String description, Category category) {
         this.name = name;
         this.description = description;
         this.category = category;
@@ -43,6 +43,28 @@ public class Property {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Property)) return false;
+
+        Property property = (Property) o;
+
+        if (!category.equals(property.category)) return false;
+        if (!description.equals(property.description)) return false;
+        if (!name.equals(property.name)) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name.hashCode();
+        result = 31 * result + description.hashCode();
+        result = 31 * result + category.hashCode();
+        return result;
+    }
+
     public static class PropertyBuilder {
         private String name;
         private String description;
@@ -64,7 +86,7 @@ public class Property {
         }
 
         public Property createProperty() {
-            return new Property(name, description,category);
+            return new Property(name, description, category);
         }
     }
 }
