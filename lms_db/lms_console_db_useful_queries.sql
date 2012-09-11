@@ -17,3 +17,18 @@ SELECT it.id,
    
  --To see all sequences
 SELECT * FROM information_schema.sequences
+
+
+--To see teh count of instances available for each item
+select it.id item_id,
+       it.name,
+       it.description,
+       it_ty.type as item_type,
+       count(1) as items_available
+   from item it,
+        item_type it_ty,
+        item_instance it_in
+  where it.item_type_id = it_ty.id
+    and it_in.item_id = it.id
+    and it.name like '%Charlie%'
+group by it.id,it.name,it.description,it_ty.type

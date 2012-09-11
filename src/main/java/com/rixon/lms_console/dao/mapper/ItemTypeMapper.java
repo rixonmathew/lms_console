@@ -20,7 +20,7 @@ import org.jetbrains.annotations.Nullable;
 public class ItemTypeMapper {
 
     @NotNull
-    public static ItemType mapToItemType(@NotNull ItemTypeRecord itemTypeRecord) {
+    public static ItemType mapToItemType(ItemTypeRecord itemTypeRecord) {
         ItemType.ItemTypeBuilder itemTypeBuilder = new ItemType.ItemTypeBuilder();
         itemTypeBuilder.setDescription(itemTypeRecord.getDescription());
         itemTypeBuilder.setType(itemTypeRecord.getType());
@@ -28,7 +28,7 @@ public class ItemTypeMapper {
     }
 
     @Nullable
-    public static ItemTypeRecord mapToItemTypeRecord(@Nullable ItemType itemType) {
+    public static ItemTypeRecord mapToItemTypeRecord(ItemType itemType) {
         if (itemType == null) {
             return null;
         }

@@ -22,6 +22,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 /**
+ * This class is used for testing the Datapump which is responsible for creating mock data for the lms
  * User: rixon|Date: 8/21/12|Time: 8:19 PM
  */
 public class DataPumpTest {
@@ -45,31 +46,51 @@ public class DataPumpTest {
     }
 
     @Test
-    public void testItemPump() {
-        /**
-         * 1) Identify the seed tables
-         * 2) Load data from the data structures. Since the seed tables need to be
-         *    semantic, this data should not be generated from simulator. It should come
-         *    from a provider.
-         * 3) Load all seed tables into data structures
-         * 4) Identify the data simulator for each table and generate the simulated fields
-         * 5) Replace foreign keys with corresponding ids from data structures
-         * 6) Find child tables of this table and create entry till there are no child tables.
-         * 7) Repeat this process till the configured number of elements are created in these
-         *    tables
-         * 8) assert count in all related tables to be same as master count
-         */
+    public void testItemPumpForBooks() {
+        testItemsForItemType("BOOK", 500);
+    }
+
+    @Test
+    public void testItemPumpForMovie() {
+        testItemsForItemType("MOVIE", 500);
+    }
+
+    @Test
+    public void testItemPumpForMusic() {
+        testItemsForItemType("MUSIC", 500);
+    }
+
+    @Test
+    public void testItemPumpForGames() {
+        testItemsForItemType("GAME", 500);
+    }
+
+    @Test
+    public void testItemPumpForMagazine() {
+        testItemsForItemType("MAGAZINE", 500);
+    }
+
+    @Test
+    public void testItemPumpForJournal() {
+        testItemsForItemType("JOURNAL", 500);
+    }
+
+    @Test
+    public void testItemPumpForNewspaperArchives() {
+        testItemsForItemType("MUSIC", 500);
+    }
+
+    private void testItemsForItemType(String itemType, int expectedMockItems) {
         DataPump dataPump = new DataPump(dataSimulator);
-        final int expectedMockItems = 500;//  100;
-        List<Item> mockItems = dataPump.generateMockItems(expectedMockItems);
+        List<Item> mockItems = dataPump.generateMockItems(expectedMockItems, itemType);
         assertNotNull(mockItems);
         assertEquals("Size of item list is not as expected", expectedMockItems, mockItems.size());
         for (Item item : mockItems) {
             System.out.println("item = " + item);
         }
         SimpleStore.getInstance().addItemsToLibrary(mockItems);
-
     }
+
 
     @Test
     public void testItemInstancePump() {

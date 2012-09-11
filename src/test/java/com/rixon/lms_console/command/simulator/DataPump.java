@@ -38,14 +38,14 @@ class DataPump {
     }
 
     @NotNull
-    public List<Item> generateMockItems(int expectedMockItems) {
+    public List<Item> generateMockItems(int expectedMockItems, String itemType) {
         ArrayList<Item> items = new ArrayList<Item>();
         Item.ItemBuilder itemBuilder = new Item.ItemBuilder();
         populateDataLists(expectedMockItems);
         for (int i = 0; i < expectedMockItems; i++) {
             itemBuilder.setName(mockNames.get(i));
             itemBuilder.setDescription(mockDescriptions.get(i));
-            itemBuilder.setItemType(ItemTypeProvider.getItemType("BOOK"));
+            itemBuilder.setItemType(ItemTypeProvider.getItemType(itemType));
             List<Property> properties = PropertyProvider.getPropertiesForCategory(CATEGORY_ITEM_PROPERTY);
             itemBuilder.setItemProperties(generateMockProperties(properties));
             items.add(itemBuilder.createItem());
