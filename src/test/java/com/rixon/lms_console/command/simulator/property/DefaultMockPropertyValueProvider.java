@@ -35,4 +35,17 @@ public class DefaultMockPropertyValueProvider implements MockPropertyValueProvid
         int index = random.nextInt(randomTitles.size());
         return randomTitles.get(index);
     }
+
+    protected String[] strings(int size) {
+        String[] strings = new String[size];
+        for (int i = 0; i < size; i++) {
+            strings[i] = randomString();
+        }
+        return strings;
+    }
+
+    protected String randomString() {
+        return null;  //To change body of created methods use File | Settings | File Templates.
+    }
 }
+

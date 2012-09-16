@@ -67,12 +67,7 @@ class DataPump {
         for (Property property : properties) {
             PropertyValue.PropertyValueBuilder propertyValueBuilder = new PropertyValue.PropertyValueBuilder();
             propertyValueBuilder.setProperty(property);
-            if (isDateProperty(property)) {
-                String dateValue = DateUtil.getDateAsString(getRandomDate());
-                propertyValueBuilder.setPropertyValue(dateValue);
-            } else {
-                propertyValueBuilder.setPropertyValue(getRandomPropertyValue(property.getName()));
-            }
+            propertyValueBuilder.setPropertyValue(getRandomPropertyValue(property.getName()));
             itemPropertyValueMap.put(property, propertyValueBuilder.createPropertyValue());
         }
         return itemPropertyValueMap;

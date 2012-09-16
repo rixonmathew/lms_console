@@ -82,10 +82,10 @@ public class PropertyDataSimulator {
     private void loadPropertyTemplates() {
         propertyTemplates = new HashMap<String, String>();
         propertyTemplates.put(ISBN, "%d%d%d-%d-%d%d%d-%d%d%d%d%d-%d");
-        propertyTemplates.put(AUTHOR, "%1$s,%2$s");
+        propertyTemplates.put(AUTHOR, " %1$s,%2$s");
         propertyTemplates.put(PUBLISHER, "%1$s Publishers");
-        propertyTemplates.put(PUBLISHED_DATE, "%date");
-        propertyTemplates.put(ADDED_DATE, "%date");
+        propertyTemplates.put(PUBLISHED_DATE, "%1$s");
+        propertyTemplates.put(ADDED_DATE, "%1$s");
         propertyTemplates.put(TITLE, "%1$s %2$s %3$s");
         propertyTemplates.put(PAGES, "%d%d%d%d");
         propertyTemplates.put(GENRE, "%1$s");
@@ -96,7 +96,20 @@ public class PropertyDataSimulator {
 
     private void loadValueProviders() {
         mockValueProviders = new HashMap<String, MockPropertyValueProvider>();
-        mockValueProviders.put(ISBN, new ISBNMockValueProvider());
+        final NumbersMockValueProvider numbersMockValueProvider = new NumbersMockValueProvider();
+        mockValueProviders.put(ISBN, numbersMockValueProvider);
+        mockValueProviders.put(AUTHOR, new NamesMockValueProvider());
+        mockValueProviders.put(PUBLISHER, new NamesMockValueProvider());
+        final DatesMockValueProvider datesMockValueProvider = new DatesMockValueProvider();
+        mockValueProviders.put(PUBLISHED_DATE, datesMockValueProvider);
+        mockValueProviders.put(ADDED_DATE, datesMockValueProvider);
+        final TitleMockValueProvider titleMockValueProvider = new TitleMockValueProvider();
+        mockValueProviders.put(TITLE, titleMockValueProvider);
+        mockValueProviders.put(PAGES, numbersMockValueProvider);
+        mockValueProviders.put(GENRE, new GenreMockValueProvider());
+        mockValueProviders.put(PRICE, numbersMockValueProvider);
+        mockValueProviders.put(WEBSITE, titleMockValueProvider);
+        mockValueProviders.put(RATING, new RatingsMockValueProvider());
         mockValueProviders.put(DEFAULT_PROVIDER, new DefaultMockPropertyValueProvider());
         //TODO add values for other properties
     }

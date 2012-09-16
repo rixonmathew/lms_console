@@ -1,0 +1,13 @@
+horror
+romance
+comedy
+tragedy
+thriller
+suspense
+western
+bette noir
+political
+action
+war
+moonlighting
+caveat emptor

@@ -8,7 +8,7 @@
 package com.rixon.lms_console.command.simulator.property;
 
 
-import clover.org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang.StringUtils;
 
 import java.util.Formatter;
 import java.util.List;
@@ -17,13 +17,13 @@ import java.util.List;
  * This class is used for
  * User: rixon|Date: 9/11/12|Time: 3:52 PM
  */
-class ISBNMockValueProvider extends DefaultMockPropertyValueProvider {
+class NumbersMockValueProvider extends DefaultMockPropertyValueProvider {
 
     @Override
     protected String randomValue() {
         int digits = StringUtils.countMatches(template, "%d");
         Formatter stringFormatter = new Formatter();
-        String mockISBN = stringFormatter.format(template, numbersForISBN(13)).toString();
+        String mockISBN = stringFormatter.format(template, numbersForISBN(digits)).toString();
         return mockISBN;
     }
 

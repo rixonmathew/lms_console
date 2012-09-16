@@ -68,4 +68,20 @@ public class SearchResult extends AbstractResult {
             return cellValue;
         }
     }
+
+    @Override
+    public String getFormatStringForHeader(int columnIndex) {
+        if (columnIndex==2||columnIndex==3) {
+            return "%1$40s |";
+        }
+        return super.getFormatStringForHeader(columnIndex);
+    }
+
+    @Override
+    public String getFormatStringForRecord(int columnIndex) {
+        if (columnIndex==2||columnIndex==3) {
+            return "%1$40s |";
+        }
+        return super.getFormatStringForRecord(columnIndex);
+    }
 }

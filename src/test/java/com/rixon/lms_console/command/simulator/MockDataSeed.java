@@ -32,6 +32,9 @@ public class MockDataSeed {
     private List<Date> seedDates;
     private List<String> seedPropertyValues;
     private List<String> seedNumbers;
+    private List<String> seedNames;
+    private List<String> seedGenres;
+    private List<String> seedRatings;
 
     public List<String> getSeedWordsTitle() {
         return seedWordsTitle;
@@ -53,6 +56,18 @@ public class MockDataSeed {
         return seedNumbers;
     }
 
+    public List<String> getSeedNames() {
+        return seedNames;
+    }
+
+    public List<String> getSeedGenres() {
+        return seedGenres;
+    }
+
+    public List<String> getSeedRatings() {
+        return seedRatings;
+    }
+
     public MockDataSeed() {
         try {
             loadSeedsFromFiles();
@@ -68,6 +83,13 @@ public class MockDataSeed {
         loadDates();
         loadPropertyValues();
         loadNumbers();
+        loadNames();
+        loadGenres();
+        loadSeedRatings();
+    }
+
+    private void loadGenres() throws IOException {
+        seedGenres = stringsFromFile(SimulatedDataFiles.GENRE_FILE);
     }
 
     private void loadTitles() throws IOException {
@@ -90,9 +112,16 @@ public class MockDataSeed {
         seedNumbers = stringsFromFile(SimulatedDataFiles.NUMBERS_FILE);
     }
 
-    @NotNull
+    private void loadNames() throws IOException {
+        seedNames = stringsFromFile(SimulatedDataFiles.NAMES_FILE);
+    }
+
+    private void loadSeedRatings() throws IOException {
+        seedRatings = stringsFromFile(SimulatedDataFiles.RATINGS_FILE);
+    }
+
     private List<String> stringsFromFile(String fileName) throws IOException {
-        URL fileURL = SimulatedDataFiles.class.getResource(fileName);
+        URL fileURL = ClassLoader.getSystemClassLoader().getResource(fileName);
         List<String> fileContents = new ArrayList<String>();
         if (fileURL == null) {
             return fileContents;
@@ -110,7 +139,7 @@ public class MockDataSeed {
 
     @NotNull
     private List<Date> datesFormFile(String fileName) throws IOException {
-        URL datesURL = SimulatedDataFiles.class.getResource(fileName);
+        URL datesURL = ClassLoader.getSystemClassLoader().getResource(fileName);
         List<Date> dateList = new ArrayList<Date>();
         if (datesURL == null) {
             return dateList;

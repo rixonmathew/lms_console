@@ -17,4 +17,7 @@ public class SimulatedDataFiles {
     public final static String DATES_FILE="dates.txt";
     public final static String PROPERTY_FILE="propertyValues.txt";
     public static final String NUMBERS_FILE = "numbers.txt";
+    public static final String NAMES_FILE = "names.txt";
+    public static final String GENRE_FILE = "genre.txt";
+    public static final String RATINGS_FILE = "ratings.txt";
 }

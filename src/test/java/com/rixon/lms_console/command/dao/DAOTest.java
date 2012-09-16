@@ -156,7 +156,7 @@ public class DAOTest {
 
     @Test
     public void testGetItemWithId() {
-        final int expectedItemID = 2;
+        final int expectedItemID = 12976;
         ItemRecord itemRecord = lmsDao.itemWithId(expectedItemID);
         assertNotNull(itemRecord);
         assertEquals("Id is not as expected", expectedItemID, itemRecord.getId());
@@ -164,13 +164,13 @@ public class DAOTest {
 
     @Test
     public void testGetPropertiesForItem() {
-        final int expectedItemID = 1;
+        final int expectedItemID = 12976;
         ItemRecord itemRecord = lmsDao.itemWithId(expectedItemID);
         assertNotNull(itemRecord);
         assertEquals("Id is not as expected", expectedItemID, itemRecord.getId());
         List<ItemPropertyRecord> itemPropertyRecords = lmsDao.propertiesForItem(itemRecord);
         assertNotNull(itemPropertyRecords);
-        final int expectedPropertiesCount = 8;
+        final int expectedPropertiesCount = 11;
         assertEquals("Count of properties is not as expected", expectedPropertiesCount, itemPropertyRecords.size());
     }
 

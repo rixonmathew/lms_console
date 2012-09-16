@@ -71,6 +71,7 @@ public class LMSConsole {
         TableModel tableModel = result.getResultsTable();
         int columns = tableModel.getColumnCount();
         int rows = tableModel.getRowCount();
+        drawLine(LINE_LENGTH);
         for (int column = 0; column < columns; column++) {
             console.printf(result.getFormatStringForHeader(column), tableModel.getColumnName(column));
         }
@@ -86,7 +87,7 @@ public class LMSConsole {
     }
 
     private void printBanner() {
-        console.printf("****** Welcome to LMS ******.%n");
+        console.printf("****** Welcome to Library Management System ******.%n");
         drawLine(50);
         console.printf("(Type help to get help, exit|quit to quit the application)%n");
     }
