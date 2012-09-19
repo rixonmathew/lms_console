@@ -10,6 +10,7 @@ package com.rixon.lms_console.business;
 import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.dao.Item;
 import com.rixon.lms_console.dao.ItemInstance;
+import com.rixon.lms_console.dao.Member;
 import com.rixon.lms_console.dao.SearchQuery;
 import com.rixon.lms_console.dao.recordset.*;
 
@@ -94,4 +95,17 @@ public interface Store {
      * @param itemInstances list of item instances
      */
     void addItemInstancesToLibrary(List<ItemInstance> itemInstances);
+
+    /**
+     * This method will return all members of the library system
+     * @return list of Library Members
+     */
+    List<Member> allMembers();
+
+    /**
+     * This method will return a single member based on the id.
+     * @param id the id of the member
+     * @return member instance
+     */
+    Member memberById(long id);
 }

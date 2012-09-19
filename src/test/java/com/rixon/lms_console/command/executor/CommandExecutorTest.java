@@ -4,7 +4,6 @@ import com.rixon.lms_console.command.AbstractCommandTest;
 import com.rixon.lms_console.command.Command;
 import com.rixon.lms_console.command.CommandTestUtil;
 import com.rixon.lms_console.command.result.Result;
-import com.rixon.lms_console.facade.ServiceFacadeFactory;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,7 +25,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
     public void setUp() {
         super.setup();
         executor = new SimpleCommandExecutor();
-        System.setProperty(ServiceFacadeFactory.LMS_MODE, ServiceFacadeFactory.FAKE);
+        //System.setProperty(ServiceFacadeFactory.LMS_MODE, ServiceFacadeFactory.FAKE);
     }
 
     @Test
@@ -165,4 +164,15 @@ public class CommandExecutorTest extends AbstractCommandTest {
         }
     }
 
+    @Test
+    public void testListCommandWithNoParameters() {
+        Command listCommand = CommandTestUtil.createCommand("list","",builder);
+        assertNotNull(listCommand);
+        CommandTestUtil.assertValidationResult(listCommand.getValidationResult(),true);
+        Result result = executor.executeCommand(listCommand);
+        assertNotNull(result);
+        TableModel tableModel = result.getResultsTable();
+        final int expectedRowCount = 4;
+        assertEquals("Displayed rows for list command is not as expected",expectedRowCount,tableModel.getRowCount());
+    }
 }

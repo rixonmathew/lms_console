@@ -47,12 +47,23 @@ public class LMSDaoSQL implements LMSDao {
         Query memberSearchQuery = entityManager.createNamedQuery(MemberRecord.FIND_MEMBER_QUERY);
         memberSearchQuery.setParameter("emailId", emailId);
         memberSearchQuery.setParameter("password", password);
+        return firstMemberRecord(memberSearchQuery);
+    }
+
+    private MemberRecord firstMemberRecord(Query memberSearchQuery) {
         List results = memberSearchQuery.getResultList();
         MemberRecord memberRecord = null;
         if (results != null && results.size() > 0) {
             memberRecord = ((List<MemberRecord>) results).get(0);
         }
         return memberRecord;
+    }
+
+    @Override
+    public MemberRecord findMember(long id) {
+        Query memberSearchQuery = entityManager.createNamedQuery(MemberRecord.FIND_MEMBER_BY_ID_QUERY);
+        memberSearchQuery.setParameter("id",id);
+        return firstMemberRecord(memberSearchQuery);
     }
 
     @Override
@@ -218,4 +229,5 @@ public class LMSDaoSQL implements LMSDao {
         //transaction.rollback();
         transaction.commit();
     }
+
 }

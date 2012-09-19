@@ -7,6 +7,6 @@ package com.rixon.lms_console.command.operation;
 public class HelpOperation extends AbstractOperation {
     public HelpOperation(String operationType) {
         super(operationType);
-        usage = "Usage: help <operation>";
+        usage = "Usage: help [operation]";
     }
 }

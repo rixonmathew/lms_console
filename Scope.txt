@@ -1,6 +1,6 @@
 Things to be incorporated
 =========================
- Introduce list command to see all books, users etc
+ Introduce list command to see users and their details
  introduce command to see items checked out to user
  introduce command to see who has checked out a particular book
  introduce command to see reservations against a book

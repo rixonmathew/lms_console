@@ -9,13 +9,11 @@ package com.rixon.lms_console.business;
 
 import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.command.result.SearchResult;
-import com.rixon.lms_console.dao.Item;
-import com.rixon.lms_console.dao.ItemInstance;
-import com.rixon.lms_console.dao.LMSDao;
-import com.rixon.lms_console.dao.SearchQuery;
+import com.rixon.lms_console.dao.*;
 import com.rixon.lms_console.dao.factory.DAOFactory;
 import com.rixon.lms_console.dao.mapper.ItemInstanceMapper;
 import com.rixon.lms_console.dao.mapper.ItemMapper;
+import com.rixon.lms_console.dao.mapper.MemberMapper;
 import com.rixon.lms_console.dao.recordset.*;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -138,5 +136,22 @@ public class SimpleStore implements Store {
         if (itemInstanceRecordWithProperties.size() > 0) {
             lmsDao.addMultipleItemInstanceRecords(itemInstanceRecordWithProperties);
         }
+    }
+
+    @Override
+    public List<Member> allMembers() {
+        List<Member> members = new ArrayList<Member>();
+        List<MemberRecord> memberRecords = lmsDao.getAllMembers();
+        for (MemberRecord memberRecord:memberRecords) {
+            Member member = MemberMapper.mapToMember(memberRecord);
+            members.add(member);
+        }
+        return members;
+    }
+
+    @Override
+    public Member memberById(long id) {
+        MemberRecord memberRecord = lmsDao.findMember(id);
+        return MemberMapper.mapToMember(memberRecord);
     }
 }

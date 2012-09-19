@@ -17,12 +17,14 @@ import javax.persistence.*;
 @Table(name="MEMBER")
 @NamedQueries({
         @NamedQuery(name=MemberRecord.FIND_MEMBER_QUERY,query = "select x from MemberRecord x where x.emailId = :emailId and x.password = :password"),
-        @NamedQuery(name=MemberRecord.ALL_MEMBERS_QUERY,query = "select x from MemberRecord x")
+        @NamedQuery(name=MemberRecord.ALL_MEMBERS_QUERY,query = "select x from MemberRecord x"),
+        @NamedQuery(name=MemberRecord.FIND_MEMBER_BY_ID_QUERY,query = "select x from MemberRecord x where x.id = :id")
 })
 public class MemberRecord {
 
     public static final String FIND_MEMBER_QUERY = "find_member";
     public static final String ALL_MEMBERS_QUERY = "all_members";
+    public static final String FIND_MEMBER_BY_ID_QUERY = "find_member_by_id_query";
 
     private int id;
     private String firstName;

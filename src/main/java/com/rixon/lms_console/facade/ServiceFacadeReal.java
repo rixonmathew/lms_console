@@ -34,6 +34,7 @@ public class ServiceFacadeReal implements ServiceFacade {
         serviceMap.put(TRANSFER,new TransferService());
         serviceMap.put(RETURN,new ReturnService());
         serviceMap.put(EXIT,new ExitService());
+        serviceMap.put(LIST,new ListService());
     }
 
     public Service serviceForOperation(String operationName) {

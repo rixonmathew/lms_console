@@ -148,4 +148,11 @@ public interface LMSDao {
      *         list of itemInstancesWithRecordProperties
      */
     void addMultipleItemInstanceRecords(List<ItemInstanceRecordWithProperties> itemInstanceRecordWithProperties);
+
+    /**
+     * This method will return the member record based on the system id
+     * @param id of the user
+     * @return the member record
+     */
+    MemberRecord findMember(long id);
 }

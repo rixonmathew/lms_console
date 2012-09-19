@@ -65,6 +65,18 @@ public class DAOTest {
     }
 
     @Test
+    public void testMemberSearchByID() {
+        final long id = 1;
+        MemberRecord memberRecord = lmsDao.findMember(id);
+        assertNotNull(memberRecord);
+        final String expectedFirstName = "Rixon";
+        final String expectedLastName = "Mathew";
+        assertEquals("First name not as expected",expectedFirstName,memberRecord.getFirstName());
+        assertEquals("Last name not as expected",expectedLastName,memberRecord.getLastName());
+    }
+
+
+    @Test
     public void testInvalidMember() {
         final String emailId = "notpresent@gmail.com";
         final String password = "password";
@@ -72,6 +84,12 @@ public class DAOTest {
         assertNull(memberRecord);
     }
 
+    @Test
+    public void testInvalidMemberSearchByID() {
+        final long id = -101;
+        MemberRecord memberRecord = lmsDao.findMember(id);
+        assertNull(memberRecord);
+    }
 
     @Test
     public void testAddNewMember() {
