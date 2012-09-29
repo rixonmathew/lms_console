@@ -27,6 +27,7 @@
             <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:hsql://localhost:9654/lms_db"/>
             <property name="javax.persistence.jdbc.user" value="SA"/>
             <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="eclipselink.logging.file" value="output.log"/>
         </properties>
     </persistence-unit>
 

@@ -46,7 +46,7 @@ public class ServiceTest {
         Result helpResult = helpService.execute(parameter);
         assertNotNull(helpResult);
         TableModel tableModel = helpResult.getResultsTable();
-        final int expectedCount = 7;
+        final int expectedCount = 8;
         assertEquals("Count is not same", expectedCount, tableModel.getRowCount());
     }
 
@@ -68,8 +68,11 @@ public class ServiceTest {
         Result searchResult = searchService.execute(parameter);
         assertNotNull(searchResult);
         TableModel tableModel = searchResult.getResultsTable();
+        final int expectedColumnCount = 6;
+        assertEquals("Column Count not as expected", expectedColumnCount,tableModel.getColumnCount());
         final int expectedCount = 26;
         assertTrue("Count should be more than expected count", tableModel.getRowCount() > expectedCount);
+        CommandTestUtil.assertCellValues(tableModel);
     }
 
     @Test

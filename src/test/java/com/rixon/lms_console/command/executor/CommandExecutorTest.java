@@ -4,7 +4,7 @@ import com.rixon.lms_console.command.AbstractCommandTest;
 import com.rixon.lms_console.command.Command;
 import com.rixon.lms_console.command.CommandTestUtil;
 import com.rixon.lms_console.command.result.Result;
-import org.jetbrains.annotations.NotNull;
+import com.rixon.lms_console.facade.ServiceFacadeFactory;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -25,7 +25,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
     public void setUp() {
         super.setup();
         executor = new SimpleCommandExecutor();
-        //System.setProperty(ServiceFacadeFactory.LMS_MODE, ServiceFacadeFactory.FAKE);
+        System.setProperty(ServiceFacadeFactory.LMS_MODE, ServiceFacadeFactory.FAKE);
     }
 
     @Test
@@ -37,7 +37,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
         final int expectedItemCount = 3;
         assertEquals("count of results not same", expectedItemCount, tableModel.getRowCount());
         assertEquals("count of columns not same", 5, tableModel.getColumnCount());
-        assertCellValues(tableModel);
+        CommandTestUtil.assertCellValues(tableModel);
     }
 
     @Test
@@ -46,10 +46,10 @@ public class CommandExecutorTest extends AbstractCommandTest {
         Result result = executor.executeCommand(helpCommand);
         assertNotNull(result);
         TableModel tableModel = result.getResultsTable();
-        final int expected = 7;
+        final int expected = 8;
         assertEquals("Displayed count of commands is not same", expected, tableModel.getRowCount());
         assertEquals("Displayed count of result columns is not same", 1, tableModel.getColumnCount());
-        assertCellValues(tableModel);
+        CommandTestUtil.assertCellValues(tableModel);
     }
 
     @Test
@@ -60,7 +60,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
         TableModel tableModel = result.getResultsTable();
         assertEquals("Displayed count of commands is not same", 1, tableModel.getRowCount());
         assertEquals("Displayed count of result columns is not same", 1, tableModel.getColumnCount());
-        assertCellValues(tableModel);
+        CommandTestUtil.assertCellValues(tableModel);
     }
 
     @Test
@@ -70,7 +70,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
         assertNotNull(result);
         TableModel tableModel = result.getResultsTable();
         assertEquals("Displayed rows for issue command is not same", 1, tableModel.getRowCount());
-        assertCellValues(tableModel);
+        CommandTestUtil.assertCellValues(tableModel);
     }
 
     @Test
@@ -80,7 +80,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
         assertNotNull(result);
         TableModel tableModel = result.getResultsTable();
         assertEquals("Displayed rows for issue command is not same", 1, tableModel.getRowCount());
-        assertCellValues(tableModel);
+        CommandTestUtil.assertCellValues(tableModel);
     }
 
     @Test
@@ -90,7 +90,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
         assertNotNull(result);
         TableModel tableModel = result.getResultsTable();
         assertEquals("Displayed rows for issue command is not same", 1, tableModel.getRowCount());
-        assertCellValues(tableModel);
+        CommandTestUtil.assertCellValues(tableModel);
     }
 
     @Test
@@ -100,7 +100,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
         assertNotNull(result);
         TableModel tableModel = result.getResultsTable();
         assertEquals("Displayed rows for invalid command is not same", 2, tableModel.getRowCount());
-        assertCellValues(tableModel);
+        CommandTestUtil.assertCellValues(tableModel);
     }
 
     @Test
@@ -110,7 +110,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
         assertNotNull(result);
         TableModel tableModel = result.getResultsTable();
         assertEquals("Displayed rows for invalid command is not same", 1, tableModel.getRowCount());
-        assertCellValues(tableModel);
+        CommandTestUtil.assertCellValues(tableModel);
     }
 
     @Test
@@ -121,7 +121,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
         assertNotNull(result);
         TableModel tableModel = result.getResultsTable();
         assertEquals("Displayed rows for invalid command is not same", 2, tableModel.getRowCount());
-        assertCellValues(tableModel);
+        CommandTestUtil.assertCellValues(tableModel);
     }
 
     @Test
@@ -133,7 +133,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
         TableModel tableModel = result.getResultsTable();
         final int expectedMessageCount = 1;
         assertEquals("Displayed rows for invalid command is not same", expectedMessageCount, tableModel.getRowCount());
-        assertCellValues(tableModel);
+        CommandTestUtil.assertCellValues(tableModel);
     }
 
     @Test
@@ -145,23 +145,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
         TableModel tableModel = result.getResultsTable();
         final int expectedMessageCount = 2;
         assertEquals("Displayed rows for invalid command is not same", expectedMessageCount, tableModel.getRowCount());
-        assertCellValues(tableModel);
-    }
-
-
-    private void assertCellValues(@NotNull TableModel tableModel) {
-
-        for (int column = 0; column < tableModel.getColumnCount(); column++) {
-            Object columnName = tableModel.getColumnName(column);
-            assertNotNull("Column name is null at " + column, columnName);
-        }
-
-        for (int row = 0; row < tableModel.getRowCount(); row++) {
-            for (int column = 0; column < tableModel.getColumnCount(); column++) {
-                Object cellValue = tableModel.getValueAt(row, column);
-                assertNotNull("Cell value null at row:" + row + " column:" + column, cellValue);
-            }
-        }
+        CommandTestUtil.assertCellValues(tableModel);
     }
 
     @Test

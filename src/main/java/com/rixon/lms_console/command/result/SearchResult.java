@@ -36,11 +36,12 @@ public class SearchResult extends AbstractResult {
 
         protected void initHeader() {
             headerNames = new HashMap<Integer, String>();
-            headerNames.put(0, "isbn");
-            headerNames.put(1, "Title");
-            headerNames.put(2, "Author");
-            headerNames.put(3, "Publisher");
-            headerNames.put(4, "Published Date");
+            headerNames.put(0, "Item id");
+            headerNames.put(1, "isbn");
+            headerNames.put(2, "Title");
+            headerNames.put(3, "Author");
+            headerNames.put(4, "Publisher");
+            headerNames.put(5, "Published Date");
         }
 
         @Nullable
@@ -50,18 +51,21 @@ public class SearchResult extends AbstractResult {
             Object cellValue = null;
             switch (columnIndex) {
                 case 0:
-                    cellValue = item.getItemPropertyValue(PropertyProvider.getProperty(ISBN)).getPropertyValue();
+                    cellValue = String.valueOf(item.getId());
                     break;
                 case 1:
-                    cellValue = item.getName();
+                    cellValue = item.getItemPropertyValue(PropertyProvider.getProperty(ISBN)).getPropertyValue();
                     break;
                 case 2:
-                    cellValue = item.getItemPropertyValue(PropertyProvider.getProperty(AUTHOR)).getPropertyValue();
+                    cellValue = item.getName();
                     break;
                 case 3:
-                    cellValue = item.getItemPropertyValue(PropertyProvider.getProperty(PUBLISHER)).getPropertyValue();
+                    cellValue = item.getItemPropertyValue(PropertyProvider.getProperty(AUTHOR)).getPropertyValue();
                     break;
                 case 4:
+                    cellValue = item.getItemPropertyValue(PropertyProvider.getProperty(PUBLISHER)).getPropertyValue();
+                    break;
+                case 5:
                     cellValue = item.getItemPropertyValue(PropertyProvider.getProperty(PUBLISHED_DATE)).getPropertyValue();
                     break;
             }
@@ -71,7 +75,11 @@ public class SearchResult extends AbstractResult {
 
     @Override
     public String getFormatStringForHeader(int columnIndex) {
-        if (columnIndex==2||columnIndex==3) {
+        if (columnIndex==0) {
+            return "%1$10s |";
+        }
+
+        if (columnIndex==3||columnIndex==4) {
             return "%1$40s |";
         }
         return super.getFormatStringForHeader(columnIndex);
@@ -79,7 +87,11 @@ public class SearchResult extends AbstractResult {
 
     @Override
     public String getFormatStringForRecord(int columnIndex) {
-        if (columnIndex==2||columnIndex==3) {
+        if (columnIndex==0) {
+            return "%1$10s |";
+        }
+
+        if (columnIndex==3||columnIndex==4) {
             return "%1$40s |";
         }
         return super.getFormatStringForRecord(columnIndex);

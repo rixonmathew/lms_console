@@ -5,6 +5,7 @@ import com.rixon.lms_console.command.validator.ValidationResult;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import javax.swing.table.TableModel;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -43,6 +44,22 @@ public class CommandTestUtil {
         }
         Collections.addAll(texts, values);
         return new SimpleParameter(texts);
+    }
+
+
+    public static void assertCellValues(@NotNull TableModel tableModel) {
+
+        for (int column = 0; column < tableModel.getColumnCount(); column++) {
+            Object columnName = tableModel.getColumnName(column);
+            assertNotNull("Column name is null at " + column, columnName);
+        }
+
+        for (int row = 0; row < tableModel.getRowCount(); row++) {
+            for (int column = 0; column < tableModel.getColumnCount(); column++) {
+                Object cellValue = tableModel.getValueAt(row, column);
+                assertNotNull("Cell value null at row:" + row + " column:" + column, cellValue);
+            }
+        }
     }
 
 }

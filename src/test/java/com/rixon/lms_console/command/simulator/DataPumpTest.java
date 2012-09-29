@@ -39,37 +39,37 @@ public class DataPumpTest {
         dataSimulator = null;
     }
 
-    //@Test
+    @Test
     public void testItemPumpForBooks() {
         testItemsForItemType("BOOK", 500);
     }
 
-    //@Test
+    @Test
     public void testItemPumpForMovie() {
         testItemsForItemType("MOVIE", 500);
     }
 
-    //@Test
+    @Test
     public void testItemPumpForMusic() {
         testItemsForItemType("MUSIC", 500);
     }
 
-    //@Test
+    @Test
     public void testItemPumpForGames() {
         testItemsForItemType("GAME", 500);
     }
 
-    //@Test
+    @Test
     public void testItemPumpForMagazine() {
         testItemsForItemType("MAGAZINE", 500);
     }
 
-    //@Test
+    @Test
     public void testItemPumpForJournal() {
         testItemsForItemType("JOURNAL", 500);
     }
 
-    //@Test
+    @Test
     public void testItemPumpForNewspaperArchives() {
         testItemsForItemType("MUSIC", 500);
     }

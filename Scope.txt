@@ -1,19 +1,19 @@
 Things to be incorporated
 =========================
- Introduce list command to see users and their details
+ introduce command to show details of given item id ( should show instance id and other details that are required for reserving the book and checking out the book)
+ Add business logic in reserve and checkout to not allow reserve/ check out when the item is already check out
+ introduce command to check out item
  introduce command to see items checked out to user
  introduce command to see who has checked out a particular book
  introduce command to see reservations against a book
  If the command is invalid the message to user should be different
  introduce command to execute canned reports based on user inputs
  Consolidate all the places where operation is used in a map. Create a meta model for a command
- Result formatter that provides formatted output for the console based on the result
  do clean up before exit
  integrate the GUI of LMS with LMSConsole
  modify search result to show the count of objects available
  introduce flags for commands to show additional options
  modify search to search by id, free form search
- integrate with life cycle of maven to run by connecting to the database
  introduce concept of roles for users
  integrate command with features to restrict users to execute only those features that they can access
  Introduce command to add new user into the system
@@ -53,3 +53,7 @@ Done
  Update datapump to create item instance properties
  Introduce DAO to get the data from data store
  Introduce LMSMain and add tests for LMSConsole
+ Introduce list command to see users and their details
+ Result formatter that provides formatted output for the console based on the result
+ integrate with life cycle of maven to run by connecting to the database
+ modify search result to show the count of items available
