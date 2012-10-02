@@ -1,12 +1,11 @@
 Things to be incorporated
 =========================
- introduce command to show details of given item id ( should show instance id and other details that are required for reserving the book and checking out the book)
+ introduce command (list) to show details of given item id ( should show instance id and other details that are required for reserving the book and checking out the book)
  Add business logic in reserve and checkout to not allow reserve/ check out when the item is already check out
  introduce command to check out item
  introduce command to see items checked out to user
  introduce command to see who has checked out a particular book
  introduce command to see reservations against a book
- If the command is invalid the message to user should be different
  introduce command to execute canned reports based on user inputs
  Consolidate all the places where operation is used in a map. Create a meta model for a command
  do clean up before exit
@@ -29,7 +28,6 @@ Things to be incorporated
  Integrate with mysql database after complete application is done using hsql
  create sizing document for hsql db based on max
  Create indexes based on search performance
- Create timer to show the time taken to display the results in the console
  Create pause effect in console to limit the output one screen at a time
 
 
@@ -57,3 +55,5 @@ Done
  Result formatter that provides formatted output for the console based on the result
  integrate with life cycle of maven to run by connecting to the database
  modify search result to show the count of items available
+ If the command is invalid the message to user should be different
+ Create timer to show the time taken to display the results in the console

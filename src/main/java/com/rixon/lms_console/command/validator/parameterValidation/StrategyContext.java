@@ -28,7 +28,7 @@ public class StrategyContext {
         validationStrategyMap.put(COMMON,new CommonValidationStrategy());
         validationStrategyMap.put(EXIT,new ExitValidationStrategy());
         validationStrategyMap.put(RESERVE,new ReserveParameterValidationStrategy());
-        validationStrategyMap.put(LIST,new ListParameterValidationStrategy());
+        validationStrategyMap.put(LIST_USER,new ListUserParameterValidationStrategy());
     }
 
     public static ParameterValidationStrategy strategyForOperation(String operationType){

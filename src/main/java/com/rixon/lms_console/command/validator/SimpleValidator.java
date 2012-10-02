@@ -6,14 +6,14 @@ import com.rixon.lms_console.command.operation.OperationsCatalog;
 import com.rixon.lms_console.command.validator.parameterValidation.ParameterValidator;
 import org.jetbrains.annotations.NotNull;
 
+import static com.rixon.lms_console.command.validator.ValidationMessageProvider.*;
+
 /**
  * ${CLASS_NAME}
  * User: rixon|Date: 8/3/12|Time: 8:27 PM
  */
 public class SimpleValidator implements Validator<String> {
 
-    private final static String SUCCESS_KEY = "success";
-    private final static String DEFAULT_KEY = "default";
 
     @NotNull
     @Override
@@ -26,7 +26,13 @@ public class SimpleValidator implements Validator<String> {
         if (isCommandValid) {
             messageKey = SUCCESS_KEY;
         } else {
-            messageKey = DEFAULT_KEY;
+            if (!isOperationValid) {
+                messageKey = INVALID_OPERATION_KEY;
+            } else if (!areParametersValid) {
+                messageKey = INVALID_PARAMETERS_KEY;
+            } else {
+                messageKey = DEFAULT_KEY;
+            }
         }
         validationMessage = ValidationMessageProvider.getMessageForKey(messageKey);
         validationHint = operation.getUsage();//ValidationHintProvider.getHintForKey(hintKey);

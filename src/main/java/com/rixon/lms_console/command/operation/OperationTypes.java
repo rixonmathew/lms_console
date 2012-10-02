@@ -13,5 +13,5 @@ public final class OperationTypes {
    public static final String RETURN = "return";
    public static final String EXIT = "exit";
    public static final String RESERVE = "reserve";
-   public static final String LIST = "list";
+   public static final String LIST_USER = "list-user";
 }

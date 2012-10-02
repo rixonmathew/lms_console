@@ -11,9 +11,9 @@ package com.rixon.lms_console.command.operation;
  * This class represents the operation type list
  * User: rixon|Date: 9/19/12|Time: 4:43 PM
  */
-public class ListOperation extends AbstractOperation {
-    ListOperation(String operationType) {
+public class ListUserOperation extends AbstractOperation {
+    ListUserOperation(String operationType) {
         super(operationType);
-        usage = "Usage: list [userid]";
+        usage = "Usage: list-user [userid]";
     }
 }

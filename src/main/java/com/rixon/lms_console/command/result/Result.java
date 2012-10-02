@@ -33,4 +33,5 @@ public interface Result {
      * @return the format string
      */
     public String getFormatStringForRecord(int columnIndex);
+
 }

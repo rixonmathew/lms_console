@@ -14,7 +14,7 @@ import org.jetbrains.annotations.Nullable;
  * This class represents the validation strategy for list operation parameters
  * User: rixon|Date: 9/19/12|Time: 4:45 PM
  */
-public class ListParameterValidationStrategy extends CommonValidationStrategy {
+public class ListUserParameterValidationStrategy extends CommonValidationStrategy {
     @Override
     public boolean validateParameter(@Nullable Parameter<String> parameter) {
         boolean isValid;

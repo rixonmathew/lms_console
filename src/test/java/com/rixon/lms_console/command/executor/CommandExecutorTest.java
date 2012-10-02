@@ -150,7 +150,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
 
     @Test
     public void testListCommandWithNoParameters() {
-        Command listCommand = CommandTestUtil.createCommand("list","",builder);
+        Command listCommand = CommandTestUtil.createCommand("list-user","",builder);
         assertNotNull(listCommand);
         CommandTestUtil.assertValidationResult(listCommand.getValidationResult(),true);
         Result result = executor.executeCommand(listCommand);

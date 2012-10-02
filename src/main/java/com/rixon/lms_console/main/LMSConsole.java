@@ -23,6 +23,7 @@ public class LMSConsole {
     private final String LMS_PROMPT = "LMS>";
     private final String EXIT_COMMAND = "exit";
     private final int LINE_LENGTH = 160;
+    private long currentTime;
 
     public LMSConsole() {
         initializeEnvironment();
@@ -50,6 +51,7 @@ public class LMSConsole {
                 continue;
             }
             Command command = builder.buildCommand(userCommandString);
+            startTimer();
             Result result = executor.executeCommand(command);
             if (command.isValid()) {
                 displayResultInConsole(result);
@@ -58,6 +60,10 @@ public class LMSConsole {
             }
         }
         while (!userCommandString.equalsIgnoreCase(EXIT_COMMAND));
+    }
+
+    private void startTimer() {
+        currentTime  = System.nanoTime();
     }
 
 
@@ -84,6 +90,14 @@ public class LMSConsole {
             console.printf("%n");
         }
         drawLine(LINE_LENGTH);
+        displayTimeTaken();
+        drawLine(LINE_LENGTH);
+    }
+
+    private void displayTimeTaken() {
+        float timeTaken = (System.nanoTime() - currentTime);
+        timeTaken/=10e9;
+        console.printf("Time taken: %1$f seconds \n",timeTaken);
     }
 
     private void printBanner() {

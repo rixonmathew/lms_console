@@ -31,4 +31,5 @@ public abstract class AbstractResult implements Result {
     public String getFormatStringForRecord(int columnIndex) {
         return "%1$20s |";
     }
+
 }

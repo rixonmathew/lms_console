@@ -17,8 +17,8 @@ import java.util.List;
  * This class represents the results for the list command
  * User: rixon|Date: 9/19/12|Time: 9:07 PM
  */
-public class ListResult extends AbstractResult {
-    public ListResult(List results) {
+public class ListUserResult extends AbstractResult {
+    public ListUserResult(List results) {
         super(results);
     }
 

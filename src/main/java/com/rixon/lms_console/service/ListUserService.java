@@ -10,7 +10,7 @@ package com.rixon.lms_console.service;
 import com.rixon.lms_console.business.SimpleStore;
 import com.rixon.lms_console.business.Store;
 import com.rixon.lms_console.command.Parameter;
-import com.rixon.lms_console.command.result.ListResult;
+import com.rixon.lms_console.command.result.ListUserResult;
 import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.dao.Member;
 
@@ -21,7 +21,7 @@ import java.util.List;
  * This class represents the service for List command
  * User: rixon|Date: 9/19/12|Time: 9:39 PM
  */
-public class ListService implements Service {
+public class ListUserService implements Service {
     @Override
     public Result execute(Parameter<String> parameter) {
         List<String> parameterValues = (List<String>) parameter.getParameters();
@@ -34,6 +34,6 @@ public class ListService implements Service {
             Member member = store.memberById(id);
             members.add(member);
         }
-        return new ListResult(members);
+        return new ListUserResult(members);
     }
 }

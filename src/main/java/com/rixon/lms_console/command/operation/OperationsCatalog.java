@@ -23,7 +23,7 @@ public class OperationsCatalog {
         validOperationTypes.add(HELP);
         validOperationTypes.add(EXIT);
         validOperationTypes.add(RESERVE);
-        validOperationTypes.add(LIST);
+        validOperationTypes.add(LIST_USER);
     }
 
     public static boolean isOperationValid(String operationType) {

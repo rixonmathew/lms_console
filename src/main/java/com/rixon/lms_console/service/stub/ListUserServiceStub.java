@@ -8,7 +8,7 @@
 package com.rixon.lms_console.service.stub;
 
 import com.rixon.lms_console.command.Parameter;
-import com.rixon.lms_console.command.result.ListResult;
+import com.rixon.lms_console.command.result.ListUserResult;
 import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.dao.Member;
 import com.rixon.lms_console.service.Service;
@@ -20,7 +20,7 @@ import java.util.List;
  *  Stub servcice for unit testing
  *  User: rixon|Date: 9/19/12|Time: 9:04 PM
  */
-public class ListServiceStub implements Service {
+public class ListUserServiceStub implements Service {
     @Override
     public Result execute(Parameter<String> parameter) {
         List<Member> members = new ArrayList<Member>();
@@ -28,7 +28,7 @@ public class ListServiceStub implements Service {
         members.add(createMockMember("John","Barrow","johnbarrow@gmail.com"));
         members.add(createMockMember("Steve","Jobs","jobs@apple.com"));
         members.add(createMockMember("Little","Johnny","littlejohn@arthur.com"));
-        return new ListResult(members);
+        return new ListUserResult(members);
     }
 
     private Member createMockMember(String firstName,String lastName,String emailID) {

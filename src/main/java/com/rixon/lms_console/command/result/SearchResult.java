@@ -75,25 +75,28 @@ public class SearchResult extends AbstractResult {
 
     @Override
     public String getFormatStringForHeader(int columnIndex) {
-        if (columnIndex==0) {
-            return "%1$10s |";
-        }
+        String formatString = null;
+        switch (columnIndex) {
+            case 0:
+                formatString = "%1$10s |";
+                break;
+            case 3:
+            case 4:
+                formatString = "%1$40s |";
+                break;
+            case 5:
+                formatString = "%1$14s |";
+                break;
 
-        if (columnIndex==3||columnIndex==4) {
-            return "%1$40s |";
         }
-        return super.getFormatStringForHeader(columnIndex);
-    }
+        if (formatString==null) {
+            formatString = super.getFormatStringForHeader(columnIndex);
+        }
+        return formatString;
+   }
 
     @Override
     public String getFormatStringForRecord(int columnIndex) {
-        if (columnIndex==0) {
-            return "%1$10s |";
-        }
-
-        if (columnIndex==3||columnIndex==4) {
-            return "%1$40s |";
-        }
-        return super.getFormatStringForRecord(columnIndex);
+        return getFormatStringForHeader(columnIndex);
     }
 }
