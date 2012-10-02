@@ -149,7 +149,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
     }
 
     @Test
-    public void testListCommandWithNoParameters() {
+    public void testListUserCommandWithNoParameters() {
         Command listCommand = CommandTestUtil.createCommand("list-user","",builder);
         assertNotNull(listCommand);
         CommandTestUtil.assertValidationResult(listCommand.getValidationResult(),true);
@@ -157,6 +157,20 @@ public class CommandExecutorTest extends AbstractCommandTest {
         assertNotNull(result);
         TableModel tableModel = result.getResultsTable();
         final int expectedRowCount = 4;
+    }
+
+    @Test
+    public void testListItemCommand() {
+        final long itemID = 11231;
+        Command listItemCommand = CommandTestUtil.createCommand("list-item",String.valueOf(itemID),builder);
+        assertNotNull(listItemCommand);
+        CommandTestUtil.assertValidationResult(listItemCommand.getValidationResult(),true);
+        Result result = executor.executeCommand(listItemCommand);
+        assertNotNull(result);
+        TableModel tableModel = result.getResultsTable();
+        final int expectedRowCount = 1;
         assertEquals("Displayed rows for list command is not as expected",expectedRowCount,tableModel.getRowCount());
+        CommandTestUtil.assertCellValues(tableModel);
+
     }
 }

@@ -29,6 +29,7 @@ public class OperationFlyWeightFactory {
       operationMap.put(EXIT,new ExitOperation(EXIT));
       operationMap.put(RESERVE,new ReserveOperation(RESERVE));
       operationMap.put(LIST_USER,new ListUserOperation(LIST_USER));
+      operationMap.put(LIST_ITEM,new ListItemOperation(LIST_ITEM));
     }
 
     public static Operation operationForType(String operationType){

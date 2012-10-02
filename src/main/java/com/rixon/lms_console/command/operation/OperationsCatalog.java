@@ -24,6 +24,7 @@ public class OperationsCatalog {
         validOperationTypes.add(EXIT);
         validOperationTypes.add(RESERVE);
         validOperationTypes.add(LIST_USER);
+        validOperationTypes.add(LIST_ITEM);
     }
 
     public static boolean isOperationValid(String operationType) {

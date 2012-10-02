@@ -29,6 +29,7 @@ public class StrategyContext {
         validationStrategyMap.put(EXIT,new ExitValidationStrategy());
         validationStrategyMap.put(RESERVE,new ReserveParameterValidationStrategy());
         validationStrategyMap.put(LIST_USER,new ListUserParameterValidationStrategy());
+        validationStrategyMap.put(LIST_ITEM,new ListItemParameterValidationStrategy());
     }
 
     public static ParameterValidationStrategy strategyForOperation(String operationType){
