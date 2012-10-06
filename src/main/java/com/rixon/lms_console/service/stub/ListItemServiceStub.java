@@ -8,8 +8,13 @@
 package com.rixon.lms_console.service.stub;
 
 import com.rixon.lms_console.command.Parameter;
+import com.rixon.lms_console.command.result.ListItemResult;
 import com.rixon.lms_console.command.result.Result;
+import com.rixon.lms_console.dao.Item;
 import com.rixon.lms_console.service.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This class represents the stub service implementation for list-item service
@@ -18,6 +23,9 @@ import com.rixon.lms_console.service.Service;
 public class ListItemServiceStub implements Service {
     @Override
     public Result execute(Parameter<String> parameter) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        List<Item> items = new ArrayList<Item>();
+        Item item = MockItemsProvider.createMockItem("Book1", "A sample Book");
+        items.add(item);
+        return new ListItemResult(items);
     }
 }

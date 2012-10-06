@@ -25,7 +25,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
     public void setUp() {
         super.setup();
         executor = new SimpleCommandExecutor();
-        System.setProperty(ServiceFacadeFactory.LMS_MODE, ServiceFacadeFactory.FAKE);
+        //System.setProperty(ServiceFacadeFactory.LMS_MODE, ServiceFacadeFactory.FAKE);
     }
 
     @Test
@@ -161,7 +161,22 @@ public class CommandExecutorTest extends AbstractCommandTest {
 
     @Test
     public void testListItemCommand() {
-        final long itemID = 11231;
+        final long itemID = 12982;
+        Command listItemCommand = CommandTestUtil.createCommand("list-item",String.valueOf(itemID),builder);
+        assertNotNull(listItemCommand);
+        CommandTestUtil.assertValidationResult(listItemCommand.getValidationResult(),true);
+        Result result = executor.executeCommand(listItemCommand);
+        assertNotNull(result);
+        TableModel tableModel = result.getResultsTable();
+        final int expectedRowCount = 15;
+        assertEquals("Displayed rows for list command is not as expected",expectedRowCount,tableModel.getRowCount());
+        CommandTestUtil.assertCellValues(tableModel);
+
+    }
+
+    @Test
+    public void testLitstItemCommandForInvalidItemID() {
+        final long itemID = 101;
         Command listItemCommand = CommandTestUtil.createCommand("list-item",String.valueOf(itemID),builder);
         assertNotNull(listItemCommand);
         CommandTestUtil.assertValidationResult(listItemCommand.getValidationResult(),true);

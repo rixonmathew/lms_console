@@ -28,8 +28,11 @@ import java.util.Map;
 public class ItemMapper {
 
     @NotNull
-    public static Item mapToItem(@NotNull ItemRecord itemRecord, @NotNull List<ItemPropertyRecord> itemProperties) {
+    public static Item mapToItem(ItemRecord itemRecord, List<ItemPropertyRecord> itemProperties) {
         Item.ItemBuilder itemBuilder = new Item.ItemBuilder();
+        if (itemRecord==null) {
+            return itemBuilder.createItem();
+        }
         itemBuilder.setId(itemRecord.getId());
         itemBuilder.setName(itemRecord.getName());
         itemBuilder.setDescription(itemRecord.getDescription());
@@ -39,8 +42,12 @@ public class ItemMapper {
     }
 
     @NotNull
-    private static Map<Property, PropertyValue> mapItemProperties(@NotNull List<ItemPropertyRecord> itemPropertyRecords) {
+    private static Map<Property, PropertyValue> mapItemProperties(List<ItemPropertyRecord> itemPropertyRecords) {
         Map<Property, PropertyValue> itemPropertyValueMap = new HashMap<Property, PropertyValue>();
+        if (itemPropertyRecords==null) {
+            return itemPropertyValueMap;
+        }
+
         for (ItemPropertyRecord itemPropertyRecord : itemPropertyRecords) {
             Property property = PropertyMapper.mapToProperty(itemPropertyRecord.getPropertyRecord());
             PropertyValue propertyValue = ItemPropertyMapper.mapToItemPropertyValue(itemPropertyRecord);

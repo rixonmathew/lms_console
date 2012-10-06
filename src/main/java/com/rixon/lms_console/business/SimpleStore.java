@@ -154,4 +154,11 @@ public class SimpleStore implements Store {
         MemberRecord memberRecord = lmsDao.findMember(id);
         return MemberMapper.mapToMember(memberRecord);
     }
+
+    @Override
+    public Item searchItemById(long itemId) {
+        ItemRecord itemRecord = lmsDao.itemWithId(itemId);
+        List<ItemPropertyRecord> itemPropertyRecords =   lmsDao.propertiesForItem(itemRecord);
+        return ItemMapper.mapToItem(itemRecord,itemPropertyRecords);
+    }
 }

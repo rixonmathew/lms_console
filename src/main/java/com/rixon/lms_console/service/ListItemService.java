@@ -7,8 +7,15 @@
 
 package com.rixon.lms_console.service;
 
+import com.rixon.lms_console.business.SimpleStore;
+import com.rixon.lms_console.business.Store;
 import com.rixon.lms_console.command.Parameter;
+import com.rixon.lms_console.command.result.ListItemResult;
 import com.rixon.lms_console.command.result.Result;
+import com.rixon.lms_console.dao.Item;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This class implements the service corresponding to the operation list-item
@@ -17,6 +24,14 @@ import com.rixon.lms_console.command.result.Result;
 public class ListItemService implements Service {
     @Override
     public Result execute(Parameter<String> parameter) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        List<String> parameterValues = (List<String>)parameter.getParameters();
+        String itemIdString = parameterValues.get(0);
+        long itemId = Long.parseLong(itemIdString);
+        Store store = SimpleStore.getInstance();
+        Item item = store.searchItemById(itemId);
+        List<Item> items = new ArrayList<Item>();
+        items.add(item);
+        return new ListItemResult(items);
+
     }
 }

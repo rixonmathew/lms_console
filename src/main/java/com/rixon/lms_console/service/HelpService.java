@@ -22,7 +22,7 @@ import java.util.List;
  * This class implements the service for help operation
  * User: rixon|Date: 8/17/12|Time: 11:30 PM
  */
-public class HelpService implements Service {
+public class  HelpService implements Service {
     @NotNull
     @Override
     public Result execute(@NotNull Parameter<String> parameter) {

@@ -14,7 +14,6 @@ import com.rixon.lms_console.dao.Item;
 import com.rixon.lms_console.dao.ItemInstance;
 import com.rixon.lms_console.dao.Property;
 import com.rixon.lms_console.dao.PropertyValue;
-import com.rixon.lms_console.util.DateUtil;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;

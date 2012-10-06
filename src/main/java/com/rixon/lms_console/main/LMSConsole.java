@@ -51,9 +51,9 @@ public class LMSConsole {
                 continue;
             }
             Command command = builder.buildCommand(userCommandString);
-            startTimer();
-            Result result = executor.executeCommand(command);
             if (command.isValid()) {
+                startTimer();
+                Result result = executor.executeCommand(command);
                 displayResultInConsole(result);
             } else {
                 displayErrorInConsole(command);

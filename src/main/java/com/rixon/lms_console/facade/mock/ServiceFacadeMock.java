@@ -38,6 +38,7 @@ public class ServiceFacadeMock implements ServiceFacade {
         serviceMap.put(EXIT,new ExitServiceStub());
         serviceMap.put(RESERVE,new ReserveServiceStub());
         serviceMap.put(LIST_USER,new ListUserServiceStub());
+        serviceMap.put(LIST_ITEM,new ListItemServiceStub());
     }
     public Service serviceForOperation(String operationName) {
         return serviceMap.get(operationName);

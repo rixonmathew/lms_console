@@ -160,6 +160,9 @@ public class LMSDaoSQL implements LMSDao {
     @NotNull
     @Override
     public List<ItemPropertyRecord> propertiesForItem(ItemRecord itemRecord) {
+        if (itemRecord==null) {
+            return new ArrayList<ItemPropertyRecord>();
+        }
         Query itemPropertiesQuery = entityManager.createNamedQuery(ItemPropertyRecord.ITEM_PROPERTY_QUERY);
         itemPropertiesQuery.setParameter("itemRecord", itemRecord);
         return (List<ItemPropertyRecord>) itemPropertiesQuery.getResultList();

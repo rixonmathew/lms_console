@@ -108,4 +108,11 @@ public interface Store {
      * @return member instance
      */
     Member memberById(long id);
+
+    /**
+     * This method will return an Item based on the itemId;
+     * @param itemId the item id
+     * @return the Item Record
+     */
+    Item searchItemById(long itemId);
 }

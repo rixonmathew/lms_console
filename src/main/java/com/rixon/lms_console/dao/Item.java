@@ -104,6 +104,13 @@ public class Item {
         return itemProperties;
     }
 
+    public boolean isValidItem() {
+        if (id==0) {
+            return false;
+        }
+        return true;
+    }
+
     /**
      * This class is the builder for building Item instances
      */
