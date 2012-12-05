@@ -13,7 +13,11 @@
     <wildcardResourcePatterns>
       <entry name="!?*.java" />
     </wildcardResourcePatterns>
-    <annotationProcessing enabled="false" useClasspath="true" />
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+    </annotationProcessing>
   </component>
   <component name="CopyrightManager" default="rixon.mathew@cognizant.com">
     <copyright>
@@ -27,6 +31,7 @@
       <element module="All" copyright="rixon.mathew@cognizant.com" />
     </module2copyright>
   </component>
+  <component name="DataSourceManagerImpl" compressed="false" hash="599820036" />
   <component name="DependencyValidationManager">
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>
@@ -41,6 +46,7 @@
     <option name="OPEN_IN_BROWSER" value="false" />
     <option name="OUTPUT_DIRECTORY" />
   </component>
+  <component name="IdProvider" IDEtalkID="DE581F10B8B9BF539BBEAF9131FB4D88" />
   <component name="ImportConfiguration">
     <option name="VENDOR" />
     <option name="RELEASE_TAG" />

@@ -20,22 +20,23 @@ import static com.rixon.lms_console.command.operation.OperationTypes.*;
  */
 public class ServiceFacadeReal implements ServiceFacade {
 
-    private Map<String,Service> serviceMap;
+    private Map<String, Service> serviceMap;
 
     public ServiceFacadeReal() {
-      loadServiceMap();
+        loadServiceMap();
     }
 
-    private void loadServiceMap(){
-        serviceMap  = new HashMap<String,Service>();
-        serviceMap.put(SEARCH,new SearchService());
-        serviceMap.put(HELP,new HelpService());
-        serviceMap.put(ISSUE,new IssueService());
-        serviceMap.put(TRANSFER,new TransferService());
-        serviceMap.put(RETURN,new ReturnService());
-        serviceMap.put(EXIT,new ExitService());
-        serviceMap.put(LIST_USER,new ListUserService());
-        serviceMap.put(LIST_ITEM,new ListItemService());
+    private void loadServiceMap() {
+        serviceMap = new HashMap<String, Service>();
+        serviceMap.put(SEARCH, new SearchService());
+        serviceMap.put(HELP, new HelpService());
+        serviceMap.put(ISSUE, new IssueService());
+        serviceMap.put(TRANSFER, new TransferService());
+        serviceMap.put(RETURN, new ReturnService());
+        serviceMap.put(EXIT, new ExitService());
+        serviceMap.put(LIST_USER, new ListUserService());
+        serviceMap.put(LIST_ITEM, new ListItemService());
+        serviceMap.put(RESERVE, new ReserveItemService());
     }
 
     public Service serviceForOperation(String operationName) {

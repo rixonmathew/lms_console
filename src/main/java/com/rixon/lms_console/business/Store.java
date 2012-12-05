@@ -98,12 +98,14 @@ public interface Store {
 
     /**
      * This method will return all members of the library system
+     *
      * @return list of Library Members
      */
     List<Member> allMembers();
 
     /**
      * This method will return a single member based on the id.
+     *
      * @param id the id of the member
      * @return member instance
      */
@@ -111,8 +113,19 @@ public interface Store {
 
     /**
      * This method will return an Item based on the itemId;
+     *
      * @param itemId the item id
      * @return the Item Record
      */
     Item searchItemById(long itemId);
+
+    /**
+     * This method is used for reserving an item to a user. It is assumed that the item and user is valid before this method is executed.
+     * This method will reserve the available instance of the item to the user and provide the result in the form of a list.
+     *
+     * @param itemId
+     * @param userId
+     * @return
+     */
+    List reserveItemForUser(String itemId, String userId);
 }

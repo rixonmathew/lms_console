@@ -25,7 +25,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
     public void setUp() {
         super.setup();
         executor = new SimpleCommandExecutor();
-        //System.setProperty(ServiceFacadeFactory.LMS_MODE, ServiceFacadeFactory.FAKE);
+        System.setProperty(ServiceFacadeFactory.LMS_MODE, ServiceFacadeFactory.FAKE);
     }
 
     @Test
@@ -36,7 +36,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
         TableModel tableModel = result.getResultsTable();
         final int expectedItemCount = 3;
         assertEquals("count of results not same", expectedItemCount, tableModel.getRowCount());
-        assertEquals("count of columns not same", 5, tableModel.getColumnCount());
+        assertEquals("count of columns not same", 6, tableModel.getColumnCount());
         CommandTestUtil.assertCellValues(tableModel);
     }
 
@@ -46,7 +46,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
         Result result = executor.executeCommand(helpCommand);
         assertNotNull(result);
         TableModel tableModel = result.getResultsTable();
-        final int expected = 8;
+        final int expected = 9;
         assertEquals("Displayed count of commands is not same", expected, tableModel.getRowCount());
         assertEquals("Displayed count of result columns is not same", 1, tableModel.getColumnCount());
         CommandTestUtil.assertCellValues(tableModel);
@@ -150,9 +150,9 @@ public class CommandExecutorTest extends AbstractCommandTest {
 
     @Test
     public void testListUserCommandWithNoParameters() {
-        Command listCommand = CommandTestUtil.createCommand("list-user","",builder);
+        Command listCommand = CommandTestUtil.createCommand("list-user", "", builder);
         assertNotNull(listCommand);
-        CommandTestUtil.assertValidationResult(listCommand.getValidationResult(),true);
+        CommandTestUtil.assertValidationResult(listCommand.getValidationResult(), true);
         Result result = executor.executeCommand(listCommand);
         assertNotNull(result);
         TableModel tableModel = result.getResultsTable();
@@ -162,14 +162,14 @@ public class CommandExecutorTest extends AbstractCommandTest {
     @Test
     public void testListItemCommand() {
         final long itemID = 12982;
-        Command listItemCommand = CommandTestUtil.createCommand("list-item",String.valueOf(itemID),builder);
+        Command listItemCommand = CommandTestUtil.createCommand("list-item", String.valueOf(itemID), builder);
         assertNotNull(listItemCommand);
-        CommandTestUtil.assertValidationResult(listItemCommand.getValidationResult(),true);
+        CommandTestUtil.assertValidationResult(listItemCommand.getValidationResult(), true);
         Result result = executor.executeCommand(listItemCommand);
         assertNotNull(result);
         TableModel tableModel = result.getResultsTable();
-        final int expectedRowCount = 15;
-        assertEquals("Displayed rows for list command is not as expected",expectedRowCount,tableModel.getRowCount());
+        final int expectedRowCount = 1; //15 in real mode
+        assertEquals("Displayed rows for list command is not as expected", expectedRowCount, tableModel.getRowCount());
         CommandTestUtil.assertCellValues(tableModel);
 
     }
@@ -177,14 +177,14 @@ public class CommandExecutorTest extends AbstractCommandTest {
     @Test
     public void testLitstItemCommandForInvalidItemID() {
         final long itemID = 101;
-        Command listItemCommand = CommandTestUtil.createCommand("list-item",String.valueOf(itemID),builder);
+        Command listItemCommand = CommandTestUtil.createCommand("list-item", String.valueOf(itemID), builder);
         assertNotNull(listItemCommand);
-        CommandTestUtil.assertValidationResult(listItemCommand.getValidationResult(),true);
+        CommandTestUtil.assertValidationResult(listItemCommand.getValidationResult(), true);
         Result result = executor.executeCommand(listItemCommand);
         assertNotNull(result);
         TableModel tableModel = result.getResultsTable();
         final int expectedRowCount = 1;
-        assertEquals("Displayed rows for list command is not as expected",expectedRowCount,tableModel.getRowCount());
+        assertEquals("Displayed rows for list command is not as expected", expectedRowCount, tableModel.getRowCount());
         CommandTestUtil.assertCellValues(tableModel);
 
     }

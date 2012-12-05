@@ -50,5 +50,5 @@ public class MockItemsProvider {
         properties.put(publishedDate, publishedDatePropertyValue);
         itemBuilder.setItemProperties(properties);
         return itemBuilder.createItem();
-    };
+    }
 }

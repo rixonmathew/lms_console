@@ -15,7 +15,7 @@ public class HelpParameterValidationStrategy extends CommonValidationStrategy {
             isValid = true;
             return isValid;
         }
-        isValid = !(parameter.getParameters().size() != 1);
+        isValid = parameter.getParameters().size() == 1;
         return isValid;
     }
 }

@@ -22,7 +22,7 @@ public class ListUserParameterValidationStrategy extends CommonValidationStrateg
             isValid = true;
             return isValid;
         }
-        isValid = !(parameter.getParameters().size() != 1);
+        isValid = (parameter.getParameters().size() == 1);
         return isValid;
     }
 

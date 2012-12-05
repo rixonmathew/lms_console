@@ -142,7 +142,7 @@ public class SimpleStore implements Store {
     public List<Member> allMembers() {
         List<Member> members = new ArrayList<Member>();
         List<MemberRecord> memberRecords = lmsDao.getAllMembers();
-        for (MemberRecord memberRecord:memberRecords) {
+        for (MemberRecord memberRecord : memberRecords) {
             Member member = MemberMapper.mapToMember(memberRecord);
             members.add(member);
         }
@@ -158,7 +158,12 @@ public class SimpleStore implements Store {
     @Override
     public Item searchItemById(long itemId) {
         ItemRecord itemRecord = lmsDao.itemWithId(itemId);
-        List<ItemPropertyRecord> itemPropertyRecords =   lmsDao.propertiesForItem(itemRecord);
-        return ItemMapper.mapToItem(itemRecord,itemPropertyRecords);
+        List<ItemPropertyRecord> itemPropertyRecords = lmsDao.propertiesForItem(itemRecord);
+        return ItemMapper.mapToItem(itemRecord, itemPropertyRecords);
+    }
+
+    @Override
+    public List reserveItemForUser(String itemId, String userId) {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
     }
 }

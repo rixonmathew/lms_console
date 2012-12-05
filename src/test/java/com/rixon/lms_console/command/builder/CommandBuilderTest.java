@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
  * This class is used for testing te command building functionality
  * User: rixon|Date: 8/17/12|Time: 10:01 AM
  */
-public class CommandBuilderTest extends AbstractCommandTest{
+public class CommandBuilderTest extends AbstractCommandTest {
 
     @Test
     public void testBasicCommandCreation() {
@@ -37,7 +37,7 @@ public class CommandBuilderTest extends AbstractCommandTest{
         final String issueOperation = "issue";
         final String books = "b12312322";
         final String userId = "u1123u22";
-        Command booksIssueCommand = CommandTestUtil.createCommand(issueOperation,userId+" "+books,builder);
+        Command booksIssueCommand = CommandTestUtil.createCommand(issueOperation, userId + " " + books, builder);
         assertNotNull(booksIssueCommand);
         List<String> parameters = (List<String>) booksIssueCommand.getParameter().getParameters();
         assertEquals("Parameter size is not same", 2, parameters.size());
@@ -48,7 +48,7 @@ public class CommandBuilderTest extends AbstractCommandTest{
     public void testInvalidCommand() {
         final String invalidSearchCommand = "searchhh";
         final String books = "bb123 12312323 123123";
-        Command invalidCommand =  CommandTestUtil.createCommand(invalidSearchCommand,books,builder);
+        Command invalidCommand = CommandTestUtil.createCommand(invalidSearchCommand, books, builder);
         assertFalse("isValid flag should be no", invalidCommand.isValid());
         assertEquals("Command string is not same", invalidSearchCommand + " " + books, invalidCommand.getOriginalCommandString());
         CommandTestUtil.assertValidationResult(invalidCommand.getValidationResult(), false);
@@ -58,8 +58,8 @@ public class CommandBuilderTest extends AbstractCommandTest{
     public void testValidationMessage() {
         final String invalidIssueCommand = "iisue";
         final String parameters = "123123,123123223,1112323";
-        final String expectedValidationMessage = "There was an error in the command syntax. refer usage of the command via help \n";
-        Command bookIssueCommand = CommandTestUtil.createCommand(invalidIssueCommand,parameters,builder);
+        final String expectedValidationMessage = "The operation specified is not valid. Type help to get list of valid operations \n";
+        Command bookIssueCommand = CommandTestUtil.createCommand(invalidIssueCommand, parameters, builder);
         assertNotNull(bookIssueCommand);
         CommandTestUtil.assertValidationResult(bookIssueCommand.getValidationResult(), false);
         String actualValidationMessage = bookIssueCommand.getValidationResult().validationMessage();
