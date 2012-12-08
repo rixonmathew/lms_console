@@ -1128,9 +1128,11 @@
     <table name="ITEM_INSTANCE_TRANSACTION" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
       <column name="ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
       <column name="ITEM_INSTANCE_ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
-      <column name="TRANSACTION_ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
+      <column name="TRANSACTION_TYPE_ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
+      <column name="MEMBER_ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
       <primary-key name="SYS_PK_10083" columns="ID" />
-      <foreign-key name="SYS_FK_10086" columns="TRANSACTION_ID" ref-table="TRANSACTION_TYPE" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
+      <foreign-key name="SYS_FK_10160" columns="MEMBER_ID" ref-table="MEMBER" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
+      <foreign-key name="SYS_FK_10086" columns="TRANSACTION_TYPE_ID" ref-table="TRANSACTION_TYPE" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
       <exported-key name="SYS_FK_10091" table="TRANSACTION_HISTORY" schema="PUBLIC" catalog="PUBLIC" columns="PARENT_TRANSACTION_ID" />
       <exported-key name="SYS_FK_10092" table="TRANSACTION_HISTORY" schema="PUBLIC" catalog="PUBLIC" columns="CHILD_TRANSACTION_ID" />
       <exported-key name="SYS_FK_10146" table="ITEM_INSTANCE_TRANSACTION_PROPERTY" schema="PUBLIC" catalog="PUBLIC" columns="ITEM_INSTANCE_TRANSACTION_ID" />
@@ -1175,6 +1177,7 @@
       <column name="EMAIL_ID" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
       <column name="PASSWORD" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
       <primary-key name="SYS_PK_10098" columns="ID" />
+      <exported-key name="SYS_FK_10160" table="ITEM_INSTANCE_TRANSACTION" schema="PUBLIC" catalog="PUBLIC" columns="MEMBER_ID" />
       <exported-key name="SYS_FK_10107" table="MEMBER_PROPERTY" schema="PUBLIC" catalog="PUBLIC" columns="MEMBER_ID" />
       <exported-key name="SYS_FK_10136" table="MEMBER_ROLE" schema="PUBLIC" catalog="PUBLIC" columns="MEMBER_ID" />
     </table>

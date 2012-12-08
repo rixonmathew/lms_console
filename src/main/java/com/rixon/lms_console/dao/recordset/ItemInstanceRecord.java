@@ -22,12 +22,16 @@ import javax.persistence.*;
                 query = "select itemInstance from ItemInstanceRecord itemInstance"),
         @NamedQuery(name = ItemInstanceRecord.ITEM_RECORD_QUERY,
                 query = "select itemInstance from ItemInstanceRecord itemInstance " +
-                        "where itemInstance.itemRecord = :itemRecord")
+                        "where itemInstance.itemRecord = :itemRecord"),
+        @NamedQuery(name = ItemInstanceRecord.ITEM_INSTANCE_ID_QUERY,
+                query = "select itemInstance from ItemInstanceRecord itemInstance " +
+                        "where itemInstance.id = :id")
 })
 public class ItemInstanceRecord {
 
     public static final String ALL_ITEM_INSTANCES_QUERY = "all_item_instances_query";
     public static final String ITEM_RECORD_QUERY = "item_record_query";
+    public static final String ITEM_INSTANCE_ID_QUERY = "item_instance_id_query";
 
     private long id;
     private ItemRecord itemRecord;

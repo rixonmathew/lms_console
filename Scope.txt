@@ -1,6 +1,5 @@
 Things to be incorporated
 =========================
- introduce command (list) to show details of given item id ( should show instance id and other details that are required for reserving the book and checking out the book)
  Add business logic in reserve and checkout to not allow reserve/ check out when the item is already check out
  introduce command to check out item
  introduce command to see items checked out to user
@@ -57,3 +56,4 @@ Done
  modify search result to show the count of items available
  If the command is invalid the message to user should be different
  Create timer to show the time taken to display the results in the console
+ introduce command (list) to show details of given item id ( should show instance id and other details that are required for reserving the book and checking out the book)

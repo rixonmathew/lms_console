@@ -10,7 +10,6 @@
              version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence ">
     <persistence-unit name="lms-eclipselink" transaction-type="RESOURCE_LOCAL">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <class>com.rixon.lms_console.domain.Book</class>
         <class>com.rixon.lms_console.dao.recordset.MemberRecord</class>
         <class>com.rixon.lms_console.dao.recordset.ItemTypeRecord</class>
         <class>com.rixon.lms_console.dao.recordset.RoleRecord</class>
@@ -22,6 +21,8 @@
         <class>com.rixon.lms_console.dao.recordset.RoleFeatureRecord</class>
         <class>com.rixon.lms_console.dao.recordset.ItemInstancePropertyRecord</class>
         <class>com.rixon.lms_console.dao.recordset.ItemInstanceRecord</class>
+        <class>com.rixon.lms_console.dao.recordset.TransactionTypeRecord</class>
+        <class>com.rixon.lms_console.dao.recordset.ItemInstanceTransactionRecord</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbc.JDBCDriver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:hsql://localhost:9654/lms_db"/>

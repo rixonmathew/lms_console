@@ -24,10 +24,10 @@ public class ReserveItemService implements Service {
     @Override
     public Result execute(Parameter<String> parameter) {
         List<String> parameterValues = (List<String>) parameter.getParameters();
-        String itemId = parameterValues.get(0);
-        String userId = parameterValues.get(1);
+        Long itemInstanceId = Long.valueOf(parameterValues.get(0));
+        Long memberId = Long.valueOf(parameterValues.get(1));
         Store store = SimpleStore.getInstance();
-        List results = store.reserveItemForUser(itemId, userId);
+        List results = store.reserveItemForUser(itemInstanceId, memberId);
         return new ReservationResult(results);
     }
 }

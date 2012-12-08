@@ -82,14 +82,22 @@ public class ServiceTest {
         Result searchResult = searchService.execute(searchParameter);
         assertNotNull(searchResult);
         TableModel tableModel = searchResult.getResultsTable();
+        assertNotNull(tableModel);
         final int expectedCount = 49;
         assertTrue("Count should be more than expected count", tableModel.getRowCount() > expectedCount);
     }
 
     @Test
-    public void testIssueServiceWithWithValidItem() {
-        Service issueService = facade.serviceForOperation(OperationTypes.ISSUE);
-        Parameter<String> issueParameter = CommandTestUtil.parameterWithString("101", "1");
-
+    public void testReserveServiceWithValidParameters() {
+        Service reserveService = facade.serviceForOperation(OperationTypes.RESERVE);
+        Parameter<String> reserveParameter = CommandTestUtil.parameterWithString("27240", "1");
+        Result reserveResult = reserveService.execute(reserveParameter);
+        assertNotNull(reserveResult);
+        TableModel tableModel = reserveResult.getResultsTable();
+        final int expectedRowCount = 1;
+        assertEquals("Count of rows not as expected", tableModel.getRowCount(), expectedRowCount);
+        final String expectedMessage = "Item Reserved Successfully.";
+        String actualMessage = (String) tableModel.getValueAt(0, 0);
+        assertEquals("Reservation message not as expected", expectedMessage, actualMessage);
     }
 }

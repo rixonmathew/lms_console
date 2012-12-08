@@ -151,8 +151,31 @@ public interface LMSDao {
 
     /**
      * This method will return the member record based on the system id
+     *
      * @param id of the user
      * @return the member record
      */
     MemberRecord findMember(long id);
+
+    /**
+     * This method will return the ItemInstance based on the id
+     *
+     * @param itemInstanceId
+     * @return ItemInstance
+     */
+    ItemInstanceRecord findItemInstanceId(long itemInstanceId);
+
+    /**
+     * This method will create an instance of the transaction
+     *
+     * @param itemInstanceTransactionRecord
+     */
+    void addItemInstanceTransaction(ItemInstanceTransactionRecord itemInstanceTransactionRecord);
+
+    /**
+     * This method will provide all the transaction types in the system
+     *
+     * @return list of all transaction type records
+     */
+    List<TransactionTypeRecord> getAllTransactionTypes();
 }

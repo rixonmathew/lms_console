@@ -120,12 +120,19 @@ public interface Store {
     Item searchItemById(long itemId);
 
     /**
-     * This method is used for reserving an item to a user. It is assumed that the item and user is valid before this method is executed.
+     * This method is used for reserving an item Instance to a user. It is assumed that the item and user is valid before this method is executed.
      * This method will reserve the available instance of the item to the user and provide the result in the form of a list.
      *
-     * @param itemId
+     * @param itemInstanceId
      * @param userId
      * @return
      */
-    List reserveItemForUser(String itemId, String userId);
+    List reserveItemForUser(long itemInstanceId, long userId);
+
+    /**
+     * This method will provide all the transaction type records defined in the system
+     *
+     * @return
+     */
+    List<TransactionTypeRecord> allTransactionTypes();
 }

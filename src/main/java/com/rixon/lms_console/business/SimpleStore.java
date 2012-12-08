@@ -15,6 +15,10 @@ import com.rixon.lms_console.dao.mapper.ItemInstanceMapper;
 import com.rixon.lms_console.dao.mapper.ItemMapper;
 import com.rixon.lms_console.dao.mapper.MemberMapper;
 import com.rixon.lms_console.dao.recordset.*;
+import com.rixon.lms_console.exception.ExceptionHandler;
+import com.rixon.lms_console.exception.InvalidItemInstanceException;
+import com.rixon.lms_console.exception.InvalidMemberException;
+import com.rixon.lms_console.exception.ItemCannotBeReservedException;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -163,7 +167,70 @@ public class SimpleStore implements Store {
     }
 
     @Override
-    public List reserveItemForUser(String itemId, String userId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    public List reserveItemForUser(long itemInstanceId, long memberId) {
+        List messages = new ArrayList();
+        ItemInstanceRecord itemInstanceRecord = lmsDao.findItemInstanceId(itemInstanceId);
+        if (itemInstanceRecord == null) {
+            messages = ExceptionHandler.handleException(new InvalidItemInstanceException(String.valueOf(itemInstanceId)));
+            return messages;
+        }
+        MemberRecord memberRecord = lmsDao.findMember(memberId);
+        if (memberRecord == null) {
+            messages = ExceptionHandler.handleException(new InvalidMemberException(String.valueOf(memberId)));
+            return messages;
+        }
+
+        ReservationCheck reservationCheck = isItemAvailableForReservation(itemInstanceRecord, memberRecord);
+        if (!reservationCheck.isItemAvailableForReservation()) {
+            messages = ExceptionHandler.handleException(new ItemCannotBeReservedException(reservationCheck.getMessage()));
+        } else {
+            persistReservation(itemInstanceRecord, memberRecord);
+            messages.add(reservationCheck.getMessage());
+        }
+        return messages;
+    }
+
+    @Override
+    public List<TransactionTypeRecord> allTransactionTypes() {
+        return lmsDao.getAllTransactionTypes();
+    }
+
+    private void persistReservation(ItemInstanceRecord itemInstanceRecord, MemberRecord memberRecord) {
+        ItemInstanceTransactionRecord itemInstanceTransactionRecord = new ItemInstanceTransactionRecord();
+        itemInstanceTransactionRecord.setItemInstanceRecord(itemInstanceRecord);
+        itemInstanceTransactionRecord.setMemberRecord(memberRecord);
+        TransactionTypeRecord transactionTypeRecord = TransactionTypeProvdier.getTransactionTypeRecord("RESERVE"); //TODO create a constance class
+        itemInstanceTransactionRecord.setTransactionTypeRecord(transactionTypeRecord);
+        lmsDao.addItemInstanceTransaction(itemInstanceTransactionRecord);
+    }
+
+    private ReservationCheck isItemAvailableForReservation(ItemInstanceRecord itemInstanceRecord, MemberRecord memberRecord) {
+        //TODO Add business logic here for reservation checks
+        //Item should not be already reserved to another user with reserve by date > todays date
+        //Item instance should not be checked out to another user
+        //Item instance should not be damaged
+        //Member has not exceeded the limit of reserving the items
+        //
+        return new ReservationCheck(true, "Item Reserved Successfully");
+
+    }
+
+    private class ReservationCheck {
+
+        boolean isItemAvailableForReservation;
+        String message;
+
+        ReservationCheck(boolean itemAvailableForReservation, String message) {
+            isItemAvailableForReservation = itemAvailableForReservation;
+            this.message = message;
+        }
+
+        public boolean isItemAvailableForReservation() {
+            return isItemAvailableForReservation;
+        }
+
+        public String getMessage() {
+            return message;
+        }
     }
 }

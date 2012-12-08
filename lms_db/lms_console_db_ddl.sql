@@ -150,21 +150,22 @@ CREATE TABLE TRANSACTION_HISTORY
 )
 
 --Sequences
-create sequence member_id_seq as bigint start with 100 increment by 1;
-create sequence member_property_id_seq as bigint start with 100 increment by 1;
-create sequence item_type_id_seq as bigint start with 100 increment by 1;
-create sequence role_id_seq as bigint start with 100 increment by 1;
-create sequence feature_id_seq as bigint start with 100 increment by 1;
-create sequence role_feature_id_seq as bigint start with 100 increment by 1;
-create sequence member_role_id_seq as bigint start with 100 increment by 1;
-create sequence transaction_type_id_seq as bigint start with 100 increment by 1;
-create sequence item_id_seq as bigint start with 100 increment by 1;
-create sequence transaction_type_id_seq as bigint start with 100 increment by 1;
-create sequence category_id_seq as bigint start with 100 increment by 1;
-create sequence property_id_seq as bigint start with 100 increment by 1;
-create sequence item_property_id_seq as bigint start with 100 increment by 1;
-create sequence item_instance_id_seq as bigint start with 100 increment by 1;
-create sequence item_instance_property_id_seq as bigint start with 100 increment by 1;
+CREATE sequence member_id_seq AS bigint start WITH 100 increment BY 1;
+CREATE sequence member_property_id_seq AS bigint start WITH 100 increment BY 1;
+CREATE sequence item_type_id_seq AS bigint start WITH 100 increment BY 1;
+CREATE sequence role_id_seq AS bigint start WITH 100 increment BY 1;
+CREATE sequence feature_id_seq AS bigint start WITH 100 increment BY 1;
+CREATE sequence role_feature_id_seq AS bigint start WITH 100 increment BY 1;
+CREATE sequence member_role_id_seq AS bigint start WITH 100 increment BY 1;
+CREATE sequence transaction_type_id_seq AS bigint start WITH 100 increment BY 1;
+CREATE sequence item_id_seq AS bigint start WITH 100 increment BY 1;
+CREATE sequence transaction_type_id_seq AS bigint start WITH 100 increment BY 1;
+CREATE sequence category_id_seq AS bigint start WITH 100 increment BY 1;
+CREATE sequence property_id_seq AS bigint start WITH 100 increment BY 1;
+CREATE sequence item_property_id_seq AS bigint start WITH 100 increment BY 1;
+CREATE sequence item_instance_id_seq AS bigint start WITH 100 increment BY 1;
+CREATE sequence item_instance_property_id_seq AS bigint start WITH 100 increment BY 1;
+CREATE sequence ITEM_INSTANCE_TRANSACTION_ID_SEQ AS bigint start WITH 100 increment BY 1;
 
 
 --Foriegn Keys for the tables

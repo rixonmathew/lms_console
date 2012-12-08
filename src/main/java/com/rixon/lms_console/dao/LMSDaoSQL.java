@@ -29,7 +29,6 @@ public class LMSDaoSQL implements LMSDao {
     public LMSDaoSQL() {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("lms-eclipselink");
         entityManager = entityManagerFactory.createEntityManager();
-
     }
 
 
@@ -62,8 +61,34 @@ public class LMSDaoSQL implements LMSDao {
     @Override
     public MemberRecord findMember(long id) {
         Query memberSearchQuery = entityManager.createNamedQuery(MemberRecord.FIND_MEMBER_BY_ID_QUERY);
-        memberSearchQuery.setParameter("id",id);
+        memberSearchQuery.setParameter("id", id);
         return firstMemberRecord(memberSearchQuery);
+    }
+
+    @Override
+    public ItemInstanceRecord findItemInstanceId(long itemInstanceId) {
+        Query itemInstanceQuery = entityManager.createNamedQuery(ItemInstanceRecord.ITEM_INSTANCE_ID_QUERY);
+        itemInstanceQuery.setParameter("id", itemInstanceId);
+        ItemInstanceRecord itemInstanceRecord = null;
+        List results = itemInstanceQuery.getResultList();
+        if (results != null && !results.isEmpty()) {
+            itemInstanceRecord = (ItemInstanceRecord) results.get(0);
+        }
+        return itemInstanceRecord;
+    }
+
+    @Override
+    public void addItemInstanceTransaction(ItemInstanceTransactionRecord itemInstanceTransactionRecord) {
+        EntityTransaction transaction = entityManager.getTransaction();
+        transaction.begin();
+        entityManager.persist(itemInstanceTransactionRecord);
+        transaction.commit();
+    }
+
+    @Override
+    public List<TransactionTypeRecord> getAllTransactionTypes() {
+        Query allTransactionTypes = entityManager.createNamedQuery(TransactionTypeRecord.ALL_TRANSACTION_TYPES_QUERY);
+        return (List<TransactionTypeRecord>) allTransactionTypes.getResultList();
     }
 
     @Override
@@ -160,7 +185,7 @@ public class LMSDaoSQL implements LMSDao {
     @NotNull
     @Override
     public List<ItemPropertyRecord> propertiesForItem(ItemRecord itemRecord) {
-        if (itemRecord==null) {
+        if (itemRecord == null) {
             return new ArrayList<ItemPropertyRecord>();
         }
         Query itemPropertiesQuery = entityManager.createNamedQuery(ItemPropertyRecord.ITEM_PROPERTY_QUERY);
