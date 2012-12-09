@@ -17,7 +17,7 @@ import com.rixon.lms_console.dao.recordset.*;
 import java.util.List;
 
 /**
- * This interface represents the data store for performing various operations
+ * This interface represents the data store for performing various operations related
  * associated with lms
  * User: rixon|Date: 8/25/12|Time: 9:07 PM
  */

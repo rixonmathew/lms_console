@@ -20,12 +20,9 @@ import static org.junit.Assert.assertNotNull;
 public class CommandTestUtil {
 
     @Nullable
-    public static Command createCommand(String operationString, String parameters, @Nullable CommandBuilder builder) {
+    public static Command createCommand(String operationString, String parameters, @NotNull CommandBuilder builder) {
         String commandString = operationString + " " + parameters;
-        Command command = null;
-        if (builder != null) {
-            command = builder.buildCommand(commandString);
-        }
+        Command command = builder.buildCommand(commandString);
         return command;
     }
 

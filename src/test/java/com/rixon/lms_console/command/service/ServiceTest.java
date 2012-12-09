@@ -37,6 +37,7 @@ public class ServiceTest {
 
     @After
     public void tearDown() {
+        facade = null;
     }
 
     @Test
@@ -96,7 +97,7 @@ public class ServiceTest {
         TableModel tableModel = reserveResult.getResultsTable();
         final int expectedRowCount = 1;
         assertEquals("Count of rows not as expected", tableModel.getRowCount(), expectedRowCount);
-        final String expectedMessage = "Item Reserved Successfully.";
+        final String expectedMessage = "Item Reserved Successfully";
         String actualMessage = (String) tableModel.getValueAt(0, 0);
         assertEquals("Reservation message not as expected", expectedMessage, actualMessage);
     }

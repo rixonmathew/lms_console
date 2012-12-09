@@ -20,7 +20,7 @@ import java.util.Random;
 public class DefaultMockPropertyValueProvider implements MockPropertyValueProvider {
 
     protected MockDataSeed mockDataSeed;
-    protected Random random = new Random();
+    protected final Random random = new Random();
     protected String template;
 
     @Override

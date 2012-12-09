@@ -35,7 +35,6 @@ public class TransactionTypeProvdier {
     }
 
     public static TransactionTypeRecord getTransactionTypeRecord(String transactionType) {
-        TransactionTypeRecord transactionTypeRecord = transactionTypeRecordMap.get(transactionType);
-        return transactionTypeRecord;
+        return transactionTypeRecordMap.get(transactionType);
     }
 }

@@ -20,7 +20,6 @@ import com.rixon.lms_console.exception.InvalidItemInstanceException;
 import com.rixon.lms_console.exception.InvalidMemberException;
 import com.rixon.lms_console.exception.ItemCannotBeReservedException;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +31,7 @@ import java.util.List;
  */
 public class SimpleStore implements Store {
 
-    @Nullable
+    @NotNull
     private final LMSDao lmsDao;
 
     private static Store storeInstance;
@@ -43,7 +42,6 @@ public class SimpleStore implements Store {
         }
         return storeInstance;
     }
-
 
     private SimpleStore() {
         lmsDao = DAOFactory.lmsDao();
@@ -235,8 +233,8 @@ public class SimpleStore implements Store {
 
     private class ReservationCheck {
 
-        boolean isItemAvailableForReservation;
-        String message;
+        final boolean isItemAvailableForReservation;
+        final String message;
 
         ReservationCheck(boolean itemAvailableForReservation, String message) {
             isItemAvailableForReservation = itemAvailableForReservation;

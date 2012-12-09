@@ -8,6 +8,8 @@
 package com.rixon.lms_console.exception.strategy;
 
 import com.rixon.lms_console.exception.InvalidItemInstanceException;
+import com.rixon.lms_console.exception.InvalidMemberException;
+import com.rixon.lms_console.exception.ItemCannotBeReservedException;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,14 +22,15 @@ import java.util.Map;
  */
 public class ExceptionStrategyContext {
 
-    private static Map<Class, ExceptionHandlingStrategy> strategyMap = new HashMap<Class, ExceptionHandlingStrategy>();
-    private static ExceptionHandlingStrategy defaultStrategy;
+    private static final Map<Class, ExceptionHandlingStrategy> strategyMap = new HashMap<Class, ExceptionHandlingStrategy>();
+    private static final ExceptionHandlingStrategy defaultStrategy;
 
     static {
         ExceptionHandlingStrategy simpleStrategy = new BasicExceptionStrategy();
         defaultStrategy = simpleStrategy;
         strategyMap.put(InvalidItemInstanceException.class, simpleStrategy);
-        //TODO populate this map with other exceptions that are created
+        strategyMap.put(InvalidMemberException.class, simpleStrategy);
+        strategyMap.put(ItemCannotBeReservedException.class, simpleStrategy);
     }
 
     public static ExceptionHandlingStrategy strategyForException(Exception e) {

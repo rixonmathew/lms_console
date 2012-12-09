@@ -22,8 +22,7 @@ public class TitleMockValueProvider extends DefaultMockPropertyValueProvider {
     protected String randomValue() {
         int digits = StringUtils.countMatches(template, "%");
         Formatter stringFormatter = new Formatter();
-        String randomText = stringFormatter.format(template, strings(digits)).toString();
-        return randomText;
+        return stringFormatter.format(template, strings(digits)).toString();
     }
 
     @Override

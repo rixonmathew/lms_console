@@ -105,10 +105,7 @@ public class Item {
     }
 
     public boolean isValidItem() {
-        if (id==0) {
-            return false;
-        }
-        return true;
+        return id != 0;
     }
 
     /**

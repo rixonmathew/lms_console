@@ -25,7 +25,7 @@ public class PropertyDataSimulator {
     private List<String> properties;
     private Map<String, String> propertyTemplates;
     private Map<String, MockPropertyValueProvider> mockValueProviders;
-    private MockDataSeed mockDataSeed;
+    private final MockDataSeed mockDataSeed;
     private final String DEFAULT_PROVIDER = "DEFAULT_PROVIDER";
 
 

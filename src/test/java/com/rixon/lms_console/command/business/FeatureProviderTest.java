@@ -9,8 +9,6 @@ package com.rixon.lms_console.command.business;
 
 import com.rixon.lms_console.business.FeatureProvider;
 import com.rixon.lms_console.dao.Feature;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
@@ -23,14 +21,6 @@ import static org.junit.Assert.*;
  * User: rixon|Date: 9/2/12|Time: 10:36 AM
  */
 public class FeatureProviderTest {
-
-    @Before
-    public void setup() {
-    }
-
-    @After
-    public void tearDown() {
-    }
 
     @Test
     public void testValidFeature() {

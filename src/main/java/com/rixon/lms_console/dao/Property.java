@@ -52,9 +52,8 @@ public class Property {
 
         if (!category.equals(property.category)) return false;
         if (!description.equals(property.description)) return false;
-        if (!name.equals(property.name)) return false;
+        return name.equals(property.name);
 
-        return true;
     }
 
     @Override

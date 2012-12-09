@@ -23,8 +23,7 @@ class NumbersMockValueProvider extends DefaultMockPropertyValueProvider {
     protected String randomValue() {
         int digits = StringUtils.countMatches(template, "%d");
         Formatter stringFormatter = new Formatter();
-        String mockISBN = stringFormatter.format(template, numbersForISBN(digits)).toString();
-        return mockISBN;
+        return stringFormatter.format(template, numbersForISBN(digits)).toString();
     }
 
     private Integer[] numbersForISBN(int size) {

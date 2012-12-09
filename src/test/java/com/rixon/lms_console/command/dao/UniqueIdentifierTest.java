@@ -8,7 +8,7 @@
 package com.rixon.lms_console.command.dao;
 
 import com.rixon.lms_console.dao.UniqueIdentifier;
-import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.NotNull;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,7 +23,7 @@ import static org.junit.Assert.assertThat;
  */
 public class UniqueIdentifierTest {
 
-    @Nullable
+    @NotNull
     UniqueIdentifier.UniqueIdentifierBuilder builder;
 
     @Before

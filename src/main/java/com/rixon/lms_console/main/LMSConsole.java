@@ -20,9 +20,6 @@ public class LMSConsole {
 
     private CommandBuilder builder;
     private CommandExecutor executor;
-    private final String LMS_PROMPT = "LMS>";
-    private final String EXIT_COMMAND = "exit";
-    private final int LINE_LENGTH = 160;
     private long currentTime;
 
     public LMSConsole() {
@@ -44,7 +41,9 @@ public class LMSConsole {
 
     private void processUserInput() {
         String userCommandString;
+        String EXIT_COMMAND = "exit";
         do {
+            String LMS_PROMPT = "LMS>";
             userCommandString = console.readLine(LMS_PROMPT);
             if ((userCommandString == null) || (userCommandString.length() == 0)) {
                 userCommandString = "continue";
@@ -63,7 +62,7 @@ public class LMSConsole {
     }
 
     private void startTimer() {
-        currentTime  = System.nanoTime();
+        currentTime = System.nanoTime();
     }
 
 
@@ -77,6 +76,7 @@ public class LMSConsole {
         TableModel tableModel = result.getResultsTable();
         int columns = tableModel.getColumnCount();
         int rows = tableModel.getRowCount();
+        int LINE_LENGTH = 160;
         drawLine(LINE_LENGTH);
         for (int column = 0; column < columns; column++) {
             console.printf(result.getFormatStringForHeader(column), tableModel.getColumnName(column));
@@ -96,8 +96,8 @@ public class LMSConsole {
 
     private void displayTimeTaken() {
         float timeTaken = (System.nanoTime() - currentTime);
-        timeTaken/=10e9;
-        console.printf("Time taken: %1$f seconds \n",timeTaken);
+        timeTaken /= 10e9;
+        console.printf("Time taken: %1$f seconds \n", timeTaken);
     }
 
     private void printBanner() {

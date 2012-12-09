@@ -155,8 +155,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
         CommandTestUtil.assertValidationResult(listCommand.getValidationResult(), true);
         Result result = executor.executeCommand(listCommand);
         assertNotNull(result);
-        TableModel tableModel = result.getResultsTable();
-        final int expectedRowCount = 4;
+        //TODO add further tests for list user
     }
 
     @Test

@@ -13,11 +13,11 @@ package com.rixon.lms_console.dao;
  */
 public class Member {
 
-    private long id;
-    private String firstName;
-    private String lastName;
-    private String emailID;
-    private String password;
+    private final long id;
+    private final String firstName;
+    private final String lastName;
+    private final String emailID;
+    private final String password;
 
     public long getId() {
         return id;

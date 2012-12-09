@@ -20,8 +20,8 @@ import java.util.*;
  */
 public class DataSimulator {
 
-    private MockDataSeed mockDataSeed;
-    private PropertyDataSimulator propertyDataSimulator;
+    private final MockDataSeed mockDataSeed;
+    private final PropertyDataSimulator propertyDataSimulator;
     private final Random random = new Random();
 
     public DataSimulator() {

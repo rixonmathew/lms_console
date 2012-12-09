@@ -9,7 +9,7 @@ package com.rixon.lms_console.dao.factory;
 
 import com.rixon.lms_console.dao.LMSDao;
 import com.rixon.lms_console.dao.LMSDaoSQL;
-import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * User: rixon|Date: 8/25/12|Time: 9:19 PM
@@ -20,7 +20,7 @@ public class DAOFactory {
     private static final String SQL_MODE = "SQL";
     private static final String NOSQL_MODE = "NOSQL";
 
-    @Nullable
+    @NotNull
     public static LMSDao lmsDao() {
         LMSDao lmsDao = null;
         String daoMode = System.getProperty(DAO_MODE);
@@ -30,7 +30,7 @@ public class DAOFactory {
         if (daoMode.equalsIgnoreCase(SQL_MODE)) {
             lmsDao = new LMSDaoSQL();
         } else if (daoMode.equalsIgnoreCase(NOSQL_MODE)) {
-
+            //TODO add DAO For Neo4J database
         }
         return lmsDao;
     }

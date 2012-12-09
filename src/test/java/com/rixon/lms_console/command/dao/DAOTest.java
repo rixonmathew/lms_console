@@ -38,15 +38,6 @@ public class DAOTest {
     }
 
     @Test
-    public void testGetAllBooks() {
-//TODO Introduce Library Item
-//        List<Book> books = lmsDao.getAllBooks();
-//        assertNotNull(books);
-//        final int expectedBookCount = 11;
-//        assertEquals("Size of list is not as expected", expectedBookCount,books.size());
-    }
-
-    @Test
     public void testGetAllMembers() {
         List<MemberRecord> memberRecords = lmsDao.getAllMembers();
         assertNotNull(memberRecords);
@@ -71,8 +62,8 @@ public class DAOTest {
         assertNotNull(memberRecord);
         final String expectedFirstName = "Rixon";
         final String expectedLastName = "Mathew";
-        assertEquals("First name not as expected",expectedFirstName,memberRecord.getFirstName());
-        assertEquals("Last name not as expected",expectedLastName,memberRecord.getLastName());
+        assertEquals("First name not as expected", expectedFirstName, memberRecord.getFirstName());
+        assertEquals("Last name not as expected", expectedLastName, memberRecord.getLastName());
     }
 
 
@@ -103,18 +94,6 @@ public class DAOTest {
         assertEquals("Password does not match", password, memberRecord.getPassword());
         lmsDao.removeMember(memberRecord);
     }
-
-//    @Test
-//    //TODO Is this functionality required?
-//    public void testRemoveMember() {
-//        final String emailId = "stevejobs@apple.com";
-//        final String password = "apple123";
-//        MemberRecord memberRecord = lmsDao.findMember(emailId,password);
-//        assertNotNull(memberRecord);
-//        lmsDao.removeMember(memberRecord);
-//        memberRecord = lmsDao.findMember(emailId,password);
-//        assertNull(memberRecord);
-//    }
 
     @Test
     public void testGetAllItemTypes() {
@@ -168,7 +147,7 @@ public class DAOTest {
     public void testGetAllProperties() {
         List<PropertyRecord> propertyRecords = lmsDao.getAllProperties();
         assertNotNull(propertyRecords);
-        final int expectedCount = 14;
+        final int expectedCount = 15;
         assertEquals("size of role records is not as expected", expectedCount, propertyRecords.size());
     }
 

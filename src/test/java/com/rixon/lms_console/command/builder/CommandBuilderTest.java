@@ -49,6 +49,7 @@ public class CommandBuilderTest extends AbstractCommandTest {
         final String invalidSearchCommand = "searchhh";
         final String books = "bb123 12312323 123123";
         Command invalidCommand = CommandTestUtil.createCommand(invalidSearchCommand, books, builder);
+        assertNotNull(invalidCommand);
         assertFalse("isValid flag should be no", invalidCommand.isValid());
         assertEquals("Command string is not same", invalidSearchCommand + " " + books, invalidCommand.getOriginalCommandString());
         CommandTestUtil.assertValidationResult(invalidCommand.getValidationResult(), false);
