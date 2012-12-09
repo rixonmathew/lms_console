@@ -92,6 +92,13 @@ public class LMSDaoSQL implements LMSDao {
     }
 
     @Override
+    public List<ItemInstancePropertyRecord> propertiesForItemInstance(ItemInstanceRecord itemInstanceRecord) {
+        Query instancePropertyQuery = entityManager.createNamedQuery(ItemInstancePropertyRecord.ITEM_INSTANCE_PROPERTY_QUERY);
+        instancePropertyQuery.setParameter("itemInstanceRecord", itemInstanceRecord);
+        return (List<ItemInstancePropertyRecord>) instancePropertyQuery.getResultList();
+    }
+
+    @Override
     public void addMember(MemberRecord memberRecord) {
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();

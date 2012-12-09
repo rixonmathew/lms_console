@@ -112,7 +112,7 @@ public interface LMSDao {
     public List<FeatureRecord> featuresForRole(String role);
 
     /**
-     * This method will return all the item properties for a particular itemRecords
+     * This method will return all the item properties for a particular itemRecord
      *
      * @param itemRecord the item for which properties are required
      * @return list of ItemPropertyRecords
@@ -178,4 +178,12 @@ public interface LMSDao {
      * @return list of all transaction type records
      */
     List<TransactionTypeRecord> getAllTransactionTypes();
+
+    /**
+     * This method will return all the properties for a particual item instance
+     *
+     * @param itemInstanceRecord
+     * @return list of ItemInstancePropertyRecord
+     */
+    List<ItemInstancePropertyRecord> propertiesForItemInstance(ItemInstanceRecord itemInstanceRecord);
 }

@@ -12,5 +12,6 @@ package com.rixon.lms_console.exception;
  */
 public class ItemCannotBeReservedException extends Exception {
     public ItemCannotBeReservedException(String reservationCheckMessage) {
+        super(reservationCheckMessage);
     }
 }

@@ -25,6 +25,8 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
+//TODO big class break into small classes
+
 /**
  * User: rixon|Date: 8/25/12|Time: 9:16 PM
  */
@@ -206,13 +208,29 @@ public class SimpleStore implements Store {
 
     private ReservationCheck isItemAvailableForReservation(ItemInstanceRecord itemInstanceRecord, MemberRecord memberRecord) {
         //TODO Add business logic here for reservation checks
-        //Item should not be already reserved to another user with reserve by date > todays date
-        //Item instance should not be checked out to another user
         //Item instance should not be damaged
         //Member has not exceeded the limit of reserving the items
         //
-        return new ReservationCheck(true, "Item Reserved Successfully");
+        boolean isItemAvailableForReservation = false;
+        String reservationMessage = "Item Reserved Successfully";
+        boolean isItemInstanceDamaged = isItemInstanceDamaged(itemInstanceRecord);
+        if (isItemInstanceDamaged) {
+            reservationMessage = "Item cannot be reserved as it is damaged";
+        }
+        return new ReservationCheck(isItemAvailableForReservation, reservationMessage);
+    }
 
+    private boolean isItemInstanceDamaged(ItemInstanceRecord itemInstanceRecord) {
+        List<ItemInstancePropertyRecord> itemInstancePropertyRecords = lmsDao.propertiesForItemInstance(itemInstanceRecord);
+        boolean isDamaged = false;
+        PropertyRecord damagedProperty = PropertyProvider.getPropertyRecord("DAMAGED");
+        for (ItemInstancePropertyRecord propertyRecord : itemInstancePropertyRecords) {
+            if (damagedProperty.equals(propertyRecord.getPropertyRecord())) {
+                isDamaged = true;
+                break;
+            }
+        }
+        return isDamaged;
     }
 
     private class ReservationCheck {

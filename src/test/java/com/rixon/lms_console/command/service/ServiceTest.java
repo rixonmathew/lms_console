@@ -100,4 +100,21 @@ public class ServiceTest {
         String actualMessage = (String) tableModel.getValueAt(0, 0);
         assertEquals("Reservation message not as expected", expectedMessage, actualMessage);
     }
+
+    @Test
+    public void testReserveServiceForDamagedItemInstance() {
+        final String instanceID = "27241";
+        final String userID = "1";
+        Service reserveService = facade.serviceForOperation(OperationTypes.RESERVE);
+        Parameter<String> reserveParameter = CommandTestUtil.parameterWithString(instanceID, userID);
+        Result reserveResult = reserveService.execute(reserveParameter);
+        assertNotNull(reserveResult);
+        TableModel tableModel = reserveResult.getResultsTable();
+        final int expectedRowCount = 1;
+        assertEquals("Count of rows not as expected", tableModel.getRowCount(), expectedRowCount);
+        final String expectedMessage = "Item cannot be reserved as it is damaged";
+        String actualMessage = (String) tableModel.getValueAt(0, 0);
+        assertEquals("Reservation message not as expected", expectedMessage, actualMessage);
+
+    }
 }
