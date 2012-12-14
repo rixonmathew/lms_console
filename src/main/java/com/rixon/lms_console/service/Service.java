@@ -13,12 +13,11 @@ import org.jetbrains.annotations.Nullable;
 public interface Service {
 
     /**
-     * This method executes the operations using the parameter
-     * and provides a result instance containing the results
+     * This method will invoke the given service and provide the result of the Service
      *
      * @param parameter the parameter object
      * @return an instance of Result
      */
     @Nullable
-    public Result execute(Parameter<String> parameter);
+    public Result invoke(Parameter<String> parameter);
 }

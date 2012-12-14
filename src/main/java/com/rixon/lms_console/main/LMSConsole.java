@@ -5,6 +5,7 @@ import com.rixon.lms_console.command.builder.CommandBuilder;
 import com.rixon.lms_console.command.executor.CommandExecutor;
 import com.rixon.lms_console.command.executor.SimpleCommandExecutor;
 import com.rixon.lms_console.command.result.Result;
+import com.rixon.lms_console.facade.ServiceFacadeFactory;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.table.TableModel;
@@ -21,14 +22,10 @@ public class LMSConsole {
     private CommandBuilder builder;
     private CommandExecutor executor;
     private long currentTime;
+    private final int LINE_LENGTH = 50;
 
     public LMSConsole() {
         initializeEnvironment();
-    }
-
-    private void initializeEnvironment() {
-        builder = new CommandBuilder();
-        executor = new SimpleCommandExecutor();
     }
 
     public void start() {
@@ -38,6 +35,28 @@ public class LMSConsole {
             processUserInput();
         }
     }
+
+    private void printBanner() {
+        final String welcomeMessage = "****** Welcome to Library Management System ******.%n";
+        console.printf(welcomeMessage);
+        drawLine(LINE_LENGTH);
+        final String helpMessage = "(Type help to get help, exit|quit to quit the application)%n";
+        console.printf(helpMessage);
+    }
+
+    private void drawLine(int length) {
+        final String LINE_CHAR = "_";
+        for (int i = 0; i < length; i++) {
+            console.printf(LINE_CHAR);
+        }
+        console.printf("%n");
+    }
+
+    private void initializeEnvironment() {
+        builder = new CommandBuilder();
+        executor = new SimpleCommandExecutor(ServiceFacadeFactory.serviceFacade());
+    }
+
 
     private void processUserInput() {
         String userCommandString;
@@ -100,17 +119,4 @@ public class LMSConsole {
         console.printf("Time taken: %1$f seconds \n", timeTaken);
     }
 
-    private void printBanner() {
-        console.printf("****** Welcome to Library Management System ******.%n");
-        drawLine(50);
-        console.printf("(Type help to get help, exit|quit to quit the application)%n");
-    }
-
-    private void drawLine(int length) {
-        final String LINE_CHAR = "_";
-        for (int i = 0; i < length; i++) {
-            console.printf(LINE_CHAR);
-        }
-        console.printf("%n");
-    }
 }

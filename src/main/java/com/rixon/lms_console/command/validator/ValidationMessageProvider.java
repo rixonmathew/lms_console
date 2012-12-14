@@ -15,7 +15,6 @@ public class ValidationMessageProvider {
 
     private static final Map<String, String> validationMessages;
     private final static String DEFAULT_MESSAGE = "This command cannot be executed. Type help for more details";
-    //private final static String ERROR_MESSAGE = "There was an error in the command syntax. refer usage of the command via help \n";
     private final static String INVALID_OPERATION_MESSAGE = "The operation specified is not valid. Type help to get list of valid operations \n";
     private final static String INVALID_PARAMETERS_MESSAGE = "The parameters specified for operation is not valid. refer usage of the command via help \n";
     private final static String SUCCESS_MESSAGE = "The command has been executed successfully";

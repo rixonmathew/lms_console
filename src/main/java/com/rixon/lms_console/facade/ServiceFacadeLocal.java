@@ -18,11 +18,11 @@ import static com.rixon.lms_console.command.operation.OperationTypes.*;
  * This class represents the facade to access all the services associated with LMS
  * User: rixon|Date: 8/17/12|Time: 7:05 PM
  */
-public class ServiceFacadeReal implements ServiceFacade {
+public class ServiceFacadeLocal implements ServiceFacade {
 
     private Map<String, Service> serviceMap;
 
-    public ServiceFacadeReal() {
+    public ServiceFacadeLocal() {
         loadServiceMap();
     }
 

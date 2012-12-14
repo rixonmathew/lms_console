@@ -15,13 +15,13 @@ import com.rixon.lms_console.dao.SearchQuery;
 
 /**
  * This class implements the service for search operation
- *  User: rixon|Date: 8/17/12|Time: 7:20 PM
+ * User: rixon|Date: 8/17/12|Time: 7:20 PM
  */
 public class SearchService implements Service {
     @Override
-    public Result execute(Parameter<String> parameter) {
+    public Result invoke(Parameter<String> parameter) {
         Store store = SimpleStore.getInstance();
-        SearchQuery searchQuery = new SearchQuery(parameter,false);
+        SearchQuery searchQuery = new SearchQuery(parameter, false);
         return store.searchItemByTitle(searchQuery);
     }
 }

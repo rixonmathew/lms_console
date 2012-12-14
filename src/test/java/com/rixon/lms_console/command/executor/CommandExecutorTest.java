@@ -3,8 +3,8 @@ package com.rixon.lms_console.command.executor;
 import com.rixon.lms_console.command.AbstractCommandTest;
 import com.rixon.lms_console.command.Command;
 import com.rixon.lms_console.command.CommandTestUtil;
+import com.rixon.lms_console.command.facade.ServiceFacadeMock;
 import com.rixon.lms_console.command.result.Result;
-import com.rixon.lms_console.facade.ServiceFacadeFactory;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -24,8 +24,7 @@ public class CommandExecutorTest extends AbstractCommandTest {
     @Before
     public void setUp() {
         super.setup();
-        executor = new SimpleCommandExecutor();
-        System.setProperty(ServiceFacadeFactory.LMS_MODE, ServiceFacadeFactory.FAKE);
+        executor = new SimpleCommandExecutor(new ServiceFacadeMock());
     }
 
     @Test

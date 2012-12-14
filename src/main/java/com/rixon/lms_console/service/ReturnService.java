@@ -18,7 +18,7 @@ import org.jetbrains.annotations.Nullable;
 public class ReturnService implements Service {
     @Nullable
     @Override
-    public Result execute(Parameter<String> parameter) {
+    public Result invoke(Parameter<String> parameter) {
         return null;  //TODO add real implementation
     }
 }

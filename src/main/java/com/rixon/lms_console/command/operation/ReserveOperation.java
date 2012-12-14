@@ -7,12 +7,14 @@
 
 package com.rixon.lms_console.command.operation;
 
+import static com.rixon.lms_console.command.operation.OperationTypes.RESERVE;
+
 /**
  * User: rixon|Date: 8/23/12|Time: 8:33 PM
  */
 public class ReserveOperation extends AbstractOperation {
-    public ReserveOperation(String operationType) {
-        super(operationType);
+    public ReserveOperation() {
+        super(RESERVE);
         usage = "Usage: reserve <book> <user>";
     }
 }

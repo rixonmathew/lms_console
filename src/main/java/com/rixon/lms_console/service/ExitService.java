@@ -25,7 +25,7 @@ public class ExitService implements Service {
 
     @NotNull
     @Override
-    public Result execute(Parameter<String> parameter) {
+    public Result invoke(Parameter<String> parameter) {
         String exitMessage = EXIT_MESSAGE;
         List<String> messages = new ArrayList<String>();
         messages.add(exitMessage);

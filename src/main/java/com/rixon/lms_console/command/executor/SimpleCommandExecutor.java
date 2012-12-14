@@ -4,7 +4,6 @@ import com.rixon.lms_console.command.Command;
 import com.rixon.lms_console.command.result.Result;
 import com.rixon.lms_console.command.result.ValidationMessageResult;
 import com.rixon.lms_console.facade.ServiceFacade;
-import com.rixon.lms_console.facade.ServiceFacadeFactory;
 import com.rixon.lms_console.service.Service;
 import org.jetbrains.annotations.NotNull;
 
@@ -18,6 +17,13 @@ import java.util.List;
  *      User: rixon|Date: 8/17/12|Time: 10:01 AM
  */
 public class SimpleCommandExecutor implements CommandExecutor {
+
+    private ServiceFacade serviceFacade;
+
+    public SimpleCommandExecutor(ServiceFacade serviceFacade) {
+        this.serviceFacade = serviceFacade;
+    }
+
     @Override
     public Result executeCommand(@NotNull Command command) {
         boolean isCommandValid = command.isValid();
@@ -25,9 +31,8 @@ public class SimpleCommandExecutor implements CommandExecutor {
             return resultWithValidationMessage(command);
         }
         String operationName = command.getOperation().getOperationType();
-        ServiceFacade serviceFacade = ServiceFacadeFactory.serviceFacade();
         Service service = serviceFacade.serviceForOperation(operationName);
-        return service.execute(command.getParameter());
+        return service.invoke(command.getParameter());
     }
 
     @NotNull

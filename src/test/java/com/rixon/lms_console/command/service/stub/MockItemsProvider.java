@@ -5,7 +5,7 @@
  * own risk. You are free to reuse as long as the credit is provided to me for this work
  */
 
-package com.rixon.lms_console.service.stub;
+package com.rixon.lms_console.command.service.stub;
 
 import com.rixon.lms_console.business.ItemTypeProvider;
 import com.rixon.lms_console.business.PropertyProvider;

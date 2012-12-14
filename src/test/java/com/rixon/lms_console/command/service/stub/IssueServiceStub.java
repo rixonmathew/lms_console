@@ -5,7 +5,7 @@
  * own risk. You are free to reuse as long as the credit is provided to me for this work
  */
 
-package com.rixon.lms_console.service.stub;
+package com.rixon.lms_console.command.service.stub;
 
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.IssueResult;
@@ -23,7 +23,7 @@ import java.util.List;
 public class IssueServiceStub implements Service {
     @NotNull
     @Override
-    public Result execute(Parameter<String> parameter) {
+    public Result invoke(Parameter<String> parameter) {
         String result = "Book issued successfully to user";
         List<String> issueResult = new ArrayList<String>();
         issueResult.add(result);

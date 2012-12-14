@@ -5,7 +5,7 @@
  * own risk. You are free to reuse as long as the credit is provided to me for this work
  */
 
-package com.rixon.lms_console.service.stub;
+package com.rixon.lms_console.command.service.stub;
 
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.operation.Operation;
@@ -26,7 +26,7 @@ import java.util.List;
 public class HelpServiceStub implements Service {
     @NotNull
     @Override
-    public Result execute(@NotNull Parameter<String> parameter) {
+    public Result invoke(@NotNull Parameter<String> parameter) {
         List<String> commands = new ArrayList<String>();
         List<String> helpParameter = (List<String>) parameter.getParameters();
 

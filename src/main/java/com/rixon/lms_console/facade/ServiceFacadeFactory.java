@@ -7,8 +7,6 @@
 
 package com.rixon.lms_console.facade;
 
-import com.rixon.lms_console.facade.mock.ServiceFacadeMock;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,29 +18,30 @@ import java.util.Map;
  */
 public class ServiceFacadeFactory {
 
-    public final static String FAKE = "FAKE";
-    public final static String REAL = "REAL";
-    public final static String LMS_MODE = "com.rixon.lms_console.service_mode";
+    public final static String LOCAL = "LOCAL";
+    //TODO think about other modes in which Service can be separated out from the application
+    public final static String SERVICE_MODE = "com.rixon.lms_console.service_mode";
 
-    private static Map<String,ServiceFacade> serviceFacadeMap;
+    private static Map<String, ServiceFacade> serviceFacadeMap;
+
     static {
-       loadServiceFacadeMap();
+        loadServiceFacadeMap();
     }
 
     private static void loadServiceFacadeMap() {
-        serviceFacadeMap = new HashMap<String,ServiceFacade>();
-        serviceFacadeMap.put(FAKE,new ServiceFacadeMock());
-        serviceFacadeMap.put(REAL,new ServiceFacadeReal());
+        serviceFacadeMap = new HashMap<String, ServiceFacade>();
+        serviceFacadeMap.put(LOCAL, new ServiceFacadeLocal());
     }
+
     public static ServiceFacade serviceFacade() {
         String mode = determineServiceMode();
         return serviceFacadeMap.get(mode);
     }
 
     private static String determineServiceMode() {
-        String mode = System.getProperty(LMS_MODE);
-        if(mode==null){
-            mode = REAL;
+        String mode = System.getProperty(SERVICE_MODE);
+        if (mode == null) {
+            mode = LOCAL;
         }
         return mode;
     }

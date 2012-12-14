@@ -5,7 +5,7 @@
  * own risk. You are free to reuse as long as the credit is provided to me for this work
  */
 
-package com.rixon.lms_console.service.stub;
+package com.rixon.lms_console.command.service.stub;
 
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.Result;
@@ -26,7 +26,7 @@ public class ExitServiceStub implements Service {
 
     @NotNull
     @Override
-    public Result execute(Parameter<String> parameter) {
+    public Result invoke(Parameter<String> parameter) {
         String exitMessage = EXIT_MESSAGE;
         List<String> messages = new ArrayList<String>();
         messages.add(exitMessage);

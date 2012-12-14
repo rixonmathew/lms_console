@@ -7,13 +7,15 @@
 
 package com.rixon.lms_console.command.operation;
 
+import static com.rixon.lms_console.command.operation.OperationTypes.LIST_USER;
+
 /**
  * This class represents the operation type list
  * User: rixon|Date: 9/19/12|Time: 4:43 PM
  */
 public class ListUserOperation extends AbstractOperation {
-    ListUserOperation(String operationType) {
-        super(operationType);
+    ListUserOperation() {
+        super(LIST_USER);
         usage = "Usage: list-user [userid]";
     }
 }

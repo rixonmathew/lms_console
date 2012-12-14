@@ -7,13 +7,15 @@
 
 package com.rixon.lms_console.command.operation;
 
+import static com.rixon.lms_console.command.operation.OperationTypes.EXIT;
+
 /**
  * This class represents the exit operation
  * User: rixon|Date: 8/17/12|Time: 10:01 AM
  */
 public class ExitOperation extends AbstractOperation {
-    public ExitOperation(String operationType) {
-        super(operationType);
+    public ExitOperation() {
+        super(EXIT);
         usage = "Usage: exit";
     }
 }

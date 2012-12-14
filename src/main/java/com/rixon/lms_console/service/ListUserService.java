@@ -23,7 +23,7 @@ import java.util.List;
  */
 public class ListUserService implements Service {
     @Override
-    public Result execute(Parameter<String> parameter) {
+    public Result invoke(Parameter<String> parameter) {
         List<String> parameterValues = (List<String>) parameter.getParameters();
         List<Member> members = new ArrayList<Member>();
         Store store = SimpleStore.getInstance();

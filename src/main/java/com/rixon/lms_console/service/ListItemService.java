@@ -23,7 +23,7 @@ import java.util.List;
  */
 public class ListItemService implements Service {
     @Override
-    public Result execute(Parameter<String> parameter) {
+    public Result invoke(Parameter<String> parameter) {
         List<String> parameterValues = (List<String>) parameter.getParameters();
         String itemIdString = parameterValues.get(0);
         long itemId = Long.parseLong(itemIdString);

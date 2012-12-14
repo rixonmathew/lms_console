@@ -5,27 +5,34 @@
  * own risk. You are free to reuse as long as the credit is provided to me for this work
  */
 
-package com.rixon.lms_console.service.stub;
+package com.rixon.lms_console.command.service.stub;
 
 import com.rixon.lms_console.command.Parameter;
-import com.rixon.lms_console.command.result.ListItemResult;
 import com.rixon.lms_console.command.result.Result;
+import com.rixon.lms_console.command.result.SearchResult;
 import com.rixon.lms_console.dao.Item;
 import com.rixon.lms_console.service.Service;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This class represents the stub service implementation for list-item service
- * User: rixon|Date: 10/2/12|Time: 12:24 PM
+ * This class implements the stub service for search operation
+ * User: rixon|Date: 8/17/12|Time: 9:16 PM
  */
-public class ListItemServiceStub implements Service {
+public class SearchServiceStub implements Service {
+    @NotNull
     @Override
-    public Result execute(Parameter<String> parameter) {
+    public Result invoke(Parameter<String> parameter) {
         List<Item> items = new ArrayList<Item>();
         Item item = MockItemsProvider.createMockItem("Book1", "A sample Book");
+        Item item2 = MockItemsProvider.createMockItem("Book2", "Sample book2");
+        Item item3 = MockItemsProvider.createMockItem("Book3", "Sample book3");
         items.add(item);
-        return new ListItemResult(items);
+        items.add(item2);
+        items.add(item3);
+        return new SearchResult(items);
     }
+
 }

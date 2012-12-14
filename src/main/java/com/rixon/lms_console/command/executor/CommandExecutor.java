@@ -10,7 +10,7 @@ import com.rixon.lms_console.command.result.Result;
 public interface CommandExecutor {
 
     /**
-     * This method is used to execute a command and return the result associated with the command
+     * This method is used to invoke a command and return the result associated with the command
      *
      * @param command the command object
      * @return Result associated with the command

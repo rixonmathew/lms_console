@@ -31,7 +31,6 @@ public class ServiceTest {
 
     @Before
     public void setup() {
-        System.setProperty(ServiceFacadeFactory.LMS_MODE, ServiceFacadeFactory.REAL);
         facade = ServiceFacadeFactory.serviceFacade();
     }
 
@@ -44,7 +43,7 @@ public class ServiceTest {
     public void testHelpServiceWitNoParameters() {
         Service helpService = facade.serviceForOperation(OperationTypes.HELP);
         Parameter<String> parameter = CommandTestUtil.parameterWithString(null);
-        Result helpResult = helpService.execute(parameter);
+        Result helpResult = helpService.invoke(parameter);
         assertNotNull(helpResult);
         TableModel tableModel = helpResult.getResultsTable();
         final int expectedCount = 9;
@@ -55,7 +54,7 @@ public class ServiceTest {
     public void testHelpServiceWitParameters() {
         Service helpService = facade.serviceForOperation(OperationTypes.HELP);
         Parameter<String> parameter = CommandTestUtil.parameterWithString("search");
-        Result helpResult = helpService.execute(parameter);
+        Result helpResult = helpService.invoke(parameter);
         assertNotNull(helpResult);
         TableModel tableModel = helpResult.getResultsTable();
         final int expectedCount = 1;
@@ -66,7 +65,7 @@ public class ServiceTest {
     public void testSearchServiceWithOneParameter() {
         Service searchService = facade.serviceForOperation(OperationTypes.SEARCH);
         Parameter<String> parameter = CommandTestUtil.parameterWithString("Charlie");
-        Result searchResult = searchService.execute(parameter);
+        Result searchResult = searchService.invoke(parameter);
         assertNotNull(searchResult);
         TableModel tableModel = searchResult.getResultsTable();
         final int expectedColumnCount = 6;
@@ -80,7 +79,7 @@ public class ServiceTest {
     public void testSearchServiceWithMultipleParameters() {
         Service searchService = facade.serviceForOperation(OperationTypes.SEARCH);
         Parameter<String> searchParameter = CommandTestUtil.parameterWithString("Charlie", "Goa");
-        Result searchResult = searchService.execute(searchParameter);
+        Result searchResult = searchService.invoke(searchParameter);
         assertNotNull(searchResult);
         TableModel tableModel = searchResult.getResultsTable();
         assertNotNull(tableModel);
@@ -92,7 +91,7 @@ public class ServiceTest {
     public void testReserveServiceWithValidParameters() {
         Service reserveService = facade.serviceForOperation(OperationTypes.RESERVE);
         Parameter<String> reserveParameter = CommandTestUtil.parameterWithString("27240", "1");
-        Result reserveResult = reserveService.execute(reserveParameter);
+        Result reserveResult = reserveService.invoke(reserveParameter);
         assertNotNull(reserveResult);
         TableModel tableModel = reserveResult.getResultsTable();
         final int expectedRowCount = 1;
@@ -108,7 +107,7 @@ public class ServiceTest {
         final String userID = "1";
         Service reserveService = facade.serviceForOperation(OperationTypes.RESERVE);
         Parameter<String> reserveParameter = CommandTestUtil.parameterWithString(instanceID, userID);
-        Result reserveResult = reserveService.execute(reserveParameter);
+        Result reserveResult = reserveService.invoke(reserveParameter);
         assertNotNull(reserveResult);
         TableModel tableModel = reserveResult.getResultsTable();
         final int expectedRowCount = 1;

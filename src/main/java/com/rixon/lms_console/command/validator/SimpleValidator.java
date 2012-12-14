@@ -17,11 +17,15 @@ public class SimpleValidator implements Validator<String> {
 
     @NotNull
     @Override
-    public ValidationResult validateCommand(@NotNull Operation operation, Parameter<String> parameter) {
-        boolean isOperationValid = OperationsCatalog.isOperationValid(operation.getOperationType());
-        boolean areParametersValid = ParameterValidator.validateParameter(parameter, operation);
+    public ValidationResult validateCommand(Operation operation, Parameter<String> parameter) {
+
+        boolean isOperationValid = (operation != null) && OperationsCatalog.isOperationValid(operation.getOperationType());
+        boolean areParametersValid = false;
+        if (isOperationValid) {
+            areParametersValid = (parameter != null) && ParameterValidator.validateParameter(parameter, operation);
+        }
         boolean isCommandValid = isOperationValid && areParametersValid;
-        String validationMessage, validationHint;
+        String validationMessage, validationHint = "";
         String messageKey;
         if (isCommandValid) {
             messageKey = SUCCESS_KEY;
@@ -35,7 +39,9 @@ public class SimpleValidator implements Validator<String> {
             }
         }
         validationMessage = ValidationMessageProvider.getMessageForKey(messageKey);
-        validationHint = operation.getUsage();//ValidationHintProvider.getHintForKey(hintKey);
+        if (isOperationValid) {
+            validationHint = operation.getUsage();
+        }
         return new BasicValidationResult(isCommandValid, validationMessage,
                 validationHint);
     }

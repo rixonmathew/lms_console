@@ -5,7 +5,7 @@
  * own risk. You are free to reuse as long as the credit is provided to me for this work
  */
 
-package com.rixon.lms_console.service.stub;
+package com.rixon.lms_console.command.service.stub;
 
 import com.rixon.lms_console.command.Parameter;
 import com.rixon.lms_console.command.result.ListUserResult;
@@ -17,21 +17,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *  Stub servcice for unit testing
- *  User: rixon|Date: 9/19/12|Time: 9:04 PM
+ * Stub servcice for unit testing
+ * User: rixon|Date: 9/19/12|Time: 9:04 PM
  */
 public class ListUserServiceStub implements Service {
     @Override
-    public Result execute(Parameter<String> parameter) {
+    public Result invoke(Parameter<String> parameter) {
         List<Member> members = new ArrayList<Member>();
-        members.add(createMockMember("Rixon","Mathew","rixonmathew@gmail.com"));
-        members.add(createMockMember("John","Barrow","johnbarrow@gmail.com"));
-        members.add(createMockMember("Steve","Jobs","jobs@apple.com"));
-        members.add(createMockMember("Little","Johnny","littlejohn@arthur.com"));
+        members.add(createMockMember("Rixon", "Mathew", "rixonmathew@gmail.com"));
+        members.add(createMockMember("John", "Barrow", "johnbarrow@gmail.com"));
+        members.add(createMockMember("Steve", "Jobs", "jobs@apple.com"));
+        members.add(createMockMember("Little", "Johnny", "littlejohn@arthur.com"));
         return new ListUserResult(members);
     }
 
-    private Member createMockMember(String firstName,String lastName,String emailID) {
+    private Member createMockMember(String firstName, String lastName, String emailID) {
         Member.MemberBuilder builder = new Member.MemberBuilder();
         builder.setId(101);
         builder.setFirstName(firstName);

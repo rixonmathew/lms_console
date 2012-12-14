@@ -7,13 +7,15 @@
 
 package com.rixon.lms_console.command.operation;
 
+import static com.rixon.lms_console.command.operation.OperationTypes.LIST_ITEM;
+
 /**
  * This class represents the operation for ListItem
  * User: rixon|Date: 10/2/12|Time: 12:08 PM
  */
 public class ListItemOperation extends AbstractOperation {
-    ListItemOperation(String operationType) {
-        super(operationType);
+    ListItemOperation() {
+        super(LIST_ITEM);
         this.usage = "list-item <item-id>";
     }
 }

@@ -18,7 +18,7 @@ import org.jetbrains.annotations.Nullable;
 public class TransferService implements Service {
     @Nullable
     @Override
-    public Result execute(Parameter<String> parameter) {
+    public Result invoke(Parameter<String> parameter) {
         return null;  //TODO inject DAO and assign
     }
 }

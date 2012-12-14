@@ -22,7 +22,7 @@ import java.util.List;
  */
 public class ReserveItemService implements Service {
     @Override
-    public Result execute(Parameter<String> parameter) {
+    public Result invoke(Parameter<String> parameter) {
         List<String> parameterValues = (List<String>) parameter.getParameters();
         Long itemInstanceId = Long.valueOf(parameterValues.get(0));
         Long memberId = Long.valueOf(parameterValues.get(1));
