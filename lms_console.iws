@@ -2,55 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_db.lck" afterPath="$PROJECT_DIR$/lms_db/lms_db.lck" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/AbstractCommandTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/AbstractCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/executor/CommandExecutor.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/executor/CommandExecutor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/executor/CommandExecutorTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/executor/CommandExecutorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/ExitOperation.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/ExitOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/ExitService.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/ExitService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/HelpOperation.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/HelpOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/HelpService.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/HelpService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/IssueOperation.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/IssueOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/IssueService.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/IssueService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/main/LMSConsole.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/main/LMSConsole.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/ListItemOperation.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/ListItemOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/ListItemService.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/ListItemService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/ListUserOperation.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/ListUserOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/ListUserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/ListUserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/OperationFlyWeightFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/OperationFlyWeightFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/Parameter.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/Parameter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/validator/parameterValidation/ParameterValidator.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/validator/parameterValidation/ParameterValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/ReserveItemService.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/ReserveItemService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/ReserveOperation.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/ReserveOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/ReturnOperation.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/ReturnOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/ReturnService.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/ReturnService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/SearchOperation.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/SearchOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/SearchService.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/SearchService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/Service.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/Service.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/facade/ServiceFacadeFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/facade/ServiceFacadeFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/service/ServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/service/ServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/executor/SimpleCommandExecutor.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/executor/SimpleCommandExecutor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/validator/SimpleValidator.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/validator/SimpleValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/TransferOperation.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/operation/TransferOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/TransferService.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/TransferService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/validator/ValidationMessageProvider.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/command/validator/ValidationMessageProvider.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_console.iws" afterPath="$PROJECT_DIR$/lms_console.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_db.log" afterPath="$PROJECT_DIR$/lms_db/lms_db.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_db.properties" afterPath="$PROJECT_DIR$/lms_db/lms_db.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_db.script" afterPath="$PROJECT_DIR$/lms_db/lms_db.script" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output.log" afterPath="$PROJECT_DIR$/output.log" />
-      <change type="MOVED" beforePath="D:\workspace\github\lms_console\src\main\java\com\rixon\lms_console\facade\ServiceFacadeReal.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/facade/ServiceFacadeLocal.java" />
-      <change type="MOVED" beforePath="D:\workspace\github\lms_console\src\main\java\com\rixon\lms_console\facade\mock\ServiceFacadeMock.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/facade/ServiceFacadeMock.java" />
-      <change type="MOVED" beforePath="D:\workspace\github\lms_console\src\main\java\com\rixon\lms_console\service\stub\ExitServiceStub.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/service/stub/ExitServiceStub.java" />
-      <change type="MOVED" beforePath="D:\workspace\github\lms_console\src\main\java\com\rixon\lms_console\service\stub\HelpServiceStub.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/service/stub/HelpServiceStub.java" />
-      <change type="MOVED" beforePath="D:\workspace\github\lms_console\src\main\java\com\rixon\lms_console\service\stub\IssueServiceStub.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/service/stub/IssueServiceStub.java" />
-      <change type="MOVED" beforePath="D:\workspace\github\lms_console\src\main\java\com\rixon\lms_console\service\stub\ListItemServiceStub.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/service/stub/ListItemServiceStub.java" />
-      <change type="MOVED" beforePath="D:\workspace\github\lms_console\src\main\java\com\rixon\lms_console\service\stub\ListUserServiceStub.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/service/stub/ListUserServiceStub.java" />
-      <change type="MOVED" beforePath="D:\workspace\github\lms_console\src\main\java\com\rixon\lms_console\service\stub\MockItemsProvider.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/service/stub/MockItemsProvider.java" />
-      <change type="MOVED" beforePath="D:\workspace\github\lms_console\src\main\java\com\rixon\lms_console\service\stub\ReserveServiceStub.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/service/stub/ReserveServiceStub.java" />
-      <change type="MOVED" beforePath="D:\workspace\github\lms_console\src\main\java\com\rixon\lms_console\service\stub\ReturnServiceStub.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/service/stub/ReturnServiceStub.java" />
-      <change type="MOVED" beforePath="D:\workspace\github\lms_console\src\main\java\com\rixon\lms_console\service\stub\SearchServiceStub.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/service/stub/SearchServiceStub.java" />
-      <change type="MOVED" beforePath="D:\workspace\github\lms_console\src\main\java\com\rixon\lms_console\service\stub\TransferServiceStub.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/service/stub/TransferServiceStub.java" />
     </list>
     <ignored path="lms_console.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -463,7 +415,7 @@
       <file leaf-file-name="ServiceTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/service/ServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="29" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.55839413">
+            <state line="39" column="31" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.6514599">
               <folding />
             </state>
           </provider>
@@ -1442,7 +1394,11 @@
       <created>1355065642616</created>
       <updated>1355065642616</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Moved stub services to test root">
+      <created>1355466791658</created>
+      <updated>1355466791658</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1467,10 +1423,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1040" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32768363" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32616082" sideWeight="0.49681783" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272933" sideWeight="0.49675852" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32616082" sideWeight="0.49027553" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.67087275" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13636364" sideWeight="0.3248" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1479,7 +1435,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249694" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.384" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2288" sideWeight="0.49924242" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32616082" sideWeight="0.50405186" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935026" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -1489,7 +1445,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18670382" sideWeight="0.77032065" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3996328" sideWeight="0.67087275" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24797407" sideWeight="0.6738392" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24797407" sideWeight="0.6738392" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2471637" sideWeight="0.6704417" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22876558" sideWeight="0.49545455" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DSM" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="100" y="100" width="2360" height="1240" />
@@ -1774,7 +1730,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/service/ServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="29" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.55839413">
+        <state line="39" column="31" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.6514599">
           <folding />
         </state>
       </provider>
