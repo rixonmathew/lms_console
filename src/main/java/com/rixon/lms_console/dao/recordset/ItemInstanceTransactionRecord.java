@@ -22,6 +22,7 @@ public class ItemInstanceTransactionRecord {
     private ItemInstanceRecord itemInstanceRecord;
     private TransactionTypeRecord transactionTypeRecord;
     private MemberRecord memberRecord;
+    private long initialTransactionId;
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "item_instance_transaction_id_gen")
@@ -62,5 +63,14 @@ public class ItemInstanceTransactionRecord {
 
     public void setMemberRecord(MemberRecord memberRecord) {
         this.memberRecord = memberRecord;
+    }
+
+    @Column(name = "INITIAL_TRANSACTION_ID")
+    public long getInitialTransactionId() {
+        return initialTransactionId;
+    }
+
+    public void setInitialTransactionId(long initialTransactionId) {
+        this.initialTransactionId = initialTransactionId;
     }
 }

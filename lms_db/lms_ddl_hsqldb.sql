@@ -132,426 +132,426 @@ CREATE TABLE ROLE_FEATURE
 --Creating the various FK's and other indices required by hsqldb
 
 --Insert data
-Insert into CATEGORY
+INSERT INTO CATEGORY
    (ID, NAME, DESCRIPTION)
- Values
+ VALUES
    (1, 'ITEM_PROPERTY', 'This category is for grouping all the properties that belongs to a Library Item');
-Insert into CATEGORY
+INSERT INTO CATEGORY
    (ID, NAME, DESCRIPTION)
- Values
+ VALUES
    (2, 'INSTANCE_PROPERTY', 'This category grpups all properties that belong to an instance');
-Insert into CATEGORY
+INSERT INTO CATEGORY
    (ID, NAME, DESCRIPTION)
- Values
+ VALUES
    (3, 'OWNER_TYPES', 'This category groups the various kinds of owners for a library item');
-Insert into CATEGORY
+INSERT INTO CATEGORY
    (ID, NAME, DESCRIPTION)
- Values
+ VALUES
    (4, 'TRANSACTION_PROPERTY', 'This category groups the properties that belongs to a transaction');
 
-Insert into ITEM_TYPE
+INSERT INTO ITEM_TYPE
    (TYPE, DESCRIPTION, ID)
- Values
+ VALUES
    ('BOOK', 'Books', 1);
-Insert into ITEM_TYPE
+INSERT INTO ITEM_TYPE
    (TYPE, DESCRIPTION, ID)
- Values
+ VALUES
    ('MOVIE', 'Movies', 2);
-Insert into ITEM_TYPE
+INSERT INTO ITEM_TYPE
    (TYPE, DESCRIPTION, ID)
- Values
+ VALUES
    ('MUSIC', 'Audio', 3);
-Insert into ITEM_TYPE
+INSERT INTO ITEM_TYPE
    (TYPE, DESCRIPTION, ID)
- Values
+ VALUES
    ('GAME', 'Console Games', 4);
-Insert into ITEM_TYPE
+INSERT INTO ITEM_TYPE
    (TYPE, DESCRIPTION, ID)
- Values
+ VALUES
    ('MAGAZINE', 'Magazine', 5);
-Insert into ITEM_TYPE
+INSERT INTO ITEM_TYPE
    (TYPE, DESCRIPTION, ID)
- Values
+ VALUES
    ('JOURNAL', 'Journals', 6);
-Insert into ITEM_TYPE
+INSERT INTO ITEM_TYPE
    (TYPE, DESCRIPTION, ID)
- Values
+ VALUES
    ('NEWSPAPER', 'Newspaper Archives', 7);
 
-Insert into MEMBER
+INSERT INTO MEMBER
    (ID, FIRST_NAME, LAST_NAME, EMAIL_ID, MOBILE_NUMBER, POSTAL_ADDRESS)
- Values
+ VALUES
    (1, 'Rixon', 'Mathew', 'rixonmathew@gmail.com', '9545590291', 'Pune');
-Insert into MEMBER
+INSERT INTO MEMBER
    (ID, FIRST_NAME, LAST_NAME, EMAIL_ID, MOBILE_NUMBER, POSTAL_ADDRESS)
- Values
+ VALUES
    (2, 'Dinkar', 'Gupta', 'dinkargupta@gmail.com', '9965842261', 'Pune');
-Insert into MEMBER
+INSERT INTO MEMBER
    (ID, FIRST_NAME, LAST_NAME, EMAIL_ID, MOBILE_NUMBER, POSTAL_ADDRESS)
- Values
+ VALUES
    (3, 'Vaibhav', 'Deshpande', 'vaibhavdeshpande@gmail.com', '9956654487', 'Jaipur');
-Insert into MEMBER
+INSERT INTO MEMBER
    (ID, FIRST_NAME, LAST_NAME, EMAIL_ID, MOBILE_NUMBER, POSTAL_ADDRESS)
- Values
+ VALUES
    (4, 'Divya', 'Jain', 'divyajain@gmail.com', '6656744548', 'Zurich');
 
-Insert into PROPERTY
+INSERT INTO PROPERTY
    (ID, CATEGORY_ID, NAME, DESCRIPTION, DATA_TYPE)
- Values
+ VALUES
    (1, 1, 'TITLE', 'Title', 'String');
-Insert into PROPERTY
+INSERT INTO PROPERTY
    (ID, CATEGORY_ID, NAME, DESCRIPTION, DATA_TYPE)
- Values
+ VALUES
    (2, 1, 'AUTHOR', 'Author', 'String');
-Insert into PROPERTY
+INSERT INTO PROPERTY
    (ID, CATEGORY_ID, NAME, DESCRIPTION, DATA_TYPE)
- Values
+ VALUES
    (3, 1, 'PUBLISHER', 'Publisher', 'String');
-Insert into PROPERTY
+INSERT INTO PROPERTY
    (ID, CATEGORY_ID, NAME, DESCRIPTION, DATA_TYPE)
- Values
+ VALUES
    (4, 1, 'PUBLISHED_DATE', 'Date item was published', 'Date');
-Insert into PROPERTY
+INSERT INTO PROPERTY
    (ID, CATEGORY_ID, NAME, DESCRIPTION, DATA_TYPE)
- Values
+ VALUES
    (5, 2, 'COVER_TYPE', 'Cover Type', 'String');
-Insert into PROPERTY
+INSERT INTO PROPERTY
    (ID, CATEGORY_ID, NAME, DESCRIPTION, DATA_TYPE)
- Values
+ VALUES
    (6, 1, 'PAGES', 'No. of pages', 'Number');
-Insert into PROPERTY
+INSERT INTO PROPERTY
    (ID, CATEGORY_ID, NAME, DESCRIPTION, DATA_TYPE)
- Values
+ VALUES
    (7, 1, 'GENRE', 'Genre', 'String');
-Insert into PROPERTY
+INSERT INTO PROPERTY
    (ID, CATEGORY_ID, NAME, DESCRIPTION, DATA_TYPE)
- Values
+ VALUES
    (8, 1, 'PRICE', 'Price', 'Money');
-Insert into PROPERTY
+INSERT INTO PROPERTY
    (ID, CATEGORY_ID, NAME, DESCRIPTION, DATA_TYPE)
- Values
+ VALUES
    (9, 1, 'ISBN', 'Isbn', 'String');
-Insert into PROPERTY
+INSERT INTO PROPERTY
    (ID, CATEGORY_ID, NAME, DESCRIPTION, DATA_TYPE)
- Values
+ VALUES
    (10, 1, 'WEBSITE', 'Website', 'String');
-Insert into PROPERTY
+INSERT INTO PROPERTY
    (ID, CATEGORY_ID, NAME, DESCRIPTION, DATA_TYPE)
- Values
+ VALUES
    (11, 1, 'CATEGORY', 'Category', 'String');
-Insert into PROPERTY
+INSERT INTO PROPERTY
    (ID, CATEGORY_ID, NAME, DESCRIPTION, DATA_TYPE)
- Values
+ VALUES
    (12, 1, 'GENRE', 'Genre', 'String');
-Insert into PROPERTY
+INSERT INTO PROPERTY
    (ID, CATEGORY_ID, NAME, DESCRIPTION, DATA_TYPE)
- Values
+ VALUES
    (13, 1, 'RATING', 'Rating', 'String');
 
-Insert into ITEM_TYPE_PROPERTY
+INSERT INTO ITEM_TYPE_PROPERTY
    (ITEM_TYPE_ID, PROPERTY_ID, MANDATORY)
- Values
+ VALUES
    (1, 1, 'Y');
-Insert into ITEM_TYPE_PROPERTY
+INSERT INTO ITEM_TYPE_PROPERTY
    (ITEM_TYPE_ID, PROPERTY_ID, MANDATORY)
- Values
+ VALUES
    (1, 2, 'Y');
-Insert into ITEM_TYPE_PROPERTY
+INSERT INTO ITEM_TYPE_PROPERTY
    (ITEM_TYPE_ID, PROPERTY_ID, MANDATORY)
- Values
+ VALUES
    (1, 3, 'Y');
-Insert into ITEM_TYPE_PROPERTY
+INSERT INTO ITEM_TYPE_PROPERTY
    (ITEM_TYPE_ID, PROPERTY_ID, MANDATORY)
- Values
+ VALUES
    (1, 4, 'Y');
-Insert into ITEM_TYPE_PROPERTY
+INSERT INTO ITEM_TYPE_PROPERTY
    (ITEM_TYPE_ID, PROPERTY_ID, MANDATORY)
- Values
+ VALUES
    (1, 6, 'N');
-Insert into ITEM_TYPE_PROPERTY
+INSERT INTO ITEM_TYPE_PROPERTY
    (ITEM_TYPE_ID, PROPERTY_ID, MANDATORY)
- Values
+ VALUES
    (1, 7, 'Y');
-Insert into ITEM_TYPE_PROPERTY
+INSERT INTO ITEM_TYPE_PROPERTY
    (ITEM_TYPE_ID, PROPERTY_ID, MANDATORY)
- Values
+ VALUES
    (1, 8, 'Y');
-Insert into ITEM_TYPE_PROPERTY
+INSERT INTO ITEM_TYPE_PROPERTY
    (ITEM_TYPE_ID, PROPERTY_ID, MANDATORY)
- Values
+ VALUES
    (1, 9, 'Y');
-Insert into ITEM_TYPE_PROPERTY
+INSERT INTO ITEM_TYPE_PROPERTY
    (ITEM_TYPE_ID, PROPERTY_ID, MANDATORY)
- Values
+ VALUES
    (1, 10, 'N');
    
    
-Insert into ITEM
+INSERT INTO ITEM
    (ID, NAME, DESCRIPTION, ITEM_TYPE_ID)
- Values
+ VALUES
    (5, 'Programming Perl', 'The primer on Perl Programming', 1);
-Insert into ITEM
+INSERT INTO ITEM
    (ID, NAME, DESCRIPTION, ITEM_TYPE_ID)
- Values
+ VALUES
    (6, 'Effective Java', 'A guide to using Java effectively', 1);
-Insert into ITEM
+INSERT INTO ITEM
    (ID, NAME, DESCRIPTION, ITEM_TYPE_ID)
- Values
+ VALUES
    (1, 'The Fountainhead', 'A classic on Objectivitism', 1);
-Insert into ITEM
+INSERT INTO ITEM
    (ID, NAME, DESCRIPTION, ITEM_TYPE_ID)
- Values
+ VALUES
    (2, 'The Godfather', 'Story about rise of Italian mafia in US', 1);
-Insert into ITEM
+INSERT INTO ITEM
    (ID, NAME, DESCRIPTION, ITEM_TYPE_ID)
- Values
+ VALUES
    (3, 'Atlas Shrugged', 'Who is John Galt?', 1);
-Insert into ITEM
+INSERT INTO ITEM
    (ID, NAME, DESCRIPTION, ITEM_TYPE_ID)
- Values
+ VALUES
    (4, 'A Prisoner of Birth', 'Jeffrey Archer', 1);   
 
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (62, 1, 1, 'The Fountainhead');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (63, 1, 2, 'Ayn Rand');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (64, 1, 3, 'Bobb Williams');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (65, 1, 4, '07/26/1936');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (66, 1, 6, '900');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (67, 1, 7, 'Fiction:Objectivism');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (68, 1, 8, '500');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (69, 1, 9, '978-112322-123-1');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (70, 2, 1, 'The Godfather');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (71, 2, 2, 'Mario Puzo');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (72, 2, 3, 'FF Publishers');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (73, 2, 4, '08/01/1967');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (74, 2, 6, '600');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (75, 2, 7, 'Fiction:Crime');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (76, 2, 8, '300');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (77, 2, 9, '965-1112122-331-2');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (78, 3, 1, 'Atlas Shrugged');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (79, 3, 2, 'Ayn Rand');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (80, 3, 3, 'Blue Lagoon');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (81, 3, 4, '06/20/1957');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (82, 3, 6, '1600');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (83, 3, 7, 'Fiction:Objectivism');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (84, 3, 8, '700');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (85, 3, 9, '935-1123212-231-2');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (86, 4, 1, 'Prisoner of Birth');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (87, 4, 2, 'Jefffrey Archer');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (88, 4, 3, 'Striped Whites');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (89, 4, 4, '06/20/2008');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (90, 4, 6, '300');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (91, 4, 7, 'Fiction:Courtroom Drama');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (92, 4, 8, '700');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (93, 4, 9, '911-2322312-212-2');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (94, 5, 1, 'Programming Perl');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (95, 5, 2, 'Larry Wall');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (96, 5, 3, 'Humped Quadraped');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (97, 5, 4, '06/20/1988');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (98, 5, 6, '400');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (99, 5, 7, 'Computers:Programming');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (100, 5, 8, '700');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (101, 5, 9, '956-1023907-856-3');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (102, 6, 1, 'Effective Java');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (103, 6, 2, 'Joshua Bloch');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (104, 6, 3, 'Bespectaled Visions');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (105, 6, 4, '09/18/2005');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (106, 6, 6, '400');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (107, 6, 7, 'Computers:Programming');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (108, 6, 8, '700');
-Insert into ITEM_PROPERTY
+INSERT INTO ITEM_PROPERTY
    (ID, ITEM_ID, PROPERTY_ID, PROPERTY_VALUE)
- Values
+ VALUES
    (109, 6, 9, '911-11139212-812-9');
 
-insert into system_role
+INSERT INTO system_role
   (id,role,description) 
- Values
+ VALUES
   (1,'Administrator','System Administrators');
 
-insert into system_role
+INSERT INTO system_role
   (id,role,description) 
- Values
+ VALUES
   (2,'Member','Member of the Library');  
   
-insert into system_role
+INSERT INTO system_role
   (id,role,description) 
- Values
+ VALUES
   (3,'Guest','Guest');    
   
   
-  insert into system_feature(id,feature,description) values (1,'SEARCH_ITEM','Search for Library Item');
-  insert into system_feature(id,feature,description) values (2,'SEARCH_MEMBER','Search for Library MEMBER');
-  insert into system_feature(id,feature,description) values (3,'CHECKOUT_ITEM','Checkout a Library Item');
-  insert into system_feature(id,feature,description) values (4,'RESERVE_ITEM','Reserve a Library Item');
-  insert into system_feature(id,feature,description) values (5,'ADD_MEMBER','Add a Library Member');
-  insert into system_feature(id,feature,description) values (6,'ADD_ITEM','Add a Library Item');
-  insert into system_feature(id,feature,description) values (7,'MODIFY_ITEM','Modify a Library Item');
-  insert into system_feature(id,feature,description) values (8,'VIEW_REPORT','View Library Reports');
-  insert into system_feature(id,feature,description) values (9,'EDIT_PREFERENCES','Edit System Preferences');
+  INSERT INTO system_feature(id,feature,description) VALUES (1,'SEARCH_ITEM','Search for Library Item');
+  INSERT INTO system_feature(id,feature,description) VALUES (2,'SEARCH_MEMBER','Search for Library MEMBER');
+  INSERT INTO system_feature(id,feature,description) VALUES (3,'CHECKOUT_ITEM','Checkout a Library Item');
+  INSERT INTO system_feature(id,feature,description) VALUES (4,'RESERVE_ITEM','Reserve a Library Item');
+  INSERT INTO system_feature(id,feature,description) VALUES (5,'ADD_MEMBER','Add a Library Member');
+  INSERT INTO system_feature(id,feature,description) VALUES (6,'ADD_ITEM','Add a Library Item');
+  INSERT INTO system_feature(id,feature,description) VALUES (7,'MODIFY_ITEM','Modify a Library Item');
+  INSERT INTO system_feature(id,feature,description) VALUES (8,'VIEW_REPORT','View Library Reports');
+  INSERT INTO system_feature(id,feature,description) VALUES (9,'EDIT_PREFERENCES','Edit System Preferences');
   
-  insert into role_feature (id,role_id,feature_id,view,edit) values(1,1,1,'Y','Y');
-  insert into role_feature (id,role_id,feature_id,view,edit) values(2,1,2,'Y','Y');
-  insert into role_feature (id,role_id,feature_id,view,edit) values(3,1,3,'Y','Y');
-  insert into role_feature (id,role_id,feature_id,view,edit) values(4,1,4,'Y','Y');
-  insert into role_feature (id,role_id,feature_id,view,edit) values(5,1,5,'Y','Y');
-  insert into role_feature (id,role_id,feature_id,view,edit) values(6,1,6,'Y','Y');
-  insert into role_feature (id,role_id,feature_id,view,edit) values(7,1,7,'Y','Y');
-  insert into role_feature (id,role_id,feature_id,view,edit) values(8,1,8,'Y','Y');
-  insert into role_feature (id,role_id,feature_id,view,edit) values(9,1,9,'Y','Y');
+  INSERT INTO role_feature (id,role_id,feature_id,VIEW,edit) VALUES(1,1,1,'Y','Y');
+  INSERT INTO role_feature (id,role_id,feature_id,VIEW,edit) VALUES(2,1,2,'Y','Y');
+  INSERT INTO role_feature (id,role_id,feature_id,VIEW,edit) VALUES(3,1,3,'Y','Y');
+  INSERT INTO role_feature (id,role_id,feature_id,VIEW,edit) VALUES(4,1,4,'Y','Y');
+  INSERT INTO role_feature (id,role_id,feature_id,VIEW,edit) VALUES(5,1,5,'Y','Y');
+  INSERT INTO role_feature (id,role_id,feature_id,VIEW,edit) VALUES(6,1,6,'Y','Y');
+  INSERT INTO role_feature (id,role_id,feature_id,VIEW,edit) VALUES(7,1,7,'Y','Y');
+  INSERT INTO role_feature (id,role_id,feature_id,VIEW,edit) VALUES(8,1,8,'Y','Y');
+  INSERT INTO role_feature (id,role_id,feature_id,VIEW,edit) VALUES(9,1,9,'Y','Y');
   
-  insert into role_feature (id,role_id,feature_id,view,edit) values(10,2,1,'Y','N');
-  insert into role_feature (id,role_id,feature_id,view,edit) values(11,2,2,DEFAULT,DEFAULT);
-  insert into role_feature (id,role_id,feature_id,view,edit) values(12,2,3,DEFAULT,DEFAULT);
-  insert into role_feature (id,role_id,feature_id,view,edit) values(13,2,4,DEFAULT,DEFAULT);
-  insert into role_feature (id,role_id,feature_id,view,edit) values(14,2,5,DEFAULT,DEFAULT);
-  insert into role_feature (id,role_id,feature_id,view,edit) values(15,2,6,DEFAULT,DEFAULT);
-  insert into role_feature (id,role_id,feature_id,view,edit) values(16,2,7,DEFAULT,DEFAULT);
-  insert into role_feature (id,role_id,feature_id,view,edit) values(17,2,8,DEFAULT,DEFAULT);
-  insert into role_feature (id,role_id,feature_id,view,edit) values(18,2,9,DEFAULT,DEFAULT);
+  INSERT INTO role_feature (id,role_id,feature_id,VIEW,edit) VALUES(10,2,1,'Y','N');
+  INSERT INTO role_feature (id,role_id,feature_id,VIEW,edit) VALUES(11,2,2,DEFAULT,DEFAULT);
+  INSERT INTO role_feature (id,role_id,feature_id,VIEW,edit) VALUES(12,2,3,DEFAULT,DEFAULT);
+  INSERT INTO role_feature (id,role_id,feature_id,VIEW,edit) VALUES(13,2,4,DEFAULT,DEFAULT);
+  INSERT INTO role_feature (id,role_id,feature_id,VIEW,edit) VALUES(14,2,5,DEFAULT,DEFAULT);
+  INSERT INTO role_feature (id,role_id,feature_id,VIEW,edit) VALUES(15,2,6,DEFAULT,DEFAULT);
+  INSERT INTO role_feature (id,role_id,feature_id,VIEW,edit) VALUES(16,2,7,DEFAULT,DEFAULT);
+  INSERT INTO role_feature (id,role_id,feature_id,VIEW,edit) VALUES(17,2,8,DEFAULT,DEFAULT);
+  INSERT INTO role_feature (id,role_id,feature_id,VIEW,edit) VALUES(18,2,9,DEFAULT,DEFAULT);
   
   
-# table or new books
+# TABLE OR new books
 CREATE TABLE Book
 (
   isbn         VARCHAR(100)               NOT NULL,
@@ -561,19 +561,19 @@ CREATE TABLE Book
   releaseDate  DATE  
 )
 
-insert into Book values ('112321','Effective Java','Joshua Bloch','Wriley publisher','01-JAN-2001');
-insert into Book values ('112322','Software Architecture in Practice','Bazz Klemens','ORiely media','1991-01-01');
-insert into Book values ('112323','Patterns of Enterprise Architecture','Ruth Babe','ORiely media','1998-01-03');
-insert into Book values ('112324','Elemental Design Patterns','Audrey Kumar','ORiely media','2001-05-03');
-insert into Book values ('112325','The Taming of the Shrew','William Shakespeare','Penguin','2008-01-03');
-insert into Book values ('112326','Theory of Music','Ludwing Van Bach','Feathers publishing','1980-01-03');
-insert into Book values ('112327','Seven habits of higly effective people','Stephen Covey','ORiely media','1998-01-03');
-insert into Book values ('112328','Managing your time','Audrey Kumar','ORiely media','1998-01-03');
-insert into Book values ('112329','Living life in your own terms','Rixon Mathew','ORiely media','1998-02-05');
-insert into Book values ('112330','Indian cinema at its best','Anurag Kashyap','ORiely media','2012-01-03');
+INSERT INTO Book VALUES ('112321','Effective Java','Joshua Bloch','Wriley publisher','01-JAN-2001');
+INSERT INTO Book VALUES ('112322','Software Architecture in Practice','Bazz Klemens','ORiely media','1991-01-01');
+INSERT INTO Book VALUES ('112323','Patterns of Enterprise Architecture','Ruth Babe','ORiely media','1998-01-03');
+INSERT INTO Book VALUES ('112324','Elemental Design Patterns','Audrey Kumar','ORiely media','2001-05-03');
+INSERT INTO Book VALUES ('112325','The Taming of the Shrew','William Shakespeare','Penguin','2008-01-03');
+INSERT INTO Book VALUES ('112326','Theory of Music','Ludwing Van Bach','Feathers publishing','1980-01-03');
+INSERT INTO Book VALUES ('112327','Seven habits of higly effective people','Stephen Covey','ORiely media','1998-01-03');
+INSERT INTO Book VALUES ('112328','Managing your time','Audrey Kumar','ORiely media','1998-01-03');
+INSERT INTO Book VALUES ('112329','Living life in your own terms','Rixon Mathew','ORiely media','1998-02-05');
+INSERT INTO Book VALUES ('112330','Indian cinema at its best','Anurag Kashyap','ORiely media','2012-01-03');
 
 
-create sequence member_id_seq as bigint start with 100 increment by 1;
+CREATE sequence member_id_seq AS bigint start WITH 100 increment BY 1;
 
 CREATE TABLE MEMBER
 (
@@ -586,21 +586,21 @@ CREATE TABLE MEMBER
   POSTAL_ADDRESS  VARCHAR(4000)
 )
 
-Insert into MEMBER
+INSERT INTO MEMBER
    (ID, FIRST_NAME, LAST_NAME, EMAIL_ID,PASSWORD, MOBILE_NUMBER, POSTAL_ADDRESS)
- Values
+ VALUES
    (1, 'Rixon', 'Mathew', 'rixonmathew@gmail.com', 'lms123#','9545590291', 'Pune');
-Insert into MEMBER
+INSERT INTO MEMBER
    (ID, FIRST_NAME, LAST_NAME, EMAIL_ID,PASSWORD, MOBILE_NUMBER, POSTAL_ADDRESS)
- Values
+ VALUES
    (2, 'Dinkar', 'Gupta', 'dinkargupta@gmail.com', 'password123','9965842261', 'Pune');
-Insert into MEMBER
+INSERT INTO MEMBER
    (ID, FIRST_NAME, LAST_NAME, EMAIL_ID,PASSWORD, MOBILE_NUMBER, POSTAL_ADDRESS)
- Values
+ VALUES
    (3, 'Vaibhav', 'Deshpande', 'vaibhavdeshpande@gmail.com', 'password123', '9956654487', 'Jaipur');
-Insert into MEMBER
+INSERT INTO MEMBER
    (ID, FIRST_NAME, LAST_NAME, EMAIL_ID,PASSWORD, MOBILE_NUMBER, POSTAL_ADDRESS)
- Values
+ VALUES
    (4, 'Divya', 'Jain', 'divyajain@gmail.com', 'password123', '6656744548', 'Zurich');
 
 

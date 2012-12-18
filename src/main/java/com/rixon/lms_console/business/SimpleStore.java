@@ -168,6 +168,7 @@ public class SimpleStore implements Store {
 
     @Override
     public List reserveItemForUser(long itemInstanceId, long memberId) {
+        //FIXME Is Store the right place for business logic?
         List messages = new ArrayList();
         ItemInstanceRecord itemInstanceRecord = lmsDao.findItemInstanceId(itemInstanceId);
         if (itemInstanceRecord == null) {

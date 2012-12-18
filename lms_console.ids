@@ -1088,7 +1088,7 @@
     </table>
     <table name="CATEGORY" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
       <column name="ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
-      <column name="NAME" sqlType="VARCHAR" length="20" precision="0" nullable="false" jdbcType="12" />
+      <column name="NAME" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12" />
       <column name="DESCRIPTION" sqlType="VARCHAR" length="500" precision="0" nullable="false" jdbcType="12" />
       <primary-key name="SYS_PK_10038" columns="ID" />
       <exported-key name="SYS_FK_10046" table="PROPERTY" schema="PUBLIC" catalog="PUBLIC" columns="CATEGORY_ID" />
@@ -1130,12 +1130,13 @@
       <column name="ITEM_INSTANCE_ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
       <column name="TRANSACTION_TYPE_ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
       <column name="MEMBER_ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
+      <column name="INITIAL_TRANSACTION_ID" sqlType="INTEGER" length="32" precision="0" nullable="true" jdbcType="4" />
       <primary-key name="SYS_PK_10083" columns="ID" />
-      <foreign-key name="SYS_FK_10160" columns="MEMBER_ID" ref-table="MEMBER" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
-      <foreign-key name="SYS_FK_10086" columns="TRANSACTION_TYPE_ID" ref-table="TRANSACTION_TYPE" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
-      <exported-key name="SYS_FK_10091" table="TRANSACTION_HISTORY" schema="PUBLIC" catalog="PUBLIC" columns="PARENT_TRANSACTION_ID" />
-      <exported-key name="SYS_FK_10092" table="TRANSACTION_HISTORY" schema="PUBLIC" catalog="PUBLIC" columns="CHILD_TRANSACTION_ID" />
-      <exported-key name="SYS_FK_10146" table="ITEM_INSTANCE_TRANSACTION_PROPERTY" schema="PUBLIC" catalog="PUBLIC" columns="ITEM_INSTANCE_TRANSACTION_ID" />
+      <foreign-key name="SYS_FK_10154" columns="MEMBER_ID" ref-table="MEMBER" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
+      <foreign-key name="SYS_FK_10087" columns="TRANSACTION_TYPE_ID" ref-table="TRANSACTION_TYPE" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
+      <exported-key name="SYS_FK_10092" table="TRANSACTION_HISTORY" schema="PUBLIC" catalog="PUBLIC" columns="PARENT_TRANSACTION_ID" />
+      <exported-key name="SYS_FK_10093" table="TRANSACTION_HISTORY" schema="PUBLIC" catalog="PUBLIC" columns="CHILD_TRANSACTION_ID" />
+      <exported-key name="SYS_FK_10147" table="ITEM_INSTANCE_TRANSACTION_PROPERTY" schema="PUBLIC" catalog="PUBLIC" columns="ITEM_INSTANCE_TRANSACTION_ID" />
     </table>
     <table name="ITEM_INSTANCE_TRANSACTION_PROPERTY" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
       <column name="ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />

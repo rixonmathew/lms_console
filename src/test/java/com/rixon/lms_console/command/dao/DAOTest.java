@@ -115,7 +115,7 @@ public class DAOTest {
     public void testGetAllCategories() {
         List<CategoryRecord> categoryRecords = lmsDao.getAllCategories();
         assertNotNull(categoryRecords);
-        final int expectedCount = 4;
+        final int expectedCount = 5;
         assertEquals("size of role records is not as expected", expectedCount, categoryRecords.size());
     }
 
