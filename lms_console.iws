@@ -2,25 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_console.ids" afterPath="$PROJECT_DIR$/lms_console.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_db.lck" afterPath="$PROJECT_DIR$/lms_db/lms_db.lck" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/CategoryRecord.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/CategoryRecord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/dao/DAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/dao/DAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemInstanceTransactionRecord.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemInstanceTransactionRecord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemRecord.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/ItemRecord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/PropertyRecord.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/dao/recordset/PropertyRecord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/SimpleStore.java" afterPath="$PROJECT_DIR$/src/main/java/com/rixon/lms_console/business/SimpleStore.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_console.ipr" afterPath="$PROJECT_DIR$/lms_console.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_console.iws" afterPath="$PROJECT_DIR$/lms_console.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_db.log" afterPath="$PROJECT_DIR$/lms_db/lms_db.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_db.properties" afterPath="$PROJECT_DIR$/lms_db/lms_db.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_db.script" afterPath="$PROJECT_DIR$/lms_db/lms_db.script" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_ddl_hsqldb.sql" afterPath="$PROJECT_DIR$/lms_db/lms_ddl_hsqldb.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output.log" afterPath="$PROJECT_DIR$/output.log" />
     </list>
     <ignored path="lms_console.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" time="1355815535586" ignored="false" />
+    <file path="/Dummy.txt" changelist="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" time="1355817007309" ignored="false" />
     <file path="/lms_db" changelist="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" time="1355816441281" ignored="false" />
     <file path="/ServiceFacadeReal.java" changelist="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" time="1355466107855" ignored="false" />
     <file path="/fragment.java" changelist="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" time="1354993070307" ignored="false" />
@@ -348,7 +335,7 @@
       <file leaf-file-name="Service.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/Service.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="44" selection-start="483" selection-end="483" vertical-scroll-proportion="0.4022082">
+            <state line="17" column="44" selection-start="483" selection-end="483" vertical-scroll-proportion="0.4586331">
               <folding />
             </state>
           </provider>
@@ -1493,7 +1480,11 @@
       <created>1355467431895</created>
       <updated>1355467431895</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Modified data store&#10;1) Added category for transaction type&#10;2) Added column for initial transaction id">
+      <created>1355817069923</created>
+      <updated>1355817069923</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1518,10 +1509,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1040" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272933" sideWeight="0.49675852" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3171806" sideWeight="0.490625" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3171008" sideWeight="0.490625" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.67087275" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13636364" sideWeight="0.3248" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1541,7 +1532,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3996328" sideWeight="0.67087275" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23905997" sideWeight="0.67270666" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22876558" sideWeight="0.49545455" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22876558" sideWeight="0.49545455" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DSM" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="100" y="100" width="2360" height="1240" />
       <window_info id="Aspects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cloverage" active="false" anchor="left" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.24905087" sideWeight="0.6661342" order="3" side_tool="true" content_ui="tabs" x="519" y="71" width="328" height="626" />
@@ -1594,7 +1585,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved stub services to test root" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified data store&#10;1) Added category for transaction type&#10;2) Added column for initial transaction id" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1629,6 +1620,7 @@
     <MESSAGE value="added business logic to check for damaged item before making reservation" />
     <MESSAGE value="fixed some warnings reported in the inspection" />
     <MESSAGE value="Moved stub services to test root" />
+    <MESSAGE value="Modified data store&#10;1) Added category for transaction type&#10;2) Added column for initial transaction id" />
   </component>
   <component name="VssConfiguration">
     <CheckoutOptions>
@@ -1811,7 +1803,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rixon/lms_console/service/Service.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="44" selection-start="483" selection-end="483" vertical-scroll-proportion="0.4022082">
+        <state line="17" column="44" selection-start="483" selection-end="483" vertical-scroll-proportion="0.4586331">
           <folding />
         </state>
       </provider>
