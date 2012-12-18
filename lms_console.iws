@@ -7,7 +7,7 @@
     </list>
     <ignored path="lms_console.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" time="1355817007309" ignored="false" />
+    <file path="/Dummy.txt" changelist="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" time="1355817101317" ignored="false" />
     <file path="/lms_db" changelist="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" time="1355816441281" ignored="false" />
     <file path="/ServiceFacadeReal.java" changelist="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" time="1355466107855" ignored="false" />
     <file path="/fragment.java" changelist="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" time="1354993070307" ignored="false" />
@@ -1484,7 +1484,11 @@
       <created>1355817069923</created>
       <updated>1355817069923</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Modified data store&#10;1) Added category for transaction type&#10;2) Added column for initial transaction id">
+      <created>1355817105276</created>
+      <updated>1355817105276</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
