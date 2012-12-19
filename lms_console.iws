@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_console.ids" afterPath="$PROJECT_DIR$/lms_console.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_db.lck" afterPath="$PROJECT_DIR$/lms_db/lms_db.lck" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/dao/DAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/dao/DAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scope.txt" afterPath="$PROJECT_DIR$/Scope.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/facade/ServiceFacadeMock.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/facade/ServiceFacadeMock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/service/ServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/rixon/lms_console/command/service/ServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_console.ipr" afterPath="$PROJECT_DIR$/lms_console.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_console.iws" afterPath="$PROJECT_DIR$/lms_console.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_db.log" afterPath="$PROJECT_DIR$/lms_db/lms_db.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_db.properties" afterPath="$PROJECT_DIR$/lms_db/lms_db.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lms_db/lms_db.script" afterPath="$PROJECT_DIR$/lms_db/lms_db.script" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output.log" afterPath="$PROJECT_DIR$/output.log" />
     </list>
     <ignored path="lms_console.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" time="1355928196271" ignored="false" />
+    <file path="/Dummy.txt" changelist="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" time="1355928483902" ignored="false" />
     <file path="/lms_db" changelist="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" time="1355823608008" ignored="false" />
     <file path="/ServiceFacadeReal.java" changelist="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" time="1355466107855" ignored="false" />
     <file path="/fragment.java" changelist="c382a781-eca5-4ffe-a11b-53f2cfe8e4cf" time="1354993070307" ignored="false" />
@@ -1503,7 +1492,11 @@
       <created>1355817136199</created>
       <updated>1355817136199</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Modified data store&#10;1) Added category for transaction type&#10;2) Added column for initial transaction id">
+      <created>1355928530361</created>
+      <updated>1355928530361</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1733,7 +1726,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Scope.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="41" selection-start="1660" selection-end="1660" vertical-scroll-proportion="0.0" />
+        <state line="28" column="41" selection-start="1660" selection-end="1660" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="jar://D:/eclipse/java/src.zip!/javax/swing/table/TableModel.java">
