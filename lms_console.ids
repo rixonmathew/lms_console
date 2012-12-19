@@ -1097,8 +1097,8 @@
       <column name="ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
       <column name="FEATURE" sqlType="VARCHAR" length="20" precision="0" nullable="false" jdbcType="12" />
       <column name="DESCRIPTION" sqlType="VARCHAR" length="500" precision="0" nullable="false" jdbcType="12" />
-      <primary-key name="SYS_PK_10118" columns="ID" />
-      <exported-key name="SYS_FK_10127" table="ROLE_FEATURE" schema="PUBLIC" catalog="PUBLIC" columns="FEATURE_ID" />
+      <primary-key name="SYS_PK_10119" columns="ID" />
+      <exported-key name="SYS_FK_10128" table="ROLE_FEATURE" schema="PUBLIC" catalog="PUBLIC" columns="FEATURE_ID" />
     </table>
     <table name="ITEM" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
       <column name="ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
@@ -1143,9 +1143,9 @@
       <column name="ITEM_INSTANCE_TRANSACTION_ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
       <column name="PROPERTY_ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
       <column name="PROPERTY_VALUE" sqlType="VARCHAR" length="4000" precision="0" nullable="true" jdbcType="12" />
-      <primary-key name="SYS_PK_10143" columns="ID" />
-      <foreign-key name="SYS_FK_10146" columns="ITEM_INSTANCE_TRANSACTION_ID" ref-table="ITEM_INSTANCE_TRANSACTION" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
-      <foreign-key name="SYS_FK_10147" columns="PROPERTY_ID" ref-table="PROPERTY" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
+      <primary-key name="SYS_PK_10144" columns="ID" />
+      <foreign-key name="SYS_FK_10147" columns="ITEM_INSTANCE_TRANSACTION_ID" ref-table="ITEM_INSTANCE_TRANSACTION" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
+      <foreign-key name="SYS_FK_10148" columns="PROPERTY_ID" ref-table="PROPERTY" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
     </table>
     <table name="ITEM_PROPERTY" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
       <column name="ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
@@ -1177,27 +1177,27 @@
       <column name="LAST_NAME" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
       <column name="EMAIL_ID" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
       <column name="PASSWORD" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
-      <primary-key name="SYS_PK_10098" columns="ID" />
-      <exported-key name="SYS_FK_10160" table="ITEM_INSTANCE_TRANSACTION" schema="PUBLIC" catalog="PUBLIC" columns="MEMBER_ID" />
-      <exported-key name="SYS_FK_10107" table="MEMBER_PROPERTY" schema="PUBLIC" catalog="PUBLIC" columns="MEMBER_ID" />
-      <exported-key name="SYS_FK_10136" table="MEMBER_ROLE" schema="PUBLIC" catalog="PUBLIC" columns="MEMBER_ID" />
+      <primary-key name="SYS_PK_10099" columns="ID" />
+      <exported-key name="SYS_FK_10154" table="ITEM_INSTANCE_TRANSACTION" schema="PUBLIC" catalog="PUBLIC" columns="MEMBER_ID" />
+      <exported-key name="SYS_FK_10108" table="MEMBER_PROPERTY" schema="PUBLIC" catalog="PUBLIC" columns="MEMBER_ID" />
+      <exported-key name="SYS_FK_10137" table="MEMBER_ROLE" schema="PUBLIC" catalog="PUBLIC" columns="MEMBER_ID" />
     </table>
     <table name="MEMBER_PROPERTY" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
       <column name="ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
       <column name="MEMBER_ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
       <column name="PROPERTY_ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
       <column name="PROPERTY_VALUE" sqlType="VARCHAR" length="4000" precision="0" nullable="true" jdbcType="12" />
-      <primary-key name="SYS_PK_10104" columns="ID" />
-      <foreign-key name="SYS_FK_10107" columns="MEMBER_ID" ref-table="MEMBER" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
-      <foreign-key name="SYS_FK_10108" columns="PROPERTY_ID" ref-table="PROPERTY" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
+      <primary-key name="SYS_PK_10105" columns="ID" />
+      <foreign-key name="SYS_FK_10108" columns="MEMBER_ID" ref-table="MEMBER" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
+      <foreign-key name="SYS_FK_10109" columns="PROPERTY_ID" ref-table="PROPERTY" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
     </table>
     <table name="MEMBER_ROLE" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
       <column name="ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
       <column name="MEMBER_ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
       <column name="ROLE_ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
-      <primary-key name="SYS_PK_10133" columns="ID" />
-      <foreign-key name="SYS_FK_10136" columns="MEMBER_ID" ref-table="MEMBER" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
-      <foreign-key name="SYS_FK_10137" columns="ROLE_ID" ref-table="ROLE" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
+      <primary-key name="SYS_PK_10134" columns="ID" />
+      <foreign-key name="SYS_FK_10137" columns="MEMBER_ID" ref-table="MEMBER" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
+      <foreign-key name="SYS_FK_10138" columns="ROLE_ID" ref-table="ROLE" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
     </table>
     <table name="PROPERTY" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
       <column name="ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
@@ -1209,25 +1209,26 @@
       <foreign-key name="SYS_FK_10046" columns="CATEGORY_ID" ref-table="CATEGORY" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
       <exported-key name="SYS_FK_10053" table="ITEM_PROPERTY" schema="PUBLIC" catalog="PUBLIC" columns="PROPERTY_ID" />
       <exported-key name="SYS_FK_10077" table="ITEM_INSTANCE_PROPERTY" schema="PUBLIC" catalog="PUBLIC" columns="PROPERTY_ID" />
-      <exported-key name="SYS_FK_10108" table="MEMBER_PROPERTY" schema="PUBLIC" catalog="PUBLIC" columns="PROPERTY_ID" />
-      <exported-key name="SYS_FK_10147" table="ITEM_INSTANCE_TRANSACTION_PROPERTY" schema="PUBLIC" catalog="PUBLIC" columns="PROPERTY_ID" />
+      <exported-key name="SYS_FK_10109" table="MEMBER_PROPERTY" schema="PUBLIC" catalog="PUBLIC" columns="PROPERTY_ID" />
+      <exported-key name="SYS_FK_10148" table="ITEM_INSTANCE_TRANSACTION_PROPERTY" schema="PUBLIC" catalog="PUBLIC" columns="PROPERTY_ID" />
+      <exported-key name="SYS_FK_10771" table="TRANSACTION_TYPE_PROPERTY" schema="PUBLIC" catalog="PUBLIC" columns="PROPERTY_ID" />
     </table>
     <table name="ROLE" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
       <column name="ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
       <column name="ROLE" sqlType="VARCHAR" length="20" precision="0" nullable="false" jdbcType="12" />
       <column name="DESCRIPTION" sqlType="VARCHAR" length="500" precision="0" nullable="false" jdbcType="12" />
-      <primary-key name="SYS_PK_10114" columns="ID" />
-      <exported-key name="SYS_FK_10126" table="ROLE_FEATURE" schema="PUBLIC" catalog="PUBLIC" columns="ROLE_ID" />
-      <exported-key name="SYS_FK_10137" table="MEMBER_ROLE" schema="PUBLIC" catalog="PUBLIC" columns="ROLE_ID" />
+      <primary-key name="SYS_PK_10115" columns="ID" />
+      <exported-key name="SYS_FK_10127" table="ROLE_FEATURE" schema="PUBLIC" catalog="PUBLIC" columns="ROLE_ID" />
+      <exported-key name="SYS_FK_10138" table="MEMBER_ROLE" schema="PUBLIC" catalog="PUBLIC" columns="ROLE_ID" />
     </table>
     <table name="ROLE_FEATURE" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
       <column name="ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
       <column name="ROLE_ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
       <column name="FEATURE_ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
       <column name="ALLOWED" sqlType="CHARACTER" length="1" precision="0" nullable="false" jdbcType="1" />
-      <primary-key name="SYS_PK_10122" columns="ID" />
-      <foreign-key name="SYS_FK_10127" columns="FEATURE_ID" ref-table="FEATURE" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
-      <foreign-key name="SYS_FK_10126" columns="ROLE_ID" ref-table="ROLE" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
+      <primary-key name="SYS_PK_10123" columns="ID" />
+      <foreign-key name="SYS_FK_10128" columns="FEATURE_ID" ref-table="FEATURE" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
+      <foreign-key name="SYS_FK_10127" columns="ROLE_ID" ref-table="ROLE" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
     </table>
     <table name="TRANSACTION_HISTORY" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
       <column name="ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
@@ -1235,16 +1236,26 @@
       <column name="CHILD_TRANSACTION_ID" sqlType="INTEGER" length="32" precision="0" nullable="true" jdbcType="4" />
       <column name="FIRST" sqlType="VARCHAR" length="1" precision="0" nullable="true" jdbcType="12" />
       <column name="LAST" sqlType="VARCHAR" length="1" precision="0" nullable="true" jdbcType="12" />
-      <primary-key name="SYS_PK_10090" columns="ID" />
-      <foreign-key name="SYS_FK_10091" columns="PARENT_TRANSACTION_ID" ref-table="ITEM_INSTANCE_TRANSACTION" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
-      <foreign-key name="SYS_FK_10092" columns="CHILD_TRANSACTION_ID" ref-table="ITEM_INSTANCE_TRANSACTION" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
+      <primary-key name="SYS_PK_10091" columns="ID" />
+      <foreign-key name="SYS_FK_10092" columns="PARENT_TRANSACTION_ID" ref-table="ITEM_INSTANCE_TRANSACTION" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
+      <foreign-key name="SYS_FK_10093" columns="CHILD_TRANSACTION_ID" ref-table="ITEM_INSTANCE_TRANSACTION" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
     </table>
     <table name="TRANSACTION_TYPE" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
       <column name="ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
       <column name="TYPE" sqlType="VARCHAR" length="20" precision="0" nullable="false" jdbcType="12" />
       <column name="DESCRIPTION" sqlType="VARCHAR" length="500" precision="0" nullable="false" jdbcType="12" />
       <primary-key name="SYS_PK_10029" columns="ID" />
-      <exported-key name="SYS_FK_10086" table="ITEM_INSTANCE_TRANSACTION" schema="PUBLIC" catalog="PUBLIC" columns="TRANSACTION_ID" />
+      <exported-key name="SYS_FK_10087" table="ITEM_INSTANCE_TRANSACTION" schema="PUBLIC" catalog="PUBLIC" columns="TRANSACTION_TYPE_ID" />
+      <exported-key name="SYS_FK_10764" table="TRANSACTION_TYPE_PROPERTY" schema="PUBLIC" catalog="PUBLIC" columns="TRANSACTION_TYPE_ID" />
+    </table>
+    <table name="TRANSACTION_TYPE_PROPERTY" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
+      <column name="TRANSACTION_TYPE_ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
+      <column name="PROPERTY_ID" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />
+      <column name="PROPERTY_VALUE" sqlType="VARCHAR" length="4000" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="SYS_PK_10165" columns="ID" />
+      <foreign-key name="SYS_FK_10771" columns="PROPERTY_ID" ref-table="PROPERTY" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
+      <foreign-key name="SYS_FK_10764" columns="TRANSACTION_TYPE_ID" ref-table="TRANSACTION_TYPE" ref-schema="PUBLIC" ref-catalog="PUBLIC" ref-columns="ID" update-rule="3" delete-rule="3" />
     </table>
     <table name="BLOCKS" schema="SYSTEM_LOBS" catalog="PUBLIC" type="SYSTEM TABLE">
       <column name="BLOCK_ADDR" sqlType="INTEGER" length="32" precision="0" nullable="false" jdbcType="4" />

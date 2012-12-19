@@ -20,7 +20,6 @@ import static com.rixon.lms_console.command.operation.OperationTypes.*;
  * This class represents the facade for accessing the stub services.
  * User: rixon|Date: 8/17/12|Time: 8:57 PM
  */
-//TODO The mock class needs to move to test root
 public class ServiceFacadeMock implements ServiceFacade {
 
     private Map<String, Service> serviceMap;

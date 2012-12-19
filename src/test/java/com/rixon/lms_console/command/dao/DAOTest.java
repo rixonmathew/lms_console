@@ -147,7 +147,7 @@ public class DAOTest {
     public void testGetAllProperties() {
         List<PropertyRecord> propertyRecords = lmsDao.getAllProperties();
         assertNotNull(propertyRecords);
-        final int expectedCount = 15;
+        final int expectedCount = 22;
         assertEquals("size of role records is not as expected", expectedCount, propertyRecords.size());
     }
 

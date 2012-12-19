@@ -115,6 +115,5 @@ public class ServiceTest {
         final String expectedMessage = "Item cannot be reserved as it is damaged";
         String actualMessage = (String) tableModel.getValueAt(0, 0);
         assertEquals("Reservation message not as expected", expectedMessage, actualMessage);
-
     }
 }

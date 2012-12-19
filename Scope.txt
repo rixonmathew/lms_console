@@ -1,6 +1,7 @@
 Things to be incorporated
 =========================
- Add business logic in reserve and checkout to not allow reserve/ check out when the item is already check out
+ Add business logic to calculate the date when the item will be available based on different scenarios ( item reserved by more than one person, item already checkedout)
+ Modify command to prevent reextension if item is reserved by a different user
  introduce command to check out item
  introduce command to see items checked out to user
  introduce command to see who has checked out a particular book
